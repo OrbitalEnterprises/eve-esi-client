@@ -11,11 +11,11 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdCalendar"></a>
 # **getCharactersCharacterIdCalendar**
-> List&lt;GetCharactersCharacterIdCalendar200Ok&gt; getCharactersCharacterIdCalendar(characterId, fromEvent, datasource)
+> List&lt;GetCharactersCharacterIdCalendar200Ok&gt; getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, token, userAgent, xUserAgent)
 
 List calendar event summaries
 
-Get 50 event summaries from the calendar. If no event ID is given, the resource will return the next 50 chronological event summaries from now. If an event ID is specified, it will return the next 50 chronological event summaries from after that event.   ---  Alternate route: &#x60;/v1/characters/{character_id}/calendar/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/calendar/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/calendar/&#x60;   ---  This route is cached for up to 5 seconds
+Get 50 event summaries from the calendar. If no event ID is given, the resource will return the next 50 chronological event summaries from now. If an event ID is specified, it will return the next 50 chronological event summaries from after that event.  ---  Alternate route: &#x60;/v1/characters/{character_id}/calendar/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/calendar/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/calendar/&#x60;   ---  This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -33,11 +33,14 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CalendarApi apiInstance = new CalendarApi();
-Long characterId = 789L; // Long | The character to retrieve events from
-Integer fromEvent = 56; // Integer | The event ID to retrieve events from
+Integer characterId = 56; // Integer | The character to retrieve events from
 String datasource = "tranquility"; // String | The server name you would like data from
+Integer fromEvent = 56; // Integer | The event ID to retrieve events from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdCalendar200Ok> result = apiInstance.getCharactersCharacterIdCalendar(characterId, fromEvent, datasource);
+    List<GetCharactersCharacterIdCalendar200Ok> result = apiInstance.getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#getCharactersCharacterIdCalendar");
@@ -49,9 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Long**| The character to retrieve events from |
- **fromEvent** | **Integer**| The event ID to retrieve events from | [optional]
+ **characterId** | **Integer**| The character to retrieve events from |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **fromEvent** | **Integer**| The event ID to retrieve events from | [optional]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -68,7 +74,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdCalendarEventId"></a>
 # **getCharactersCharacterIdCalendarEventId**
-> GetCharactersCharacterIdCalendarEventIdOk getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource)
+> GetCharactersCharacterIdCalendarEventIdOk getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, token, userAgent, xUserAgent)
 
 Get an event
 
@@ -90,11 +96,14 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CalendarApi apiInstance = new CalendarApi();
-Long characterId = 789L; // Long | The character id requesting the event
+Integer characterId = 56; // Integer | The character id requesting the event
 Integer eventId = 56; // Integer | The id of the event requested
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource);
+    GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#getCharactersCharacterIdCalendarEventId");
@@ -106,9 +115,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Long**| The character id requesting the event |
+ **characterId** | **Integer**| The character id requesting the event |
  **eventId** | **Integer**| The id of the event requested |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -125,7 +137,7 @@ Name | Type | Description  | Notes
 
 <a name="putCharactersCharacterIdCalendarEventId"></a>
 # **putCharactersCharacterIdCalendarEventId**
-> putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource)
+> putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token, userAgent, xUserAgent)
 
 Respond to an event
 
@@ -151,8 +163,11 @@ Integer characterId = 56; // Integer | The character ID requesting the event
 Integer eventId = 56; // Integer | The ID of the event requested
 PutCharactersCharacterIdCalendarEventIdResponse response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource);
+    apiInstance.putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#putCharactersCharacterIdCalendarEventId");
     e.printStackTrace();
@@ -167,6 +182,9 @@ Name | Type | Description  | Notes
  **eventId** | **Integer**| The ID of the event requested |
  **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

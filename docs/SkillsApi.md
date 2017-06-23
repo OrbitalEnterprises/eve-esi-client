@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdSkillqueue"></a>
 # **getCharactersCharacterIdSkillqueue**
-> List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; getCharactersCharacterIdSkillqueue(characterId, datasource)
+> List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; getCharactersCharacterIdSkillqueue(characterId, datasource, token, userAgent, xUserAgent)
 
 Get character&#39;s skill queue
 
@@ -34,8 +34,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 SkillsApi apiInstance = new SkillsApi();
 Integer characterId = 56; // Integer | Character id of the target character
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdSkillqueue200Ok> result = apiInstance.getCharactersCharacterIdSkillqueue(characterId, datasource);
+    List<GetCharactersCharacterIdSkillqueue200Ok> result = apiInstance.getCharactersCharacterIdSkillqueue(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SkillsApi#getCharactersCharacterIdSkillqueue");
@@ -49,6 +52,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| Character id of the target character |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -65,11 +71,11 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdSkills"></a>
 # **getCharactersCharacterIdSkills**
-> GetCharactersCharacterIdSkillsOk getCharactersCharacterIdSkills(characterId, datasource)
+> GetCharactersCharacterIdSkillsOk getCharactersCharacterIdSkills(characterId, datasource, token, userAgent, xUserAgent)
 
 Get character skills
 
-List all trained skills for the given character  ---  Alternate route: &#x60;/v3/characters/{character_id}/skills/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/skills/&#x60;   ---  This route is cached for up to 120 seconds
+List all trained skills for the given character  ---  Alternate route: &#x60;/v3/characters/{character_id}/skills/&#x60;   ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -89,8 +95,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 SkillsApi apiInstance = new SkillsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdSkillsOk result = apiInstance.getCharactersCharacterIdSkills(characterId, datasource);
+    GetCharactersCharacterIdSkillsOk result = apiInstance.getCharactersCharacterIdSkills(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SkillsApi#getCharactersCharacterIdSkills");
@@ -104,6 +113,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

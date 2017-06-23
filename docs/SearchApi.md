@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdSearch"></a>
 # **getCharactersCharacterIdSearch**
-> GetCharactersCharacterIdSearchOk getCharactersCharacterIdSearch(characterId, search, categories, language, strict, datasource)
+> GetCharactersCharacterIdSearchOk getCharactersCharacterIdSearch(categories, characterId, search, datasource, language, strict, token, userAgent, xUserAgent)
 
 Search on a string
 
@@ -32,14 +32,17 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 SearchApi apiInstance = new SearchApi();
+List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
 Integer characterId = 56; // Integer | An EVE character ID
 String search = "search_example"; // String | The string to search on
-List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
+String datasource = "tranquility"; // String | The server name you would like data from
 String language = "en-us"; // String | Search locale
 Boolean strict = false; // Boolean | Whether the search should be a strict match
-String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdSearchOk result = apiInstance.getCharactersCharacterIdSearch(characterId, search, categories, language, strict, datasource);
+    GetCharactersCharacterIdSearchOk result = apiInstance.getCharactersCharacterIdSearch(categories, characterId, search, datasource, language, strict, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SearchApi#getCharactersCharacterIdSearch");
@@ -51,12 +54,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, structure, wormhole]
  **characterId** | **Integer**| An EVE character ID |
  **search** | **String**| The string to search on |
- **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, structure, wormhole]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **language** | **String**| Search locale | [optional] [default to en-us] [enum: en-us, de, fr, ru, ja, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -73,7 +79,7 @@ Name | Type | Description  | Notes
 
 <a name="getSearch"></a>
 # **getSearch**
-> GetSearchOk getSearch(search, categories, language, strict, datasource)
+> GetSearchOk getSearch(categories, search, datasource, language, strict, userAgent, xUserAgent)
 
 Search on a string
 
@@ -87,13 +93,15 @@ Search for entities that match a given sub-string.  ---  Alternate route: &#x60;
 
 
 SearchApi apiInstance = new SearchApi();
-String search = "search_example"; // String | The string to search on
 List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
+String search = "search_example"; // String | The string to search on
+String datasource = "tranquility"; // String | The server name you would like data from
 String language = "en-us"; // String | Search locale
 Boolean strict = false; // Boolean | Whether the search should be a strict match
-String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetSearchOk result = apiInstance.getSearch(search, categories, language, strict, datasource);
+    GetSearchOk result = apiInstance.getSearch(categories, search, datasource, language, strict, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SearchApi#getSearch");
@@ -105,11 +113,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **String**| The string to search on |
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, wormhole]
+ **search** | **String**| The string to search on |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **language** | **String**| Search locale | [optional] [default to en-us] [enum: en-us, de, fr, ru, ja, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

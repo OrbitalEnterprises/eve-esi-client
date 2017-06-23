@@ -93,6 +93,7 @@ FIGHTERTUBE2 | &quot;FighterTube2&quot;
 FIGHTERTUBE3 | &quot;FighterTube3&quot;
 FIGHTERTUBE4 | &quot;FighterTube4&quot;
 MODULE | &quot;Module&quot;
+WARDROBE | &quot;Wardrobe&quot;
 
 
 <a name="LocationTypeEnum"></a>

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getIncursions"></a>
 # **getIncursions**
-> List&lt;GetIncursions200Ok&gt; getIncursions(datasource)
+> List&lt;GetIncursions200Ok&gt; getIncursions(datasource, userAgent, xUserAgent)
 
 List incursions
 
@@ -24,8 +24,10 @@ Return a list of current incursions  ---  Alternate route: &#x60;/v1/incursions/
 
 IncursionsApi apiInstance = new IncursionsApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetIncursions200Ok> result = apiInstance.getIncursions(datasource);
+    List<GetIncursions200Ok> result = apiInstance.getIncursions(datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling IncursionsApi#getIncursions");
@@ -38,6 +40,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

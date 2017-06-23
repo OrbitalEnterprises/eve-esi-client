@@ -22,3 +22,7 @@ build
 /.classpath
 /.project
 /.settings/
+
+# IDE settings
+/.idea
+/*.iml

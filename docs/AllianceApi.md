@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getAlliances"></a>
 # **getAlliances**
-> List&lt;Integer&gt; getAlliances(datasource)
+> List&lt;Integer&gt; getAlliances(datasource, userAgent, xUserAgent)
 
 List all alliances
 
@@ -28,8 +28,10 @@ List all active player alliances  ---  Alternate route: &#x60;/v1/alliances/&#x6
 
 AllianceApi apiInstance = new AllianceApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getAlliances(datasource);
+    List<Integer> result = apiInstance.getAlliances(datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliances");
@@ -42,6 +44,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -58,7 +62,7 @@ No authorization required
 
 <a name="getAlliancesAllianceId"></a>
 # **getAlliancesAllianceId**
-> GetAlliancesAllianceIdOk getAlliancesAllianceId(allianceId, datasource)
+> GetAlliancesAllianceIdOk getAlliancesAllianceId(allianceId, datasource, userAgent, xUserAgent)
 
 Get alliance information
 
@@ -74,8 +78,10 @@ Public information about an alliance  ---  Alternate route: &#x60;/v2/alliances/
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An Eve alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetAlliancesAllianceIdOk result = apiInstance.getAlliancesAllianceId(allianceId, datasource);
+    GetAlliancesAllianceIdOk result = apiInstance.getAlliancesAllianceId(allianceId, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceId");
@@ -89,6 +95,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An Eve alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -105,7 +113,7 @@ No authorization required
 
 <a name="getAlliancesAllianceIdCorporations"></a>
 # **getAlliancesAllianceIdCorporations**
-> List&lt;Integer&gt; getAlliancesAllianceIdCorporations(allianceId, datasource)
+> List&lt;Integer&gt; getAlliancesAllianceIdCorporations(allianceId, datasource, userAgent, xUserAgent)
 
 List alliance&#39;s corporations
 
@@ -121,8 +129,10 @@ List all current member corporations of an alliance  ---  Alternate route: &#x60
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getAlliancesAllianceIdCorporations(allianceId, datasource);
+    List<Integer> result = apiInstance.getAlliancesAllianceIdCorporations(allianceId, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceIdCorporations");
@@ -136,6 +146,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -152,7 +164,7 @@ No authorization required
 
 <a name="getAlliancesAllianceIdIcons"></a>
 # **getAlliancesAllianceIdIcons**
-> GetAlliancesAllianceIdIconsOk getAlliancesAllianceIdIcons(allianceId, datasource)
+> GetAlliancesAllianceIdIconsOk getAlliancesAllianceIdIcons(allianceId, datasource, userAgent, xUserAgent)
 
 Get alliance icon
 
@@ -168,8 +180,10 @@ Get the icon urls for a alliance  ---  Alternate route: &#x60;/v1/alliances/{all
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetAlliancesAllianceIdIconsOk result = apiInstance.getAlliancesAllianceIdIcons(allianceId, datasource);
+    GetAlliancesAllianceIdIconsOk result = apiInstance.getAlliancesAllianceIdIcons(allianceId, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceIdIcons");
@@ -183,6 +197,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -199,11 +215,11 @@ No authorization required
 
 <a name="getAlliancesNames"></a>
 # **getAlliancesNames**
-> List&lt;GetAlliancesNames200Ok&gt; getAlliancesNames(allianceIds, datasource)
+> List&lt;GetAlliancesNames200Ok&gt; getAlliancesNames(allianceIds, datasource, userAgent, xUserAgent)
 
 Get alliance names
 
-Resolve a set of alliance IDs to alliance names  ---  Alternate route: &#x60;/v1/alliances/names/&#x60;  Alternate route: &#x60;/legacy/alliances/names/&#x60;  Alternate route: &#x60;/dev/alliances/names/&#x60;   ---  This route is cached for up to 3600 seconds
+Resolve a set of alliance IDs to alliance names  ---  Alternate route: &#x60;/v1/alliances/names/&#x60;  Alternate route: &#x60;/legacy/alliances/names/&#x60;   ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -215,8 +231,10 @@ Resolve a set of alliance IDs to alliance names  ---  Alternate route: &#x60;/v1
 AllianceApi apiInstance = new AllianceApi();
 List<Long> allianceIds = Arrays.asList(56L); // List<Long> | A comma separated list of alliance IDs
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetAlliancesNames200Ok> result = apiInstance.getAlliancesNames(allianceIds, datasource);
+    List<GetAlliancesNames200Ok> result = apiInstance.getAlliancesNames(allianceIds, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesNames");
@@ -230,6 +248,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceIds** | [**List&lt;Long&gt;**](Long.md)| A comma separated list of alliance IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

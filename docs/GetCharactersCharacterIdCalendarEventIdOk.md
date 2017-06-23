@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | [**DateTime**](DateTime.md) | date string | 
-**duration** | **Long** | Length in minutes | 
+**duration** | **Integer** | Length in minutes | 
 **eventId** | **Integer** | event_id integer | 
 **importance** | **Integer** | importance integer | 
-**ownerId** | **Long** | owner_id integer | 
+**ownerId** | **Integer** | owner_id integer | 
 **ownerName** | **String** | owner_name string | 
 **ownerType** | [**OwnerTypeEnum**](#OwnerTypeEnum) | owner_type string | 
 **response** | **String** | response string | 

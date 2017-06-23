@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInsurancePrices"></a>
 # **getInsurancePrices**
-> List&lt;GetInsurancePrices200Ok&gt; getInsurancePrices(acceptLanguage, datasource)
+> List&lt;GetInsurancePrices200Ok&gt; getInsurancePrices(datasource, language, userAgent, xUserAgent)
 
 List insurance levels
 
@@ -23,10 +23,12 @@ Return available insurance levels for all ship types  ---  Alternate route: &#x6
 
 
 InsuranceApi apiInstance = new InsuranceApi();
-String acceptLanguage = "en"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
+String language = "en-us"; // String | Language to use in the response
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetInsurancePrices200Ok> result = apiInstance.getInsurancePrices(acceptLanguage, datasource);
+    List<GetInsurancePrices200Ok> result = apiInstance.getInsurancePrices(datasource, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InsuranceApi#getInsurancePrices");
@@ -38,8 +40,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en] [enum: de, en, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

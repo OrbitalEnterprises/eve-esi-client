@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdBookmarks"></a>
 # **getCharactersCharacterIdBookmarks**
-> List&lt;GetCharactersCharacterIdBookmarks200Ok&gt; getCharactersCharacterIdBookmarks(characterId, datasource)
+> List&lt;GetCharactersCharacterIdBookmarks200Ok&gt; getCharactersCharacterIdBookmarks(characterId, datasource, token, userAgent, xUserAgent)
 
 List bookmarks
 
@@ -34,8 +34,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 BookmarksApi apiInstance = new BookmarksApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdBookmarks200Ok> result = apiInstance.getCharactersCharacterIdBookmarks(characterId, datasource);
+    List<GetCharactersCharacterIdBookmarks200Ok> result = apiInstance.getCharactersCharacterIdBookmarks(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling BookmarksApi#getCharactersCharacterIdBookmarks");
@@ -49,6 +52,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -65,7 +71,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdBookmarksFolders"></a>
 # **getCharactersCharacterIdBookmarksFolders**
-> List&lt;GetCharactersCharacterIdBookmarksFolders200Ok&gt; getCharactersCharacterIdBookmarksFolders(characterId, datasource)
+> List&lt;GetCharactersCharacterIdBookmarksFolders200Ok&gt; getCharactersCharacterIdBookmarksFolders(characterId, datasource, token, userAgent, xUserAgent)
 
 List bookmark folders
 
@@ -89,8 +95,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 BookmarksApi apiInstance = new BookmarksApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdBookmarksFolders200Ok> result = apiInstance.getCharactersCharacterIdBookmarksFolders(characterId, datasource);
+    List<GetCharactersCharacterIdBookmarksFolders200Ok> result = apiInstance.getCharactersCharacterIdBookmarksFolders(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling BookmarksApi#getCharactersCharacterIdBookmarksFolders");
@@ -104,6 +113,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

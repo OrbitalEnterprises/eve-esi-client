@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 <a name="deleteCharactersCharacterIdContacts"></a>
 # **deleteCharactersCharacterIdContacts**
-> deleteCharactersCharacterIdContacts(characterId, contactIds, datasource)
+> deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token, userAgent, xUserAgent)
 
 Delete contacts
 
-Bulk delete contacts  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk delete contacts  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60; 
 
 ### Example
 ```java
@@ -36,10 +36,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | ID for a character
-List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to edit
+List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to delete
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteCharactersCharacterIdContacts(characterId, contactIds, datasource);
+    apiInstance.deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#deleteCharactersCharacterIdContacts");
     e.printStackTrace();
@@ -51,8 +54,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| ID for a character |
- **contactIds** | **List&lt;Integer&gt;**| A list of contacts to edit |
+ **contactIds** | **List&lt;Integer&gt;**| A list of contacts to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -69,7 +75,7 @@ null (empty response body)
 
 <a name="getCharactersCharacterIdContacts"></a>
 # **getCharactersCharacterIdContacts**
-> List&lt;GetCharactersCharacterIdContacts200Ok&gt; getCharactersCharacterIdContacts(characterId, page, datasource)
+> List&lt;GetCharactersCharacterIdContacts200Ok&gt; getCharactersCharacterIdContacts(characterId, datasource, page, token, userAgent, xUserAgent)
 
 Get contacts
 
@@ -92,10 +98,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | ID for a character
-Integer page = 1; // Integer | page integer
 String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | page integer
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContacts200Ok> result = apiInstance.getCharactersCharacterIdContacts(characterId, page, datasource);
+    List<GetCharactersCharacterIdContacts200Ok> result = apiInstance.getCharactersCharacterIdContacts(characterId, datasource, page, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getCharactersCharacterIdContacts");
@@ -108,8 +117,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| ID for a character |
- **page** | **Integer**| page integer | [optional] [default to 1]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| page integer | [optional] [default to 1]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -126,7 +138,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdContactsLabels"></a>
 # **getCharactersCharacterIdContactsLabels**
-> List&lt;GetCharactersCharacterIdContactsLabels200Ok&gt; getCharactersCharacterIdContactsLabels(characterId, datasource)
+> List&lt;GetCharactersCharacterIdContactsLabels200Ok&gt; getCharactersCharacterIdContactsLabels(characterId, datasource, token, userAgent, xUserAgent)
 
 Get contact labels
 
@@ -150,8 +162,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | ID for a character
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContactsLabels200Ok> result = apiInstance.getCharactersCharacterIdContactsLabels(characterId, datasource);
+    List<GetCharactersCharacterIdContactsLabels200Ok> result = apiInstance.getCharactersCharacterIdContactsLabels(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getCharactersCharacterIdContactsLabels");
@@ -165,6 +180,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| ID for a character |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -181,7 +199,7 @@ Name | Type | Description  | Notes
 
 <a name="postCharactersCharacterIdContacts"></a>
 # **postCharactersCharacterIdContacts**
-> List&lt;Integer&gt; postCharactersCharacterIdContacts(characterId, standing, contactIds, watched, labelId, datasource)
+> List&lt;Integer&gt; postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent)
 
 Add contacts
 
@@ -204,13 +222,16 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | ID for a character
-Float standing = 3.4F; // Float | Standing for the new contact
 List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to add
-Boolean watched = false; // Boolean | Whether the new contact should be watched, note this is only effective on characters
-Long labelId = 0L; // Long | Add a custom label to the new contact
+Float standing = 3.4F; // Float | Standing for the new contact
 String datasource = "tranquility"; // String | The server name you would like data from
+Long labelId = 0L; // Long | Add a custom label to the new contact
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+Boolean watched = false; // Boolean | Whether the new contact should be watched, note this is only effective on characters
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.postCharactersCharacterIdContacts(characterId, standing, contactIds, watched, labelId, datasource);
+    List<Integer> result = apiInstance.postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#postCharactersCharacterIdContacts");
@@ -223,11 +244,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| ID for a character |
- **standing** | **Float**| Standing for the new contact |
  **contactIds** | **List&lt;Integer&gt;**| A list of contacts to add |
- **watched** | **Boolean**| Whether the new contact should be watched, note this is only effective on characters | [optional] [default to false]
- **labelId** | **Long**| Add a custom label to the new contact | [optional] [default to 0]
+ **standing** | **Float**| Standing for the new contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **labelId** | **Long**| Add a custom label to the new contact | [optional] [default to 0]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **watched** | **Boolean**| Whether the new contact should be watched, note this is only effective on characters | [optional] [default to false]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -244,7 +268,7 @@ Name | Type | Description  | Notes
 
 <a name="putCharactersCharacterIdContacts"></a>
 # **putCharactersCharacterIdContacts**
-> putCharactersCharacterIdContacts(characterId, standing, contactIds, watched, labelId, datasource)
+> putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent)
 
 Edit contacts
 
@@ -267,13 +291,16 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | ID for a character
-Float standing = 3.4F; // Float | Standing for the contact
 List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to edit
-Boolean watched = false; // Boolean | Whether the contact should be watched, note this is only effective on characters
-Long labelId = 0L; // Long | Add a custom label to the contact, use 0 for clearing label
+Float standing = 3.4F; // Float | Standing for the contact
 String datasource = "tranquility"; // String | The server name you would like data from
+Long labelId = 0L; // Long | Add a custom label to the contact, use 0 for clearing label
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+Boolean watched = false; // Boolean | Whether the contact should be watched, note this is only effective on characters
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putCharactersCharacterIdContacts(characterId, standing, contactIds, watched, labelId, datasource);
+    apiInstance.putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#putCharactersCharacterIdContacts");
     e.printStackTrace();
@@ -285,11 +312,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| ID for a character |
- **standing** | **Float**| Standing for the contact |
  **contactIds** | **List&lt;Integer&gt;**| A list of contacts to edit |
- **watched** | **Boolean**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
- **labelId** | **Long**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
+ **standing** | **Float**| Standing for the contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **labelId** | **Long**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **watched** | **Boolean**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

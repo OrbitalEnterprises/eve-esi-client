@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="postUiAutopilotWaypoint"></a>
 # **postUiAutopilotWaypoint**
-> postUiAutopilotWaypoint(destinationId, clearOtherWaypoints, addToBeginning, datasource)
+> postUiAutopilotWaypoint(addToBeginning, clearOtherWaypoints, destinationId, datasource, token, userAgent, xUserAgent)
 
 Set Autopilot Waypoint
 
@@ -35,12 +35,15 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 UserInterfaceApi apiInstance = new UserInterfaceApi();
-Long destinationId = 789L; // Long | The destination to travel to, can be solar system, station or structure's id
-Boolean clearOtherWaypoints = false; // Boolean | Whether clean other waypoints beforing adding this one
 Boolean addToBeginning = false; // Boolean | Whether this solar system should be added to the beginning of all waypoints
+Boolean clearOtherWaypoints = false; // Boolean | Whether clean other waypoints beforing adding this one
+Long destinationId = 789L; // Long | The destination to travel to, can be solar system, station or structure's id
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postUiAutopilotWaypoint(destinationId, clearOtherWaypoints, addToBeginning, datasource);
+    apiInstance.postUiAutopilotWaypoint(addToBeginning, clearOtherWaypoints, destinationId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserInterfaceApi#postUiAutopilotWaypoint");
     e.printStackTrace();
@@ -51,10 +54,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destinationId** | **Long**| The destination to travel to, can be solar system, station or structure&#39;s id |
- **clearOtherWaypoints** | **Boolean**| Whether clean other waypoints beforing adding this one | [default to false]
  **addToBeginning** | **Boolean**| Whether this solar system should be added to the beginning of all waypoints | [default to false]
+ **clearOtherWaypoints** | **Boolean**| Whether clean other waypoints beforing adding this one | [default to false]
+ **destinationId** | **Long**| The destination to travel to, can be solar system, station or structure&#39;s id |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -71,7 +77,7 @@ null (empty response body)
 
 <a name="postUiOpenwindowContract"></a>
 # **postUiOpenwindowContract**
-> postUiOpenwindowContract(contractId, datasource)
+> postUiOpenwindowContract(contractId, datasource, token, userAgent, xUserAgent)
 
 Open Contract Window
 
@@ -95,8 +101,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UserInterfaceApi apiInstance = new UserInterfaceApi();
 Integer contractId = 56; // Integer | The contract to open
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postUiOpenwindowContract(contractId, datasource);
+    apiInstance.postUiOpenwindowContract(contractId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserInterfaceApi#postUiOpenwindowContract");
     e.printStackTrace();
@@ -109,6 +118,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contractId** | **Integer**| The contract to open |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -125,7 +137,7 @@ null (empty response body)
 
 <a name="postUiOpenwindowInformation"></a>
 # **postUiOpenwindowInformation**
-> postUiOpenwindowInformation(targetId, datasource)
+> postUiOpenwindowInformation(targetId, datasource, token, userAgent, xUserAgent)
 
 Open Information Window
 
@@ -149,8 +161,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UserInterfaceApi apiInstance = new UserInterfaceApi();
 Integer targetId = 56; // Integer | The target to open
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postUiOpenwindowInformation(targetId, datasource);
+    apiInstance.postUiOpenwindowInformation(targetId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserInterfaceApi#postUiOpenwindowInformation");
     e.printStackTrace();
@@ -163,6 +178,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **targetId** | **Integer**| The target to open |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -179,7 +197,7 @@ null (empty response body)
 
 <a name="postUiOpenwindowMarketdetails"></a>
 # **postUiOpenwindowMarketdetails**
-> postUiOpenwindowMarketdetails(typeId, datasource)
+> postUiOpenwindowMarketdetails(typeId, datasource, token, userAgent, xUserAgent)
 
 Open Market Details
 
@@ -203,8 +221,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UserInterfaceApi apiInstance = new UserInterfaceApi();
 Integer typeId = 56; // Integer | The item type to open in market window
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postUiOpenwindowMarketdetails(typeId, datasource);
+    apiInstance.postUiOpenwindowMarketdetails(typeId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserInterfaceApi#postUiOpenwindowMarketdetails");
     e.printStackTrace();
@@ -217,6 +238,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **typeId** | **Integer**| The item type to open in market window |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -233,7 +257,7 @@ null (empty response body)
 
 <a name="postUiOpenwindowNewmail"></a>
 # **postUiOpenwindowNewmail**
-> postUiOpenwindowNewmail(newMail, datasource)
+> postUiOpenwindowNewmail(newMail, datasource, token, userAgent, xUserAgent)
 
 Open New Mail Window
 
@@ -257,8 +281,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UserInterfaceApi apiInstance = new UserInterfaceApi();
 PostUiOpenwindowNewmailNewMail newMail = new PostUiOpenwindowNewmailNewMail(); // PostUiOpenwindowNewmailNewMail | The details of mail to create
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postUiOpenwindowNewmail(newMail, datasource);
+    apiInstance.postUiOpenwindowNewmail(newMail, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserInterfaceApi#postUiOpenwindowNewmail");
     e.printStackTrace();
@@ -271,6 +298,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **newMail** | [**PostUiOpenwindowNewmailNewMail**](PostUiOpenwindowNewmailNewMail.md)| The details of mail to create |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

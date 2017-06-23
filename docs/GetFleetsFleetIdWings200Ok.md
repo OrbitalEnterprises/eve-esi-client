@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Long** | id integer | 
 **name** | **String** | name string | 
-**squads** | [**List&lt;FleetsfleetIdwingsSquads&gt;**](FleetsfleetIdwingsSquads.md) | squads array | 
+**squads** | [**List&lt;GetFleetsFleetIdWingsSquad&gt;**](GetFleetsFleetIdWingsSquad.md) | squads array | 
 
 
 

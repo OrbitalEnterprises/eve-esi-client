@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdPlanets"></a>
 # **getCharactersCharacterIdPlanets**
-> List&lt;GetCharactersCharacterIdPlanets200Ok&gt; getCharactersCharacterIdPlanets(characterId, datasource)
+> List&lt;GetCharactersCharacterIdPlanets200Ok&gt; getCharactersCharacterIdPlanets(characterId, datasource, token, userAgent, xUserAgent)
 
 Get colonies
 
@@ -35,8 +35,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 PlanetaryInteractionApi apiInstance = new PlanetaryInteractionApi();
 Integer characterId = 56; // Integer | Character id of the target character
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdPlanets200Ok> result = apiInstance.getCharactersCharacterIdPlanets(characterId, datasource);
+    List<GetCharactersCharacterIdPlanets200Ok> result = apiInstance.getCharactersCharacterIdPlanets(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlanetaryInteractionApi#getCharactersCharacterIdPlanets");
@@ -50,6 +53,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| Character id of the target character |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -66,11 +72,11 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdPlanetsPlanetId"></a>
 # **getCharactersCharacterIdPlanetsPlanetId**
-> GetCharactersCharacterIdPlanetsPlanetIdOk getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource)
+> GetCharactersCharacterIdPlanetsPlanetIdOk getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token, userAgent, xUserAgent)
 
 Get colony layout
 
-Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information on this endpoint will not update until this criteria is met.  ---  Alternate route: &#x60;/v1/characters/{character_id}/planets/{planet_id}/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/planets/{planet_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/planets/{planet_id}/&#x60;   ---  This route is cached for up to 600 seconds
+Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.  ---  Alternate route: &#x60;/v2/characters/{character_id}/planets/{planet_id}/&#x60;   ---  This route is cached for up to 600 seconds
 
 ### Example
 ```java
@@ -91,8 +97,11 @@ PlanetaryInteractionApi apiInstance = new PlanetaryInteractionApi();
 Integer characterId = 56; // Integer | Character id of the target character
 Integer planetId = 56; // Integer | Planet id of the target planet
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource);
+    GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlanetaryInteractionApi#getCharactersCharacterIdPlanetsPlanetId");
@@ -107,6 +116,9 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| Character id of the target character |
  **planetId** | **Integer**| Planet id of the target planet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -123,7 +135,7 @@ Name | Type | Description  | Notes
 
 <a name="getUniverseSchematicsSchematicId"></a>
 # **getUniverseSchematicsSchematicId**
-> GetUniverseSchematicsSchematicIdOk getUniverseSchematicsSchematicId(schematicId, datasource)
+> GetUniverseSchematicsSchematicIdOk getUniverseSchematicsSchematicId(schematicId, datasource, userAgent, xUserAgent)
 
 Get schematic information
 
@@ -139,8 +151,10 @@ Get information on a planetary factory schematic  ---  Alternate route: &#x60;/v
 PlanetaryInteractionApi apiInstance = new PlanetaryInteractionApi();
 Integer schematicId = 56; // Integer | A PI schematic ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseSchematicsSchematicIdOk result = apiInstance.getUniverseSchematicsSchematicId(schematicId, datasource);
+    GetUniverseSchematicsSchematicIdOk result = apiInstance.getUniverseSchematicsSchematicId(schematicId, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlanetaryInteractionApi#getUniverseSchematicsSchematicId");
@@ -154,6 +168,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **schematicId** | **Integer**| A PI schematic ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

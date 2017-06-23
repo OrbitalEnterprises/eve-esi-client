@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdKillmailsRecent"></a>
 # **getCharactersCharacterIdKillmailsRecent**
-> List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; getCharactersCharacterIdKillmailsRecent(characterId, maxCount, maxKillId, datasource)
+> List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; getCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent)
 
 List kills and losses
 
@@ -33,11 +33,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 KillmailsApi apiInstance = new KillmailsApi();
 Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
 Integer maxCount = 50; // Integer | How many killmails to return at maximum
 Integer maxKillId = 56; // Integer | Only return killmails with ID smaller than this. 
-String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdKillmailsRecent200Ok> result = apiInstance.getCharactersCharacterIdKillmailsRecent(characterId, maxCount, maxKillId, datasource);
+    List<GetCharactersCharacterIdKillmailsRecent200Ok> result = apiInstance.getCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling KillmailsApi#getCharactersCharacterIdKillmailsRecent");
@@ -50,9 +53,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **maxCount** | **Integer**| How many killmails to return at maximum | [optional] [default to 50]
  **maxKillId** | **Integer**| Only return killmails with ID smaller than this.  | [optional]
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -69,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getKillmailsKillmailIdKillmailHash"></a>
 # **getKillmailsKillmailIdKillmailHash**
-> GetKillmailsKillmailIdKillmailHashOk getKillmailsKillmailIdKillmailHash(killmailId, killmailHash, datasource)
+> GetKillmailsKillmailIdKillmailHashOk getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, userAgent, xUserAgent)
 
 Get a single killmail
 
@@ -83,11 +89,13 @@ Return a single killmail from its ID and hash  ---  Alternate route: &#x60;/v1/k
 
 
 KillmailsApi apiInstance = new KillmailsApi();
-Integer killmailId = 56; // Integer | The killmail ID to be queried
 String killmailHash = "killmailHash_example"; // String | The killmail hash for verification
+Integer killmailId = 56; // Integer | The killmail ID to be queried
 String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetKillmailsKillmailIdKillmailHashOk result = apiInstance.getKillmailsKillmailIdKillmailHash(killmailId, killmailHash, datasource);
+    GetKillmailsKillmailIdKillmailHashOk result = apiInstance.getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling KillmailsApi#getKillmailsKillmailIdKillmailHash");
@@ -99,9 +107,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **killmailId** | **Integer**| The killmail ID to be queried |
  **killmailHash** | **String**| The killmail hash for verification |
+ **killmailId** | **Integer**| The killmail ID to be queried |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

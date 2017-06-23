@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="deleteFleetsFleetIdMembersMemberId"></a>
 # **deleteFleetsFleetIdMembersMemberId**
-> deleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource)
+> deleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource, token, userAgent, xUserAgent)
 
 Kick fleet member
 
@@ -46,8 +46,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 Integer memberId = 56; // Integer | The character ID of a member in this fleet
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource);
+    apiInstance.deleteFleetsFleetIdMembersMemberId(fleetId, memberId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#deleteFleetsFleetIdMembersMemberId");
     e.printStackTrace();
@@ -61,6 +64,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **memberId** | **Integer**| The character ID of a member in this fleet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -77,7 +83,7 @@ null (empty response body)
 
 <a name="deleteFleetsFleetIdSquadsSquadId"></a>
 # **deleteFleetsFleetIdSquadsSquadId**
-> deleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource)
+> deleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource, token, userAgent, xUserAgent)
 
 Delete fleet squad
 
@@ -102,8 +108,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 Long squadId = 789L; // Long | The squad to delete
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource);
+    apiInstance.deleteFleetsFleetIdSquadsSquadId(fleetId, squadId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#deleteFleetsFleetIdSquadsSquadId");
     e.printStackTrace();
@@ -117,6 +126,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **squadId** | **Long**| The squad to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -133,7 +145,7 @@ null (empty response body)
 
 <a name="deleteFleetsFleetIdWingsWingId"></a>
 # **deleteFleetsFleetIdWingsWingId**
-> deleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource)
+> deleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource, token, userAgent, xUserAgent)
 
 Delete fleet wing
 
@@ -158,8 +170,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 Long wingId = 789L; // Long | The wing to delete
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource);
+    apiInstance.deleteFleetsFleetIdWingsWingId(fleetId, wingId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#deleteFleetsFleetIdWingsWingId");
     e.printStackTrace();
@@ -173,6 +188,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **wingId** | **Long**| The wing to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -189,7 +207,7 @@ null (empty response body)
 
 <a name="getFleetsFleetId"></a>
 # **getFleetsFleetId**
-> GetFleetsFleetIdOk getFleetsFleetId(fleetId, datasource)
+> GetFleetsFleetIdOk getFleetsFleetId(fleetId, datasource, token, userAgent, xUserAgent)
 
 Get fleet information
 
@@ -213,8 +231,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetFleetsFleetIdOk result = apiInstance.getFleetsFleetId(fleetId, datasource);
+    GetFleetsFleetIdOk result = apiInstance.getFleetsFleetId(fleetId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#getFleetsFleetId");
@@ -228,6 +249,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -244,7 +268,7 @@ Name | Type | Description  | Notes
 
 <a name="getFleetsFleetIdMembers"></a>
 # **getFleetsFleetIdMembers**
-> List&lt;GetFleetsFleetIdMembers200Ok&gt; getFleetsFleetIdMembers(fleetId, acceptLanguage, datasource)
+> List&lt;GetFleetsFleetIdMembers200Ok&gt; getFleetsFleetIdMembers(fleetId, datasource, language, token, userAgent, xUserAgent)
 
 Get fleet members
 
@@ -267,10 +291,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
-String acceptLanguage = "en"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
+String language = "en-us"; // String | Language to use in the response
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetFleetsFleetIdMembers200Ok> result = apiInstance.getFleetsFleetIdMembers(fleetId, acceptLanguage, datasource);
+    List<GetFleetsFleetIdMembers200Ok> result = apiInstance.getFleetsFleetIdMembers(fleetId, datasource, language, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#getFleetsFleetIdMembers");
@@ -283,8 +310,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en] [enum: de, en, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -301,7 +331,7 @@ Name | Type | Description  | Notes
 
 <a name="getFleetsFleetIdWings"></a>
 # **getFleetsFleetIdWings**
-> List&lt;GetFleetsFleetIdWings200Ok&gt; getFleetsFleetIdWings(fleetId, acceptLanguage, datasource)
+> List&lt;GetFleetsFleetIdWings200Ok&gt; getFleetsFleetIdWings(fleetId, datasource, language, token, userAgent, xUserAgent)
 
 Get fleet wings
 
@@ -324,10 +354,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
-String acceptLanguage = "en"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
+String language = "en-us"; // String | Language to use in the response
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetFleetsFleetIdWings200Ok> result = apiInstance.getFleetsFleetIdWings(fleetId, acceptLanguage, datasource);
+    List<GetFleetsFleetIdWings200Ok> result = apiInstance.getFleetsFleetIdWings(fleetId, datasource, language, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#getFleetsFleetIdWings");
@@ -340,8 +373,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en] [enum: de, en, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -358,7 +394,7 @@ Name | Type | Description  | Notes
 
 <a name="postFleetsFleetIdMembers"></a>
 # **postFleetsFleetIdMembers**
-> postFleetsFleetIdMembers(fleetId, invitation, datasource)
+> postFleetsFleetIdMembers(fleetId, invitation, datasource, token, userAgent, xUserAgent)
 
 Create fleet invitation
 
@@ -383,8 +419,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 PostFleetsFleetIdMembersInvitation invitation = new PostFleetsFleetIdMembersInvitation(); // PostFleetsFleetIdMembersInvitation | Details of the invitation
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.postFleetsFleetIdMembers(fleetId, invitation, datasource);
+    apiInstance.postFleetsFleetIdMembers(fleetId, invitation, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#postFleetsFleetIdMembers");
     e.printStackTrace();
@@ -398,6 +437,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **invitation** | [**PostFleetsFleetIdMembersInvitation**](PostFleetsFleetIdMembersInvitation.md)| Details of the invitation |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -414,7 +456,7 @@ null (empty response body)
 
 <a name="postFleetsFleetIdWings"></a>
 # **postFleetsFleetIdWings**
-> PostFleetsFleetIdWingsCreated postFleetsFleetIdWings(fleetId, datasource)
+> PostFleetsFleetIdWingsCreated postFleetsFleetIdWings(fleetId, datasource, token, userAgent, xUserAgent)
 
 Create fleet wing
 
@@ -438,8 +480,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    PostFleetsFleetIdWingsCreated result = apiInstance.postFleetsFleetIdWings(fleetId, datasource);
+    PostFleetsFleetIdWingsCreated result = apiInstance.postFleetsFleetIdWings(fleetId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#postFleetsFleetIdWings");
@@ -453,6 +498,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -469,7 +517,7 @@ Name | Type | Description  | Notes
 
 <a name="postFleetsFleetIdWingsWingIdSquads"></a>
 # **postFleetsFleetIdWingsWingIdSquads**
-> PostFleetsFleetIdWingsWingIdSquadsCreated postFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource)
+> PostFleetsFleetIdWingsWingIdSquadsCreated postFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource, token, userAgent, xUserAgent)
 
 Create fleet squad
 
@@ -494,8 +542,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 Long wingId = 789L; // Long | The wing_id to create squad in
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    PostFleetsFleetIdWingsWingIdSquadsCreated result = apiInstance.postFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource);
+    PostFleetsFleetIdWingsWingIdSquadsCreated result = apiInstance.postFleetsFleetIdWingsWingIdSquads(fleetId, wingId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#postFleetsFleetIdWingsWingIdSquads");
@@ -510,6 +561,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **wingId** | **Long**| The wing_id to create squad in |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -526,7 +580,7 @@ Name | Type | Description  | Notes
 
 <a name="putFleetsFleetId"></a>
 # **putFleetsFleetId**
-> putFleetsFleetId(fleetId, newSettings, datasource)
+> putFleetsFleetId(fleetId, newSettings, datasource, token, userAgent, xUserAgent)
 
 Update fleet
 
@@ -551,8 +605,11 @@ FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
 PutFleetsFleetIdNewSettings newSettings = new PutFleetsFleetIdNewSettings(); // PutFleetsFleetIdNewSettings | What to update for this fleet
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putFleetsFleetId(fleetId, newSettings, datasource);
+    apiInstance.putFleetsFleetId(fleetId, newSettings, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#putFleetsFleetId");
     e.printStackTrace();
@@ -566,6 +623,9 @@ Name | Type | Description  | Notes
  **fleetId** | **Long**| ID for a fleet |
  **newSettings** | [**PutFleetsFleetIdNewSettings**](PutFleetsFleetIdNewSettings.md)| What to update for this fleet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -582,7 +642,7 @@ null (empty response body)
 
 <a name="putFleetsFleetIdMembersMemberId"></a>
 # **putFleetsFleetIdMembersMemberId**
-> putFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource)
+> putFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource, token, userAgent, xUserAgent)
 
 Move fleet member
 
@@ -608,8 +668,11 @@ Long fleetId = 789L; // Long | ID for a fleet
 Integer memberId = 56; // Integer | The character ID of a member in this fleet
 PutFleetsFleetIdMembersMemberIdMovement movement = new PutFleetsFleetIdMembersMemberIdMovement(); // PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource);
+    apiInstance.putFleetsFleetIdMembersMemberId(fleetId, memberId, movement, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#putFleetsFleetIdMembersMemberId");
     e.printStackTrace();
@@ -624,6 +687,9 @@ Name | Type | Description  | Notes
  **memberId** | **Integer**| The character ID of a member in this fleet |
  **movement** | [**PutFleetsFleetIdMembersMemberIdMovement**](PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -640,7 +706,7 @@ null (empty response body)
 
 <a name="putFleetsFleetIdSquadsSquadId"></a>
 # **putFleetsFleetIdSquadsSquadId**
-> putFleetsFleetIdSquadsSquadId(fleetId, squadId, naming, datasource)
+> putFleetsFleetIdSquadsSquadId(fleetId, naming, squadId, datasource, token, userAgent, xUserAgent)
 
 Rename fleet squad
 
@@ -663,11 +729,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
-Long squadId = 789L; // Long | The squad to rename
 PutFleetsFleetIdSquadsSquadIdNaming naming = new PutFleetsFleetIdSquadsSquadIdNaming(); // PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
+Long squadId = 789L; // Long | The squad to rename
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putFleetsFleetIdSquadsSquadId(fleetId, squadId, naming, datasource);
+    apiInstance.putFleetsFleetIdSquadsSquadId(fleetId, naming, squadId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#putFleetsFleetIdSquadsSquadId");
     e.printStackTrace();
@@ -679,9 +748,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
- **squadId** | **Long**| The squad to rename |
  **naming** | [**PutFleetsFleetIdSquadsSquadIdNaming**](PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad |
+ **squadId** | **Long**| The squad to rename |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -698,7 +770,7 @@ null (empty response body)
 
 <a name="putFleetsFleetIdWingsWingId"></a>
 # **putFleetsFleetIdWingsWingId**
-> putFleetsFleetIdWingsWingId(fleetId, wingId, naming, datasource)
+> putFleetsFleetIdWingsWingId(fleetId, naming, wingId, datasource, token, userAgent, xUserAgent)
 
 Rename fleet wing
 
@@ -721,11 +793,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FleetsApi apiInstance = new FleetsApi();
 Long fleetId = 789L; // Long | ID for a fleet
-Long wingId = 789L; // Long | The wing to rename
 PutFleetsFleetIdWingsWingIdNaming naming = new PutFleetsFleetIdWingsWingIdNaming(); // PutFleetsFleetIdWingsWingIdNaming | New name of the wing
+Long wingId = 789L; // Long | The wing to rename
 String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use, if preferred over a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putFleetsFleetIdWingsWingId(fleetId, wingId, naming, datasource);
+    apiInstance.putFleetsFleetIdWingsWingId(fleetId, naming, wingId, datasource, token, userAgent, xUserAgent);
 } catch (ApiException e) {
     System.err.println("Exception when calling FleetsApi#putFleetsFleetIdWingsWingId");
     e.printStackTrace();
@@ -737,9 +812,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleetId** | **Long**| ID for a fleet |
- **wingId** | **Long**| The wing to rename |
  **naming** | [**PutFleetsFleetIdWingsWingIdNaming**](PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing |
+ **wingId** | **Long**| The wing to rename |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

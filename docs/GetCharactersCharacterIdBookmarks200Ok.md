@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **memo** | **String** | memo string | 
 **note** | **String** | note string | 
 **ownerId** | **Integer** | owner_id integer | 
-**target** | [**CharacterscharacterIdbookmarksTarget**](CharacterscharacterIdbookmarksTarget.md) |  |  [optional]
+**target** | [**GetCharactersCharacterIdBookmarksTarget**](GetCharactersCharacterIdBookmarksTarget.md) |  |  [optional]
 
 
 
