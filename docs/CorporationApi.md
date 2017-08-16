@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 Get corporation information
 
-Public information about a corporation  ---  Alternate route: &#x60;/v3/corporations/{corporation_id}/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/&#x60;   ---  This route is cached for up to 3600 seconds
+Public information about a corporation  --- Alternate route: &#x60;/v3/corporations/{corporation_id}/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -31,7 +31,7 @@ Public information about a corporation  ---  Alternate route: &#x60;/v3/corporat
 
 
 CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An Eve corporation ID
+Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An Eve corporation ID |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -72,7 +72,7 @@ No authorization required
 
 Get alliance history
 
-Get a list of all the alliances a corporation has been a member of  ---  Alternate route: &#x60;/v1/corporations/{corporation_id}/alliancehistory/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/alliancehistory/&#x60;   ---  This route is cached for up to 3600 seconds
+Get a list of all the alliances a corporation has been a member of  --- Alternate route: &#x60;/v2/corporations/{corporation_id}/alliancehistory/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/alliancehistory/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -123,7 +123,7 @@ No authorization required
 
 Get corporation icon
 
-Get the icon urls for a corporation  ---  Alternate route: &#x60;/v1/corporations/{corporation_id}/icons/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/icons/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/icons/&#x60;   ---  This route is cached for up to 3600 seconds
+Get the icon urls for a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/icons/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/icons/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/icons/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -174,7 +174,7 @@ No authorization required
 
 Get corporation members
 
-Read the current list of members if the calling character is a member.  ---  Alternate route: &#x60;/v2/corporations/{corporation_id}/members/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/members/&#x60;   ---  This route is cached for up to 3600 seconds
+Read the current list of members if the calling character is a member.  --- Alternate route: &#x60;/v2/corporations/{corporation_id}/members/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/members/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -192,9 +192,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | A corporation ID
+Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -210,9 +210,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| A corporation ID |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 Get corporation member roles
 
-Return the roles of all members if the character has the personnel manager role or any grantable role.  ---  Alternate route: &#x60;/v1/corporations/{corporation_id}/roles/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/roles/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/roles/&#x60;   ---  This route is cached for up to 3600 seconds
+Return the roles of all members if the character has the personnel manager role or any grantable role.  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/roles/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/roles/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/roles/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -253,9 +253,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | A corporation ID
+Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -271,9 +271,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| A corporation ID |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 Get corporation structures
 
-Get a list of corporation structures  ---  Alternate route: &#x60;/v1/corporations/{corporation_id}/structures/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/structures/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/structures/&#x60;   ---  This route is cached for up to 3600 seconds
+Get a list of corporation structures  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/structures/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/structures/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/structures/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -314,11 +314,11 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | A corporation ID
+Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String language = "en-us"; // String | Language to use in the response
-Integer page = 56; // Integer | Which page to query, 250 structures per page
-String token = "token_example"; // String | Access token to use, if preferred over a header
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -334,11 +334,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| A corporation ID |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
- **page** | **Integer**| Which page to query, 250 structures per page | [optional]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 Get corporation names
 
-Resolve a set of corporation IDs to corporation names  ---  Alternate route: &#x60;/v1/corporations/names/&#x60;  Alternate route: &#x60;/legacy/corporations/names/&#x60;   ---  This route is cached for up to 3600 seconds
+Resolve a set of corporation IDs to corporation names  --- Alternate route: &#x60;/v1/corporations/names/&#x60;  Alternate route: &#x60;/legacy/corporations/names/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -412,7 +412,7 @@ No authorization required
 
 Get npc corporations
 
-Get a list of npc corporations  ---  Alternate route: &#x60;/v1/corporations/npccorps/&#x60;  Alternate route: &#x60;/legacy/corporations/npccorps/&#x60;  Alternate route: &#x60;/dev/corporations/npccorps/&#x60;   ---  This route expires daily at 11:05
+Get a list of npc corporations  --- Alternate route: &#x60;/v1/corporations/npccorps/&#x60;  Alternate route: &#x60;/legacy/corporations/npccorps/&#x60;  Alternate route: &#x60;/dev/corporations/npccorps/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -461,7 +461,7 @@ No authorization required
 
 Update structure vulnerability schedule
 
-Update the vulnerability window schedule of a corporation structure  ---  Alternate route: &#x60;/v1/corporations/{corporation_id}/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/structures/{structure_id}/&#x60; 
+Update the vulnerability window schedule of a corporation structure  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/structures/{structure_id}/&#x60; 
 
 ### Example
 ```java
@@ -479,11 +479,11 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | A corporation ID
+Integer corporationId = 56; // Integer | An EVE corporation ID
 List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> newSchedule = Arrays.asList(new PutCorporationsCorporationIdStructuresStructureIdNewSchedule()); // List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> | New vulnerability window schedule for the structure
 Long structureId = 789L; // Long | A structure ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -498,11 +498,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| A corporation ID |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **newSchedule** | [**List&lt;PutCorporationsCorporationIdStructuresStructureIdNewSchedule&gt;**](PutCorporationsCorporationIdStructuresStructureIdNewSchedule.md)| New vulnerability window schedule for the structure |
  **structureId** | **Long**| A structure ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

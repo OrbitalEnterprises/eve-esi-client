@@ -78,6 +78,7 @@ SPECIALIZEDAMMOHOLD | &quot;SpecializedAmmoHold&quot;
 SPECIALIZEDCOMMANDCENTERHOLD | &quot;SpecializedCommandCenterHold&quot;
 SPECIALIZEDPLANETARYCOMMODITIESHOLD | &quot;SpecializedPlanetaryCommoditiesHold&quot;
 SPECIALIZEDMATERIALBAY | &quot;SpecializedMaterialBay&quot;
+SUBSYSTEMBAY | &quot;SubSystemBay&quot;
 SUBSYSTEMSLOT0 | &quot;SubSystemSlot0&quot;
 SUBSYSTEMSLOT1 | &quot;SubSystemSlot1&quot;
 SUBSYSTEMSLOT2 | &quot;SubSystemSlot2&quot;

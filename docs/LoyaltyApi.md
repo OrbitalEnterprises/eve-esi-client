@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get loyalty points
 
-Return a list of loyalty points for all corporations the character has worked for  ---  Alternate route: &#x60;/v1/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/loyalty/points/&#x60; 
+Return a list of loyalty points for all corporations the character has worked for  --- Alternate route: &#x60;/v1/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/loyalty/points/&#x60; 
 
 ### Example
 ```java
@@ -32,9 +32,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 LoyaltyApi apiInstance = new LoyaltyApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -50,9 +50,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 List loyalty store offers
 
-Return a list of offers from a specific corporation&#39;s loyalty store  ---  Alternate route: &#x60;/v1/loyalty/stores/{corporation_id}/offers/&#x60;  Alternate route: &#x60;/legacy/loyalty/stores/{corporation_id}/offers/&#x60;  Alternate route: &#x60;/dev/loyalty/stores/{corporation_id}/offers/&#x60;   ---  This route expires daily at 11:05
+Return a list of offers from a specific corporation&#39;s loyalty store  --- Alternate route: &#x60;/v1/loyalty/stores/{corporation_id}/offers/&#x60;  Alternate route: &#x60;/legacy/loyalty/stores/{corporation_id}/offers/&#x60;  Alternate route: &#x60;/dev/loyalty/stores/{corporation_id}/offers/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -85,7 +85,7 @@ Return a list of offers from a specific corporation&#39;s loyalty store  ---  Al
 
 
 LoyaltyApi apiInstance = new LoyaltyApi();
-Integer corporationId = 56; // Integer | ID of a corporation
+Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -102,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| ID of a corporation |
+ **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

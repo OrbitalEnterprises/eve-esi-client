@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **String** | Internal server error message |  [optional]
+**error** | **String** | Internal server error message | 
 
 
 

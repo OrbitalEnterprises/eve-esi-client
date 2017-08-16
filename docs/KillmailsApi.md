@@ -4,7 +4,7 @@ All URIs are relative to *https://esi.tech.ccp.is/latest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent/ | List kills and losses
+[**getCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
 [**getKillmailsKillmailIdKillmailHash**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 
 
@@ -12,9 +12,9 @@ Method | HTTP request | Description
 # **getCharactersCharacterIdKillmailsRecent**
 > List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; getCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent)
 
-List kills and losses
+Get character kills and losses
 
-Return a list of character&#39;s recent kills and losses  ---  Alternate route: &#x60;/v1/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/killmails/recent/&#x60;   ---  This route is cached for up to 120 seconds
+Return a list of character&#39;s recent kills and losses  --- Alternate route: &#x60;/v1/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/killmails/recent/&#x60;  --- This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -36,7 +36,7 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 Integer maxCount = 50; // Integer | How many killmails to return at maximum
 Integer maxKillId = 56; // Integer | Only return killmails with ID smaller than this. 
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **maxCount** | **Integer**| How many killmails to return at maximum | [optional] [default to 50]
  **maxKillId** | **Integer**| Only return killmails with ID smaller than this.  | [optional]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get a single killmail
 
-Return a single killmail from its ID and hash  ---  Alternate route: &#x60;/v1/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/legacy/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/dev/killmails/{killmail_id}/{killmail_hash}/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a single killmail from its ID and hash  --- Alternate route: &#x60;/v1/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/legacy/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/dev/killmails/{killmail_id}/{killmail_hash}/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java

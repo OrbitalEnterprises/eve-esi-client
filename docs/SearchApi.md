@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Search on a string
 
-Search for entities that match a given sub-string.  ---  Alternate route: &#x60;/v2/characters/{character_id}/search/&#x60;   ---  This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v2/characters/{character_id}/search/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -36,9 +36,9 @@ List<String> categories = Arrays.asList("categories_example"); // List<String> |
 Integer characterId = 56; // Integer | An EVE character ID
 String search = "search_example"; // String | The string to search on
 String datasource = "tranquility"; // String | The server name you would like data from
-String language = "en-us"; // String | Search locale
+String language = "en-us"; // String | Language to use in the response
 Boolean strict = false; // Boolean | Whether the search should be a strict match
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -58,9 +58,9 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **search** | **String**| The string to search on |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **language** | **String**| Search locale | [optional] [default to en-us] [enum: en-us, de, fr, ru, ja, zh]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 Search on a string
 
-Search for entities that match a given sub-string.  ---  Alternate route: &#x60;/v1/search/&#x60;  Alternate route: &#x60;/legacy/search/&#x60;   ---  This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v1/search/&#x60;  Alternate route: &#x60;/legacy/search/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -96,7 +96,7 @@ SearchApi apiInstance = new SearchApi();
 List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
 String search = "search_example"; // String | The string to search on
 String datasource = "tranquility"; // String | The server name you would like data from
-String language = "en-us"; // String | Search locale
+String language = "en-us"; // String | Language to use in the response
 Boolean strict = false; // Boolean | Whether the search should be a strict match
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, wormhole]
  **search** | **String**| The string to search on |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **language** | **String**| Search locale | [optional] [default to en-us] [enum: en-us, de, fr, ru, ja, zh]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

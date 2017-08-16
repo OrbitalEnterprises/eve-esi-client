@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 List all alliances
 
-List all active player alliances  ---  Alternate route: &#x60;/v1/alliances/&#x60;  Alternate route: &#x60;/legacy/alliances/&#x60;  Alternate route: &#x60;/dev/alliances/&#x60;   ---  This route is cached for up to 3600 seconds
+List all active player alliances  --- Alternate route: &#x60;/v1/alliances/&#x60;  Alternate route: &#x60;/legacy/alliances/&#x60;  Alternate route: &#x60;/dev/alliances/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -66,7 +66,7 @@ No authorization required
 
 Get alliance information
 
-Public information about an alliance  ---  Alternate route: &#x60;/v2/alliances/{alliance_id}/&#x60;   ---  This route is cached for up to 3600 seconds
+Public information about an alliance  --- Alternate route: &#x60;/v2/alliances/{alliance_id}/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -76,7 +76,7 @@ Public information about an alliance  ---  Alternate route: &#x60;/v2/alliances/
 
 
 AllianceApi apiInstance = new AllianceApi();
-Integer allianceId = 56; // Integer | An Eve alliance ID
+Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -93,7 +93,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **allianceId** | **Integer**| An Eve alliance ID |
+ **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -117,7 +117,7 @@ No authorization required
 
 List alliance&#39;s corporations
 
-List all current member corporations of an alliance  ---  Alternate route: &#x60;/v1/alliances/{alliance_id}/corporations/&#x60;  Alternate route: &#x60;/legacy/alliances/{alliance_id}/corporations/&#x60;  Alternate route: &#x60;/dev/alliances/{alliance_id}/corporations/&#x60;   ---  This route is cached for up to 3600 seconds
+List all current member corporations of an alliance  --- Alternate route: &#x60;/v1/alliances/{alliance_id}/corporations/&#x60;  Alternate route: &#x60;/legacy/alliances/{alliance_id}/corporations/&#x60;  Alternate route: &#x60;/dev/alliances/{alliance_id}/corporations/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -168,7 +168,7 @@ No authorization required
 
 Get alliance icon
 
-Get the icon urls for a alliance  ---  Alternate route: &#x60;/v1/alliances/{alliance_id}/icons/&#x60;  Alternate route: &#x60;/legacy/alliances/{alliance_id}/icons/&#x60;  Alternate route: &#x60;/dev/alliances/{alliance_id}/icons/&#x60;   ---  This route is cached for up to 3600 seconds
+Get the icon urls for a alliance  --- Alternate route: &#x60;/v1/alliances/{alliance_id}/icons/&#x60;  Alternate route: &#x60;/legacy/alliances/{alliance_id}/icons/&#x60;  Alternate route: &#x60;/dev/alliances/{alliance_id}/icons/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -219,7 +219,7 @@ No authorization required
 
 Get alliance names
 
-Resolve a set of alliance IDs to alliance names  ---  Alternate route: &#x60;/v1/alliances/names/&#x60;  Alternate route: &#x60;/legacy/alliances/names/&#x60;   ---  This route is cached for up to 3600 seconds
+Resolve a set of alliance IDs to alliance names  --- Alternate route: &#x60;/v1/alliances/names/&#x60;  Alternate route: &#x60;/legacy/alliances/names/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java

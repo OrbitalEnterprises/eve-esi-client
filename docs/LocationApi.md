@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get character location
 
-Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable.  ---  Alternate route: &#x60;/v1/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/location/&#x60;   ---  This route is cached for up to 5 seconds
+Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable.  --- Alternate route: &#x60;/v1/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/location/&#x60;  --- This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -35,7 +35,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get character online
 
-Checks if the character is currently online  ---  Alternate route: &#x60;/v1/characters/{character_id}/online/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/online/&#x60;   ---  This route is cached for up to 60 seconds
+Checks if the character is currently online  --- Alternate route: &#x60;/v1/characters/{character_id}/online/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/online/&#x60;  --- This route is cached for up to 60 seconds
 
 ### Example
 ```java
@@ -96,7 +96,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get current ship
 
-Get the current ship type, name and id  ---  Alternate route: &#x60;/v1/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/ship/&#x60;   ---  This route is cached for up to 5 seconds
+Get the current ship type, name and id  --- Alternate route: &#x60;/v1/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/ship/&#x60;  --- This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -157,7 +157,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

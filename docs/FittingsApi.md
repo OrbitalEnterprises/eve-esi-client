@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Delete fitting
 
-Delete a fitting from a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/fittings/{fitting_id}/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/{fitting_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/{fitting_id}/&#x60; 
+Delete a fitting from a character  --- Alternate route: &#x60;/v1/characters/{character_id}/fittings/{fitting_id}/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/{fitting_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/{fitting_id}/&#x60; 
 
 ### Example
 ```java
@@ -33,10 +33,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FittingsApi apiInstance = new FittingsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 Integer fittingId = 56; // Integer | ID for a fitting of this character
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -51,10 +51,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **fittingId** | **Integer**| ID for a fitting of this character |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -77,7 +77,7 @@ null (empty response body)
 
 Get fittings
 
-Return fittings of a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/&#x60;   ---  This route is cached for up to 300 seconds
+Return fittings of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -95,9 +95,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FittingsApi apiInstance = new FittingsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -113,9 +113,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 Create fitting
 
-Save a new fitting for a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/&#x60; 
+Save a new fitting for a character  --- Alternate route: &#x60;/v1/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fittings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fittings/&#x60; 
 
 ### Example
 ```java
@@ -156,10 +156,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FittingsApi apiInstance = new FittingsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 PostCharactersCharacterIdFittingsFitting fitting = new PostCharactersCharacterIdFittingsFitting(); // PostCharactersCharacterIdFittingsFitting | Details about the new fitting
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -175,10 +175,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **fitting** | [**PostCharactersCharacterIdFittingsFitting**](PostCharactersCharacterIdFittingsFitting.md)| Details about the new fitting | [optional]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

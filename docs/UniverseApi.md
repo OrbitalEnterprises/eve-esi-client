@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 Get bloodlines
 
-Get a list of bloodlines  ---  Alternate route: &#x60;/v1/universe/bloodlines/&#x60;  Alternate route: &#x60;/legacy/universe/bloodlines/&#x60;  Alternate route: &#x60;/dev/universe/bloodlines/&#x60;   ---  This route expires daily at 11:05
+Get a list of bloodlines  --- Alternate route: &#x60;/v1/universe/bloodlines/&#x60;  Alternate route: &#x60;/legacy/universe/bloodlines/&#x60;  Alternate route: &#x60;/dev/universe/bloodlines/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -89,7 +89,7 @@ No authorization required
 
 Get item categories
 
-Get a list of item categories  ---  Alternate route: &#x60;/v1/universe/categories/&#x60;  Alternate route: &#x60;/legacy/universe/categories/&#x60;  Alternate route: &#x60;/dev/universe/categories/&#x60;   ---  This route expires daily at 11:05
+Get a list of item categories  --- Alternate route: &#x60;/v1/universe/categories/&#x60;  Alternate route: &#x60;/legacy/universe/categories/&#x60;  Alternate route: &#x60;/dev/universe/categories/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -138,7 +138,7 @@ No authorization required
 
 Get item category information
 
-Get information of an item category  ---  Alternate route: &#x60;/v1/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/legacy/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/dev/universe/categories/{category_id}/&#x60;   ---  This route expires daily at 11:05
+Get information of an item category  --- Alternate route: &#x60;/v1/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/legacy/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/dev/universe/categories/{category_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -191,7 +191,7 @@ No authorization required
 
 Get constellations
 
-Get a list of constellations  ---  Alternate route: &#x60;/v1/universe/constellations/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/&#x60;  Alternate route: &#x60;/dev/universe/constellations/&#x60;   ---  This route expires daily at 11:05
+Get a list of constellations  --- Alternate route: &#x60;/v1/universe/constellations/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/&#x60;  Alternate route: &#x60;/dev/universe/constellations/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -240,7 +240,7 @@ No authorization required
 
 Get constellation information
 
-Get information on a constellation  ---  Alternate route: &#x60;/v1/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/dev/universe/constellations/{constellation_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a constellation  --- Alternate route: &#x60;/v1/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/dev/universe/constellations/{constellation_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -293,7 +293,7 @@ No authorization required
 
 Get factions
 
-Get a list of factions  ---  Alternate route: &#x60;/v1/universe/factions/&#x60;  Alternate route: &#x60;/legacy/universe/factions/&#x60;  Alternate route: &#x60;/dev/universe/factions/&#x60;   ---  This route expires daily at 11:05
+Get a list of factions  --- Alternate route: &#x60;/v1/universe/factions/&#x60;  Alternate route: &#x60;/legacy/universe/factions/&#x60;  Alternate route: &#x60;/dev/universe/factions/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -344,7 +344,7 @@ No authorization required
 
 Get graphics
 
-Get a list of graphics  ---  Alternate route: &#x60;/v1/universe/graphics/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/&#x60;  Alternate route: &#x60;/dev/universe/graphics/&#x60;   ---  This route expires daily at 11:05
+Get a list of graphics  --- Alternate route: &#x60;/v1/universe/graphics/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/&#x60;  Alternate route: &#x60;/dev/universe/graphics/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -393,7 +393,7 @@ No authorization required
 
 Get graphic information
 
-Get information on a graphic  ---  Alternate route: &#x60;/v1/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/dev/universe/graphics/{graphic_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a graphic  --- Alternate route: &#x60;/v1/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/dev/universe/graphics/{graphic_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -444,7 +444,7 @@ No authorization required
 
 Get item groups
 
-Get a list of item groups  ---  Alternate route: &#x60;/v1/universe/groups/&#x60;  Alternate route: &#x60;/legacy/universe/groups/&#x60;  Alternate route: &#x60;/dev/universe/groups/&#x60;   ---  This route expires daily at 11:05
+Get a list of item groups  --- Alternate route: &#x60;/v1/universe/groups/&#x60;  Alternate route: &#x60;/legacy/universe/groups/&#x60;  Alternate route: &#x60;/dev/universe/groups/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -455,7 +455,7 @@ Get a list of item groups  ---  Alternate route: &#x60;/v1/universe/groups/&#x60
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 56; // Integer | Which page to query
+Integer page = 1; // Integer | Which page of results to return
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -472,7 +472,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page to query | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -495,7 +495,7 @@ No authorization required
 
 Get item group information
 
-Get information on an item group  ---  Alternate route: &#x60;/v1/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/legacy/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/dev/universe/groups/{group_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on an item group  --- Alternate route: &#x60;/v1/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/legacy/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/dev/universe/groups/{group_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -548,7 +548,7 @@ No authorization required
 
 Get moon information
 
-Get information on a moon  ---  Alternate route: &#x60;/v1/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/legacy/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/dev/universe/moons/{moon_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a moon  --- Alternate route: &#x60;/v1/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/legacy/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/dev/universe/moons/{moon_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -599,7 +599,7 @@ No authorization required
 
 Get planet information
 
-Get information on a planet  ---  Alternate route: &#x60;/v1/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/legacy/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/dev/universe/planets/{planet_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a planet  --- Alternate route: &#x60;/v1/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/legacy/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/dev/universe/planets/{planet_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -650,7 +650,7 @@ No authorization required
 
 Get character races
 
-Get a list of character races  ---  Alternate route: &#x60;/v1/universe/races/&#x60;  Alternate route: &#x60;/legacy/universe/races/&#x60;  Alternate route: &#x60;/dev/universe/races/&#x60;   ---  This route expires daily at 11:05
+Get a list of character races  --- Alternate route: &#x60;/v1/universe/races/&#x60;  Alternate route: &#x60;/legacy/universe/races/&#x60;  Alternate route: &#x60;/dev/universe/races/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -701,7 +701,7 @@ No authorization required
 
 Get regions
 
-Get a list of regions  ---  Alternate route: &#x60;/v1/universe/regions/&#x60;  Alternate route: &#x60;/legacy/universe/regions/&#x60;  Alternate route: &#x60;/dev/universe/regions/&#x60;   ---  This route expires daily at 11:05
+Get a list of regions  --- Alternate route: &#x60;/v1/universe/regions/&#x60;  Alternate route: &#x60;/legacy/universe/regions/&#x60;  Alternate route: &#x60;/dev/universe/regions/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -750,7 +750,7 @@ No authorization required
 
 Get region information
 
-Get information on a region  ---  Alternate route: &#x60;/v1/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/legacy/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/dev/universe/regions/{region_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a region  --- Alternate route: &#x60;/v1/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/legacy/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/dev/universe/regions/{region_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -803,7 +803,7 @@ No authorization required
 
 Get stargate information
 
-Get information on a stargate  ---  Alternate route: &#x60;/v1/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/legacy/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/dev/universe/stargates/{stargate_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a stargate  --- Alternate route: &#x60;/v1/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/legacy/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/dev/universe/stargates/{stargate_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -854,7 +854,7 @@ No authorization required
 
 Get station information
 
-Get information on a station  ---  Alternate route: &#x60;/v2/universe/stations/{station_id}/&#x60;  Alternate route: &#x60;/dev/universe/stations/{station_id}/&#x60;   ---  This route is cached for up to 300 seconds
+Get information on a station  --- Alternate route: &#x60;/v2/universe/stations/{station_id}/&#x60;  Alternate route: &#x60;/dev/universe/stations/{station_id}/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -905,7 +905,7 @@ No authorization required
 
 List all public structures
 
-List all public structures  ---  Alternate route: &#x60;/v1/universe/structures/&#x60;  Alternate route: &#x60;/legacy/universe/structures/&#x60;  Alternate route: &#x60;/dev/universe/structures/&#x60;   ---  This route is cached for up to 3600 seconds
+List all public structures  --- Alternate route: &#x60;/v1/universe/structures/&#x60;  Alternate route: &#x60;/legacy/universe/structures/&#x60;  Alternate route: &#x60;/dev/universe/structures/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -954,7 +954,7 @@ No authorization required
 
 Get structure information
 
-Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  ---  Alternate route: &#x60;/v1/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/universe/structures/{structure_id}/&#x60;   ---  This route is cached for up to 3600 seconds
+Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  --- Alternate route: &#x60;/v1/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/universe/structures/{structure_id}/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -974,7 +974,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UniverseApi apiInstance = new UniverseApi();
 Long structureId = 789L; // Long | An Eve structure ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -992,7 +992,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structureId** | **Long**| An Eve structure ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1015,7 +1015,7 @@ Name | Type | Description  | Notes
 
 Get system jumps
 
-Get the number of jumps in solar systems within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with jumps will be listed  ---  Alternate route: &#x60;/v1/universe/system_jumps/&#x60;  Alternate route: &#x60;/legacy/universe/system_jumps/&#x60;  Alternate route: &#x60;/dev/universe/system_jumps/&#x60;   ---  This route is cached for up to 3600 seconds
+Get the number of jumps in solar systems within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with jumps will be listed  --- Alternate route: &#x60;/v1/universe/system_jumps/&#x60;  Alternate route: &#x60;/legacy/universe/system_jumps/&#x60;  Alternate route: &#x60;/dev/universe/system_jumps/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1064,7 +1064,7 @@ No authorization required
 
 Get system kills
 
-Get the number of ship, pod and NPC kills per solar system within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with kills will be listed  ---  Alternate route: &#x60;/v1/universe/system_kills/&#x60;  Alternate route: &#x60;/legacy/universe/system_kills/&#x60;   ---  This route is cached for up to 3600 seconds
+Get the number of ship, pod and NPC kills per solar system within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with kills will be listed  --- Alternate route: &#x60;/v2/universe/system_kills/&#x60;  Alternate route: &#x60;/dev/universe/system_kills/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1113,7 +1113,7 @@ No authorization required
 
 Get solar systems
 
-Get a list of solar systems  ---  Alternate route: &#x60;/v1/universe/systems/&#x60;  Alternate route: &#x60;/legacy/universe/systems/&#x60;  Alternate route: &#x60;/dev/universe/systems/&#x60;   ---  This route expires daily at 11:05
+Get a list of solar systems  --- Alternate route: &#x60;/v1/universe/systems/&#x60;  Alternate route: &#x60;/legacy/universe/systems/&#x60;  Alternate route: &#x60;/dev/universe/systems/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1162,7 +1162,7 @@ No authorization required
 
 Get solar system information
 
-Get information on a solar system  ---  Alternate route: &#x60;/v2/universe/systems/{system_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a solar system  --- Alternate route: &#x60;/v2/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1215,7 +1215,7 @@ No authorization required
 
 Get types
 
-Get a list of type ids  ---  Alternate route: &#x60;/v1/universe/types/&#x60;  Alternate route: &#x60;/legacy/universe/types/&#x60;  Alternate route: &#x60;/dev/universe/types/&#x60;   ---  This route expires daily at 11:05
+Get a list of type ids  --- Alternate route: &#x60;/v1/universe/types/&#x60;  Alternate route: &#x60;/legacy/universe/types/&#x60;  Alternate route: &#x60;/dev/universe/types/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1226,7 +1226,7 @@ Get a list of type ids  ---  Alternate route: &#x60;/v1/universe/types/&#x60;  A
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 56; // Integer | Which page to query
+Integer page = 1; // Integer | Which page of results to return
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -1243,7 +1243,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page to query | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1266,7 +1266,7 @@ No authorization required
 
 Get type information
 
-Get information on a type  ---  Alternate route: &#x60;/v2/universe/types/{type_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on a type  --- Alternate route: &#x60;/v2/universe/types/{type_id}/&#x60;  Alternate route: &#x60;/legacy/universe/types/{type_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1319,7 +1319,7 @@ No authorization required
 
 Get names and categories for a set of ID&#39;s
 
-Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  ---  Alternate route: &#x60;/v2/universe/names/&#x60;  Alternate route: &#x60;/dev/universe/names/&#x60; 
+Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- Alternate route: &#x60;/v2/universe/names/&#x60;  Alternate route: &#x60;/dev/universe/names/&#x60; 
 
 ### Example
 ```java

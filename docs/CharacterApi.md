@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdBlueprints**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /characters/{character_id}/blueprints/ | Get blueprints
 [**getCharactersCharacterIdChatChannels**](CharacterApi.md#getCharactersCharacterIdChatChannels) | **GET** /characters/{character_id}/chat_channels/ | Get chat channels
 [**getCharactersCharacterIdCorporationhistory**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
+[**getCharactersCharacterIdFatigue**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
 [**getCharactersCharacterIdMedals**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals
 [**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 [**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
@@ -24,7 +25,7 @@ Method | HTTP request | Description
 
 Get character&#39;s public information
 
-Public information about a character  ---  Alternate route: &#x60;/v4/characters/{character_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/&#x60;   ---  This route is cached for up to 3600 seconds
+Public information about a character  --- Alternate route: &#x60;/v4/characters/{character_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -75,7 +76,7 @@ No authorization required
 
 Get agents research
 
-Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints &#x3D; remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  ---  Alternate route: &#x60;/v1/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/agents_research/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints &#x3D; remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  --- Alternate route: &#x60;/v1/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/agents_research/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -93,9 +94,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -111,9 +112,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -136,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get blueprints
 
-Return a list of blueprints the character has  ---  Alternate route: &#x60;/v1/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/blueprints/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a list of blueprints the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -154,9 +155,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -172,9 +173,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -197,7 +198,7 @@ Name | Type | Description  | Notes
 
 Get chat channels
 
-Return chat channels that a character is the owner or an operator of  ---  Alternate route: &#x60;/v1/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/chat_channels/&#x60;   ---  This route is cached for up to 300 seconds
+Return chat channels that a character is the owner or an operator of  --- Alternate route: &#x60;/v1/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/chat_channels/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -215,9 +216,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -233,9 +234,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -258,7 +259,7 @@ Name | Type | Description  | Notes
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  ---  Alternate route: &#x60;/v1/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/corporationhistory/&#x60;   ---  This route is cached for up to 3600 seconds
+Get a list of all the corporations a character has been a member of  --- Alternate route: &#x60;/v1/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/corporationhistory/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -303,13 +304,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getCharactersCharacterIdMedals"></a>
-# **getCharactersCharacterIdMedals**
-> List&lt;GetCharactersCharacterIdMedals200Ok&gt; getCharactersCharacterIdMedals(characterId, datasource, token, userAgent, xUserAgent)
+<a name="getCharactersCharacterIdFatigue"></a>
+# **getCharactersCharacterIdFatigue**
+> GetCharactersCharacterIdFatigueOk getCharactersCharacterIdFatigue(characterId, datasource, token, userAgent, xUserAgent)
 
-Get medals
+Get jump fatigue
 
-Return a list of medals the character has  ---  Alternate route: &#x60;/v1/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/medals/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a character&#39;s jump activation and fatigue information  --- Alternate route: &#x60;/v1/characters/{character_id}/fatigue/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fatigue/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fatigue/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -327,9 +328,70 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    GetCharactersCharacterIdFatigueOk result = apiInstance.getCharactersCharacterIdFatigue(characterId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdFatigue");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**GetCharactersCharacterIdFatigueOk**](GetCharactersCharacterIdFatigueOk.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCharactersCharacterIdMedals"></a>
+# **getCharactersCharacterIdMedals**
+> List&lt;GetCharactersCharacterIdMedals200Ok&gt; getCharactersCharacterIdMedals(characterId, datasource, token, userAgent, xUserAgent)
+
+Get medals
+
+Return a list of medals the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/medals/&#x60;  --- This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CharacterApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CharacterApi apiInstance = new CharacterApi();
+Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -345,9 +407,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -370,7 +432,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  ---  Alternate route: &#x60;/v2/characters/{character_id}/portrait/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/portrait/&#x60;   ---  This route is cached for up to 3600 seconds
+Get portrait urls for a character  --- Alternate route: &#x60;/v2/characters/{character_id}/portrait/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/portrait/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -421,7 +483,7 @@ No authorization required
 
 Get character corporation roles
 
-Returns a character&#39;s corporation roles  ---  Alternate route: &#x60;/v1/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/roles/&#x60;   ---  This route is cached for up to 3600 seconds
+Returns a character&#39;s corporation roles  --- Alternate route: &#x60;/v1/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/roles/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -439,9 +501,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | A character ID
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -457,9 +519,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| A character ID |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -482,7 +544,7 @@ Name | Type | Description  | Notes
 
 Get standings
 
-Return character standings from agents, NPC corporations, and factions  ---  Alternate route: &#x60;/v1/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/standings/&#x60;   ---  This route is cached for up to 3600 seconds
+Return character standings from agents, NPC corporations, and factions  --- Alternate route: &#x60;/v1/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/standings/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -500,9 +562,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -518,9 +580,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -543,7 +605,7 @@ Name | Type | Description  | Notes
 
 Get character names
 
-Resolve a set of character IDs to character names  ---  Alternate route: &#x60;/v1/characters/names/&#x60;  Alternate route: &#x60;/legacy/characters/names/&#x60;  Alternate route: &#x60;/dev/characters/names/&#x60;   ---  This route is cached for up to 3600 seconds
+Resolve a set of character IDs to character names  --- Alternate route: &#x60;/v1/characters/names/&#x60;  Alternate route: &#x60;/legacy/characters/names/&#x60;  Alternate route: &#x60;/dev/characters/names/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -594,7 +656,7 @@ No authorization required
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  ---  Alternate route: &#x60;/v1/characters/affiliation/&#x60;  Alternate route: &#x60;/legacy/characters/affiliation/&#x60;  Alternate route: &#x60;/dev/characters/affiliation/&#x60;   ---  This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate route: &#x60;/v1/characters/affiliation/&#x60;  Alternate route: &#x60;/legacy/characters/affiliation/&#x60;  Alternate route: &#x60;/dev/characters/affiliation/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -645,7 +707,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  ---  Alternate route: &#x60;/v3/characters/{character_id}/cspa/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/cspa/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/cspa/&#x60; 
+Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  --- Alternate route: &#x60;/v3/characters/{character_id}/cspa/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/cspa/&#x60; 
 
 ### Example
 ```java
@@ -666,7 +728,7 @@ CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
 PostCharactersCharacterIdCspaCharacters characters = new PostCharactersCharacterIdCspaCharacters(); // PostCharactersCharacterIdCspaCharacters | The target characters to calculate the charge for
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -685,7 +747,7 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **characters** | [**PostCharactersCharacterIdCspaCharacters**](PostCharactersCharacterIdCspaCharacters.md)| The target characters to calculate the charge for |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

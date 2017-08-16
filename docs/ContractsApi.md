@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get contracts
 
-Returns contracts available to a character, only if the character is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \&quot;in_progress\&quot;.  ---  Alternate route: &#x60;/v1/characters/{character_id}/contracts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/&#x60;   ---  This route is cached for up to 300 seconds
+Returns contracts available to a character, only if the character is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \&quot;in_progress\&quot;.  --- Alternate route: &#x60;/v1/characters/{character_id}/contracts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -33,9 +33,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContractsApi apiInstance = new ContractsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -51,9 +51,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get contract bids
 
-Lists bids on a particular auction contract  ---  Alternate route: &#x60;/v1/characters/{character_id}/contracts/{contract_id}/bids/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/{contract_id}/bids/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/{contract_id}/bids/&#x60;   ---  This route is cached for up to 300 seconds
+Lists bids on a particular auction contract  --- Alternate route: &#x60;/v1/characters/{character_id}/contracts/{contract_id}/bids/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/{contract_id}/bids/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/{contract_id}/bids/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -94,10 +94,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContractsApi apiInstance = new ContractsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 Integer contractId = 56; // Integer | ID of a contract
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -113,10 +113,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **contractId** | **Integer**| ID of a contract |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 Get contract items
 
-Lists Items and details of a particular contract  ---  Alternate route: &#x60;/v1/characters/{character_id}/contracts/{contract_id}/items/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/{contract_id}/items/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/{contract_id}/items/&#x60;   ---  This route is cached for up to 3600 seconds
+Lists Items and details of a particular contract  --- Alternate route: &#x60;/v1/characters/{character_id}/contracts/{contract_id}/items/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contracts/{contract_id}/items/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contracts/{contract_id}/items/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -157,10 +157,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContractsApi apiInstance = new ContractsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 Integer contractId = 56; // Integer | ID of a contract
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -176,10 +176,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **contractId** | **Integer**| ID of a contract |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60; 
+Bulk delete contacts  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60; 
 
 ### Example
 ```java
@@ -35,10 +35,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to delete
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -53,10 +53,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **contactIds** | **List&lt;Integer&gt;**| A list of contacts to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -79,7 +79,7 @@ null (empty response body)
 
 Get contacts
 
-Return contacts of a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;   ---  This route is cached for up to 300 seconds
+Return contacts of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -97,10 +97,10 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | page integer
-String token = "token_example"; // String | Access token to use, if preferred over a header
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -116,10 +116,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| page integer | [optional] [default to 1]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 Get contact labels
 
-Return custom labels for contacts the character defined  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/labels/&#x60;   ---  This route is cached for up to 300 seconds
+Return custom labels for contacts the character defined  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/labels/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -160,9 +160,9 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -178,9 +178,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 Add contacts
 
-Bulk add contacts with same settings  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk add contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
 
 ### Example
 ```java
@@ -221,12 +221,12 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to add
 Float standing = 3.4F; // Float | Standing for the new contact
 String datasource = "tranquility"; // String | The server name you would like data from
 Long labelId = 0L; // Long | Add a custom label to the new contact
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 Boolean watched = false; // Boolean | Whether the new contact should be watched, note this is only effective on characters
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -243,12 +243,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **contactIds** | **List&lt;Integer&gt;**| A list of contacts to add |
  **standing** | **Float**| Standing for the new contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **labelId** | **Long**| Add a custom label to the new contact | [optional] [default to 0]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **watched** | **Boolean**| Whether the new contact should be watched, note this is only effective on characters | [optional] [default to false]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 Edit contacts
 
-Bulk edit contacts with same settings  ---  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk edit contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
 
 ### Example
 ```java
@@ -290,12 +290,12 @@ OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
 evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
-Integer characterId = 56; // Integer | ID for a character
+Integer characterId = 56; // Integer | An EVE character ID
 List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to edit
 Float standing = 3.4F; // Float | Standing for the contact
 String datasource = "tranquility"; // String | The server name you would like data from
 Long labelId = 0L; // Long | Add a custom label to the contact, use 0 for clearing label
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 Boolean watched = false; // Boolean | Whether the contact should be watched, note this is only effective on characters
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -311,12 +311,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characterId** | **Integer**| ID for a character |
+ **characterId** | **Integer**| An EVE character ID |
  **contactIds** | **List&lt;Integer&gt;**| A list of contacts to edit |
  **standing** | **Float**| Standing for the contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **labelId** | **Long**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **watched** | **Boolean**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 List character industry jobs
 
-List industry jobs placed by a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/industry/jobs/&#x60;   ---  This route is cached for up to 300 seconds
+List industry jobs placed by a character  --- Alternate route: &#x60;/v1/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/industry/jobs/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -36,7 +36,7 @@ IndustryApi apiInstance = new IndustryApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 Boolean includeCompleted = true; // Boolean | Whether retrieve completed character industry jobs as well
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **includeCompleted** | **Boolean**| Whether retrieve completed character industry jobs as well | [optional]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 List industry facilities
 
-Return a list of industry facilities  ---  Alternate route: &#x60;/v1/industry/facilities/&#x60;  Alternate route: &#x60;/legacy/industry/facilities/&#x60;  Alternate route: &#x60;/dev/industry/facilities/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a list of industry facilities  --- Alternate route: &#x60;/v1/industry/facilities/&#x60;  Alternate route: &#x60;/legacy/industry/facilities/&#x60;  Alternate route: &#x60;/dev/industry/facilities/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -127,7 +127,7 @@ No authorization required
 
 List solar system cost indices
 
-Return cost indices for solar systems  ---  Alternate route: &#x60;/v1/industry/systems/&#x60;  Alternate route: &#x60;/legacy/industry/systems/&#x60;  Alternate route: &#x60;/dev/industry/systems/&#x60;   ---  This route is cached for up to 3600 seconds
+Return cost indices for solar systems  --- Alternate route: &#x60;/v1/industry/systems/&#x60;  Alternate route: &#x60;/legacy/industry/systems/&#x60;  Alternate route: &#x60;/dev/industry/systems/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java

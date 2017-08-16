@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 List orders from a character
 
-List market orders placed by a character  ---  Alternate route: &#x60;/v1/characters/{character_id}/orders/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/orders/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/orders/&#x60;   ---  This route is cached for up to 3600 seconds
+List market orders placed by a character  --- Alternate route: &#x60;/v1/characters/{character_id}/orders/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/orders/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/orders/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -39,7 +39,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MarketApi apiInstance = new MarketApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use, if preferred over a header
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get item groups
 
-Get a list of item groups  ---  Alternate route: &#x60;/v1/markets/groups/&#x60;  Alternate route: &#x60;/legacy/markets/groups/&#x60;  Alternate route: &#x60;/dev/markets/groups/&#x60;   ---  This route expires daily at 11:05
+Get a list of item groups  --- Alternate route: &#x60;/v1/markets/groups/&#x60;  Alternate route: &#x60;/legacy/markets/groups/&#x60;  Alternate route: &#x60;/dev/markets/groups/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -129,7 +129,7 @@ No authorization required
 
 Get item group information
 
-Get information on an item group  ---  Alternate route: &#x60;/v1/markets/groups/{market_group_id}/&#x60;  Alternate route: &#x60;/legacy/markets/groups/{market_group_id}/&#x60;  Alternate route: &#x60;/dev/markets/groups/{market_group_id}/&#x60;   ---  This route expires daily at 11:05
+Get information on an item group  --- Alternate route: &#x60;/v1/markets/groups/{market_group_id}/&#x60;  Alternate route: &#x60;/legacy/markets/groups/{market_group_id}/&#x60;  Alternate route: &#x60;/dev/markets/groups/{market_group_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -182,7 +182,7 @@ No authorization required
 
 List market prices
 
-Return a list of prices  ---  Alternate route: &#x60;/v1/markets/prices/&#x60;  Alternate route: &#x60;/legacy/markets/prices/&#x60;  Alternate route: &#x60;/dev/markets/prices/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a list of prices  --- Alternate route: &#x60;/v1/markets/prices/&#x60;  Alternate route: &#x60;/legacy/markets/prices/&#x60;  Alternate route: &#x60;/dev/markets/prices/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -231,7 +231,7 @@ No authorization required
 
 List historical market statistics in a region
 
-Return a list of historical market statistics for the specified type in a region  ---  Alternate route: &#x60;/v1/markets/{region_id}/history/&#x60;  Alternate route: &#x60;/legacy/markets/{region_id}/history/&#x60;  Alternate route: &#x60;/dev/markets/{region_id}/history/&#x60;   ---  This route is cached for up to 3600 seconds
+Return a list of historical market statistics for the specified type in a region  --- Alternate route: &#x60;/v1/markets/{region_id}/history/&#x60;  Alternate route: &#x60;/legacy/markets/{region_id}/history/&#x60;  Alternate route: &#x60;/dev/markets/{region_id}/history/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -284,7 +284,7 @@ No authorization required
 
 List orders in a region
 
-Return a list of orders in a region  ---  Alternate route: &#x60;/v1/markets/{region_id}/orders/&#x60;  Alternate route: &#x60;/legacy/markets/{region_id}/orders/&#x60;  Alternate route: &#x60;/dev/markets/{region_id}/orders/&#x60;   ---  This route is cached for up to 300 seconds
+Return a list of orders in a region  --- Alternate route: &#x60;/v1/markets/{region_id}/orders/&#x60;  Alternate route: &#x60;/legacy/markets/{region_id}/orders/&#x60;  Alternate route: &#x60;/dev/markets/{region_id}/orders/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -297,7 +297,7 @@ MarketApi apiInstance = new MarketApi();
 String orderType = "all"; // String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
 Integer regionId = 56; // Integer | Return orders in this region
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | Which page to query, only used for querying without type_id. Starting at 1
+Integer page = 1; // Integer | Which page of results to return
 Integer typeId = 56; // Integer | Return orders only for this type
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
  **orderType** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. | [default to all] [enum: buy, sell, all]
  **regionId** | **Integer**| Return orders in this region |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page to query, only used for querying without type_id. Starting at 1 | [optional] [default to 1]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **typeId** | **Integer**| Return orders only for this type | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -341,7 +341,7 @@ No authorization required
 
 List orders in a structure
 
-Return all orders in a structure  ---  Alternate route: &#x60;/v1/markets/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/markets/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/markets/structures/{structure_id}/&#x60;   ---  This route is cached for up to 300 seconds
+Return all orders in a structure  --- Alternate route: &#x60;/v1/markets/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/markets/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/markets/structures/{structure_id}/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -361,8 +361,8 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MarketApi apiInstance = new MarketApi();
 Long structureId = 789L; // Long | Return orders in this structure
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | Which page to query, starting at 1
-String token = "token_example"; // String | Access token to use, if preferred over a header
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
@@ -380,8 +380,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structureId** | **Long**| Return orders in this structure |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page to query, starting at 1 | [optional] [default to 1]
- **token** | **String**| Access token to use, if preferred over a header | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **position** | [**GetUniverseSystemsSystemIdPosition**](GetUniverseSystemsSystemIdPosition.md) |  |  [optional]
 **securityClass** | **String** | security_class string |  [optional]
 **securityStatus** | **Float** | security_status number | 
+**starId** | **Integer** | star_id integer |  [optional]
 **stargates** | **List&lt;Integer&gt;** | stargates array | 
 **systemId** | **Integer** | system_id integer | 
 
