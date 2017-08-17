@@ -78,6 +78,15 @@
           </execution>
         </executions>
       </plugin>
+      <!-- Maven release plugin for automating releases -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
