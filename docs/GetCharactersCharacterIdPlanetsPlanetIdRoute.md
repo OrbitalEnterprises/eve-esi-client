@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **quantity** | **Float** | quantity number | 
 **routeId** | **Long** | route_id integer | 
 **sourcePinId** | **Long** | source_pin_id integer | 
-**waypoints** | [**List&lt;GetCharactersCharacterIdPlanetsPlanetIdWaypoint&gt;**](GetCharactersCharacterIdPlanetsPlanetIdWaypoint.md) | waypoints array |  [optional]
+**waypoints** | **List&lt;Long&gt;** | list of pin ID waypoints |  [optional]
 
 
 

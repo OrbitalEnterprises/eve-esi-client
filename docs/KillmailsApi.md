@@ -5,6 +5,7 @@ All URIs are relative to *https://esi.tech.ccp.is/latest*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
+[**getCorporationsCorporationIdKillmailsRecent**](KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
 [**getKillmailsKillmailIdKillmailHash**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 
 
@@ -63,6 +64,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt;**](GetCharactersCharacterIdKillmailsRecent200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdKillmailsRecent"></a>
+# **getCorporationsCorporationIdKillmailsRecent**
+> List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, maxKillId, token, userAgent, xUserAgent)
+
+Get corporation kills and losses
+
+Get a list of corporation&#39;s recent kills and losses  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/killmails/recent/&#x60;  --- This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.KillmailsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+KillmailsApi apiInstance = new KillmailsApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+String datasource = "tranquility"; // String | The server name you would like data from
+Integer maxKillId = 56; // Integer | Only return killmails with ID smaller than this
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCorporationsCorporationIdKillmailsRecent200Ok> result = apiInstance.getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, maxKillId, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling KillmailsApi#getCorporationsCorporationIdKillmailsRecent");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **maxKillId** | **Integer**| Only return killmails with ID smaller than this | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt;**](GetCorporationsCorporationIdKillmailsRecent200Ok.md)
 
 ### Authorization
 

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdCorporationhistory**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
 [**getCharactersCharacterIdFatigue**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
 [**getCharactersCharacterIdMedals**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals
+[**getCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
 [**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 [**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
 [**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings/ | Get standings
@@ -426,6 +427,67 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getCharactersCharacterIdNotificationsContacts"></a>
+# **getCharactersCharacterIdNotificationsContacts**
+> List&lt;GetCharactersCharacterIdNotificationsContacts200Ok&gt; getCharactersCharacterIdNotificationsContacts(characterId, datasource, token, userAgent, xUserAgent)
+
+Get new contact notifications
+
+Return notifications about having been added to someone&#39;s contact list  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/contacts/&#x60;  --- This route is cached for up to 600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CharacterApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CharacterApi apiInstance = new CharacterApi();
+Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCharactersCharacterIdNotificationsContacts200Ok> result = apiInstance.getCharactersCharacterIdNotificationsContacts(characterId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdNotificationsContacts");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCharactersCharacterIdNotificationsContacts200Ok&gt;**](GetCharactersCharacterIdNotificationsContacts200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getCharactersCharacterIdPortrait"></a>
 # **getCharactersCharacterIdPortrait**
 > GetCharactersCharacterIdPortraitOk getCharactersCharacterIdPortrait(characterId, datasource, userAgent, xUserAgent)
@@ -483,7 +545,7 @@ No authorization required
 
 Get character corporation roles
 
-Returns a character&#39;s corporation roles  --- Alternate route: &#x60;/v1/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/roles/&#x60;  --- This route is cached for up to 3600 seconds
+Returns a character&#39;s corporation roles  --- Alternate route: &#x60;/v1/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/roles/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -666,7 +728,7 @@ Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate
 
 
 CharacterApi apiInstance = new CharacterApi();
-List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for
+List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -683,7 +745,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for |
+ **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

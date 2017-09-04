@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**getUniverseRegions**](UniverseApi.md#getUniverseRegions) | **GET** /universe/regions/ | Get regions
 [**getUniverseRegionsRegionId**](UniverseApi.md#getUniverseRegionsRegionId) | **GET** /universe/regions/{region_id}/ | Get region information
 [**getUniverseStargatesStargateId**](UniverseApi.md#getUniverseStargatesStargateId) | **GET** /universe/stargates/{stargate_id}/ | Get stargate information
+[**getUniverseStarsStarId**](UniverseApi.md#getUniverseStarsStarId) | **GET** /universe/stars/{star_id}/ | Get star information
 [**getUniverseStationsStationId**](UniverseApi.md#getUniverseStationsStationId) | **GET** /universe/stations/{station_id}/ | Get station information
 [**getUniverseStructures**](UniverseApi.md#getUniverseStructures) | **GET** /universe/structures/ | List all public structures
 [**getUniverseStructuresStructureId**](UniverseApi.md#getUniverseStructuresStructureId) | **GET** /universe/structures/{structure_id}/ | Get structure information
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**getUniverseSystemsSystemId**](UniverseApi.md#getUniverseSystemsSystemId) | **GET** /universe/systems/{system_id}/ | Get solar system information
 [**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /universe/types/ | Get types
 [**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /universe/types/{type_id}/ | Get type information
+[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /universe/names/ | Get names and categories for a set of ID&#39;s
 
 
 <a name="getUniverseBloodlines"></a>
@@ -847,6 +849,57 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getUniverseStarsStarId"></a>
+# **getUniverseStarsStarId**
+> GetUniverseStarsStarIdOk getUniverseStarsStarId(starId, datasource, userAgent, xUserAgent)
+
+Get star information
+
+Get information on a star  --- Alternate route: &#x60;/v1/universe/stars/{star_id}/&#x60;  Alternate route: &#x60;/legacy/universe/stars/{star_id}/&#x60;  Alternate route: &#x60;/dev/universe/stars/{star_id}/&#x60;  --- This route expires daily at 11:05
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.UniverseApi;
+
+
+UniverseApi apiInstance = new UniverseApi();
+Integer starId = 56; // Integer | star_id integer
+String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    GetUniverseStarsStarIdOk result = apiInstance.getUniverseStarsStarId(starId, datasource, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniverseApi#getUniverseStarsStarId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **starId** | **Integer**| star_id integer |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**GetUniverseStarsStarIdOk**](GetUniverseStarsStarIdOk.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getUniverseStationsStationId"></a>
 # **getUniverseStationsStationId**
 > GetUniverseStationsStationIdOk getUniverseStationsStationId(stationId, datasource, userAgent, xUserAgent)
@@ -1161,7 +1214,7 @@ No authorization required
 
 Get solar system information
 
-Get information on a solar system  --- Alternate route: &#x60;/v2/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a solar system  --- Alternate route: &#x60;/v3/universe/systems/{system_id}/&#x60;  Alternate route: &#x60;/dev/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1302,6 +1355,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetUniverseTypesTypeIdOk**](GetUniverseTypesTypeIdOk.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="postUniverseNames"></a>
+# **postUniverseNames**
+> List&lt;PostUniverseNames200Ok&gt; postUniverseNames(ids, datasource, userAgent, xUserAgent)
+
+Get names and categories for a set of ID&#39;s
+
+Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- Alternate route: &#x60;/v2/universe/names/&#x60;  Alternate route: &#x60;/dev/universe/names/&#x60; 
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.UniverseApi;
+
+
+UniverseApi apiInstance = new UniverseApi();
+List<Integer> ids = Arrays.asList(new List<Integer>()); // List<Integer> | The ids to resolve
+String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<PostUniverseNames200Ok> result = apiInstance.postUniverseNames(ids, datasource, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniverseApi#postUniverseNames");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | **List&lt;Integer&gt;**| The ids to resolve |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;PostUniverseNames200Ok&gt;**](PostUniverseNames200Ok.md)
 
 ### Authorization
 

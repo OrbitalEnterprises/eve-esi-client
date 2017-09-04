@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**contents** | [**List&lt;GetCharactersCharacterIdPlanetsPlanetIdContent&gt;**](GetCharactersCharacterIdPlanetsPlanetIdContent.md) | contents array |  [optional]
 **expiryTime** | [**DateTime**](DateTime.md) | expiry_time string |  [optional]
 **extractorDetails** | [**GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails**](GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails.md) |  |  [optional]
 **factoryDetails** | [**GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails**](GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails.md) |  |  [optional]
