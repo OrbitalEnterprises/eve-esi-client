@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 Get blueprints
 
-Return a list of blueprints the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of blueprints the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java

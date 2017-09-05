@@ -290,7 +290,7 @@ Class | Method | HTTP request | Description
 *WalletApi* | [**getCharactersCharacterIdWalletJournal**](docs/WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /characters/{character_id}/wallet/journal/ | Get character wallet journal
 *WalletApi* | [**getCharactersCharacterIdWalletTransactions**](docs/WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
 *WalletApi* | [**getCorporationsCorporationIdWallets**](docs/WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-*WalletApi* | [**getCorporationsCorporationIdWalletsDivisionJournal**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get character wallet journal
+*WalletApi* | [**getCorporationsCorporationIdWalletsDivisionJournal**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
 *WarsApi* | [**getWars**](docs/WarsApi.md#getWars) | **GET** /wars/ | List wars
 *WarsApi* | [**getWarsWarId**](docs/WarsApi.md#getWarsWarId) | **GET** /wars/{war_id}/ | Get war information
 *WarsApi* | [**getWarsWarIdKillmails**](docs/WarsApi.md#getWarsWarIdKillmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war

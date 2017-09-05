@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdWalletJournal**](WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /characters/{character_id}/wallet/journal/ | Get character wallet journal
 [**getCharactersCharacterIdWalletTransactions**](WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
 [**getCorporationsCorporationIdWallets**](WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-[**getCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get character wallet journal
+[**getCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
 
 
 <a name="getCharactersCharacterIdWallet"></a>
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 # **getCorporationsCorporationIdWalletsDivisionJournal**
 > List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; getCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, fromId, token, userAgent, xUserAgent)
 
-Get character wallet journal
+Get corporation wallet journal
 
 Retrieve corporation wallet journal  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  --- This route is cached for up to 300 seconds
 
