@@ -45,7 +45,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>https://esi.tech.ccp.is/latest/swagger.json?datasource=tranquility</inputSpec>
+              <inputSpec>https://esi.tech.ccp.is/latest/swagger.json</inputSpec>
               <language>java</language>
               <configOptions>
                 <sourceFolder>src/gen/java/main</sourceFolder>
