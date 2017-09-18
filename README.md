@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *AllianceApi* | [**getAlliancesAllianceIdIcons**](docs/AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /alliances/{alliance_id}/icons/ | Get alliance icon
 *AllianceApi* | [**getAlliancesNames**](docs/AllianceApi.md#getAlliancesNames) | **GET** /alliances/names/ | Get alliance names
 *AssetsApi* | [**getCharactersCharacterIdAssets**](docs/AssetsApi.md#getCharactersCharacterIdAssets) | **GET** /characters/{character_id}/assets/ | Get character assets
+*AssetsApi* | [**getCorporationsCorporationIdAssets**](docs/AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /corporations/{corporation_id}/assets/ | Get corporation assets
 *BookmarksApi* | [**getCharactersCharacterIdBookmarks**](docs/BookmarksApi.md#getCharactersCharacterIdBookmarks) | **GET** /characters/{character_id}/bookmarks/ | List bookmarks
 *BookmarksApi* | [**getCharactersCharacterIdBookmarksFolders**](docs/BookmarksApi.md#getCharactersCharacterIdBookmarksFolders) | **GET** /characters/{character_id}/bookmarks/folders/ | List bookmark folders
 *CalendarApi* | [**getCharactersCharacterIdCalendar**](docs/CalendarApi.md#getCharactersCharacterIdCalendar) | **GET** /characters/{character_id}/calendar/ | List calendar event summaries
@@ -154,6 +155,7 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdCorporationhistory**](docs/CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
 *CharacterApi* | [**getCharactersCharacterIdFatigue**](docs/CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
 *CharacterApi* | [**getCharactersCharacterIdMedals**](docs/CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals
+*CharacterApi* | [**getCharactersCharacterIdNotifications**](docs/CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications
 *CharacterApi* | [**getCharactersCharacterIdNotificationsContacts**](docs/CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
@@ -295,6 +297,7 @@ Class | Method | HTTP request | Description
 *WalletApi* | [**getCharactersCharacterIdWalletTransactions**](docs/WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
 *WalletApi* | [**getCorporationsCorporationIdWallets**](docs/WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
 *WalletApi* | [**getCorporationsCorporationIdWalletsDivisionJournal**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+*WalletApi* | [**getCorporationsCorporationIdWalletsDivisionTransactions**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionTransactions) | **GET** /corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 *WarsApi* | [**getWars**](docs/WarsApi.md#getWars) | **GET** /wars/ | List wars
 *WarsApi* | [**getWarsWarId**](docs/WarsApi.md#getWarsWarId) | **GET** /wars/{war_id}/ | Get war information
 *WarsApi* | [**getWarsWarIdKillmails**](docs/WarsApi.md#getWarsWarIdKillmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war
@@ -355,6 +358,7 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdMedals200Ok](docs/GetCharactersCharacterIdMedals200Ok.md)
  - [GetCharactersCharacterIdMedalsGraphic](docs/GetCharactersCharacterIdMedalsGraphic.md)
  - [GetCharactersCharacterIdNotFound](docs/GetCharactersCharacterIdNotFound.md)
+ - [GetCharactersCharacterIdNotifications200Ok](docs/GetCharactersCharacterIdNotifications200Ok.md)
  - [GetCharactersCharacterIdNotificationsContacts200Ok](docs/GetCharactersCharacterIdNotificationsContacts200Ok.md)
  - [GetCharactersCharacterIdOk](docs/GetCharactersCharacterIdOk.md)
  - [GetCharactersCharacterIdOpportunities200Ok](docs/GetCharactersCharacterIdOpportunities200Ok.md)
@@ -382,6 +386,7 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdWalletTransactions200Ok](docs/GetCharactersCharacterIdWalletTransactions200Ok.md)
  - [GetCharactersNames200Ok](docs/GetCharactersNames200Ok.md)
  - [GetCorporationsCorporationIdAlliancehistory200Ok](docs/GetCorporationsCorporationIdAlliancehistory200Ok.md)
+ - [GetCorporationsCorporationIdAssets200Ok](docs/GetCorporationsCorporationIdAssets200Ok.md)
  - [GetCorporationsCorporationIdContacts200Ok](docs/GetCorporationsCorporationIdContacts200Ok.md)
  - [GetCorporationsCorporationIdDivisionsHangar](docs/GetCorporationsCorporationIdDivisionsHangar.md)
  - [GetCorporationsCorporationIdDivisionsOk](docs/GetCorporationsCorporationIdDivisionsOk.md)
@@ -401,6 +406,7 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdWallets200Ok](docs/GetCorporationsCorporationIdWallets200Ok.md)
  - [GetCorporationsCorporationIdWalletsDivisionJournal200Ok](docs/GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
  - [GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo](docs/GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo.md)
+ - [GetCorporationsCorporationIdWalletsDivisionTransactions200Ok](docs/GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
  - [GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
  - [GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
  - [GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
@@ -577,6 +583,7 @@ Authentication schemes defined for the API:
 - **Authorizatoin URL**: https://login.eveonline.com/oauth/authorize
 - **Scopes**: 
   - esi-assets.read_assets.v1: EVE SSO scope esi-assets.read_assets.v1
+  - esi-assets.read_corporation_assets.v1: EVE SSO scope esi-assets.read_corporation_assets.v1
   - esi-bookmarks.read_character_bookmarks.v1: EVE SSO scope esi-bookmarks.read_character_bookmarks.v1
   - esi-calendar.read_calendar_events.v1: EVE SSO scope esi-calendar.read_calendar_events.v1
   - esi-calendar.respond_calendar_events.v1: EVE SSO scope esi-calendar.respond_calendar_events.v1

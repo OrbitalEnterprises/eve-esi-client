@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdWalletTransactions**](WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
 [**getCorporationsCorporationIdWallets**](WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
 [**getCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+[**getCorporationsCorporationIdWalletsDivisionTransactions**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionTransactions) | **GET** /corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 
 
 <a name="getCharactersCharacterIdWallet"></a>
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  --- This route is cached for up to 300 seconds
+Retrieve corporation wallet journal  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -314,6 +315,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt;**](GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdWalletsDivisionTransactions"></a>
+# **getCorporationsCorporationIdWalletsDivisionTransactions**
+> List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, token, userAgent, xUserAgent)
+
+Get corporation wallet transactions
+
+Get wallet transactions of a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  --- This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.WalletApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+WalletApi apiInstance = new WalletApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+Integer division = 56; // Integer | Wallet key of the division to fetch journals from
+String datasource = "tranquility"; // String | The server name you would like data from
+Long fromId = 789L; // Long | Only show journal entries happened before the transaction referenced by this id
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> result = apiInstance.getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WalletApi#getCorporationsCorporationIdWalletsDivisionTransactions");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **division** | **Integer**| Wallet key of the division to fetch journals from |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **fromId** | **Long**| Only show journal entries happened before the transaction referenced by this id | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt;**](GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
 
 ### Authorization
 

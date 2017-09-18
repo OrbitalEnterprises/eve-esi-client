@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdCorporationhistory**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
 [**getCharactersCharacterIdFatigue**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
 [**getCharactersCharacterIdMedals**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals
+[**getCharactersCharacterIdNotifications**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications
 [**getCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
 [**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 [**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
@@ -417,6 +418,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCharactersCharacterIdMedals200Ok&gt;**](GetCharactersCharacterIdMedals200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCharactersCharacterIdNotifications"></a>
+# **getCharactersCharacterIdNotifications**
+> List&lt;GetCharactersCharacterIdNotifications200Ok&gt; getCharactersCharacterIdNotifications(characterId, datasource, token, userAgent, xUserAgent)
+
+Get character notifications
+
+Return character notifications  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/&#x60;  --- This route is cached for up to 1800 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CharacterApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CharacterApi apiInstance = new CharacterApi();
+Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCharactersCharacterIdNotifications200Ok> result = apiInstance.getCharactersCharacterIdNotifications(characterId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdNotifications");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCharactersCharacterIdNotifications200Ok&gt;**](GetCharactersCharacterIdNotifications200Ok.md)
 
 ### Authorization
 

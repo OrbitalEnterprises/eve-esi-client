@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get loyalty points
 
-Return a list of loyalty points for all corporations the character has worked for  --- Alternate route: &#x60;/v1/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/loyalty/points/&#x60; 
+Return a list of loyalty points for all corporations the character has worked for  --- Alternate route: &#x60;/v1/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/loyalty/points/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/loyalty/points/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
