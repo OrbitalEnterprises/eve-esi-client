@@ -1,18 +1,19 @@
 
-# GetCorporationsCorporationIdRoles200Ok
+# GetCorporationsCorporationIdTitles200Ok
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**characterId** | **Integer** | character_id integer | 
 **grantableRoles** | [**List&lt;GrantableRolesEnum&gt;**](#List&lt;GrantableRolesEnum&gt;) | grantable_roles array |  [optional]
 **grantableRolesAtBase** | [**List&lt;GrantableRolesAtBaseEnum&gt;**](#List&lt;GrantableRolesAtBaseEnum&gt;) | grantable_roles_at_base array |  [optional]
 **grantableRolesAtHq** | [**List&lt;GrantableRolesAtHqEnum&gt;**](#List&lt;GrantableRolesAtHqEnum&gt;) | grantable_roles_at_hq array |  [optional]
 **grantableRolesAtOther** | [**List&lt;GrantableRolesAtOtherEnum&gt;**](#List&lt;GrantableRolesAtOtherEnum&gt;) | grantable_roles_at_other array |  [optional]
+**name** | **String** | name string |  [optional]
 **roles** | [**List&lt;RolesEnum&gt;**](#List&lt;RolesEnum&gt;) | roles array |  [optional]
 **rolesAtBase** | [**List&lt;RolesAtBaseEnum&gt;**](#List&lt;RolesAtBaseEnum&gt;) | roles_at_base array |  [optional]
 **rolesAtHq** | [**List&lt;RolesAtHqEnum&gt;**](#List&lt;RolesAtHqEnum&gt;) | roles_at_hq array |  [optional]
 **rolesAtOther** | [**List&lt;RolesAtOtherEnum&gt;**](#List&lt;RolesAtOtherEnum&gt;) | roles_at_other array |  [optional]
+**titleId** | **Integer** | title_id integer |  [optional]
 
 
 <a name="List<GrantableRolesEnum>"></a>
