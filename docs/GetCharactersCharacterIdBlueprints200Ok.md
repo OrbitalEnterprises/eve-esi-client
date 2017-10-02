@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**itemId** | **Long** | Unique ID for this item. The ID of an item is stable if that item is not repackaged, stacked, detached from a stack, assembled, or otherwise altered. If an item is changed in one of these ways, then the ID will also change (see notes below). | 
+**itemId** | **Long** | Unique ID for this item. The ID of an item is stable if that item is not repackaged, stacked, detached from a stack, assembled, or otherwise altered. If an item is changed in one of these ways, then the ID will also change. | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | Indicates something about this item&#39;s storage location. The flag is used to differentiate between hangar divisions, drone bay, fitting location, and similar. | 
 **locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. If an item_id the Character - AssetList API must be queried to find the container using the item_id, from which the correct location of the Blueprint can be derived. | 
 **materialEfficiency** | **Integer** | Material Efficiency Level of the blueprint, can be any integer between 0 and 10. | 

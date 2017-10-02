@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 Get chat channels
 
-Return chat channels that a character is the owner or an operator of  --- Alternate route: &#x60;/v1/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/chat_channels/&#x60;  --- This route is cached for up to 300 seconds
+Return chat channels that a character is the owner or operator of  --- Alternate route: &#x60;/v1/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/chat_channels/&#x60;  --- This route is cached for up to 300 seconds
 
 ### Example
 ```java

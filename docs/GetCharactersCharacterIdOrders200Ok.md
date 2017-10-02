@@ -26,30 +26,30 @@ Name | Type | Description | Notes
 ## Enum: RangeEnum
 Name | Value
 ---- | -----
-STATION | &quot;station&quot;
+_1 | &quot;1&quot;
+_10 | &quot;10&quot;
+_2 | &quot;2&quot;
+_20 | &quot;20&quot;
+_3 | &quot;3&quot;
+_30 | &quot;30&quot;
+_4 | &quot;4&quot;
+_40 | &quot;40&quot;
+_5 | &quot;5&quot;
 REGION | &quot;region&quot;
 SOLARSYSTEM | &quot;solarsystem&quot;
-_1 | &quot;1&quot;
-_2 | &quot;2&quot;
-_3 | &quot;3&quot;
-_4 | &quot;4&quot;
-_5 | &quot;5&quot;
-_10 | &quot;10&quot;
-_20 | &quot;20&quot;
-_30 | &quot;30&quot;
-_40 | &quot;40&quot;
+STATION | &quot;station&quot;
 
 
 <a name="StateEnum"></a>
 ## Enum: StateEnum
 Name | Value
 ---- | -----
-OPEN | &quot;open&quot;
+CANCELLED | &quot;cancelled&quot;
+CHARACTER_DELETED | &quot;character_deleted&quot;
 CLOSED | &quot;closed&quot;
 EXPIRED | &quot;expired&quot;
-CANCELLED | &quot;cancelled&quot;
+OPEN | &quot;open&quot;
 PENDING | &quot;pending&quot;
-CHARACTER_DELETED | &quot;character_deleted&quot;
 
 
 

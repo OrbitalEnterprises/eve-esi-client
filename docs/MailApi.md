@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 Return mailing list subscriptions
 
-Return all mailing lists that the character is subscribed to   --- Alternate route: &#x60;/v1/characters/{character_id}/mail/lists/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/mail/lists/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/mail/lists/&#x60;  --- This route is cached for up to 120 seconds
+Return all mailing lists that the character is subscribed to  --- Alternate route: &#x60;/v1/characters/{character_id}/mail/lists/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/mail/lists/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/mail/lists/&#x60;  --- This route is cached for up to 120 seconds
 
 ### Example
 ```java

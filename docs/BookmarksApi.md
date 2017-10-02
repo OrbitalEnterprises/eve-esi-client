@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 List bookmark folders
 
-List your character&#39;s personal bookmark folders  --- Alternate route: &#x60;/v1/characters/{character_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/bookmarks/folders/&#x60;  --- This route is cached for up to 3600 seconds
+List your character&#39;s personal bookmark folders  --- Alternate route: &#x60;/v1/characters/{character_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/bookmarks/folders/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
