@@ -21,6 +21,7 @@ CHARACTER | &quot;character&quot;
 CORPORATION | &quot;corporation&quot;
 ALLIANCE | &quot;alliance&quot;
 FACTION | &quot;faction&quot;
+OTHER | &quot;other&quot;
 
 
 <a name="TypeEnum"></a>

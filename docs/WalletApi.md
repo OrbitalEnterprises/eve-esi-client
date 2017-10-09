@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve character wallet journal  --- Alternate route: &#x60;/v1/characters/{character_id}/wallet/journal/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/wallet/journal/&#x60;  --- This route is cached for up to 3600 seconds
+Retrieve character wallet journal  --- Alternate route: &#x60;/v2/characters/{character_id}/wallet/journal/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/wallet/journal/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java

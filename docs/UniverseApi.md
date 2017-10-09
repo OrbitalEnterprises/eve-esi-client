@@ -1318,7 +1318,7 @@ No authorization required
 
 Get type information
 
-Get information on a type  --- Alternate route: &#x60;/v2/universe/types/{type_id}/&#x60;  Alternate route: &#x60;/legacy/universe/types/{type_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a type  --- Alternate route: &#x60;/v3/universe/types/{type_id}/&#x60;  Alternate route: &#x60;/dev/universe/types/{type_id}/&#x60;  --- This route expires daily at 11:05
 
 ### Example
 ```java

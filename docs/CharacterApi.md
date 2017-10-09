@@ -135,11 +135,11 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdBlueprints"></a>
 # **getCharactersCharacterIdBlueprints**
-> List&lt;GetCharactersCharacterIdBlueprints200Ok&gt; getCharactersCharacterIdBlueprints(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdBlueprints200Ok&gt; getCharactersCharacterIdBlueprints(characterId, datasource, page, token, userAgent, xUserAgent)
 
 Get blueprints
 
-Return a list of blueprints the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of blueprints the character owns  --- Alternate route: &#x60;/v2/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -159,11 +159,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdBlueprints200Ok> result = apiInstance.getCharactersCharacterIdBlueprints(characterId, datasource, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdBlueprints200Ok> result = apiInstance.getCharactersCharacterIdBlueprints(characterId, datasource, page, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdBlueprints");
@@ -177,6 +178,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

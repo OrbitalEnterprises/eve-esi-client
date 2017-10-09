@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **quantity** | **Integer** | quantity integer | 
 **transactionId** | **Long** | Unique transaction ID | 
 **typeId** | **Integer** | type_id integer | 
-**unitPrice** | **Integer** | Amount paid per unit | 
+**unitPrice** | **Float** | Amount paid per unit | 
 
 
 
