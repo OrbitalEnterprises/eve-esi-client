@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**deleteFleetsFleetIdMembersMemberId**](FleetsApi.md#deleteFleetsFleetIdMembersMemberId) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member
 [**deleteFleetsFleetIdSquadsSquadId**](FleetsApi.md#deleteFleetsFleetIdSquadsSquadId) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad
 [**deleteFleetsFleetIdWingsWingId**](FleetsApi.md#deleteFleetsFleetIdWingsWingId) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing
+[**getCharactersCharacterIdFleet**](FleetsApi.md#getCharactersCharacterIdFleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info
 [**getFleetsFleetId**](FleetsApi.md#getFleetsFleetId) | **GET** /fleets/{fleet_id}/ | Get fleet information
 [**getFleetsFleetIdMembers**](FleetsApi.md#getFleetsFleetIdMembers) | **GET** /fleets/{fleet_id}/members/ | Get fleet members
 [**getFleetsFleetIdWings**](FleetsApi.md#getFleetsFleetIdWings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings
@@ -195,6 +196,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCharactersCharacterIdFleet"></a>
+# **getCharactersCharacterIdFleet**
+> GetCharactersCharacterIdFleetOk getCharactersCharacterIdFleet(characterId, datasource, token, userAgent, xUserAgent)
+
+Get character fleet info
+
+Return the fleet ID the character is in, if any.  --- Alternate route: &#x60;/v1/characters/{character_id}/fleet/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fleet/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fleet/&#x60;  --- This route is cached for up to 60 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.FleetsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+FleetsApi apiInstance = new FleetsApi();
+Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    GetCharactersCharacterIdFleetOk result = apiInstance.getCharactersCharacterIdFleet(characterId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FleetsApi#getCharactersCharacterIdFleet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**GetCharactersCharacterIdFleetOk**](GetCharactersCharacterIdFleetOk.md)
 
 ### Authorization
 

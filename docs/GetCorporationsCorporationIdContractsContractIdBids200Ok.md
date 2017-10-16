@@ -1,5 +1,5 @@
 
-# GetCharactersCharacterIdContractsContractIdBids200Ok
+# GetCorporationsCorporationIdContractsContractIdBids200Ok
 
 ## Properties
 Name | Type | Description | Notes

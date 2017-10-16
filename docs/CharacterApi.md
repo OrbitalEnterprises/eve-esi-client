@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/&#x60;  --- This route is cached for up to 1800 seconds
+Return character notifications  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/&#x60;  --- This route is cached for up to 600 seconds
 
 ### Example
 ```java

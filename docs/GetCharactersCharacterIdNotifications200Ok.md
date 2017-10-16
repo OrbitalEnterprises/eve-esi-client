@@ -146,6 +146,10 @@ MADEWARMUTUAL | &quot;MadeWarMutual&quot;
 MERCOFFEREDNEGOTIATIONMSG | &quot;MercOfferedNegotiationMsg&quot;
 MISSIONOFFEREXPIRATIONMSG | &quot;MissionOfferExpirationMsg&quot;
 MISSIONTIMEOUTMSG | &quot;MissionTimeoutMsg&quot;
+MOONMININGAUTOMATICFRACTURE | &quot;MoonminingAutomaticFracture&quot;
+MOONMININGEXTRACTIONCANCELLED | &quot;MoonminingExtractionCancelled&quot;
+MOONMININGEXTRACTIONFINISHED | &quot;MoonminingExtractionFinished&quot;
+MOONMININGLASERFIRED | &quot;MoonminingLaserFired&quot;
 NPCSTANDINGSGAINED | &quot;NPCStandingsGained&quot;
 NPCSTANDINGSLOST | &quot;NPCStandingsLost&quot;
 OFFEREDSURRENDER | &quot;OfferedSurrender&quot;
@@ -199,6 +203,7 @@ TUTORIALMSG | &quot;TutorialMsg&quot;
 WARALLYOFFERDECLINEDMSG | &quot;WarAllyOfferDeclinedMsg&quot;
 WARSURRENDERDECLINEDMSG | &quot;WarSurrenderDeclinedMsg&quot;
 WARSURRENDEROFFERMSG | &quot;WarSurrenderOfferMsg&quot;
+NOTIFICATIONTYPEMOONMININGEXTRACTIONSTARTED | &quot;notificationTypeMoonminingExtractionStarted&quot;
 
 
 

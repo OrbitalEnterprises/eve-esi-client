@@ -5,6 +5,7 @@ All URIs are relative to *https://esi.tech.ccp.is/latest*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCharactersCharacterIdOrders**](MarketApi.md#getCharactersCharacterIdOrders) | **GET** /characters/{character_id}/orders/ | List orders from a character
+[**getCorporationsCorporationIdOrders**](MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /corporations/{corporation_id}/orders/ | List orders from a corporation
 [**getMarketsGroups**](MarketApi.md#getMarketsGroups) | **GET** /markets/groups/ | Get item groups
 [**getMarketsGroupsMarketGroupId**](MarketApi.md#getMarketsGroupsMarketGroupId) | **GET** /markets/groups/{market_group_id}/ | Get item group information
 [**getMarketsPrices**](MarketApi.md#getMarketsPrices) | **GET** /markets/prices/ | List market prices
@@ -65,6 +66,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCharactersCharacterIdOrders200Ok&gt;**](GetCharactersCharacterIdOrders200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdOrders"></a>
+# **getCorporationsCorporationIdOrders**
+> List&lt;GetCorporationsCorporationIdOrders200Ok&gt; getCorporationsCorporationIdOrders(corporationId, datasource, page, token, userAgent, xUserAgent)
+
+List orders from a corporation
+
+List market orders placed on behalf of a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/orders/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/orders/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/orders/&#x60;  --- This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.MarketApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+MarketApi apiInstance = new MarketApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCorporationsCorporationIdOrders200Ok> result = apiInstance.getCorporationsCorporationIdOrders(corporationId, datasource, page, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MarketApi#getCorporationsCorporationIdOrders");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCorporationsCorporationIdOrders200Ok&gt;**](GetCorporationsCorporationIdOrders200Ok.md)
 
 ### Authorization
 
