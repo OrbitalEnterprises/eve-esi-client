@@ -1,12 +1,12 @@
 # SovereigntyApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSovereigntyCampaigns**](SovereigntyApi.md#getSovereigntyCampaigns) | **GET** /sovereignty/campaigns/ | List sovereignty campaigns
-[**getSovereigntyMap**](SovereigntyApi.md#getSovereigntyMap) | **GET** /sovereignty/map/ | List sovereignty of systems
-[**getSovereigntyStructures**](SovereigntyApi.md#getSovereigntyStructures) | **GET** /sovereignty/structures/ | List sovereignty structures
+[**getSovereigntyCampaigns**](SovereigntyApi.md#getSovereigntyCampaigns) | **GET** /v1/sovereignty/campaigns/ | List sovereignty campaigns
+[**getSovereigntyMap**](SovereigntyApi.md#getSovereigntyMap) | **GET** /v1/sovereignty/map/ | List sovereignty of systems
+[**getSovereigntyStructures**](SovereigntyApi.md#getSovereigntyStructures) | **GET** /v1/sovereignty/structures/ | List sovereignty structures
 
 
 <a name="getSovereigntyCampaigns"></a>
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 List sovereignty campaigns
 
-Shows sovereignty data for campaigns.  --- Alternate route: &#x60;/v1/sovereignty/campaigns/&#x60;  Alternate route: &#x60;/legacy/sovereignty/campaigns/&#x60;  Alternate route: &#x60;/dev/sovereignty/campaigns/&#x60;  --- This route is cached for up to 5 seconds
+Shows sovereignty data for campaigns.  ---  This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -64,7 +64,7 @@ No authorization required
 
 List sovereignty of systems
 
-Shows sovereignty information for solar systems  --- Alternate route: &#x60;/v1/sovereignty/map/&#x60;  Alternate route: &#x60;/legacy/sovereignty/map/&#x60;  Alternate route: &#x60;/dev/sovereignty/map/&#x60;  --- This route is cached for up to 3600 seconds
+Shows sovereignty information for solar systems  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -113,7 +113,7 @@ No authorization required
 
 List sovereignty structures
 
-Shows sovereignty data for structures.  --- Alternate route: &#x60;/v1/sovereignty/structures/&#x60;  Alternate route: &#x60;/legacy/sovereignty/structures/&#x60;  Alternate route: &#x60;/dev/sovereignty/structures/&#x60;  --- This route is cached for up to 120 seconds
+Shows sovereignty data for structures.  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java

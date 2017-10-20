@@ -1,13 +1,13 @@
 # IndustryApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdIndustryJobs**](IndustryApi.md#getCharactersCharacterIdIndustryJobs) | **GET** /characters/{character_id}/industry/jobs/ | List character industry jobs
-[**getCorporationsCorporationIdIndustryJobs**](IndustryApi.md#getCorporationsCorporationIdIndustryJobs) | **GET** /corporations/{corporation_id}/industry/jobs/ | List corporation industry jobs
-[**getIndustryFacilities**](IndustryApi.md#getIndustryFacilities) | **GET** /industry/facilities/ | List industry facilities
-[**getIndustrySystems**](IndustryApi.md#getIndustrySystems) | **GET** /industry/systems/ | List solar system cost indices
+[**getCharactersCharacterIdIndustryJobs**](IndustryApi.md#getCharactersCharacterIdIndustryJobs) | **GET** /v1/characters/{character_id}/industry/jobs/ | List character industry jobs
+[**getCorporationsCorporationIdIndustryJobs**](IndustryApi.md#getCorporationsCorporationIdIndustryJobs) | **GET** /v1/corporations/{corporation_id}/industry/jobs/ | List corporation industry jobs
+[**getIndustryFacilities**](IndustryApi.md#getIndustryFacilities) | **GET** /v1/industry/facilities/ | List industry facilities
+[**getIndustrySystems**](IndustryApi.md#getIndustrySystems) | **GET** /v1/industry/systems/ | List solar system cost indices
 
 
 <a name="getCharactersCharacterIdIndustryJobs"></a>
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List character industry jobs
 
-List industry jobs placed by a character  --- Alternate route: &#x60;/v1/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/industry/jobs/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/industry/jobs/&#x60;  --- This route is cached for up to 300 seconds
+List industry jobs placed by a character  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/industry/jobs/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/industry/jobs/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/industry/jobs/&#x60;  --- This route is cached for up to 300 seconds
+List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 List industry facilities
 
-Return a list of industry facilities  --- Alternate route: &#x60;/v1/industry/facilities/&#x60;  Alternate route: &#x60;/legacy/industry/facilities/&#x60;  Alternate route: &#x60;/dev/industry/facilities/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of industry facilities  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -193,7 +193,7 @@ No authorization required
 
 List solar system cost indices
 
-Return cost indices for solar systems  --- Alternate route: &#x60;/v1/industry/systems/&#x60;  Alternate route: &#x60;/legacy/industry/systems/&#x60;  Alternate route: &#x60;/dev/industry/systems/&#x60;  --- This route is cached for up to 3600 seconds
+Return cost indices for solar systems  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

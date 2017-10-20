@@ -1,12 +1,12 @@
 # KillmailsApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
-[**getCorporationsCorporationIdKillmailsRecent**](KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
-[**getKillmailsKillmailIdKillmailHash**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
+[**getCharactersCharacterIdKillmailsRecent**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get character kills and losses
+[**getCorporationsCorporationIdKillmailsRecent**](KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+[**getKillmailsKillmailIdKillmailHash**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /v1/killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 
 
 <a name="getCharactersCharacterIdKillmailsRecent"></a>
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get character kills and losses
 
-Return a list of character&#39;s recent kills and losses  --- Alternate route: &#x60;/v1/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/killmails/recent/&#x60;  --- This route is cached for up to 120 seconds
+Return a list of character&#39;s recent kills and losses  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get corporation kills and losses
 
-Get a list of corporation&#39;s recent kills and losses  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/killmails/recent/&#x60;  --- This route is cached for up to 3600 seconds
+Get a list of corporation&#39;s recent kills and losses  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 Get a single killmail
 
-Return a single killmail from its ID and hash  --- Alternate route: &#x60;/v1/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/legacy/killmails/{killmail_id}/{killmail_hash}/&#x60;  Alternate route: &#x60;/dev/killmails/{killmail_id}/{killmail_hash}/&#x60;  --- This route is cached for up to 3600 seconds
+Return a single killmail from its ID and hash  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

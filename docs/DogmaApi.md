@@ -1,13 +1,13 @@
 # DogmaApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDogmaAttributes**](DogmaApi.md#getDogmaAttributes) | **GET** /dogma/attributes/ | Get attributes
-[**getDogmaAttributesAttributeId**](DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /dogma/attributes/{attribute_id}/ | Get attribute information
-[**getDogmaEffects**](DogmaApi.md#getDogmaEffects) | **GET** /dogma/effects/ | Get effects
-[**getDogmaEffectsEffectId**](DogmaApi.md#getDogmaEffectsEffectId) | **GET** /dogma/effects/{effect_id}/ | Get effect information
+[**getDogmaAttributes**](DogmaApi.md#getDogmaAttributes) | **GET** /v1/dogma/attributes/ | Get attributes
+[**getDogmaAttributesAttributeId**](DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /v1/dogma/attributes/{attribute_id}/ | Get attribute information
+[**getDogmaEffects**](DogmaApi.md#getDogmaEffects) | **GET** /v1/dogma/effects/ | Get effects
+[**getDogmaEffectsEffectId**](DogmaApi.md#getDogmaEffectsEffectId) | **GET** /v2/dogma/effects/{effect_id}/ | Get effect information
 
 
 <a name="getDogmaAttributes"></a>
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get attributes
 
-Get a list of dogma attribute ids  --- Alternate route: &#x60;/v1/dogma/attributes/&#x60;  Alternate route: &#x60;/legacy/dogma/attributes/&#x60;  Alternate route: &#x60;/dev/dogma/attributes/&#x60;  --- This route expires daily at 11:05
+Get a list of dogma attribute ids  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -65,7 +65,7 @@ No authorization required
 
 Get attribute information
 
-Get information on a dogma attribute  --- Alternate route: &#x60;/v1/dogma/attributes/{attribute_id}/&#x60;  Alternate route: &#x60;/legacy/dogma/attributes/{attribute_id}/&#x60;  Alternate route: &#x60;/dev/dogma/attributes/{attribute_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a dogma attribute  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -116,7 +116,7 @@ No authorization required
 
 Get effects
 
-Get a list of dogma effect ids  --- Alternate route: &#x60;/v1/dogma/effects/&#x60;  Alternate route: &#x60;/legacy/dogma/effects/&#x60;  Alternate route: &#x60;/dev/dogma/effects/&#x60;  --- This route expires daily at 11:05
+Get a list of dogma effect ids  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -165,7 +165,7 @@ No authorization required
 
 Get effect information
 
-Get information on a dogma effect  --- Alternate route: &#x60;/v2/dogma/effects/{effect_id}/&#x60;  Alternate route: &#x60;/dev/dogma/effects/{effect_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a dogma effect  ---  This route expires daily at 11:05
 
 ### Example
 ```java

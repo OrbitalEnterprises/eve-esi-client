@@ -1,11 +1,11 @@
 # ClonesApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdClones**](ClonesApi.md#getCharactersCharacterIdClones) | **GET** /characters/{character_id}/clones/ | Get clones
-[**getCharactersCharacterIdImplants**](ClonesApi.md#getCharactersCharacterIdImplants) | **GET** /characters/{character_id}/implants/ | Get active implants
+[**getCharactersCharacterIdClones**](ClonesApi.md#getCharactersCharacterIdClones) | **GET** /v2/characters/{character_id}/clones/ | Get clones
+[**getCharactersCharacterIdImplants**](ClonesApi.md#getCharactersCharacterIdImplants) | **GET** /v1/characters/{character_id}/implants/ | Get active implants
 
 
 <a name="getCharactersCharacterIdClones"></a>
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get clones
 
-A list of the character&#39;s clones  --- Alternate route: &#x60;/v2/characters/{character_id}/clones/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/clones/&#x60;  --- This route is cached for up to 120 seconds
+A list of the character&#39;s clones  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 Get active implants
 
-Return implants on the active clone of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/implants/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/implants/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/implants/&#x60;  --- This route is cached for up to 3600 seconds
+Return implants on the active clone of a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

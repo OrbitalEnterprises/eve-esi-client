@@ -1,13 +1,13 @@
 # BookmarksApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdBookmarks**](BookmarksApi.md#getCharactersCharacterIdBookmarks) | **GET** /characters/{character_id}/bookmarks/ | List bookmarks
-[**getCharactersCharacterIdBookmarksFolders**](BookmarksApi.md#getCharactersCharacterIdBookmarksFolders) | **GET** /characters/{character_id}/bookmarks/folders/ | List bookmark folders
-[**getCorporationsCorporationIdBookmarks**](BookmarksApi.md#getCorporationsCorporationIdBookmarks) | **GET** /corporations/{corporation_id}/bookmarks/ | List corporation bookmarks
-[**getCorporationsCorporationIdBookmarksFolders**](BookmarksApi.md#getCorporationsCorporationIdBookmarksFolders) | **GET** /corporations/{corporation_id}/bookmarks/folders/ | List corporation bookmark folders
+[**getCharactersCharacterIdBookmarks**](BookmarksApi.md#getCharactersCharacterIdBookmarks) | **GET** /v1/characters/{character_id}/bookmarks/ | List bookmarks
+[**getCharactersCharacterIdBookmarksFolders**](BookmarksApi.md#getCharactersCharacterIdBookmarksFolders) | **GET** /v1/characters/{character_id}/bookmarks/folders/ | List bookmark folders
+[**getCorporationsCorporationIdBookmarks**](BookmarksApi.md#getCorporationsCorporationIdBookmarks) | **GET** /v1/corporations/{corporation_id}/bookmarks/ | List corporation bookmarks
+[**getCorporationsCorporationIdBookmarksFolders**](BookmarksApi.md#getCorporationsCorporationIdBookmarksFolders) | **GET** /v1/corporations/{corporation_id}/bookmarks/folders/ | List corporation bookmark folders
 
 
 <a name="getCharactersCharacterIdBookmarks"></a>
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List bookmarks
 
-List your character&#39;s personal bookmarks  --- Alternate route: &#x60;/v1/characters/{character_id}/bookmarks/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/bookmarks/&#x60;  --- This route is cached for up to 3600 seconds
+List your character&#39;s personal bookmarks  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 List bookmark folders
 
-List your character&#39;s personal bookmark folders  --- Alternate route: &#x60;/v1/characters/{character_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/bookmarks/folders/&#x60;  --- This route is cached for up to 3600 seconds
+List your character&#39;s personal bookmark folders  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 List corporation bookmarks
 
-A list of your corporation&#39;s bookmarks  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/bookmarks/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/bookmarks/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/bookmarks/&#x60;  --- This route is cached for up to 3600 seconds
+A list of your corporation&#39;s bookmarks  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 List corporation bookmark folders
 
-A list of your corporation&#39;s bookmark folders  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/bookmarks/folders/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/bookmarks/folders/&#x60;  --- This route is cached for up to 3600 seconds
+A list of your corporation&#39;s bookmark folders  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

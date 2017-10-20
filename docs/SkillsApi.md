@@ -1,12 +1,12 @@
 # SkillsApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdAttributes**](SkillsApi.md#getCharactersCharacterIdAttributes) | **GET** /characters/{character_id}/attributes/ | Get character attributes
-[**getCharactersCharacterIdSkillqueue**](SkillsApi.md#getCharactersCharacterIdSkillqueue) | **GET** /characters/{character_id}/skillqueue/ | Get character&#39;s skill queue
-[**getCharactersCharacterIdSkills**](SkillsApi.md#getCharactersCharacterIdSkills) | **GET** /characters/{character_id}/skills/ | Get character skills
+[**getCharactersCharacterIdAttributes**](SkillsApi.md#getCharactersCharacterIdAttributes) | **GET** /v1/characters/{character_id}/attributes/ | Get character attributes
+[**getCharactersCharacterIdSkillqueue**](SkillsApi.md#getCharactersCharacterIdSkillqueue) | **GET** /v2/characters/{character_id}/skillqueue/ | Get character&#39;s skill queue
+[**getCharactersCharacterIdSkills**](SkillsApi.md#getCharactersCharacterIdSkills) | **GET** /v3/characters/{character_id}/skills/ | Get character skills
 
 
 <a name="getCharactersCharacterIdAttributes"></a>
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get character attributes
 
-Return attributes of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/attributes/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/attributes/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/attributes/&#x60;  --- This route is cached for up to 3600 seconds
+Return attributes of a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get character&#39;s skill queue
 
-List the configured skill queue for the given character  --- Alternate route: &#x60;/v2/characters/{character_id}/skillqueue/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/skillqueue/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/skillqueue/&#x60;  --- This route is cached for up to 120 seconds
+List the configured skill queue for the given character  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get character skills
 
-List all trained skills for the given character  --- Alternate route: &#x60;/v3/characters/{character_id}/skills/&#x60;  --- This route is cached for up to 120 seconds
+List all trained skills for the given character  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java

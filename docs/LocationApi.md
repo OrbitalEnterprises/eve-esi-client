@@ -1,12 +1,12 @@
 # LocationApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdLocation**](LocationApi.md#getCharactersCharacterIdLocation) | **GET** /characters/{character_id}/location/ | Get character location
-[**getCharactersCharacterIdOnline**](LocationApi.md#getCharactersCharacterIdOnline) | **GET** /characters/{character_id}/online/ | Get character online
-[**getCharactersCharacterIdShip**](LocationApi.md#getCharactersCharacterIdShip) | **GET** /characters/{character_id}/ship/ | Get current ship
+[**getCharactersCharacterIdLocation**](LocationApi.md#getCharactersCharacterIdLocation) | **GET** /v1/characters/{character_id}/location/ | Get character location
+[**getCharactersCharacterIdOnline**](LocationApi.md#getCharactersCharacterIdOnline) | **GET** /v1/characters/{character_id}/online/ | Get character online
+[**getCharactersCharacterIdShip**](LocationApi.md#getCharactersCharacterIdShip) | **GET** /v1/characters/{character_id}/ship/ | Get current ship
 
 
 <a name="getCharactersCharacterIdLocation"></a>
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get character location
 
-Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable.  --- Alternate route: &#x60;/v1/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/location/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/location/&#x60;  --- This route is cached for up to 5 seconds
+Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable.  ---  This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get character online
 
-Checks if the character is currently online  --- Alternate route: &#x60;/v1/characters/{character_id}/online/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/online/&#x60;  --- This route is cached for up to 60 seconds
+Checks if the character is currently online  ---  This route is cached for up to 60 seconds
 
 ### Example
 ```java
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get current ship
 
-Get the current ship type, name and id  --- Alternate route: &#x60;/v1/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/ship/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/ship/&#x60;  --- This route is cached for up to 5 seconds
+Get the current ship type, name and id  ---  This route is cached for up to 5 seconds
 
 ### Example
 ```java

@@ -1,15 +1,15 @@
 # WalletApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdWallet**](WalletApi.md#getCharactersCharacterIdWallet) | **GET** /characters/{character_id}/wallet/ | Get a character&#39;s wallet balance
-[**getCharactersCharacterIdWalletJournal**](WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /characters/{character_id}/wallet/journal/ | Get character wallet journal
-[**getCharactersCharacterIdWalletTransactions**](WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
-[**getCorporationsCorporationIdWallets**](WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-[**getCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
-[**getCorporationsCorporationIdWalletsDivisionTransactions**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionTransactions) | **GET** /corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
+[**getCharactersCharacterIdWallet**](WalletApi.md#getCharactersCharacterIdWallet) | **GET** /v1/characters/{character_id}/wallet/ | Get a character&#39;s wallet balance
+[**getCharactersCharacterIdWalletJournal**](WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /v2/characters/{character_id}/wallet/journal/ | Get character wallet journal
+[**getCharactersCharacterIdWalletTransactions**](WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /v1/characters/{character_id}/wallet/transactions/ | Get wallet transactions
+[**getCorporationsCorporationIdWallets**](WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /v1/corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
+[**getCorporationsCorporationIdWalletsDivisionJournal**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /v1/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+[**getCorporationsCorporationIdWalletsDivisionTransactions**](WalletApi.md#getCorporationsCorporationIdWalletsDivisionTransactions) | **GET** /v1/corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 
 
 <a name="getCharactersCharacterIdWallet"></a>
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get a character&#39;s wallet balance
 
-Returns a character&#39;s wallet balance  --- Alternate route: &#x60;/v1/characters/{character_id}/wallet/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/wallet/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/wallet/&#x60;  --- This route is cached for up to 120 seconds
+Returns a character&#39;s wallet balance  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve character wallet journal  --- Alternate route: &#x60;/v2/characters/{character_id}/wallet/journal/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/wallet/journal/&#x60;  --- This route is cached for up to 3600 seconds
+Retrieve character wallet journal  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 Get wallet transactions
 
-Get wallet transactions of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/wallet/transactions/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/wallet/transactions/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/wallet/transactions/&#x60;  --- This route is cached for up to 3600 seconds
+Get wallet transactions of a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 Returns a corporation&#39;s wallet balance
 
-Get a corporation&#39;s wallets  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/&#x60;  --- This route is cached for up to 300 seconds
+Get a corporation&#39;s wallets  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/journal/&#x60;  --- This route is cached for up to 3600 seconds
+Retrieve corporation wallet journal  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet transactions
 
-Get wallet transactions of a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/wallets/{division}/transactions/&#x60;  --- This route is cached for up to 3600 seconds
+Get wallet transactions of a corporation  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
