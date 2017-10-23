@@ -9,13 +9,11 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdBlueprints**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v1/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
 [**getCorporationsCorporationIdContainersLogs**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v1/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
 [**getCorporationsCorporationIdDivisions**](CorporationApi.md#getCorporationsCorporationIdDivisions) | **GET** /v1/corporations/{corporation_id}/divisions/ | Get corporation divisions
-[**getCorporationsCorporationIdFacilities**](CorporationApi.md#getCorporationsCorporationIdFacilities) | **GET** /v1/corporations/{corporation_id}/facilities/ | Get corporation facilities
 [**getCorporationsCorporationIdIcons**](CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /v1/corporations/{corporation_id}/icons/ | Get corporation icon
 [**getCorporationsCorporationIdMembers**](CorporationApi.md#getCorporationsCorporationIdMembers) | **GET** /v2/corporations/{corporation_id}/members/ | Get corporation members
 [**getCorporationsCorporationIdMembersLimit**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 [**getCorporationsCorporationIdMembertracking**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
 [**getCorporationsCorporationIdRoles**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
-[**getCorporationsCorporationIdRolesHistory**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 [**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation members
 [**getCorporationsCorporationIdStandings**](CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 [**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v1/corporations/{corporation_id}/structures/ | Get corporation structures
@@ -314,67 +312,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getCorporationsCorporationIdFacilities"></a>
-# **getCorporationsCorporationIdFacilities**
-> List&lt;GetCorporationsCorporationIdFacilities200Ok&gt; getCorporationsCorporationIdFacilities(corporationId, datasource, token, userAgent, xUserAgent)
-
-Get corporation facilities
-
-Return a corporation&#39;s facilities  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.invoker.Configuration;
-//import enterprises.orbital.eve.esi.client.invoker.auth.*;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
-try {
-    List<GetCorporationsCorporationIdFacilities200Ok> result = apiInstance.getCorporationsCorporationIdFacilities(corporationId, datasource, token, userAgent, xUserAgent);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdFacilities");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
-
-### Return type
-
-[**List&lt;GetCorporationsCorporationIdFacilities200Ok&gt;**](GetCorporationsCorporationIdFacilities200Ok.md)
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="getCorporationsCorporationIdIcons"></a>
 # **getCorporationsCorporationIdIcons**
 > GetCorporationsCorporationIdIconsOk getCorporationsCorporationIdIcons(corporationId, datasource, userAgent, xUserAgent)
@@ -660,69 +597,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCorporationsCorporationIdRoles200Ok&gt;**](GetCorporationsCorporationIdRoles200Ok.md)
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getCorporationsCorporationIdRolesHistory"></a>
-# **getCorporationsCorporationIdRolesHistory**
-> List&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt; getCorporationsCorporationIdRolesHistory(corporationId, datasource, page, token, userAgent, xUserAgent)
-
-Get corporation member roles history
-
-Return how roles have changed for a coporation&#39;s members, up to a month  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.invoker.Configuration;
-//import enterprises.orbital.eve.esi.client.invoker.auth.*;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | Which page of results to return
-String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
-try {
-    List<GetCorporationsCorporationIdRolesHistory200Ok> result = apiInstance.getCorporationsCorporationIdRolesHistory(corporationId, datasource, page, token, userAgent, xUserAgent);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdRolesHistory");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page of results to return | [optional] [default to 1]
- **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
-
-### Return type
-
-[**List&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt;**](GetCorporationsCorporationIdRolesHistory200Ok.md)
 
 ### Authorization
 
