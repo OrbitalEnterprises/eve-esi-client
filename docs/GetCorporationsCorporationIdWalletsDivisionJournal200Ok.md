@@ -4,29 +4,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **Float** | Transaction amount. Positive when value transferred to the first party. Negative otherwise |  [optional]
-**balance** | **Float** | Wallet balance after transaction occurred |  [optional]
 **date** | [**DateTime**](DateTime.md) | Date and time of transaction | 
-**extraInfo** | [**GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo**](GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo.md) |  |  [optional]
-**firstPartyId** | **Integer** | first_party_id integer |  [optional]
-**firstPartyType** | [**FirstPartyTypeEnum**](#FirstPartyTypeEnum) | first_party_type string |  [optional]
-**reason** | **String** | reason string |  [optional]
 **refId** | **Long** | Unique journal reference ID | 
 **refType** | [**RefTypeEnum**](#RefTypeEnum) | Transaction type, different type of transaction will populate different fields in &#x60;extra_info&#x60; | 
+**firstPartyId** | **Integer** | first_party_id integer |  [optional]
+**firstPartyType** | [**FirstPartyTypeEnum**](#FirstPartyTypeEnum) | first_party_type string |  [optional]
 **secondPartyId** | **Integer** | second_party_id integer |  [optional]
 **secondPartyType** | [**SecondPartyTypeEnum**](#SecondPartyTypeEnum) | second_party_type string |  [optional]
-**tax** | **Float** | Tax amount received for tax related transactions |  [optional]
+**amount** | **Float** | Transaction amount. Positive when value transferred to the first party. Negative otherwise |  [optional]
+**balance** | **Float** | Wallet balance after transaction occurred |  [optional]
+**reason** | **String** | reason string |  [optional]
 **taxRecieverId** | **Integer** | the corporation ID receiving any tax paid |  [optional]
-
-
-<a name="FirstPartyTypeEnum"></a>
-## Enum: FirstPartyTypeEnum
-Name | Value
----- | -----
-CHARACTER | &quot;character&quot;
-CORPORATION | &quot;corporation&quot;
-ALLIANCE | &quot;alliance&quot;
-FACTION | &quot;faction&quot;
+**tax** | **Float** | Tax amount received for tax related transactions |  [optional]
+**extraInfo** | [**GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo**](GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo.md) |  |  [optional]
 
 
 <a name="RefTypeEnum"></a>
@@ -145,6 +135,16 @@ PROJECT_DISCOVERY_TAX | &quot;project_discovery_tax&quot;
 REPROCESSING_TAX | &quot;reprocessing_tax&quot;
 JUMP_CLONE_ACTIVATION_FEE | &quot;jump_clone_activation_fee&quot;
 OPERATION_BONUS | &quot;operation_bonus&quot;
+
+
+<a name="FirstPartyTypeEnum"></a>
+## Enum: FirstPartyTypeEnum
+Name | Value
+---- | -----
+CHARACTER | &quot;character&quot;
+CORPORATION | &quot;corporation&quot;
+ALLIANCE | &quot;alliance&quot;
+FACTION | &quot;faction&quot;
 
 
 <a name="SecondPartyTypeEnum"></a>

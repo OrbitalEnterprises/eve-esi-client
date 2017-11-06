@@ -4,21 +4,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**orderId** | **Long** | Unique order ID | 
+**typeId** | **Integer** | The type ID of the item transacted in this order | 
+**regionId** | **Integer** | ID of the region where order was placed | 
+**locationId** | **Long** | ID of the location where order was placed | 
+**range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
+**isBuyOrder** | **Boolean** | True for a bid (buy) order. False for an offer (sell) order | 
+**price** | **Float** | Cost per unit for this order | 
+**volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
+**volumeRemain** | **Integer** | Quantity of items still required or offered | 
+**issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 
+**state** | [**StateEnum**](#StateEnum) | Current order state | 
+**minVolume** | **Integer** | For bids (buy orders), the minimum quantity that will be accepted in a matching offer (sell order) | 
+**walletDivision** | **Integer** | Wallet division of which this order used | 
 **duration** | **Integer** | Numer of days for which order is valid (starting from the issued date). An order expires at time issued + duration | 
 **escrow** | **Float** | For buy orders, the amount of ISK in escrow | 
-**isBuyOrder** | **Boolean** | True for a bid (buy) order. False for an offer (sell) order | 
-**issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 
-**locationId** | **Long** | ID of the location where order was placed | 
-**minVolume** | **Integer** | For bids (buy orders), the minimum quantity that will be accepted in a matching offer (sell order) | 
-**orderId** | **Long** | Unique order ID | 
-**price** | **Float** | Cost per unit for this order | 
-**range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
-**regionId** | **Integer** | ID of the region where order was placed | 
-**state** | [**StateEnum**](#StateEnum) | Current order state | 
-**typeId** | **Integer** | The type ID of the item transacted in this order | 
-**volumeRemain** | **Integer** | Quantity of items still required or offered | 
-**volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
-**walletDivision** | **Integer** | Wallet division of which this order used | 
 
 
 <a name="RangeEnum"></a>

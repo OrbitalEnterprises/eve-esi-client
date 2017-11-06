@@ -4,17 +4,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**duration** | **Integer** | duration integer | 
-**isBuyOrder** | **Boolean** | is_buy_order boolean | 
-**issued** | [**DateTime**](DateTime.md) | issued string | 
-**locationId** | **Long** | location_id integer | 
-**minVolume** | **Integer** | min_volume integer | 
 **orderId** | **Long** | order_id integer | 
-**price** | **Float** | price number | 
-**range** | [**RangeEnum**](#RangeEnum) | range string | 
 **typeId** | **Integer** | type_id integer | 
-**volumeRemain** | **Integer** | volume_remain integer | 
+**locationId** | **Long** | location_id integer | 
 **volumeTotal** | **Integer** | volume_total integer | 
+**volumeRemain** | **Integer** | volume_remain integer | 
+**minVolume** | **Integer** | min_volume integer | 
+**price** | **Float** | price number | 
+**isBuyOrder** | **Boolean** | is_buy_order boolean | 
+**duration** | **Integer** | duration integer | 
+**issued** | [**DateTime**](DateTime.md) | issued string | 
+**range** | [**RangeEnum**](#RangeEnum) | range string | 
 
 
 <a name="RangeEnum"></a>

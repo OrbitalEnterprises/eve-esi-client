@@ -4,34 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | [**ActionEnum**](#ActionEnum) | action string | 
-**characterId** | **Integer** | ID of the character who performed the action. | 
+**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
 **containerId** | **Long** | ID of the container | 
 **containerTypeId** | **Integer** | Type ID of the container | 
-**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
+**characterId** | **Integer** | ID of the character who performed the action. | 
 **locationId** | **Long** | location_id integer | 
-**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
-**newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
-**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
+**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
+**action** | [**ActionEnum**](#ActionEnum) | action string | 
 **passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
-**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
 **typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
-
-
-<a name="ActionEnum"></a>
-## Enum: ActionEnum
-Name | Value
----- | -----
-ADD | &quot;add&quot;
-ASSEMBLE | &quot;assemble&quot;
-CONFIGURE | &quot;configure&quot;
-ENTER_PASSWORD | &quot;enter_password&quot;
-LOCK | &quot;lock&quot;
-MOVE | &quot;move&quot;
-REPACKAGE | &quot;repackage&quot;
-SET_NAME | &quot;set_name&quot;
-SET_PASSWORD | &quot;set_password&quot;
-UNLOCK | &quot;unlock&quot;
+**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
+**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
+**newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
 
 
 <a name="LocationFlagEnum"></a>
@@ -153,6 +137,22 @@ SUBSYSTEMBAY | &quot;SubsystemBay&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;
+
+
+<a name="ActionEnum"></a>
+## Enum: ActionEnum
+Name | Value
+---- | -----
+ADD | &quot;add&quot;
+ASSEMBLE | &quot;assemble&quot;
+CONFIGURE | &quot;configure&quot;
+ENTER_PASSWORD | &quot;enter_password&quot;
+LOCK | &quot;lock&quot;
+MOVE | &quot;move&quot;
+REPACKAGE | &quot;repackage&quot;
+SET_NAME | &quot;set_name&quot;
+SET_PASSWORD | &quot;set_password&quot;
+UNLOCK | &quot;unlock&quot;
 
 
 <a name="PasswordTypeEnum"></a>

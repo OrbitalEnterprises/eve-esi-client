@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**average** | **Float** | average number | 
 **date** | [**LocalDate**](LocalDate.md) | The date of this historical statistic entry | 
-**highest** | **Float** | highest number | 
-**lowest** | **Float** | lowest number | 
 **orderCount** | **Long** | Total number of orders happened that day | 
 **volume** | **Long** | Total | 
+**highest** | **Float** | highest number | 
+**average** | **Float** | average number | 
+**lowest** | **Float** | lowest number | 
 
 
 
