@@ -4,14 +4,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bookmarkId** | **Long** | bookmark_id integer | 
-**creatorId** | **Integer** | creator_id integer | 
-**ownerId** | **Integer** | owner_id integer | 
+**bookmarkId** | **Integer** | bookmark_id integer | 
 **folderId** | **Integer** | folder_id integer |  [optional]
-**createDate** | [**DateTime**](DateTime.md) | create_date string | 
-**memo** | **String** | memo string | 
-**note** | **String** | note string | 
-**target** | [**GetCharactersCharacterIdBookmarksTarget**](GetCharactersCharacterIdBookmarksTarget.md) |  |  [optional]
+**created** | [**DateTime**](DateTime.md) | created string | 
+**label** | **String** | label string | 
+**notes** | **String** | notes string | 
+**locationId** | **Integer** | location_id integer | 
+**creatorId** | **Integer** | creator_id integer | 
+**item** | [**GetCharactersCharacterIdBookmarksItem**](GetCharactersCharacterIdBookmarksItem.md) |  |  [optional]
+**coordinates** | [**GetCharactersCharacterIdBookmarksCoordinates**](GetCharactersCharacterIdBookmarksCoordinates.md) |  |  [optional]
 
 
 

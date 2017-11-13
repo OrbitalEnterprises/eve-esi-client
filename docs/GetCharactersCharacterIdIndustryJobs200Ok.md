@@ -33,10 +33,10 @@ Name | Type | Description | Notes
 Name | Value
 ---- | -----
 ACTIVE | &quot;active&quot;
+CANCELLED | &quot;cancelled&quot;
+DELIVERED | &quot;delivered&quot;
 PAUSED | &quot;paused&quot;
 READY | &quot;ready&quot;
-DELIVERED | &quot;delivered&quot;
-CANCELLED | &quot;cancelled&quot;
 REVERTED | &quot;reverted&quot;
 
 
