@@ -199,6 +199,8 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdMembersLimit**](docs/CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 *CorporationApi* | [**getCorporationsCorporationIdMembersTitles**](docs/CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 *CorporationApi* | [**getCorporationsCorporationIdMembertracking**](docs/CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
+*CorporationApi* | [**getCorporationsCorporationIdOutposts**](docs/CorporationApi.md#getCorporationsCorporationIdOutposts) | **GET** /v1/corporations/{corporation_id}/outposts/ | Get corporation outposts
+*CorporationApi* | [**getCorporationsCorporationIdOutpostsOutpostId**](docs/CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 *CorporationApi* | [**getCorporationsCorporationIdRoles**](docs/CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 *CorporationApi* | [**getCorporationsCorporationIdRolesHistory**](docs/CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 *CorporationApi* | [**getCorporationsCorporationIdShareholders**](docs/CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation members
@@ -462,6 +464,9 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdNotFound](docs/GetCorporationsCorporationIdNotFound.md)
  - [GetCorporationsCorporationIdOk](docs/GetCorporationsCorporationIdOk.md)
  - [GetCorporationsCorporationIdOrders200Ok](docs/GetCorporationsCorporationIdOrders200Ok.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdService](docs/GetCorporationsCorporationIdOutpostsOutpostIdService.md)
  - [GetCorporationsCorporationIdRoles200Ok](docs/GetCorporationsCorporationIdRoles200Ok.md)
  - [GetCorporationsCorporationIdRolesHistory200Ok](docs/GetCorporationsCorporationIdRolesHistory200Ok.md)
  - [GetCorporationsCorporationIdShareholders200Ok](docs/GetCorporationsCorporationIdShareholders200Ok.md)
@@ -690,6 +695,7 @@ Authentication schemes defined for the API:
   - esi-corporations.read_facilities.v1: EVE SSO scope esi-corporations.read_facilities.v1
   - esi-corporations.read_fw_stats.v1: EVE SSO scope esi-corporations.read_fw_stats.v1
   - esi-corporations.read_medals.v1: EVE SSO scope esi-corporations.read_medals.v1
+  - esi-corporations.read_outposts.v1: EVE SSO scope esi-corporations.read_outposts.v1
   - esi-corporations.read_standings.v1: EVE SSO scope esi-corporations.read_standings.v1
   - esi-corporations.read_starbases.v1: EVE SSO scope esi-corporations.read_starbases.v1
   - esi-corporations.read_structures.v1: EVE SSO scope esi-corporations.read_structures.v1

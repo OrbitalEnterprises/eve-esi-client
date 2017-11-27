@@ -17,6 +17,8 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdMembersLimit**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 [**getCorporationsCorporationIdMembersTitles**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 [**getCorporationsCorporationIdMembertracking**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
+[**getCorporationsCorporationIdOutposts**](CorporationApi.md#getCorporationsCorporationIdOutposts) | **GET** /v1/corporations/{corporation_id}/outposts/ | Get corporation outposts
+[**getCorporationsCorporationIdOutpostsOutpostId**](CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 [**getCorporationsCorporationIdRoles**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 [**getCorporationsCorporationIdRolesHistory**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 [**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation members
@@ -791,6 +793,132 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCorporationsCorporationIdMembertracking200Ok&gt;**](GetCorporationsCorporationIdMembertracking200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdOutposts"></a>
+# **getCorporationsCorporationIdOutposts**
+> List&lt;Integer&gt; getCorporationsCorporationIdOutposts(corporationId, datasource, page, token, userAgent, xUserAgent)
+
+Get corporation outposts
+
+Get a list of corporation outpost IDs Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CorporationApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CorporationApi apiInstance = new CorporationApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<Integer> result = apiInstance.getCorporationsCorporationIdOutposts(corporationId, datasource, page, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutposts");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+**List&lt;Integer&gt;**
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdOutpostsOutpostId"></a>
+# **getCorporationsCorporationIdOutpostsOutpostId**
+> GetCorporationsCorporationIdOutpostsOutpostIdOk getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, token, userAgent, xUserAgent)
+
+Get corporation outpost details
+
+Get details about a given outpost. Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CorporationApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CorporationApi apiInstance = new CorporationApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+Integer outpostId = 56; // Integer | A station (outpost) ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    GetCorporationsCorporationIdOutpostsOutpostIdOk result = apiInstance.getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutpostsOutpostId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **outpostId** | **Integer**| A station (outpost) ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**GetCorporationsCorporationIdOutpostsOutpostIdOk**](GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
 
 ### Authorization
 
