@@ -150,6 +150,7 @@ CHARACTER | &quot;character&quot;
 CORPORATION | &quot;corporation&quot;
 ALLIANCE | &quot;alliance&quot;
 FACTION | &quot;faction&quot;
+SYSTEM | &quot;system&quot;
 
 
 <a name="SecondPartyTypeEnum"></a>
@@ -160,6 +161,7 @@ CHARACTER | &quot;character&quot;
 CORPORATION | &quot;corporation&quot;
 ALLIANCE | &quot;alliance&quot;
 FACTION | &quot;faction&quot;
+SYSTEM | &quot;system&quot;
 
 
 

@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Structure_manager
 
 ### Example
 ```java
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 Corporation mining observers
 
-Paginated list of all entities capable of observing and recording mining for a corporation  ---  This route is cached for up to 3600 seconds
+Paginated list of all entities capable of observing and recording mining for a corporation  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant
 
 ### Example
 ```java
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 Observed corporation mining
 
-Paginated record of all mining seen by an observer  ---  This route is cached for up to 3600 seconds
+Paginated record of all mining seen by an observer  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant
 
 ### Example
 ```java
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds
+List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): FactoryManager
 
 ### Example
 ```java

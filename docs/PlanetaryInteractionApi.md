@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 List corporation customs offices
 
-List customs offices owned by a corporation  ---  This route is cached for up to 3600 seconds
+List customs offices owned by a corporation  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java

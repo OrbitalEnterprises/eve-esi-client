@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 List orders from a corporation
 
-List market orders placed on behalf of a corporation  ---  This route is cached for up to 3600 seconds
+List market orders placed on behalf of a corporation  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader
 
 ### Example
 ```java

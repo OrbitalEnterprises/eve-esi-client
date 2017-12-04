@@ -140,7 +140,7 @@ No authorization required
 
 Get corporation blueprints
 
-Returns a list of blueprints the corporation owns  ---  This route is cached for up to 3600 seconds
+Returns a list of blueprints the corporation owns  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 Get all corporation ALSC logs
 
-Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation  ---  This route is cached for up to 600 seconds
+Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation  ---  This route is cached for up to 600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 Get corporation divisions
 
-Return corporation hangar and wallet division names, only show if a division is not using the default name  ---  This route is cached for up to 3600 seconds
+Return corporation hangar and wallet division names, only show if a division is not using the default name  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 Get corporation facilities
 
-Return a corporation&#39;s facilities  ---  This route is cached for up to 3600 seconds
+Return a corporation&#39;s facilities  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 ```java
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 
 Get corporation issued medals
 
-Returns medals issued by a corporation  ---  This route is cached for up to 3600 seconds
+Returns medals issued by a corporation  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 Get corporation member limit
 
-Return a corporation&#39;s member limit, not including CEO himself  ---  This route is cached for up to 3600 seconds
+Return a corporation&#39;s member limit, not including CEO himself  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 Get corporation&#39;s members&#39; titles
 
-Returns a corporation&#39;s members&#39; titles  ---  This route is cached for up to 3600 seconds
+Returns a corporation&#39;s members&#39; titles  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -748,7 +748,7 @@ Name | Type | Description  | Notes
 
 Track corporation members
 
-Returns additional information about a corporation&#39;s members which helps tracking their activities  ---  This route is cached for up to 3600 seconds
+Returns additional information about a corporation&#39;s members which helps tracking their activities  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -809,7 +809,7 @@ Name | Type | Description  | Notes
 
 Get corporation outposts
 
-Get a list of corporation outpost IDs Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds
+Get a list of corporation outpost IDs Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -872,7 +872,7 @@ Name | Type | Description  | Notes
 
 Get corporation outpost details
 
-Get details about a given outpost. Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds
+Get details about a given outpost. Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -996,7 +996,7 @@ Name | Type | Description  | Notes
 
 Get corporation member roles history
 
-Return how roles have changed for a coporation&#39;s members, up to a month  ---  This route is cached for up to 3600 seconds
+Return how roles have changed for a coporation&#39;s members, up to a month  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -1185,7 +1185,7 @@ Name | Type | Description  | Notes
 
 Get corporation starbases (POSes)
 
-Returns list of corporation starbases (POSes)  ---  This route is cached for up to 3600 seconds
+Returns list of corporation starbases (POSes)  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 
 Get starbase (POS) detail
 
-Returns various settings and fuels of a starbase (POS)  ---  This route is cached for up to 3600 seconds
+Returns various settings and fuels of a starbase (POS)  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -1315,7 +1315,7 @@ Name | Type | Description  | Notes
 
 Get corporation structures
 
-Get a list of corporation structures  ---  This route is cached for up to 3600 seconds
+Get a list of corporation structures  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager
 
 ### Example
 ```java
@@ -1380,7 +1380,7 @@ Name | Type | Description  | Notes
 
 Get corporation titles
 
-Returns a corporation&#39;s titles  ---  This route is cached for up to 3600 seconds
+Returns a corporation&#39;s titles  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
