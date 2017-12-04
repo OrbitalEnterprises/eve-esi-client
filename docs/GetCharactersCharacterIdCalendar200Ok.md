@@ -4,11 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eventDate** | [**DateTime**](DateTime.md) | event_date string |  [optional]
 **eventId** | **Integer** | event_id integer |  [optional]
-**eventResponse** | [**EventResponseEnum**](#EventResponseEnum) | event_response string |  [optional]
-**importance** | **Integer** | importance integer |  [optional]
+**eventDate** | [**DateTime**](DateTime.md) | event_date string |  [optional]
 **title** | **String** | title string |  [optional]
+**importance** | **Integer** | importance integer |  [optional]
+**eventResponse** | [**EventResponseEnum**](#EventResponseEnum) | event_response string |  [optional]
 
 
 <a name="EventResponseEnum"></a>

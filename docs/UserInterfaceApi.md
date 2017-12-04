@@ -1,14 +1,14 @@
 # UserInterfaceApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postUiAutopilotWaypoint**](UserInterfaceApi.md#postUiAutopilotWaypoint) | **POST** /ui/autopilot/waypoint/ | Set Autopilot Waypoint
-[**postUiOpenwindowContract**](UserInterfaceApi.md#postUiOpenwindowContract) | **POST** /ui/openwindow/contract/ | Open Contract Window
-[**postUiOpenwindowInformation**](UserInterfaceApi.md#postUiOpenwindowInformation) | **POST** /ui/openwindow/information/ | Open Information Window
-[**postUiOpenwindowMarketdetails**](UserInterfaceApi.md#postUiOpenwindowMarketdetails) | **POST** /ui/openwindow/marketdetails/ | Open Market Details
-[**postUiOpenwindowNewmail**](UserInterfaceApi.md#postUiOpenwindowNewmail) | **POST** /ui/openwindow/newmail/ | Open New Mail Window
+[**postUiAutopilotWaypoint**](UserInterfaceApi.md#postUiAutopilotWaypoint) | **POST** /v2/ui/autopilot/waypoint/ | Set Autopilot Waypoint
+[**postUiOpenwindowContract**](UserInterfaceApi.md#postUiOpenwindowContract) | **POST** /v1/ui/openwindow/contract/ | Open Contract Window
+[**postUiOpenwindowInformation**](UserInterfaceApi.md#postUiOpenwindowInformation) | **POST** /v1/ui/openwindow/information/ | Open Information Window
+[**postUiOpenwindowMarketdetails**](UserInterfaceApi.md#postUiOpenwindowMarketdetails) | **POST** /v1/ui/openwindow/marketdetails/ | Open Market Details
+[**postUiOpenwindowNewmail**](UserInterfaceApi.md#postUiOpenwindowNewmail) | **POST** /v1/ui/openwindow/newmail/ | Open New Mail Window
 
 
 <a name="postUiAutopilotWaypoint"></a>
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Set Autopilot Waypoint
 
-Set a solar system as autopilot waypoint  --- Alternate route: &#x60;/v2/ui/autopilot/waypoint/&#x60;  Alternate route: &#x60;/dev/ui/autopilot/waypoint/&#x60; 
+Set a solar system as autopilot waypoint  --- 
 
 ### Example
 ```java
@@ -81,7 +81,7 @@ null (empty response body)
 
 Open Contract Window
 
-Open the contract window inside the client  --- Alternate route: &#x60;/v1/ui/openwindow/contract/&#x60;  Alternate route: &#x60;/legacy/ui/openwindow/contract/&#x60;  Alternate route: &#x60;/dev/ui/openwindow/contract/&#x60; 
+Open the contract window inside the client  --- 
 
 ### Example
 ```java
@@ -141,7 +141,7 @@ null (empty response body)
 
 Open Information Window
 
-Open the information window for a character, corporation or alliance inside the client  --- Alternate route: &#x60;/v1/ui/openwindow/information/&#x60;  Alternate route: &#x60;/legacy/ui/openwindow/information/&#x60;  Alternate route: &#x60;/dev/ui/openwindow/information/&#x60; 
+Open the information window for a character, corporation or alliance inside the client  --- 
 
 ### Example
 ```java
@@ -201,7 +201,7 @@ null (empty response body)
 
 Open Market Details
 
-Open the market details window for a specific typeID inside the client  --- Alternate route: &#x60;/v1/ui/openwindow/marketdetails/&#x60;  Alternate route: &#x60;/legacy/ui/openwindow/marketdetails/&#x60;  Alternate route: &#x60;/dev/ui/openwindow/marketdetails/&#x60; 
+Open the market details window for a specific typeID inside the client  --- 
 
 ### Example
 ```java
@@ -261,7 +261,7 @@ null (empty response body)
 
 Open New Mail Window
 
-Open the New Mail window, according to settings from the request if applicable  --- Alternate route: &#x60;/v1/ui/openwindow/newmail/&#x60;  Alternate route: &#x60;/legacy/ui/openwindow/newmail/&#x60;  Alternate route: &#x60;/dev/ui/openwindow/newmail/&#x60; 
+Open the New Mail window, according to settings from the request if applicable  --- 
 
 ### Example
 ```java

@@ -1,11 +1,11 @@
 # SearchApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdSearch**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /characters/{character_id}/search/ | Search on a string
-[**getSearch**](SearchApi.md#getSearch) | **GET** /search/ | Search on a string
+[**getCharactersCharacterIdSearch**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /v2/characters/{character_id}/search/ | Search on a string
+[**getSearch**](SearchApi.md#getSearch) | **GET** /v1/search/ | Search on a string
 
 
 <a name="getCharactersCharacterIdSearch"></a>
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v2/characters/{character_id}/search/&#x60;  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v1/search/&#x60;  Alternate route: &#x60;/legacy/search/&#x60;  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

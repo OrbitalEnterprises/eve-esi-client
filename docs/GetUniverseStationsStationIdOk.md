@@ -4,18 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**maxDockableShipVolume** | **Float** | max_dockable_ship_volume number | 
+**stationId** | **Integer** | station_id integer | 
 **name** | **String** | name string | 
-**officeRentalCost** | **Float** | office_rental_cost number | 
 **owner** | **Integer** | ID of the corporation that controls this station |  [optional]
-**position** | [**GetUniverseStationsStationIdPosition**](GetUniverseStationsStationIdPosition.md) |  |  [optional]
+**typeId** | **Integer** | type_id integer | 
 **raceId** | **Integer** | race_id integer |  [optional]
+**position** | [**GetUniverseStationsStationIdPosition**](GetUniverseStationsStationIdPosition.md) |  |  [optional]
+**systemId** | **Integer** | The solar system this station is in | 
 **reprocessingEfficiency** | **Float** | reprocessing_efficiency number | 
 **reprocessingStationsTake** | **Float** | reprocessing_stations_take number | 
+**maxDockableShipVolume** | **Float** | max_dockable_ship_volume number | 
+**officeRentalCost** | **Float** | office_rental_cost number | 
 **services** | [**List&lt;ServicesEnum&gt;**](#List&lt;ServicesEnum&gt;) | services array | 
-**stationId** | **Integer** | station_id integer | 
-**systemId** | **Integer** | The solar system this station is in | 
-**typeId** | **Integer** | type_id integer | 
 
 
 <a name="List<ServicesEnum>"></a>

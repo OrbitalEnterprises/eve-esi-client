@@ -1,36 +1,36 @@
 # UniverseApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getUniverseBloodlines**](UniverseApi.md#getUniverseBloodlines) | **GET** /universe/bloodlines/ | Get bloodlines
-[**getUniverseCategories**](UniverseApi.md#getUniverseCategories) | **GET** /universe/categories/ | Get item categories
-[**getUniverseCategoriesCategoryId**](UniverseApi.md#getUniverseCategoriesCategoryId) | **GET** /universe/categories/{category_id}/ | Get item category information
-[**getUniverseConstellations**](UniverseApi.md#getUniverseConstellations) | **GET** /universe/constellations/ | Get constellations
-[**getUniverseConstellationsConstellationId**](UniverseApi.md#getUniverseConstellationsConstellationId) | **GET** /universe/constellations/{constellation_id}/ | Get constellation information
-[**getUniverseFactions**](UniverseApi.md#getUniverseFactions) | **GET** /universe/factions/ | Get factions
-[**getUniverseGraphics**](UniverseApi.md#getUniverseGraphics) | **GET** /universe/graphics/ | Get graphics
-[**getUniverseGraphicsGraphicId**](UniverseApi.md#getUniverseGraphicsGraphicId) | **GET** /universe/graphics/{graphic_id}/ | Get graphic information
-[**getUniverseGroups**](UniverseApi.md#getUniverseGroups) | **GET** /universe/groups/ | Get item groups
-[**getUniverseGroupsGroupId**](UniverseApi.md#getUniverseGroupsGroupId) | **GET** /universe/groups/{group_id}/ | Get item group information
-[**getUniverseMoonsMoonId**](UniverseApi.md#getUniverseMoonsMoonId) | **GET** /universe/moons/{moon_id}/ | Get moon information
-[**getUniversePlanetsPlanetId**](UniverseApi.md#getUniversePlanetsPlanetId) | **GET** /universe/planets/{planet_id}/ | Get planet information
-[**getUniverseRaces**](UniverseApi.md#getUniverseRaces) | **GET** /universe/races/ | Get character races
-[**getUniverseRegions**](UniverseApi.md#getUniverseRegions) | **GET** /universe/regions/ | Get regions
-[**getUniverseRegionsRegionId**](UniverseApi.md#getUniverseRegionsRegionId) | **GET** /universe/regions/{region_id}/ | Get region information
-[**getUniverseStargatesStargateId**](UniverseApi.md#getUniverseStargatesStargateId) | **GET** /universe/stargates/{stargate_id}/ | Get stargate information
-[**getUniverseStarsStarId**](UniverseApi.md#getUniverseStarsStarId) | **GET** /universe/stars/{star_id}/ | Get star information
-[**getUniverseStationsStationId**](UniverseApi.md#getUniverseStationsStationId) | **GET** /universe/stations/{station_id}/ | Get station information
-[**getUniverseStructures**](UniverseApi.md#getUniverseStructures) | **GET** /universe/structures/ | List all public structures
-[**getUniverseStructuresStructureId**](UniverseApi.md#getUniverseStructuresStructureId) | **GET** /universe/structures/{structure_id}/ | Get structure information
-[**getUniverseSystemJumps**](UniverseApi.md#getUniverseSystemJumps) | **GET** /universe/system_jumps/ | Get system jumps
-[**getUniverseSystemKills**](UniverseApi.md#getUniverseSystemKills) | **GET** /universe/system_kills/ | Get system kills
-[**getUniverseSystems**](UniverseApi.md#getUniverseSystems) | **GET** /universe/systems/ | Get solar systems
-[**getUniverseSystemsSystemId**](UniverseApi.md#getUniverseSystemsSystemId) | **GET** /universe/systems/{system_id}/ | Get solar system information
-[**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /universe/types/ | Get types
-[**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /universe/types/{type_id}/ | Get type information
-[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /universe/names/ | Get names and categories for a set of ID&#39;s
+[**getUniverseBloodlines**](UniverseApi.md#getUniverseBloodlines) | **GET** /v1/universe/bloodlines/ | Get bloodlines
+[**getUniverseCategories**](UniverseApi.md#getUniverseCategories) | **GET** /v1/universe/categories/ | Get item categories
+[**getUniverseCategoriesCategoryId**](UniverseApi.md#getUniverseCategoriesCategoryId) | **GET** /v1/universe/categories/{category_id}/ | Get item category information
+[**getUniverseConstellations**](UniverseApi.md#getUniverseConstellations) | **GET** /v1/universe/constellations/ | Get constellations
+[**getUniverseConstellationsConstellationId**](UniverseApi.md#getUniverseConstellationsConstellationId) | **GET** /v1/universe/constellations/{constellation_id}/ | Get constellation information
+[**getUniverseFactions**](UniverseApi.md#getUniverseFactions) | **GET** /v2/universe/factions/ | Get factions
+[**getUniverseGraphics**](UniverseApi.md#getUniverseGraphics) | **GET** /v1/universe/graphics/ | Get graphics
+[**getUniverseGraphicsGraphicId**](UniverseApi.md#getUniverseGraphicsGraphicId) | **GET** /v1/universe/graphics/{graphic_id}/ | Get graphic information
+[**getUniverseGroups**](UniverseApi.md#getUniverseGroups) | **GET** /v1/universe/groups/ | Get item groups
+[**getUniverseGroupsGroupId**](UniverseApi.md#getUniverseGroupsGroupId) | **GET** /v1/universe/groups/{group_id}/ | Get item group information
+[**getUniverseMoonsMoonId**](UniverseApi.md#getUniverseMoonsMoonId) | **GET** /v1/universe/moons/{moon_id}/ | Get moon information
+[**getUniversePlanetsPlanetId**](UniverseApi.md#getUniversePlanetsPlanetId) | **GET** /v1/universe/planets/{planet_id}/ | Get planet information
+[**getUniverseRaces**](UniverseApi.md#getUniverseRaces) | **GET** /v1/universe/races/ | Get character races
+[**getUniverseRegions**](UniverseApi.md#getUniverseRegions) | **GET** /v1/universe/regions/ | Get regions
+[**getUniverseRegionsRegionId**](UniverseApi.md#getUniverseRegionsRegionId) | **GET** /v1/universe/regions/{region_id}/ | Get region information
+[**getUniverseStargatesStargateId**](UniverseApi.md#getUniverseStargatesStargateId) | **GET** /v1/universe/stargates/{stargate_id}/ | Get stargate information
+[**getUniverseStarsStarId**](UniverseApi.md#getUniverseStarsStarId) | **GET** /v1/universe/stars/{star_id}/ | Get star information
+[**getUniverseStationsStationId**](UniverseApi.md#getUniverseStationsStationId) | **GET** /v2/universe/stations/{station_id}/ | Get station information
+[**getUniverseStructures**](UniverseApi.md#getUniverseStructures) | **GET** /v1/universe/structures/ | List all public structures
+[**getUniverseStructuresStructureId**](UniverseApi.md#getUniverseStructuresStructureId) | **GET** /v1/universe/structures/{structure_id}/ | Get structure information
+[**getUniverseSystemJumps**](UniverseApi.md#getUniverseSystemJumps) | **GET** /v1/universe/system_jumps/ | Get system jumps
+[**getUniverseSystemKills**](UniverseApi.md#getUniverseSystemKills) | **GET** /v2/universe/system_kills/ | Get system kills
+[**getUniverseSystems**](UniverseApi.md#getUniverseSystems) | **GET** /v1/universe/systems/ | Get solar systems
+[**getUniverseSystemsSystemId**](UniverseApi.md#getUniverseSystemsSystemId) | **GET** /v3/universe/systems/{system_id}/ | Get solar system information
+[**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /v1/universe/types/ | Get types
+[**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /v3/universe/types/{type_id}/ | Get type information
+[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /v2/universe/names/ | Get names and categories for a set of ID&#39;s
 
 
 <a name="getUniverseBloodlines"></a>
@@ -39,7 +39,7 @@ Method | HTTP request | Description
 
 Get bloodlines
 
-Get a list of bloodlines  --- Alternate route: &#x60;/v1/universe/bloodlines/&#x60;  Alternate route: &#x60;/legacy/universe/bloodlines/&#x60;  Alternate route: &#x60;/dev/universe/bloodlines/&#x60;  --- This route expires daily at 11:05
+Get a list of bloodlines  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -90,7 +90,7 @@ No authorization required
 
 Get item categories
 
-Get a list of item categories  --- Alternate route: &#x60;/v1/universe/categories/&#x60;  Alternate route: &#x60;/legacy/universe/categories/&#x60;  Alternate route: &#x60;/dev/universe/categories/&#x60;  --- This route expires daily at 11:05
+Get a list of item categories  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -139,7 +139,7 @@ No authorization required
 
 Get item category information
 
-Get information of an item category  --- Alternate route: &#x60;/v1/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/legacy/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/dev/universe/categories/{category_id}/&#x60;  --- This route expires daily at 11:05
+Get information of an item category  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -192,7 +192,7 @@ No authorization required
 
 Get constellations
 
-Get a list of constellations  --- Alternate route: &#x60;/v1/universe/constellations/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/&#x60;  Alternate route: &#x60;/dev/universe/constellations/&#x60;  --- This route expires daily at 11:05
+Get a list of constellations  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -241,7 +241,7 @@ No authorization required
 
 Get constellation information
 
-Get information on a constellation  --- Alternate route: &#x60;/v1/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/dev/universe/constellations/{constellation_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a constellation  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -294,7 +294,7 @@ No authorization required
 
 Get factions
 
-Get a list of factions  --- Alternate route: &#x60;/v1/universe/factions/&#x60;  Alternate route: &#x60;/legacy/universe/factions/&#x60;  Alternate route: &#x60;/dev/universe/factions/&#x60;  --- This route expires daily at 11:05
+Get a list of factions  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -345,7 +345,7 @@ No authorization required
 
 Get graphics
 
-Get a list of graphics  --- Alternate route: &#x60;/v1/universe/graphics/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/&#x60;  Alternate route: &#x60;/dev/universe/graphics/&#x60;  --- This route expires daily at 11:05
+Get a list of graphics  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -394,7 +394,7 @@ No authorization required
 
 Get graphic information
 
-Get information on a graphic  --- Alternate route: &#x60;/v1/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/legacy/universe/graphics/{graphic_id}/&#x60;  Alternate route: &#x60;/dev/universe/graphics/{graphic_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a graphic  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -445,7 +445,7 @@ No authorization required
 
 Get item groups
 
-Get a list of item groups  --- Alternate route: &#x60;/v1/universe/groups/&#x60;  Alternate route: &#x60;/legacy/universe/groups/&#x60;  Alternate route: &#x60;/dev/universe/groups/&#x60;  --- This route expires daily at 11:05
+Get a list of item groups  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -496,7 +496,7 @@ No authorization required
 
 Get item group information
 
-Get information on an item group  --- Alternate route: &#x60;/v1/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/legacy/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/dev/universe/groups/{group_id}/&#x60;  --- This route expires daily at 11:05
+Get information on an item group  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -549,7 +549,7 @@ No authorization required
 
 Get moon information
 
-Get information on a moon  --- Alternate route: &#x60;/v1/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/legacy/universe/moons/{moon_id}/&#x60;  Alternate route: &#x60;/dev/universe/moons/{moon_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a moon  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -600,7 +600,7 @@ No authorization required
 
 Get planet information
 
-Get information on a planet  --- Alternate route: &#x60;/v1/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/legacy/universe/planets/{planet_id}/&#x60;  Alternate route: &#x60;/dev/universe/planets/{planet_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a planet  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -651,7 +651,7 @@ No authorization required
 
 Get character races
 
-Get a list of character races  --- Alternate route: &#x60;/v1/universe/races/&#x60;  Alternate route: &#x60;/legacy/universe/races/&#x60;  Alternate route: &#x60;/dev/universe/races/&#x60;  --- This route expires daily at 11:05
+Get a list of character races  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -702,7 +702,7 @@ No authorization required
 
 Get regions
 
-Get a list of regions  --- Alternate route: &#x60;/v1/universe/regions/&#x60;  Alternate route: &#x60;/legacy/universe/regions/&#x60;  Alternate route: &#x60;/dev/universe/regions/&#x60;  --- This route expires daily at 11:05
+Get a list of regions  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -751,7 +751,7 @@ No authorization required
 
 Get region information
 
-Get information on a region  --- Alternate route: &#x60;/v1/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/legacy/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/dev/universe/regions/{region_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a region  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -804,7 +804,7 @@ No authorization required
 
 Get stargate information
 
-Get information on a stargate  --- Alternate route: &#x60;/v1/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/legacy/universe/stargates/{stargate_id}/&#x60;  Alternate route: &#x60;/dev/universe/stargates/{stargate_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a stargate  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -855,7 +855,7 @@ No authorization required
 
 Get star information
 
-Get information on a star  --- Alternate route: &#x60;/v1/universe/stars/{star_id}/&#x60;  Alternate route: &#x60;/legacy/universe/stars/{star_id}/&#x60;  Alternate route: &#x60;/dev/universe/stars/{star_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a star  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -906,7 +906,7 @@ No authorization required
 
 Get station information
 
-Get information on a station  --- Alternate route: &#x60;/v2/universe/stations/{station_id}/&#x60;  Alternate route: &#x60;/dev/universe/stations/{station_id}/&#x60;  --- This route is cached for up to 300 seconds
+Get information on a station  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -957,7 +957,7 @@ No authorization required
 
 List all public structures
 
-List all public structures  --- Alternate route: &#x60;/v1/universe/structures/&#x60;  Alternate route: &#x60;/legacy/universe/structures/&#x60;  Alternate route: &#x60;/dev/universe/structures/&#x60;  --- This route is cached for up to 3600 seconds
+List all public structures  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1006,7 +1006,7 @@ No authorization required
 
 Get structure information
 
-Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  --- Alternate route: &#x60;/v1/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/dev/universe/structures/{structure_id}/&#x60;  --- This route is cached for up to 3600 seconds
+Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1067,7 +1067,7 @@ Name | Type | Description  | Notes
 
 Get system jumps
 
-Get the number of jumps in solar systems within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with jumps will be listed  --- Alternate route: &#x60;/v1/universe/system_jumps/&#x60;  Alternate route: &#x60;/legacy/universe/system_jumps/&#x60;  Alternate route: &#x60;/dev/universe/system_jumps/&#x60;  --- This route is cached for up to 3600 seconds
+Get the number of jumps in solar systems within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with jumps will be listed  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1116,7 +1116,7 @@ No authorization required
 
 Get system kills
 
-Get the number of ship, pod and NPC kills per solar system within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with kills will be listed  --- Alternate route: &#x60;/v2/universe/system_kills/&#x60;  Alternate route: &#x60;/dev/universe/system_kills/&#x60;  --- This route is cached for up to 3600 seconds
+Get the number of ship, pod and NPC kills per solar system within the last hour ending at the timestamp of the Last-Modified header, excluding wormhole space. Only systems with kills will be listed  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1165,7 +1165,7 @@ No authorization required
 
 Get solar systems
 
-Get a list of solar systems  --- Alternate route: &#x60;/v1/universe/systems/&#x60;  Alternate route: &#x60;/legacy/universe/systems/&#x60;  Alternate route: &#x60;/dev/universe/systems/&#x60;  --- This route expires daily at 11:05
+Get a list of solar systems  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1214,7 +1214,7 @@ No authorization required
 
 Get solar system information
 
-Get information on a solar system  --- Alternate route: &#x60;/v3/universe/systems/{system_id}/&#x60;  Alternate route: &#x60;/dev/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a solar system  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1267,7 +1267,7 @@ No authorization required
 
 Get types
 
-Get a list of type ids  --- Alternate route: &#x60;/v1/universe/types/&#x60;  Alternate route: &#x60;/legacy/universe/types/&#x60;  Alternate route: &#x60;/dev/universe/types/&#x60;  --- This route expires daily at 11:05
+Get a list of type ids  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1318,7 +1318,7 @@ No authorization required
 
 Get type information
 
-Get information on a type  --- Alternate route: &#x60;/v3/universe/types/{type_id}/&#x60;  Alternate route: &#x60;/dev/universe/types/{type_id}/&#x60;  --- This route expires daily at 11:05
+Get information on a type  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -1371,7 +1371,7 @@ No authorization required
 
 Get names and categories for a set of ID&#39;s
 
-Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- Alternate route: &#x60;/v2/universe/names/&#x60;  Alternate route: &#x60;/dev/universe/names/&#x60; 
+Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- 
 
 ### Example
 ```java

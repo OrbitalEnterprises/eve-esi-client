@@ -1,24 +1,25 @@
 # CharacterApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterId**](CharacterApi.md#getCharactersCharacterId) | **GET** /characters/{character_id}/ | Get character&#39;s public information
-[**getCharactersCharacterIdAgentsResearch**](CharacterApi.md#getCharactersCharacterIdAgentsResearch) | **GET** /characters/{character_id}/agents_research/ | Get agents research
-[**getCharactersCharacterIdBlueprints**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /characters/{character_id}/blueprints/ | Get blueprints
-[**getCharactersCharacterIdChatChannels**](CharacterApi.md#getCharactersCharacterIdChatChannels) | **GET** /characters/{character_id}/chat_channels/ | Get chat channels
-[**getCharactersCharacterIdCorporationhistory**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
-[**getCharactersCharacterIdFatigue**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
-[**getCharactersCharacterIdMedals**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals
-[**getCharactersCharacterIdNotifications**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications
-[**getCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
-[**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
-[**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
-[**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings/ | Get standings
-[**getCharactersNames**](CharacterApi.md#getCharactersNames) | **GET** /characters/names/ | Get character names
-[**postCharactersAffiliation**](CharacterApi.md#postCharactersAffiliation) | **POST** /characters/affiliation/ | Character affiliation
-[**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /characters/{character_id}/cspa/ | Calculate a CSPA charge cost
+[**getCharactersCharacterId**](CharacterApi.md#getCharactersCharacterId) | **GET** /v4/characters/{character_id}/ | Get character&#39;s public information
+[**getCharactersCharacterIdAgentsResearch**](CharacterApi.md#getCharactersCharacterIdAgentsResearch) | **GET** /v1/characters/{character_id}/agents_research/ | Get agents research
+[**getCharactersCharacterIdBlueprints**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /v2/characters/{character_id}/blueprints/ | Get blueprints
+[**getCharactersCharacterIdChatChannels**](CharacterApi.md#getCharactersCharacterIdChatChannels) | **GET** /v1/characters/{character_id}/chat_channels/ | Get chat channels
+[**getCharactersCharacterIdCorporationhistory**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
+[**getCharactersCharacterIdFatigue**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
+[**getCharactersCharacterIdMedals**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
+[**getCharactersCharacterIdNotifications**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v1/characters/{character_id}/notifications/ | Get character notifications
+[**getCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
+[**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
+[**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v1/characters/{character_id}/roles/ | Get character corporation roles
+[**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
+[**getCharactersCharacterIdTitles**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
+[**getCharactersNames**](CharacterApi.md#getCharactersNames) | **GET** /v1/characters/names/ | Get character names
+[**postCharactersAffiliation**](CharacterApi.md#postCharactersAffiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
+[**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /v3/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
 
 
 <a name="getCharactersCharacterId"></a>
@@ -27,7 +28,7 @@ Method | HTTP request | Description
 
 Get character&#39;s public information
 
-Public information about a character  --- Alternate route: &#x60;/v4/characters/{character_id}/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/&#x60;  --- This route is cached for up to 3600 seconds
+Public information about a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -78,7 +79,7 @@ No authorization required
 
 Get agents research
 
-Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints &#x3D; remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  --- Alternate route: &#x60;/v1/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/agents_research/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/agents_research/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints &#x3D; remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -139,7 +140,7 @@ Name | Type | Description  | Notes
 
 Get blueprints
 
-Return a list of blueprints the character owns  --- Alternate route: &#x60;/v2/characters/{character_id}/blueprints/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/blueprints/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of blueprints the character owns  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -202,7 +203,7 @@ Name | Type | Description  | Notes
 
 Get chat channels
 
-Return chat channels that a character is the owner or operator of  --- Alternate route: &#x60;/v1/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/chat_channels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/chat_channels/&#x60;  --- This route is cached for up to 300 seconds
+Return chat channels that a character is the owner or operator of  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -263,7 +264,7 @@ Name | Type | Description  | Notes
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  --- Alternate route: &#x60;/v1/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/corporationhistory/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/corporationhistory/&#x60;  --- This route is cached for up to 3600 seconds
+Get a list of all the corporations a character has been a member of  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -314,7 +315,7 @@ No authorization required
 
 Get jump fatigue
 
-Return a character&#39;s jump activation and fatigue information  --- Alternate route: &#x60;/v1/characters/{character_id}/fatigue/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/fatigue/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/fatigue/&#x60;  --- This route is cached for up to 300 seconds
+Return a character&#39;s jump activation and fatigue information  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -375,7 +376,7 @@ Name | Type | Description  | Notes
 
 Get medals
 
-Return a list of medals the character has  --- Alternate route: &#x60;/v1/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/medals/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/medals/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of medals the character has  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -436,7 +437,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/&#x60;  --- This route is cached for up to 600 seconds
+Return character notifications  ---  This route is cached for up to 600 seconds
 
 ### Example
 ```java
@@ -497,7 +498,7 @@ Name | Type | Description  | Notes
 
 Get new contact notifications
 
-Return notifications about having been added to someone&#39;s contact list  --- Alternate route: &#x60;/v1/characters/{character_id}/notifications/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/notifications/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/notifications/contacts/&#x60;  --- This route is cached for up to 600 seconds
+Return notifications about having been added to someone&#39;s contact list  ---  This route is cached for up to 600 seconds
 
 ### Example
 ```java
@@ -558,7 +559,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  --- Alternate route: &#x60;/v2/characters/{character_id}/portrait/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/portrait/&#x60;  --- This route is cached for up to 3600 seconds
+Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -609,7 +610,7 @@ No authorization required
 
 Get character corporation roles
 
-Returns a character&#39;s corporation roles  --- Alternate route: &#x60;/v1/characters/{character_id}/roles/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/roles/&#x60;  --- This route is cached for up to 3600 seconds
+Returns a character&#39;s corporation roles  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -670,7 +671,7 @@ Name | Type | Description  | Notes
 
 Get standings
 
-Return character standings from agents, NPC corporations, and factions  --- Alternate route: &#x60;/v1/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/standings/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/standings/&#x60;  --- This route is cached for up to 3600 seconds
+Return character standings from agents, NPC corporations, and factions  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -725,13 +726,74 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getCharactersCharacterIdTitles"></a>
+# **getCharactersCharacterIdTitles**
+> List&lt;GetCharactersCharacterIdTitles200Ok&gt; getCharactersCharacterIdTitles(characterId, datasource, token, userAgent, xUserAgent)
+
+Get character corporation titles
+
+Returns a character&#39;s titles  ---  This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.CharacterApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+CharacterApi apiInstance = new CharacterApi();
+Integer characterId = 56; // Integer | An EVE character ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetCharactersCharacterIdTitles200Ok> result = apiInstance.getCharactersCharacterIdTitles(characterId, datasource, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdTitles");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **characterId** | **Integer**| An EVE character ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetCharactersCharacterIdTitles200Ok&gt;**](GetCharactersCharacterIdTitles200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getCharactersNames"></a>
 # **getCharactersNames**
 > List&lt;GetCharactersNames200Ok&gt; getCharactersNames(characterIds, datasource, userAgent, xUserAgent)
 
 Get character names
 
-Resolve a set of character IDs to character names  --- Alternate route: &#x60;/v1/characters/names/&#x60;  Alternate route: &#x60;/legacy/characters/names/&#x60;  Alternate route: &#x60;/dev/characters/names/&#x60;  --- This route is cached for up to 3600 seconds
+Resolve a set of character IDs to character names  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -782,7 +844,7 @@ No authorization required
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate route: &#x60;/v1/characters/affiliation/&#x60;  Alternate route: &#x60;/legacy/characters/affiliation/&#x60;  Alternate route: &#x60;/dev/characters/affiliation/&#x60;  --- This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -833,7 +895,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  --- Alternate route: &#x60;/v3/characters/{character_id}/cspa/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/cspa/&#x60; 
+Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  --- 
 
 ### Example
 ```java

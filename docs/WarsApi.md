@@ -1,12 +1,12 @@
 # WarsApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getWars**](WarsApi.md#getWars) | **GET** /wars/ | List wars
-[**getWarsWarId**](WarsApi.md#getWarsWarId) | **GET** /wars/{war_id}/ | Get war information
-[**getWarsWarIdKillmails**](WarsApi.md#getWarsWarIdKillmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war
+[**getWars**](WarsApi.md#getWars) | **GET** /v1/wars/ | List wars
+[**getWarsWarId**](WarsApi.md#getWarsWarId) | **GET** /v1/wars/{war_id}/ | Get war information
+[**getWarsWarIdKillmails**](WarsApi.md#getWarsWarIdKillmails) | **GET** /v1/wars/{war_id}/killmails/ | List kills for a war
 
 
 <a name="getWars"></a>
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 List wars
 
-Return a list of wars  --- Alternate route: &#x60;/v1/wars/&#x60;  Alternate route: &#x60;/legacy/wars/&#x60;  Alternate route: &#x60;/dev/wars/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of wars  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -66,7 +66,7 @@ No authorization required
 
 Get war information
 
-Return details about a war  --- Alternate route: &#x60;/v1/wars/{war_id}/&#x60;  Alternate route: &#x60;/legacy/wars/{war_id}/&#x60;  Alternate route: &#x60;/dev/wars/{war_id}/&#x60;  --- This route is cached for up to 3600 seconds
+Return details about a war  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -117,7 +117,7 @@ No authorization required
 
 List kills for a war
 
-Return a list of kills related to a war  --- Alternate route: &#x60;/v1/wars/{war_id}/killmails/&#x60;  Alternate route: &#x60;/legacy/wars/{war_id}/killmails/&#x60;  Alternate route: &#x60;/dev/wars/{war_id}/killmails/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of kills related to a war  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java

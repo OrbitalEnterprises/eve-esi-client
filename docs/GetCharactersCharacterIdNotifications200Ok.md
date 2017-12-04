@@ -4,24 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**isRead** | **Boolean** | is_read boolean |  [optional]
 **notificationId** | **Long** | notification_id integer | 
+**type** | [**TypeEnum**](#TypeEnum) | type string | 
 **senderId** | **Integer** | sender_id integer | 
 **senderType** | [**SenderTypeEnum**](#SenderTypeEnum) | sender_type string | 
-**text** | **String** | text string |  [optional]
 **timestamp** | [**DateTime**](DateTime.md) | timestamp string | 
-**type** | [**TypeEnum**](#TypeEnum) | type string | 
-
-
-<a name="SenderTypeEnum"></a>
-## Enum: SenderTypeEnum
-Name | Value
----- | -----
-CHARACTER | &quot;character&quot;
-CORPORATION | &quot;corporation&quot;
-ALLIANCE | &quot;alliance&quot;
-FACTION | &quot;faction&quot;
-OTHER | &quot;other&quot;
+**isRead** | **Boolean** | is_read boolean |  [optional]
+**text** | **String** | text string |  [optional]
 
 
 <a name="TypeEnum"></a>
@@ -204,6 +193,17 @@ WARALLYOFFERDECLINEDMSG | &quot;WarAllyOfferDeclinedMsg&quot;
 WARSURRENDERDECLINEDMSG | &quot;WarSurrenderDeclinedMsg&quot;
 WARSURRENDEROFFERMSG | &quot;WarSurrenderOfferMsg&quot;
 NOTIFICATIONTYPEMOONMININGEXTRACTIONSTARTED | &quot;notificationTypeMoonminingExtractionStarted&quot;
+
+
+<a name="SenderTypeEnum"></a>
+## Enum: SenderTypeEnum
+Name | Value
+---- | -----
+CHARACTER | &quot;character&quot;
+CORPORATION | &quot;corporation&quot;
+ALLIANCE | &quot;alliance&quot;
+FACTION | &quot;faction&quot;
+OTHER | &quot;other&quot;
 
 
 

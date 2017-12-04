@@ -1,15 +1,16 @@
 # ContactsApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /characters/{character_id}/contacts/ | Delete contacts
-[**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /characters/{character_id}/contacts/ | Get contacts
-[**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /characters/{character_id}/contacts/labels/ | Get contact labels
-[**getCorporationsCorporationIdContacts**](ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /corporations/{corporation_id}/contacts/ | Get corporation contacts
-[**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /characters/{character_id}/contacts/ | Add contacts
-[**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /characters/{character_id}/contacts/ | Edit contacts
+[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v1/characters/{character_id}/contacts/ | Delete contacts
+[**getAlliancesAllianceIdContacts**](ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+[**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
+[**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
+[**getCorporationsCorporationIdContacts**](ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+[**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
+[**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
 
 
 <a name="deleteCharactersCharacterIdContacts"></a>
@@ -18,7 +19,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60; 
+Bulk delete contacts  --- 
 
 ### Example
 ```java
@@ -74,13 +75,76 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getAlliancesAllianceIdContacts"></a>
+# **getAlliancesAllianceIdContacts**
+> List&lt;GetAlliancesAllianceIdContacts200Ok&gt; getAlliancesAllianceIdContacts(allianceId, datasource, page, token, userAgent, xUserAgent)
+
+Get alliance contacts
+
+Return contacts of an alliance  ---  This route is cached for up to 300 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.invoker.Configuration;
+//import enterprises.orbital.eve.esi.client.invoker.auth.*;
+//import enterprises.orbital.eve.esi.client.api.ContactsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+ContactsApi apiInstance = new ContactsApi();
+Integer allianceId = 56; // Integer | An EVE alliance ID
+String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
+String token = "token_example"; // String | Access token to use if unable to set a header
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    List<GetAlliancesAllianceIdContacts200Ok> result = apiInstance.getAlliancesAllianceIdContacts(allianceId, datasource, page, token, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContactsApi#getAlliancesAllianceIdContacts");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **allianceId** | **Integer**| An EVE alliance ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**List&lt;GetAlliancesAllianceIdContacts200Ok&gt;**](GetAlliancesAllianceIdContacts200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getCharactersCharacterIdContacts"></a>
 # **getCharactersCharacterIdContacts**
 > List&lt;GetCharactersCharacterIdContacts200Ok&gt; getCharactersCharacterIdContacts(characterId, datasource, page, token, userAgent, xUserAgent)
 
 Get contacts
 
-Return contacts of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
+Return contacts of a character  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -143,7 +207,7 @@ Name | Type | Description  | Notes
 
 Get contact labels
 
-Return custom labels for contacts the character defined  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/labels/&#x60;  --- This route is cached for up to 300 seconds
+Return custom labels for contacts the character defined  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -204,7 +268,7 @@ Name | Type | Description  | Notes
 
 Get corporation contacts
 
-Return contacts of a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
+Return contacts of a corporation  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -267,7 +331,7 @@ Name | Type | Description  | Notes
 
 Add contacts
 
-Bulk add contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk add contacts with same settings  --- 
 
 ### Example
 ```java
@@ -336,7 +400,7 @@ Name | Type | Description  | Notes
 
 Edit contacts
 
-Bulk edit contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk edit contacts with same settings  --- 
 
 ### Example
 ```java

@@ -1,14 +1,14 @@
 # OpportunitiesApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdOpportunities**](OpportunitiesApi.md#getCharactersCharacterIdOpportunities) | **GET** /characters/{character_id}/opportunities/ | Get a character&#39;s completed tasks
-[**getOpportunitiesGroups**](OpportunitiesApi.md#getOpportunitiesGroups) | **GET** /opportunities/groups/ | Get opportunities groups
-[**getOpportunitiesGroupsGroupId**](OpportunitiesApi.md#getOpportunitiesGroupsGroupId) | **GET** /opportunities/groups/{group_id}/ | Get opportunities group
-[**getOpportunitiesTasks**](OpportunitiesApi.md#getOpportunitiesTasks) | **GET** /opportunities/tasks/ | Get opportunities tasks
-[**getOpportunitiesTasksTaskId**](OpportunitiesApi.md#getOpportunitiesTasksTaskId) | **GET** /opportunities/tasks/{task_id}/ | Get opportunities task
+[**getCharactersCharacterIdOpportunities**](OpportunitiesApi.md#getCharactersCharacterIdOpportunities) | **GET** /v1/characters/{character_id}/opportunities/ | Get a character&#39;s completed tasks
+[**getOpportunitiesGroups**](OpportunitiesApi.md#getOpportunitiesGroups) | **GET** /v1/opportunities/groups/ | Get opportunities groups
+[**getOpportunitiesGroupsGroupId**](OpportunitiesApi.md#getOpportunitiesGroupsGroupId) | **GET** /v1/opportunities/groups/{group_id}/ | Get opportunities group
+[**getOpportunitiesTasks**](OpportunitiesApi.md#getOpportunitiesTasks) | **GET** /v1/opportunities/tasks/ | Get opportunities tasks
+[**getOpportunitiesTasksTaskId**](OpportunitiesApi.md#getOpportunitiesTasksTaskId) | **GET** /v1/opportunities/tasks/{task_id}/ | Get opportunities task
 
 
 <a name="getCharactersCharacterIdOpportunities"></a>
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get a character&#39;s completed tasks
 
-Return a list of tasks finished by a character  --- Alternate route: &#x60;/v1/characters/{character_id}/opportunities/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/opportunities/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/opportunities/&#x60;  --- This route is cached for up to 3600 seconds
+Return a list of tasks finished by a character  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 Get opportunities groups
 
-Return a list of opportunities groups  --- Alternate route: &#x60;/v1/opportunities/groups/&#x60;  Alternate route: &#x60;/legacy/opportunities/groups/&#x60;  Alternate route: &#x60;/dev/opportunities/groups/&#x60;  --- This route expires daily at 11:05
+Return a list of opportunities groups  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -127,7 +127,7 @@ No authorization required
 
 Get opportunities group
 
-Return information of an opportunities group  --- Alternate route: &#x60;/v1/opportunities/groups/{group_id}/&#x60;  Alternate route: &#x60;/legacy/opportunities/groups/{group_id}/&#x60;  Alternate route: &#x60;/dev/opportunities/groups/{group_id}/&#x60;  --- This route expires daily at 11:05
+Return information of an opportunities group  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -180,7 +180,7 @@ No authorization required
 
 Get opportunities tasks
 
-Return a list of opportunities tasks  --- Alternate route: &#x60;/v1/opportunities/tasks/&#x60;  Alternate route: &#x60;/legacy/opportunities/tasks/&#x60;  Alternate route: &#x60;/dev/opportunities/tasks/&#x60;  --- This route expires daily at 11:05
+Return a list of opportunities tasks  ---  This route expires daily at 11:05
 
 ### Example
 ```java
@@ -229,7 +229,7 @@ No authorization required
 
 Get opportunities task
 
-Return information of an opportunities task  --- Alternate route: &#x60;/v1/opportunities/tasks/{task_id}/&#x60;  Alternate route: &#x60;/legacy/opportunities/tasks/{task_id}/&#x60;  Alternate route: &#x60;/dev/opportunities/tasks/{task_id}/&#x60;  --- This route expires daily at 11:05
+Return information of an opportunities task  ---  This route expires daily at 11:05
 
 ### Example
 ```java

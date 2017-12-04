@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**implants** | **List&lt;Integer&gt;** | implants array |  [optional]
 **locationId** | **Long** | location_id integer |  [optional]
 **locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string |  [optional]
+**implants** | **List&lt;Integer&gt;** | implants array |  [optional]
 
 
 <a name="LocationTypeEnum"></a>

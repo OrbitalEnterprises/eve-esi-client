@@ -4,9 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**folderId** | **Integer** | folder_id integer |  [optional]
-**name** | **String** | name string |  [optional]
-**ownerId** | **Integer** | owner_id integer |  [optional]
+**folderId** | **Integer** | folder_id integer | 
+**name** | **String** | name string | 
 
 
 
