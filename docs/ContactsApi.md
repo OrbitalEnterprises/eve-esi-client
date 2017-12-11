@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  --- 
+Bulk delete contacts  ---  [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#DELETE-/characters/{character_id}/contacts/)
 
 ### Example
 ```java

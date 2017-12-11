@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **division** | **Integer** | division integer | 
-**balance** | **Float** | balance number | 
+**balance** | **Double** | balance number | 
 
 
 

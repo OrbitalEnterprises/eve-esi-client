@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get character assets
 
-Return a list of the characters assets  ---  This route is cached for up to 3600 seconds
+Return a list of the characters assets  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/assets/)
 
 ### Example
 ```java
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 Get corporation assets
 
-Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 Get character asset locations
 
-Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- 
+Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#POST-/characters/{character_id}/assets/locations/)
 
 ### Example
 ```java
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 Get corporation asset locations
 
-Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  Requires one of the following EVE corporation role(s): Director
+Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#POST-/corporations/{corporation_id}/assets/locations/)
 
 ### Example
 ```java

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Search on a string
 
-Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/search/)
 
 ### Example
 ```java
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 Search on a string
 
-Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/search/)
 
 ### Example
 ```java

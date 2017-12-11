@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **locationId** | **Long** | ID of the location where order was placed | 
 **range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
 **isBuyOrder** | **Boolean** | True for a bid (buy) order. False for an offer (sell) order | 
-**price** | **Float** | Cost per unit for this order | 
+**price** | **Double** | Cost per unit for this order | 
 **volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
 **volumeRemain** | **Integer** | Quantity of items still required or offered | 
 **issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 

@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **firstPartyType** | [**FirstPartyTypeEnum**](#FirstPartyTypeEnum) | first_party_type string |  [optional]
 **secondPartyId** | **Integer** | second_party_id integer |  [optional]
 **secondPartyType** | [**SecondPartyTypeEnum**](#SecondPartyTypeEnum) | second_party_type string |  [optional]
-**amount** | **Float** | Transaction amount. Positive when value transferred to the first party. Negative otherwise |  [optional]
-**balance** | **Float** | Wallet balance after transaction occurred |  [optional]
+**amount** | **Double** | Transaction amount. Positive when value transferred to the first party. Negative otherwise |  [optional]
+**balance** | **Double** | Wallet balance after transaction occurred |  [optional]
 **reason** | **String** | reason string |  [optional]
 **taxRecieverId** | **Integer** | the corporation ID receiving any tax paid |  [optional]
-**tax** | **Float** | Tax amount received for tax related transactions |  [optional]
+**tax** | **Double** | Tax amount received for tax related transactions |  [optional]
 **extraInfo** | [**GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo**](GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo.md) |  |  [optional]
 
 

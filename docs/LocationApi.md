@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 Get character online
 
-Checks if the character is currently online  ---  This route is cached for up to 60 seconds
+Checks if the character is currently online  ---  This route is cached for up to 60 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/online/)
 
 ### Example
 ```java

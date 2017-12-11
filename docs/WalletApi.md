@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdWallet"></a>
 # **getCharactersCharacterIdWallet**
-> Float getCharactersCharacterIdWallet(characterId, datasource, token, userAgent, xUserAgent)
+> Double getCharactersCharacterIdWallet(characterId, datasource, token, userAgent, xUserAgent)
 
 Get a character&#39;s wallet balance
 
@@ -42,7 +42,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Float result = apiInstance.getCharactersCharacterIdWallet(characterId, datasource, token, userAgent, xUserAgent);
+    Double result = apiInstance.getCharactersCharacterIdWallet(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCharactersCharacterIdWallet");
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Float**
+**Double**
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve character wallet journal  ---  This route is cached for up to 3600 seconds
+Retrieve character wallet journal  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/wallet/journal/)
 
 ### Example
 ```java
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Retrieve corporation wallet journal  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/wallets/{division}/journal/)
 
 ### Example
 ```java

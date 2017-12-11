@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **date** | [**DateTime**](DateTime.md) | Date and time of transaction | 
 **typeId** | **Integer** | type_id integer | 
 **locationId** | **Long** | location_id integer | 
-**unitPrice** | **Float** | Amount paid per unit | 
+**unitPrice** | **Double** | Amount paid per unit | 
 **quantity** | **Integer** | quantity integer | 
 **clientId** | **Integer** | client_id integer | 
 **isBuy** | **Boolean** | is_buy boolean | 

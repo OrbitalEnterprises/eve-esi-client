@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get character skills
 
-List all trained skills for the given character  ---  This route is cached for up to 120 seconds
+List all trained skills for the given character  ---  This route is cached for up to 120 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/skills/)
 
 ### Example
 ```java
