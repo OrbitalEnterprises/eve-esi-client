@@ -21,10 +21,10 @@ Name | Type | Description | Notes
 **dateAccepted** | [**DateTime**](DateTime.md) | Date of confirmation of contract |  [optional]
 **daysToComplete** | **Integer** | Number of days to perform the contract |  [optional]
 **dateCompleted** | [**DateTime**](DateTime.md) | Date of completed of contract |  [optional]
-**price** | **Float** | Price of contract (for ItemsExchange and Auctions) |  [optional]
-**reward** | **Float** | Remuneration for contract (for Couriers only) |  [optional]
-**collateral** | **Float** | Collateral price (for Couriers only) |  [optional]
-**buyout** | **Float** | Buyout price (for Auctions only) |  [optional]
+**price** | **Double** | Price of contract (for ItemsExchange and Auctions) |  [optional]
+**reward** | **Double** | Remuneration for contract (for Couriers only) |  [optional]
+**collateral** | **Double** | Collateral price (for Couriers only) |  [optional]
+**buyout** | **Double** | Buyout price (for Auctions only) |  [optional]
 **volume** | **Float** | Volume of items in the contract |  [optional]
 
 

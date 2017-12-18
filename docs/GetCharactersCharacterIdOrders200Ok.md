@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **accountId** | **Integer** | Wallet division for the buyer or seller of this order. Always 1000 for characters. Currently 1000 through 1006 for corporations | 
 **duration** | **Integer** | Numer of days for which order is valid (starting from the issued date). An order expires at time issued + duration | 
 **isCorp** | **Boolean** | is_corp boolean | 
-**escrow** | **Float** | For buy orders, the amount of ISK in escrow | 
+**escrow** | **Double** | For buy orders, the amount of ISK in escrow | 
 
 
 <a name="RangeEnum"></a>

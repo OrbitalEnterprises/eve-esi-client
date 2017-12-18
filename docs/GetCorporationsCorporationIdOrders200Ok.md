@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **minVolume** | **Integer** | For bids (buy orders), the minimum quantity that will be accepted in a matching offer (sell order) | 
 **walletDivision** | **Integer** | Wallet division of which this order used | 
 **duration** | **Integer** | Numer of days for which order is valid (starting from the issued date). An order expires at time issued + duration | 
-**escrow** | **Float** | For buy orders, the amount of ISK in escrow | 
+**escrow** | **Double** | For buy orders, the amount of ISK in escrow | 
 
 
 <a name="RangeEnum"></a>
