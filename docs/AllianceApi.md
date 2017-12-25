@@ -5,10 +5,10 @@ All URIs are relative to *https://esi.tech.ccp.is*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAlliances**](AllianceApi.md#getAlliances) | **GET** /v1/alliances/ | List all alliances
-[**getAlliancesAllianceId**](AllianceApi.md#getAlliancesAllianceId) | **GET** /v2/alliances/{alliance_id}/ | Get alliance information
+[**getAlliancesAllianceId**](AllianceApi.md#getAlliancesAllianceId) | **GET** /v3/alliances/{alliance_id}/ | Get alliance information
 [**getAlliancesAllianceIdCorporations**](AllianceApi.md#getAlliancesAllianceIdCorporations) | **GET** /v1/alliances/{alliance_id}/corporations/ | List alliance&#39;s corporations
 [**getAlliancesAllianceIdIcons**](AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /v1/alliances/{alliance_id}/icons/ | Get alliance icon
-[**getAlliancesNames**](AllianceApi.md#getAlliancesNames) | **GET** /v1/alliances/names/ | Get alliance names
+[**getAlliancesNames**](AllianceApi.md#getAlliancesNames) | **GET** /v2/alliances/names/ | Get alliance names
 
 
 <a name="getAlliances"></a>
@@ -66,7 +66,7 @@ No authorization required
 
 Get alliance information
 
-Public information about an alliance  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/alliances/{alliance_id}/)
+Public information about an alliance  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -219,7 +219,7 @@ No authorization required
 
 Get alliance names
 
-Resolve a set of alliance IDs to alliance names  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/alliances/names/)
+Resolve a set of alliance IDs to alliance names  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -229,7 +229,7 @@ Resolve a set of alliance IDs to alliance names  ---  This route is cached for u
 
 
 AllianceApi apiInstance = new AllianceApi();
-List<Long> allianceIds = Arrays.asList(56L); // List<Long> | A comma separated list of alliance IDs
+List<Integer> allianceIds = Arrays.asList(56); // List<Integer> | A comma separated list of alliance IDs
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -246,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **allianceIds** | [**List&lt;Long&gt;**](Long.md)| A comma separated list of alliance IDs |
+ **allianceIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of alliance IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

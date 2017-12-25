@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **typeId** | **Integer** | type_id integer | 
-**quantity** | **Integer** | quantity integer |  [optional]
+**quantity** | **Integer** | quantity integer | 
 **locationId** | **Long** | location_id integer | 
 **locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
 **itemId** | **Long** | item_id integer | 

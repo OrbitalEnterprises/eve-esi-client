@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCharactersCharacterIdAttributes**](SkillsApi.md#getCharactersCharacterIdAttributes) | **GET** /v1/characters/{character_id}/attributes/ | Get character attributes
 [**getCharactersCharacterIdSkillqueue**](SkillsApi.md#getCharactersCharacterIdSkillqueue) | **GET** /v2/characters/{character_id}/skillqueue/ | Get character&#39;s skill queue
-[**getCharactersCharacterIdSkills**](SkillsApi.md#getCharactersCharacterIdSkills) | **GET** /v3/characters/{character_id}/skills/ | Get character skills
+[**getCharactersCharacterIdSkills**](SkillsApi.md#getCharactersCharacterIdSkills) | **GET** /v4/characters/{character_id}/skills/ | Get character skills
 
 
 <a name="getCharactersCharacterIdAttributes"></a>
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 Get character skills
 
-List all trained skills for the given character  ---  This route is cached for up to 120 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/skills/)
+List all trained skills for the given character  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java

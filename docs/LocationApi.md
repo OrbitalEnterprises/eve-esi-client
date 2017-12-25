@@ -5,7 +5,7 @@ All URIs are relative to *https://esi.tech.ccp.is*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCharactersCharacterIdLocation**](LocationApi.md#getCharactersCharacterIdLocation) | **GET** /v1/characters/{character_id}/location/ | Get character location
-[**getCharactersCharacterIdOnline**](LocationApi.md#getCharactersCharacterIdOnline) | **GET** /v1/characters/{character_id}/online/ | Get character online
+[**getCharactersCharacterIdOnline**](LocationApi.md#getCharactersCharacterIdOnline) | **GET** /v2/characters/{character_id}/online/ | Get character online
 [**getCharactersCharacterIdShip**](LocationApi.md#getCharactersCharacterIdShip) | **GET** /v1/characters/{character_id}/ship/ | Get current ship
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdOnline"></a>
 # **getCharactersCharacterIdOnline**
-> Boolean getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdOnlineOk getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent)
 
 Get character online
 
-Checks if the character is currently online  ---  This route is cached for up to 60 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/online/)
+Checks if the character is currently online  ---  This route is cached for up to 60 seconds
 
 ### Example
 ```java
@@ -100,7 +100,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Boolean result = apiInstance.getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdOnlineOk result = apiInstance.getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationApi#getCharactersCharacterIdOnline");
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Boolean**
+[**GetCharactersCharacterIdOnlineOk**](GetCharactersCharacterIdOnlineOk.md)
 
 ### Authorization
 

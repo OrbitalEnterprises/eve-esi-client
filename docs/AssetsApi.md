@@ -4,11 +4,11 @@ All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdAssets**](AssetsApi.md#getCharactersCharacterIdAssets) | **GET** /v2/characters/{character_id}/assets/ | Get character assets
-[**getCorporationsCorporationIdAssets**](AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /v1/corporations/{corporation_id}/assets/ | Get corporation assets
-[**postCharactersCharacterIdAssetsLocations**](AssetsApi.md#postCharactersCharacterIdAssetsLocations) | **POST** /v1/characters/{character_id}/assets/locations/ | Get character asset locations
+[**getCharactersCharacterIdAssets**](AssetsApi.md#getCharactersCharacterIdAssets) | **GET** /v3/characters/{character_id}/assets/ | Get character assets
+[**getCorporationsCorporationIdAssets**](AssetsApi.md#getCorporationsCorporationIdAssets) | **GET** /v2/corporations/{corporation_id}/assets/ | Get corporation assets
+[**postCharactersCharacterIdAssetsLocations**](AssetsApi.md#postCharactersCharacterIdAssetsLocations) | **POST** /v2/characters/{character_id}/assets/locations/ | Get character asset locations
 [**postCharactersCharacterIdAssetsNames**](AssetsApi.md#postCharactersCharacterIdAssetsNames) | **POST** /v1/characters/{character_id}/assets/names/ | Get character asset names
-[**postCorporationsCorporationIdAssetsLocations**](AssetsApi.md#postCorporationsCorporationIdAssetsLocations) | **POST** /v1/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
+[**postCorporationsCorporationIdAssetsLocations**](AssetsApi.md#postCorporationsCorporationIdAssetsLocations) | **POST** /v2/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
 [**postCorporationsCorporationIdAssetsNames**](AssetsApi.md#postCorporationsCorporationIdAssetsNames) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get coporation asset names
 
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get character assets
 
-Return a list of the characters assets  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/assets/)
+Return a list of the characters assets  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 Get corporation assets
 
-Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
+Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 Get character asset locations
 
-Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#POST-/characters/{character_id}/assets/locations/)
+Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- 
 
 ### Example
 ```java
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 Get corporation asset locations
 
-Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  Requires one of the following EVE corporation role(s): Director  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#POST-/corporations/{corporation_id}/assets/locations/)
+Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  ---  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java

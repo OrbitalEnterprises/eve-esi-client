@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **amount** | **Double** | Transaction amount. Positive when value transferred to the first party. Negative otherwise |  [optional]
 **balance** | **Double** | Wallet balance after transaction occurred |  [optional]
 **reason** | **String** | reason string |  [optional]
-**taxRecieverId** | **Integer** | the corporation ID receiving any tax paid |  [optional]
+**taxReceiverId** | **Integer** | the corporation ID receiving any tax paid |  [optional]
 **tax** | **Double** | Tax amount received for tax related transactions |  [optional]
 **extraInfo** | [**GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo**](GetCorporationsCorporationIdWalletsDivisionJournalExtraInfo.md) |  |  [optional]
 

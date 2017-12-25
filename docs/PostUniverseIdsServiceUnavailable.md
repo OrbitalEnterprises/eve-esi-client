@@ -1,10 +1,10 @@
 
-# PostCharactersCharacterIdCspaCreated
+# PostUniverseIdsServiceUnavailable
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost** | **Long** | cost integer |  [optional]
+**error** | **String** | Service unavailable message |  [optional]
 
 
 

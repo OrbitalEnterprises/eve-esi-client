@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**getUniverseSystemsSystemId**](UniverseApi.md#getUniverseSystemsSystemId) | **GET** /v3/universe/systems/{system_id}/ | Get solar system information
 [**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /v1/universe/types/ | Get types
 [**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /v3/universe/types/{type_id}/ | Get type information
+[**postUniverseIds**](UniverseApi.md#postUniverseIds) | **POST** /v1/universe/ids/ | Bulk names to IDs
 [**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /v2/universe/names/ | Get names and categories for a set of ID&#39;s
 
 
@@ -1355,6 +1356,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetUniverseTypesTypeIdOk**](GetUniverseTypesTypeIdOk.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="postUniverseIds"></a>
+# **postUniverseIds**
+> PostUniverseIdsOk postUniverseIds(names, datasource, language, userAgent, xUserAgent)
+
+Bulk names to IDs
+
+Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- 
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.UniverseApi;
+
+
+UniverseApi apiInstance = new UniverseApi();
+List<String> names = Arrays.asList(new List<String>()); // List<String> | The names to resolve
+String datasource = "tranquility"; // String | The server name you would like data from
+String language = "en-us"; // String | Language to use in the response
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    PostUniverseIdsOk result = apiInstance.postUniverseIds(names, datasource, language, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniverseApi#postUniverseIds");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **names** | **List&lt;String&gt;**| The names to resolve |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**PostUniverseIdsOk**](PostUniverseIdsOk.md)
 
 ### Authorization
 

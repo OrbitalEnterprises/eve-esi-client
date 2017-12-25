@@ -10,11 +10,10 @@ Name | Type | Description | Notes
 **constellation** | **List&lt;Integer&gt;** | constellation array |  [optional]
 **corporation** | **List&lt;Integer&gt;** | corporation array |  [optional]
 **faction** | **List&lt;Integer&gt;** | faction array |  [optional]
-**inventorytype** | **List&lt;Integer&gt;** | inventorytype array |  [optional]
+**inventoryType** | **List&lt;Integer&gt;** | inventory_type array |  [optional]
 **region** | **List&lt;Integer&gt;** | region array |  [optional]
-**solarsystem** | **List&lt;Integer&gt;** | solarsystem array |  [optional]
+**solarSystem** | **List&lt;Integer&gt;** | solar_system array |  [optional]
 **station** | **List&lt;Integer&gt;** | station array |  [optional]
-**wormhole** | **List&lt;Integer&gt;** | wormhole array |  [optional]
 
 
 

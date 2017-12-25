@@ -4,7 +4,7 @@ All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdClones**](ClonesApi.md#getCharactersCharacterIdClones) | **GET** /v2/characters/{character_id}/clones/ | Get clones
+[**getCharactersCharacterIdClones**](ClonesApi.md#getCharactersCharacterIdClones) | **GET** /v3/characters/{character_id}/clones/ | Get clones
 [**getCharactersCharacterIdImplants**](ClonesApi.md#getCharactersCharacterIdImplants) | **GET** /v1/characters/{character_id}/implants/ | Get active implants
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Get clones
 
-A list of the character&#39;s clones  ---  This route is cached for up to 120 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/clones/)
+A list of the character&#39;s clones  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 Get active implants
 
-Return implants on the active clone of a character  ---  This route is cached for up to 3600 seconds
+Return implants on the active clone of a character  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java

@@ -4,9 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locationId** | **Long** | location_id integer |  [optional]
-**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string |  [optional]
-**implants** | **List&lt;Integer&gt;** | implants array |  [optional]
+**jumpCloneId** | **Integer** | jump_clone_id integer | 
+**name** | **String** | name string |  [optional]
+**locationId** | **Long** | location_id integer | 
+**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
+**implants** | **List&lt;Integer&gt;** | implants array | 
 
 
 <a name="LocationTypeEnum"></a>

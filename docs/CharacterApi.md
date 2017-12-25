@@ -14,13 +14,13 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdNotifications**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /v1/characters/{character_id}/notifications/ | Get character notifications
 [**getCharactersCharacterIdNotificationsContacts**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 [**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
-[**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v1/characters/{character_id}/roles/ | Get character corporation roles
+[**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
 [**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
 [**getCharactersCharacterIdStats**](CharacterApi.md#getCharactersCharacterIdStats) | **GET** /v1/characters/{character_id}/stats/ | Yearly aggregate stats
 [**getCharactersCharacterIdTitles**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
 [**getCharactersNames**](CharacterApi.md#getCharactersNames) | **GET** /v1/characters/names/ | Get character names
 [**postCharactersAffiliation**](CharacterApi.md#postCharactersAffiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
-[**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /v3/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
+[**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /v4/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
 
 
 <a name="getCharactersCharacterId"></a>
@@ -607,11 +607,11 @@ No authorization required
 
 <a name="getCharactersCharacterIdRoles"></a>
 # **getCharactersCharacterIdRoles**
-> List&lt;String&gt; getCharactersCharacterIdRoles(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdRolesOk getCharactersCharacterIdRoles(characterId, datasource, token, userAgent, xUserAgent)
 
 Get character corporation roles
 
-Returns a character&#39;s corporation roles  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/characters/{character_id}/roles/)
+Returns a character&#39;s corporation roles  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -635,7 +635,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<String> result = apiInstance.getCharactersCharacterIdRoles(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdRolesOk result = apiInstance.getCharactersCharacterIdRoles(characterId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdRoles");
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**List&lt;String&gt;**
+[**GetCharactersCharacterIdRolesOk**](GetCharactersCharacterIdRolesOk.md)
 
 ### Authorization
 
@@ -953,11 +953,11 @@ No authorization required
 
 <a name="postCharactersCharacterIdCspa"></a>
 # **postCharactersCharacterIdCspa**
-> PostCharactersCharacterIdCspaCreated postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent)
+> Float postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent)
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  ---  [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#POST-/characters/{character_id}/cspa/)
+Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  --- 
 
 ### Example
 ```java
@@ -976,13 +976,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
-PostCharactersCharacterIdCspaCharacters characters = new PostCharactersCharacterIdCspaCharacters(); // PostCharactersCharacterIdCspaCharacters | The target characters to calculate the charge for
+List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The target characters to calculate the charge for
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    PostCharactersCharacterIdCspaCreated result = apiInstance.postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent);
+    Float result = apiInstance.postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#postCharactersCharacterIdCspa");
@@ -995,7 +995,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **characters** | [**PostCharactersCharacterIdCspaCharacters**](PostCharactersCharacterIdCspaCharacters.md)| The target characters to calculate the charge for |
+ **characters** | **List&lt;Integer&gt;**| The target characters to calculate the charge for |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
@@ -1003,7 +1003,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PostCharactersCharacterIdCspaCreated**](PostCharactersCharacterIdCspaCreated.md)
+**Float**
 
 ### Authorization
 

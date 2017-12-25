@@ -4,7 +4,7 @@ All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v1/characters/{character_id}/contacts/ | Delete contacts
+[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
 [**getAlliancesAllianceIdContacts**](ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
 [**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
 [**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  ---  [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#DELETE-/characters/{character_id}/contacts/)
+Bulk delete contacts  --- 
 
 ### Example
 ```java
@@ -38,7 +38,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
-List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to delete
+List<Integer> contactIds = Arrays.asList(56); // List<Integer> | A list of contacts to delete
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
@@ -56,7 +56,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **contactIds** | **List&lt;Integer&gt;**| A list of contacts to delete |
+ **contactIds** | [**List&lt;Integer&gt;**](Integer.md)| A list of contacts to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]

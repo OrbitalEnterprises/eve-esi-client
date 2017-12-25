@@ -4,7 +4,7 @@ All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCorporationsCorporationId**](CorporationApi.md#getCorporationsCorporationId) | **GET** /v3/corporations/{corporation_id}/ | Get corporation information
+[**getCorporationsCorporationId**](CorporationApi.md#getCorporationsCorporationId) | **GET** /v4/corporations/{corporation_id}/ | Get corporation information
 [**getCorporationsCorporationIdAlliancehistory**](CorporationApi.md#getCorporationsCorporationIdAlliancehistory) | **GET** /v2/corporations/{corporation_id}/alliancehistory/ | Get alliance history
 [**getCorporationsCorporationIdBlueprints**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v1/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
 [**getCorporationsCorporationIdContainersLogs**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v1/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdIcons**](CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /v1/corporations/{corporation_id}/icons/ | Get corporation icon
 [**getCorporationsCorporationIdMedals**](CorporationApi.md#getCorporationsCorporationIdMedals) | **GET** /v1/corporations/{corporation_id}/medals/ | Get corporation medals
 [**getCorporationsCorporationIdMedalsIssued**](CorporationApi.md#getCorporationsCorporationIdMedalsIssued) | **GET** /v1/corporations/{corporation_id}/medals/issued/ | Get corporation issued medals
-[**getCorporationsCorporationIdMembers**](CorporationApi.md#getCorporationsCorporationIdMembers) | **GET** /v2/corporations/{corporation_id}/members/ | Get corporation members
+[**getCorporationsCorporationIdMembers**](CorporationApi.md#getCorporationsCorporationIdMembers) | **GET** /v3/corporations/{corporation_id}/members/ | Get corporation members
 [**getCorporationsCorporationIdMembersLimit**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 [**getCorporationsCorporationIdMembersTitles**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 [**getCorporationsCorporationIdMembertracking**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
 [**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v1/corporations/{corporation_id}/structures/ | Get corporation structures
 [**getCorporationsCorporationIdTitles**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
-[**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v1/corporations/names/ | Get corporation names
+[**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 [**getCorporationsNpccorps**](CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 [**putCorporationsCorporationIdStructuresStructureId**](CorporationApi.md#putCorporationsCorporationIdStructuresStructureId) | **PUT** /v1/corporations/{corporation_id}/structures/{structure_id}/ | Update structure vulnerability schedule
 
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 Get corporation information
 
-Public information about a corporation  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/)
+Public information about a corporation  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -561,11 +561,11 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdMembers"></a>
 # **getCorporationsCorporationIdMembers**
-> List&lt;GetCorporationsCorporationIdMembers200Ok&gt; getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;Integer&gt; getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent)
 
 Get corporation members
 
-Read the current list of members if the calling character is a member.  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/members/)
+Return the current member list of a corporation, the token&#39;s character need to be a member of the corporation.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -589,7 +589,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdMembers200Ok> result = apiInstance.getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMembers");
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;GetCorporationsCorporationIdMembers200Ok&gt;**](GetCorporationsCorporationIdMembers200Ok.md)
+**List&lt;Integer&gt;**
 
 ### Authorization
 
@@ -1441,7 +1441,7 @@ Name | Type | Description  | Notes
 
 Get corporation names
 
-Resolve a set of corporation IDs to corporation names  ---  This route is cached for up to 3600 seconds  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/names/)
+Resolve a set of corporation IDs to corporation names  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -1451,7 +1451,7 @@ Resolve a set of corporation IDs to corporation names  ---  This route is cached
 
 
 CorporationApi apiInstance = new CorporationApi();
-List<Long> corporationIds = Arrays.asList(56L); // List<Long> | A comma separated list of corporation IDs
+List<Integer> corporationIds = Arrays.asList(56); // List<Integer> | A comma separated list of corporation IDs
 String datasource = "tranquility"; // String | The server name you would like data from
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
@@ -1468,7 +1468,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporationIds** | [**List&lt;Long&gt;**](Long.md)| A comma separated list of corporation IDs |
+ **corporationIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of corporation IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
