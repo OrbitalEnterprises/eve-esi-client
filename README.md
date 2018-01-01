@@ -167,7 +167,7 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
 *CharacterApi* | [**getCharactersCharacterIdStandings**](docs/CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
-*CharacterApi* | [**getCharactersCharacterIdStats**](docs/CharacterApi.md#getCharactersCharacterIdStats) | **GET** /v1/characters/{character_id}/stats/ | Yearly aggregate stats
+*CharacterApi* | [**getCharactersCharacterIdStats**](docs/CharacterApi.md#getCharactersCharacterIdStats) | **GET** /v2/characters/{character_id}/stats/ | Yearly aggregate stats
 *CharacterApi* | [**getCharactersCharacterIdTitles**](docs/CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
 *CharacterApi* | [**getCharactersNames**](docs/CharacterApi.md#getCharactersNames) | **GET** /v1/characters/names/ | Get character names
 *CharacterApi* | [**postCharactersAffiliation**](docs/CharacterApi.md#postCharactersAffiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
@@ -429,6 +429,18 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdSkillsSkill](docs/GetCharactersCharacterIdSkillsSkill.md)
  - [GetCharactersCharacterIdStandings200Ok](docs/GetCharactersCharacterIdStandings200Ok.md)
  - [GetCharactersCharacterIdStats200Ok](docs/GetCharactersCharacterIdStats200Ok.md)
+ - [GetCharactersCharacterIdStatsCharacter](docs/GetCharactersCharacterIdStatsCharacter.md)
+ - [GetCharactersCharacterIdStatsCombat](docs/GetCharactersCharacterIdStatsCombat.md)
+ - [GetCharactersCharacterIdStatsIndustry](docs/GetCharactersCharacterIdStatsIndustry.md)
+ - [GetCharactersCharacterIdStatsInventory](docs/GetCharactersCharacterIdStatsInventory.md)
+ - [GetCharactersCharacterIdStatsIsk](docs/GetCharactersCharacterIdStatsIsk.md)
+ - [GetCharactersCharacterIdStatsMarket](docs/GetCharactersCharacterIdStatsMarket.md)
+ - [GetCharactersCharacterIdStatsMining](docs/GetCharactersCharacterIdStatsMining.md)
+ - [GetCharactersCharacterIdStatsModule](docs/GetCharactersCharacterIdStatsModule.md)
+ - [GetCharactersCharacterIdStatsOrbital](docs/GetCharactersCharacterIdStatsOrbital.md)
+ - [GetCharactersCharacterIdStatsPve](docs/GetCharactersCharacterIdStatsPve.md)
+ - [GetCharactersCharacterIdStatsSocial](docs/GetCharactersCharacterIdStatsSocial.md)
+ - [GetCharactersCharacterIdStatsTravel](docs/GetCharactersCharacterIdStatsTravel.md)
  - [GetCharactersCharacterIdTitles200Ok](docs/GetCharactersCharacterIdTitles200Ok.md)
  - [GetCharactersCharacterIdWalletJournal200Ok](docs/GetCharactersCharacterIdWalletJournal200Ok.md)
  - [GetCharactersCharacterIdWalletJournalExtraInfo](docs/GetCharactersCharacterIdWalletJournalExtraInfo.md)
