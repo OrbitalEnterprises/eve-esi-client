@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **typeId** | **Integer** | type_id integer | 
 **quantity** | **Integer** | quantity integer | 
 **lpCost** | **Integer** | lp_cost integer | 
-**iskCost** | [**BigDecimal**](BigDecimal.md) | isk_cost number | 
+**iskCost** | **Long** | isk_cost integer | 
 **requiredItems** | [**List&lt;GetLoyaltyStoresCorporationIdOffersRequiredItem&gt;**](GetLoyaltyStoresCorporationIdOffersRequiredItem.md) | required_items array | 
 
 

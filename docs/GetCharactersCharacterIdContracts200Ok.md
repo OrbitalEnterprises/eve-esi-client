@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **reward** | **Double** | Remuneration for contract (for Couriers only) |  [optional]
 **collateral** | **Double** | Collateral price (for Couriers only) |  [optional]
 **buyout** | **Double** | Buyout price (for Auctions only) |  [optional]
-**volume** | **Float** | Volume of items in the contract |  [optional]
+**volume** | **Double** | Volume of items in the contract |  [optional]
 
 
 <a name="TypeEnum"></a>

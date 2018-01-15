@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdContracts"></a>
 # **getCharactersCharacterIdContracts**
-> List&lt;GetCharactersCharacterIdContracts200Ok&gt; getCharactersCharacterIdContracts(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContracts200Ok&gt; getCharactersCharacterIdContracts(characterId, datasource, page, token, userAgent, xUserAgent)
 
 Get contracts
 
@@ -38,11 +38,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContractsApi apiInstance = new ContractsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContracts200Ok> result = apiInstance.getCharactersCharacterIdContracts(characterId, datasource, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContracts200Ok> result = apiInstance.getCharactersCharacterIdContracts(characterId, datasource, page, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCharactersCharacterIdContracts");
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -201,11 +203,11 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdContracts"></a>
 # **getCorporationsCorporationIdContracts**
-> List&lt;GetCorporationsCorporationIdContracts200Ok&gt; getCorporationsCorporationIdContracts(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContracts200Ok&gt; getCorporationsCorporationIdContracts(corporationId, datasource, page, token, userAgent, xUserAgent)
 
 Get coporation contracts
 
-Returns contracts available to a coporation, only if the corporation is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \&quot;in_progress\&quot;.  ---  This route is cached for up to 3600 seconds
+Returns contracts available to a coporation, only if the corporation is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is \&quot;in_progress\&quot;.  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -225,11 +227,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContractsApi apiInstance = new ContractsApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContracts200Ok> result = apiInstance.getCorporationsCorporationIdContracts(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContracts200Ok> result = apiInstance.getCorporationsCorporationIdContracts(corporationId, datasource, page, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCorporationsCorporationIdContracts");
@@ -243,6 +246,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
