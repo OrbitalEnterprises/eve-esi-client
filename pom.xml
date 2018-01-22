@@ -10,7 +10,7 @@
   <name>EVE ESI Client</name>
   <description>Auto-gen build of Java ESI Swagger client using swagger-cli</description>
   <packaging>jar</packaging>
-  <version>1.0.0.20180129-SNAPSHOT</version>
+  <version>1.0.0.20180122-SNAPSHOT</version>
   <scm>
     <url>https://github.com/OrbitalEnterprises/eve-esi-client</url>
     <connection>scm:git:https://github.com/OrbitalEnterprises/eve-esi-client.git</connection>
