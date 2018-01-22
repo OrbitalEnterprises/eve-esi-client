@@ -1244,7 +1244,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdStarbasesStarbaseId"></a>
 # **getCorporationsCorporationIdStarbasesStarbaseId**
-> GetCorporationsCorporationIdStarbasesStarbaseIdOk getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, page, token, userAgent, xUserAgent)
+> GetCorporationsCorporationIdStarbasesStarbaseIdOk getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, token, userAgent, xUserAgent)
 
 Get starbase (POS) detail
 
@@ -1270,12 +1270,11 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 Long starbaseId = 789L; // Long | An EVE starbase (POS) ID
 Integer systemId = 56; // Integer | The solar system this starbase (POS) is located in,
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCorporationsCorporationIdStarbasesStarbaseIdOk result = apiInstance.getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, page, token, userAgent, xUserAgent);
+    GetCorporationsCorporationIdStarbasesStarbaseIdOk result = apiInstance.getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdStarbasesStarbaseId");
@@ -1291,7 +1290,6 @@ Name | Type | Description  | Notes
  **starbaseId** | **Long**| An EVE starbase (POS) ID |
  **systemId** | **Integer**| The solar system this starbase (POS) is located in, |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]

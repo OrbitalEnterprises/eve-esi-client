@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **quantity** | **Integer** | quantity integer | 
 **lpCost** | **Integer** | lp_cost integer | 
 **iskCost** | **Long** | isk_cost integer | 
+**akCost** | **Integer** | Analysis kredit cost |  [optional]
 **requiredItems** | [**List&lt;GetLoyaltyStoresCorporationIdOffersRequiredItem&gt;**](GetLoyaltyStoresCorporationIdOffersRequiredItem.md) | required_items array | 
 
 
