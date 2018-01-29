@@ -204,7 +204,7 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdOutpostsOutpostId**](docs/CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 *CorporationApi* | [**getCorporationsCorporationIdRoles**](docs/CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 *CorporationApi* | [**getCorporationsCorporationIdRolesHistory**](docs/CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
-*CorporationApi* | [**getCorporationsCorporationIdShareholders**](docs/CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation members
+*CorporationApi* | [**getCorporationsCorporationIdShareholders**](docs/CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation shareholders
 *CorporationApi* | [**getCorporationsCorporationIdStandings**](docs/CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 *CorporationApi* | [**getCorporationsCorporationIdStarbases**](docs/CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 *CorporationApi* | [**getCorporationsCorporationIdStarbasesStarbaseId**](docs/CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
@@ -269,8 +269,10 @@ Class | Method | HTTP request | Description
 *MailApi* | [**postCharactersCharacterIdMail**](docs/MailApi.md#postCharactersCharacterIdMail) | **POST** /v1/characters/{character_id}/mail/ | Send a new mail
 *MailApi* | [**postCharactersCharacterIdMailLabels**](docs/MailApi.md#postCharactersCharacterIdMailLabels) | **POST** /v2/characters/{character_id}/mail/labels/ | Create a mail label
 *MailApi* | [**putCharactersCharacterIdMailMailId**](docs/MailApi.md#putCharactersCharacterIdMailMailId) | **PUT** /v1/characters/{character_id}/mail/{mail_id}/ | Update metadata about a mail
-*MarketApi* | [**getCharactersCharacterIdOrders**](docs/MarketApi.md#getCharactersCharacterIdOrders) | **GET** /v1/characters/{character_id}/orders/ | List orders from a character
-*MarketApi* | [**getCorporationsCorporationIdOrders**](docs/MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v1/corporations/{corporation_id}/orders/ | List orders from a corporation
+*MarketApi* | [**getCharactersCharacterIdOrders**](docs/MarketApi.md#getCharactersCharacterIdOrders) | **GET** /v1/characters/{character_id}/orders/ | List open orders from a character
+*MarketApi* | [**getCharactersCharacterIdOrdersHistory**](docs/MarketApi.md#getCharactersCharacterIdOrdersHistory) | **GET** /v1/characters/{character_id}/orders/history/ | List historical orders by a character
+*MarketApi* | [**getCorporationsCorporationIdOrders**](docs/MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v1/corporations/{corporation_id}/orders/ | List open orders from a corporation
+*MarketApi* | [**getCorporationsCorporationIdOrdersHistory**](docs/MarketApi.md#getCorporationsCorporationIdOrdersHistory) | **GET** /v1/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
 *MarketApi* | [**getMarketsGroups**](docs/MarketApi.md#getMarketsGroups) | **GET** /v1/markets/groups/ | Get item groups
 *MarketApi* | [**getMarketsGroupsMarketGroupId**](docs/MarketApi.md#getMarketsGroupsMarketGroupId) | **GET** /v1/markets/groups/{market_group_id}/ | Get item group information
 *MarketApi* | [**getMarketsPrices**](docs/MarketApi.md#getMarketsPrices) | **GET** /v1/markets/prices/ | List market prices
@@ -409,6 +411,7 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdOnlineOk](docs/GetCharactersCharacterIdOnlineOk.md)
  - [GetCharactersCharacterIdOpportunities200Ok](docs/GetCharactersCharacterIdOpportunities200Ok.md)
  - [GetCharactersCharacterIdOrders200Ok](docs/GetCharactersCharacterIdOrders200Ok.md)
+ - [GetCharactersCharacterIdOrdersHistory200Ok](docs/GetCharactersCharacterIdOrdersHistory200Ok.md)
  - [GetCharactersCharacterIdPlanets200Ok](docs/GetCharactersCharacterIdPlanets200Ok.md)
  - [GetCharactersCharacterIdPlanetsPlanetIdContent](docs/GetCharactersCharacterIdPlanetsPlanetIdContent.md)
  - [GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails](docs/GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails.md)
@@ -480,6 +483,7 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdNotFound](docs/GetCorporationsCorporationIdNotFound.md)
  - [GetCorporationsCorporationIdOk](docs/GetCorporationsCorporationIdOk.md)
  - [GetCorporationsCorporationIdOrders200Ok](docs/GetCorporationsCorporationIdOrders200Ok.md)
+ - [GetCorporationsCorporationIdOrdersHistory200Ok](docs/GetCorporationsCorporationIdOrdersHistory200Ok.md)
  - [GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
  - [GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
  - [GetCorporationsCorporationIdOutpostsOutpostIdService](docs/GetCorporationsCorporationIdOutpostsOutpostIdService.md)

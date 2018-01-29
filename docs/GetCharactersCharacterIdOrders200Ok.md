@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **state** | [**StateEnum**](#StateEnum) | Current order state | 
 **minVolume** | **Integer** | For bids (buy orders), the minimum quantity that will be accepted in a matching offer (sell order) | 
 **accountId** | **Integer** | Wallet division for the buyer or seller of this order. Always 1000 for characters. Currently 1000 through 1006 for corporations | 
-**duration** | **Integer** | Numer of days for which order is valid (starting from the issued date). An order expires at time issued + duration | 
+**duration** | **Integer** | Number of days the order is valid for (starting from the issued date). An order expires at time issued + duration | 
 **isCorp** | **Boolean** | is_corp boolean | 
 **escrow** | **Double** | For buy orders, the amount of ISK in escrow | 
 
