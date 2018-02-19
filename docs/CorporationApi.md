@@ -25,11 +25,10 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdStandings**](CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 [**getCorporationsCorporationIdStarbases**](CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 [**getCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-[**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v1/corporations/{corporation_id}/structures/ | Get corporation structures
+[**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
 [**getCorporationsCorporationIdTitles**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
 [**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 [**getCorporationsNpccorps**](CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
-[**putCorporationsCorporationIdStructuresStructureId**](CorporationApi.md#putCorporationsCorporationIdStructuresStructureId) | **PUT** /v1/corporations/{corporation_id}/structures/{structure_id}/ | Update structure vulnerability schedule
 
 
 <a name="getCorporationsCorporationId"></a>
@@ -1313,7 +1312,7 @@ Name | Type | Description  | Notes
 
 Get corporation structures
 
-Get a list of corporation structures  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager  --- [This route has an available update](https://esi.tech.ccp.is/diff/latest/dev/#GET-/corporations/{corporation_id}/structures/)
+Get a list of corporation structures. This route&#39;s version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager
 
 ### Example
 ```java
@@ -1527,70 +1526,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="putCorporationsCorporationIdStructuresStructureId"></a>
-# **putCorporationsCorporationIdStructuresStructureId**
-> putCorporationsCorporationIdStructuresStructureId(corporationId, newSchedule, structureId, datasource, token, userAgent, xUserAgent)
-
-Update structure vulnerability schedule
-
-Update the vulnerability window schedule of a corporation structure  --- 
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.invoker.Configuration;
-//import enterprises.orbital.eve.esi.client.invoker.auth.*;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> newSchedule = Arrays.asList(new PutCorporationsCorporationIdStructuresStructureIdNewSchedule()); // List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> | New vulnerability window schedule for the structure
-Long structureId = 789L; // Long | A structure ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
-try {
-    apiInstance.putCorporationsCorporationIdStructuresStructureId(corporationId, newSchedule, structureId, datasource, token, userAgent, xUserAgent);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#putCorporationsCorporationIdStructuresStructureId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **newSchedule** | [**List&lt;PutCorporationsCorporationIdStructuresStructureIdNewSchedule&gt;**](PutCorporationsCorporationIdStructuresStructureIdNewSchedule.md)| New vulnerability window schedule for the structure |
- **structureId** | **Long**| A structure ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[evesso](../README.md#evesso)
 
 ### HTTP request headers
 

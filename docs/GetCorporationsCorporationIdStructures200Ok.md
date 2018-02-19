@@ -14,8 +14,30 @@ Name | Type | Description | Notes
 **stateTimerStart** | [**DateTime**](DateTime.md) | Date at which the structure entered it&#39;s current state |  [optional]
 **stateTimerEnd** | [**DateTime**](DateTime.md) | Date at which the structure will move to it&#39;s next state |  [optional]
 **unanchorsAt** | [**DateTime**](DateTime.md) | Date at which the structure will unanchor |  [optional]
-**currentVul** | [**List&lt;GetCorporationsCorporationIdStructuresCurrentVul&gt;**](GetCorporationsCorporationIdStructuresCurrentVul.md) | This week&#39;s vulnerability windows, Monday is day 0 | 
-**nextVul** | [**List&lt;GetCorporationsCorporationIdStructuresNextVul&gt;**](GetCorporationsCorporationIdStructuresNextVul.md) | Next week&#39;s vulnerability windows, Monday is day 0 | 
+**state** | [**StateEnum**](#StateEnum) | state string | 
+**reinforceWeekday** | **Integer** | The day of the week when the structure exits its final reinforcement period and becomes vulnerable to attack against its hull. Monday is 0 and Sunday is 6. | 
+**reinforceHour** | **Integer** | The hour of day that determines the four hour window when the structure will randomly exit its reinforcement periods and become vulnerable to attack against its armor and/or hull. The structure will become vulnerable at a random time that is +/- 2 hours centered on the value of this property. | 
+**nextReinforceWeekday** | **Integer** | The requested change to reinforce_weekday that will take effect at the time shown by next_reinforce_apply. |  [optional]
+**nextReinforceHour** | **Integer** | The requested change to reinforce_hour that will take effect at the time shown by next_reinforce_apply. |  [optional]
+**nextReinforceApply** | [**DateTime**](DateTime.md) | The date and time when the structure&#39;s newly requested reinforcement times (e.g. next_reinforce_hour and next_reinforce_day) will take effect. |  [optional]
+
+
+<a name="StateEnum"></a>
+## Enum: StateEnum
+Name | Value
+---- | -----
+ANCHOR_VULNERABLE | &quot;anchor_vulnerable&quot;
+ANCHORING | &quot;anchoring&quot;
+ARMOR_REINFORCE | &quot;armor_reinforce&quot;
+ARMOR_VULNERABLE | &quot;armor_vulnerable&quot;
+FITTING_INVULNERABLE | &quot;fitting_invulnerable&quot;
+HULL_REINFORCE | &quot;hull_reinforce&quot;
+HULL_VULNERABLE | &quot;hull_vulnerable&quot;
+ONLINE_DEPRECATED | &quot;online_deprecated&quot;
+ONLINING_VULNERABLE | &quot;onlining_vulnerable&quot;
+SHIELD_VULNERABLE | &quot;shield_vulnerable&quot;
+UNANCHORED | &quot;unanchored&quot;
+UNKNOWN | &quot;unknown&quot;
 
 
 

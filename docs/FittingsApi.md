@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 <a name="postCharactersCharacterIdFittings"></a>
 # **postCharactersCharacterIdFittings**
-> PostCharactersCharacterIdFittingsCreated postCharactersCharacterIdFittings(characterId, datasource, fitting, token, userAgent, xUserAgent)
+> PostCharactersCharacterIdFittingsCreated postCharactersCharacterIdFittings(characterId, fitting, datasource, token, userAgent, xUserAgent)
 
 Create fitting
 
@@ -157,13 +157,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 FittingsApi apiInstance = new FittingsApi();
 Integer characterId = 56; // Integer | An EVE character ID
-String datasource = "tranquility"; // String | The server name you would like data from
 PostCharactersCharacterIdFittingsFitting fitting = new PostCharactersCharacterIdFittingsFitting(); // PostCharactersCharacterIdFittingsFitting | Details about the new fitting
+String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    PostCharactersCharacterIdFittingsCreated result = apiInstance.postCharactersCharacterIdFittings(characterId, datasource, fitting, token, userAgent, xUserAgent);
+    PostCharactersCharacterIdFittingsCreated result = apiInstance.postCharactersCharacterIdFittings(characterId, fitting, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FittingsApi#postCharactersCharacterIdFittings");
@@ -176,8 +176,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
+ **fitting** | [**PostCharactersCharacterIdFittingsFitting**](PostCharactersCharacterIdFittingsFitting.md)| Details about the new fitting |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **fitting** | [**PostCharactersCharacterIdFittingsFitting**](PostCharactersCharacterIdFittingsFitting.md)| Details about the new fitting | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
