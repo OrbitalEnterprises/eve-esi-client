@@ -9,13 +9,37 @@ Name | Type | Description | Notes
 **containerTypeId** | **Integer** | Type ID of the container | 
 **characterId** | **Integer** | ID of the character who performed the action. | 
 **locationId** | **Long** | location_id integer | 
-**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
 **action** | [**ActionEnum**](#ActionEnum) | action string | 
 **passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
 **typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
 **quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
 **oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
 **newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
+**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
+
+
+<a name="ActionEnum"></a>
+## Enum: ActionEnum
+Name | Value
+---- | -----
+ADD | &quot;add&quot;
+ASSEMBLE | &quot;assemble&quot;
+CONFIGURE | &quot;configure&quot;
+ENTER_PASSWORD | &quot;enter_password&quot;
+LOCK | &quot;lock&quot;
+MOVE | &quot;move&quot;
+REPACKAGE | &quot;repackage&quot;
+SET_NAME | &quot;set_name&quot;
+SET_PASSWORD | &quot;set_password&quot;
+UNLOCK | &quot;unlock&quot;
+
+
+<a name="PasswordTypeEnum"></a>
+## Enum: PasswordTypeEnum
+Name | Value
+---- | -----
+CONFIG | &quot;config&quot;
+GENERAL | &quot;general&quot;
 
 
 <a name="LocationFlagEnum"></a>
@@ -137,30 +161,6 @@ SUBSYSTEMBAY | &quot;SubsystemBay&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;
-
-
-<a name="ActionEnum"></a>
-## Enum: ActionEnum
-Name | Value
----- | -----
-ADD | &quot;add&quot;
-ASSEMBLE | &quot;assemble&quot;
-CONFIGURE | &quot;configure&quot;
-ENTER_PASSWORD | &quot;enter_password&quot;
-LOCK | &quot;lock&quot;
-MOVE | &quot;move&quot;
-REPACKAGE | &quot;repackage&quot;
-SET_NAME | &quot;set_name&quot;
-SET_PASSWORD | &quot;set_password&quot;
-UNLOCK | &quot;unlock&quot;
-
-
-<a name="PasswordTypeEnum"></a>
-## Enum: PasswordTypeEnum
-Name | Value
----- | -----
-CONFIG | &quot;config&quot;
-GENERAL | &quot;general&quot;
 
 
 

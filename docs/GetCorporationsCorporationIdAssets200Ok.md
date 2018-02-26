@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **locationId** | **Long** | location_id integer | 
 **locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
 **itemId** | **Long** | item_id integer | 
-**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
 **isSingleton** | **Boolean** | is_singleton boolean | 
+**locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
 
 
 <a name="LocationTypeEnum"></a>
