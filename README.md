@@ -6,7 +6,7 @@ The auto-generated instructions in the installation are appended below but are n
 
 ## Using the Library
 
-A regular release of this library is deposited in [Maven Central](https://search.maven.org/).  Releases of the library are versioned by build date of the form `YYYYMMDD`.
+A regular release of this library is deposited in [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22enterprises.orbital.eve.esi%22).  Releases of the library are versioned by build date of the form `YYYYMMDD`.
 
 For maven, add this dependency to your project's POM (substitute YYYYMMDD as appropriate):
 
