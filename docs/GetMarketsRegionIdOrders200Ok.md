@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **orderId** | **Long** | order_id integer | 
 **typeId** | **Integer** | type_id integer | 
 **locationId** | **Long** | location_id integer | 
+**systemId** | **Integer** | The solar system this order was placed | 
 **volumeTotal** | **Integer** | volume_total integer | 
 **volumeRemain** | **Integer** | volume_remain integer | 
 **minVolume** | **Integer** | min_volume integer | 

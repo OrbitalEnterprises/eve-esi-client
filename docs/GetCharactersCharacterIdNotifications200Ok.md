@@ -149,6 +149,7 @@ MISSIONTIMEOUTMSG | &quot;MissionTimeoutMsg&quot;
 MOONMININGAUTOMATICFRACTURE | &quot;MoonminingAutomaticFracture&quot;
 MOONMININGEXTRACTIONCANCELLED | &quot;MoonminingExtractionCancelled&quot;
 MOONMININGEXTRACTIONFINISHED | &quot;MoonminingExtractionFinished&quot;
+MOONMININGEXTRACTIONSTARTED | &quot;MoonminingExtractionStarted&quot;
 MOONMININGLASERFIRED | &quot;MoonminingLaserFired&quot;
 NPCSTANDINGSGAINED | &quot;NPCStandingsGained&quot;
 NPCSTANDINGSLOST | &quot;NPCStandingsLost&quot;
@@ -196,6 +197,9 @@ STRUCTUREONLINE | &quot;StructureOnline&quot;
 STRUCTURESERVICESOFFLINE | &quot;StructureServicesOffline&quot;
 STRUCTUREUNANCHORING | &quot;StructureUnanchoring&quot;
 STRUCTUREUNDERATTACK | &quot;StructureUnderAttack&quot;
+STRUCTUREWENTHIGHPOWER | &quot;StructureWentHighPower&quot;
+STRUCTUREWENTLOWPOWER | &quot;StructureWentLowPower&quot;
+STRUCTURESREINFORCEMENTCHANGED | &quot;StructuresReinforcementChanged&quot;
 TOWERALERTMSG | &quot;TowerAlertMsg&quot;
 TOWERRESOURCEALERTMSG | &quot;TowerResourceAlertMsg&quot;
 TRANSACTIONREVERSALMSG | &quot;TransactionReversalMsg&quot;
@@ -203,7 +207,6 @@ TUTORIALMSG | &quot;TutorialMsg&quot;
 WARALLYOFFERDECLINEDMSG | &quot;WarAllyOfferDeclinedMsg&quot;
 WARSURRENDERDECLINEDMSG | &quot;WarSurrenderDeclinedMsg&quot;
 WARSURRENDEROFFERMSG | &quot;WarSurrenderOfferMsg&quot;
-NOTIFICATIONTYPEMOONMININGEXTRACTIONSTARTED | &quot;notificationTypeMoonminingExtractionStarted&quot;
 
 
 

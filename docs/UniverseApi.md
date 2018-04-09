@@ -5,6 +5,7 @@ All URIs are relative to *https://esi.tech.ccp.is*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getUniverseAncestries**](UniverseApi.md#getUniverseAncestries) | **GET** /v1/universe/ancestries/ | Get ancestries
+[**getUniverseAsteroidBeltsAsteroidBeltId**](UniverseApi.md#getUniverseAsteroidBeltsAsteroidBeltId) | **GET** /v1/universe/asteroid_belts/{asteroid_belt_id}/ | Get asteroid belt information
 [**getUniverseBloodlines**](UniverseApi.md#getUniverseBloodlines) | **GET** /v1/universe/bloodlines/ | Get bloodlines
 [**getUniverseCategories**](UniverseApi.md#getUniverseCategories) | **GET** /v1/universe/categories/ | Get item categories
 [**getUniverseCategoriesCategoryId**](UniverseApi.md#getUniverseCategoriesCategoryId) | **GET** /v1/universe/categories/{category_id}/ | Get item category information
@@ -76,6 +77,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetUniverseAncestries200Ok&gt;**](GetUniverseAncestries200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getUniverseAsteroidBeltsAsteroidBeltId"></a>
+# **getUniverseAsteroidBeltsAsteroidBeltId**
+> GetUniverseAsteroidBeltsAsteroidBeltIdOk getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, userAgent, xUserAgent)
+
+Get asteroid belt information
+
+Get information on an asteroid belt  ---  This route expires daily at 11:05
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.UniverseApi;
+
+
+UniverseApi apiInstance = new UniverseApi();
+Integer asteroidBeltId = 56; // Integer | asteroid_belt_id integer
+String datasource = "tranquility"; // String | The server name you would like data from
+String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
+String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+try {
+    GetUniverseAsteroidBeltsAsteroidBeltIdOk result = apiInstance.getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, userAgent, xUserAgent);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniverseApi#getUniverseAsteroidBeltsAsteroidBeltId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asteroidBeltId** | **Integer**| asteroid_belt_id integer |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
+ **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**GetUniverseAsteroidBeltsAsteroidBeltIdOk**](GetUniverseAsteroidBeltsAsteroidBeltIdOk.md)
 
 ### Authorization
 
