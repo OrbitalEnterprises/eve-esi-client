@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdKillmailsRecent"></a>
 # **getCharactersCharacterIdKillmailsRecent**
-> List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; getCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; getCharactersCharacterIdKillmailsRecent(characterId, datasource, ifNoneMatch, maxCount, maxKillId, token, userAgent, xUserAgent)
 
 Get character kills and losses
 
@@ -35,13 +35,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 KillmailsApi apiInstance = new KillmailsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer maxCount = 50; // Integer | How many killmails to return at maximum
 Integer maxKillId = 56; // Integer | Only return killmails with ID smaller than this. 
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdKillmailsRecent200Ok> result = apiInstance.getCharactersCharacterIdKillmailsRecent(characterId, datasource, maxCount, maxKillId, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdKillmailsRecent200Ok> result = apiInstance.getCharactersCharacterIdKillmailsRecent(characterId, datasource, ifNoneMatch, maxCount, maxKillId, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling KillmailsApi#getCharactersCharacterIdKillmailsRecent");
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **maxCount** | **Integer**| How many killmails to return at maximum | [optional] [default to 50]
  **maxKillId** | **Integer**| Only return killmails with ID smaller than this.  | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
@@ -71,12 +73,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdKillmailsRecent"></a>
 # **getCorporationsCorporationIdKillmailsRecent**
-> List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, maxKillId, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, ifNoneMatch, maxKillId, token, userAgent, xUserAgent)
 
 Get corporation kills and losses
 
@@ -100,12 +102,13 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 KillmailsApi apiInstance = new KillmailsApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer maxKillId = 56; // Integer | Only return killmails with ID smaller than this
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdKillmailsRecent200Ok> result = apiInstance.getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, maxKillId, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdKillmailsRecent200Ok> result = apiInstance.getCorporationsCorporationIdKillmailsRecent(corporationId, datasource, ifNoneMatch, maxKillId, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling KillmailsApi#getCorporationsCorporationIdKillmailsRecent");
@@ -119,6 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **maxKillId** | **Integer**| Only return killmails with ID smaller than this | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
@@ -134,12 +138,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getKillmailsKillmailIdKillmailHash"></a>
 # **getKillmailsKillmailIdKillmailHash**
-> GetKillmailsKillmailIdKillmailHashOk getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, userAgent, xUserAgent)
+> GetKillmailsKillmailIdKillmailHashOk getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get a single killmail
 
@@ -156,10 +160,11 @@ KillmailsApi apiInstance = new KillmailsApi();
 String killmailHash = "killmailHash_example"; // String | The killmail hash for verification
 Integer killmailId = 56; // Integer | The killmail ID to be queried
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetKillmailsKillmailIdKillmailHashOk result = apiInstance.getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, userAgent, xUserAgent);
+    GetKillmailsKillmailIdKillmailHashOk result = apiInstance.getKillmailsKillmailIdKillmailHash(killmailHash, killmailId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling KillmailsApi#getKillmailsKillmailIdKillmailHash");
@@ -174,6 +179,7 @@ Name | Type | Description  | Notes
  **killmailHash** | **String**| The killmail hash for verification |
  **killmailId** | **Integer**| The killmail ID to be queried |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -187,6 +193,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

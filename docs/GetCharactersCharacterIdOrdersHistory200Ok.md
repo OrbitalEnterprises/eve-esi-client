@@ -4,21 +4,21 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderId** | **Long** | Unique order ID | 
-**typeId** | **Integer** | The type ID of the item transacted in this order | 
-**regionId** | **Integer** | ID of the region where order was placed | 
-**locationId** | **Long** | ID of the location where order was placed | 
-**range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
-**price** | **Double** | Cost per unit for this order | 
-**volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
-**volumeRemain** | **Integer** | Quantity of items still required or offered | 
-**issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 
-**isBuyOrder** | **Boolean** | True if the order is a bid (buy) order |  [optional]
-**minVolume** | **Integer** | For buy orders, the minimum quantity that will be accepted in a matching sell order |  [optional]
-**escrow** | **Double** | For buy orders, the amount of ISK in escrow |  [optional]
 **duration** | **Integer** | Number of days the order was valid for (starting from the issued date). An order expires at time issued + duration | 
-**state** | [**StateEnum**](#StateEnum) | Current order state | 
+**escrow** | **Double** | For buy orders, the amount of ISK in escrow |  [optional]
+**isBuyOrder** | **Boolean** | True if the order is a bid (buy) order |  [optional]
 **isCorporation** | **Boolean** | Signifies whether the buy/sell order was placed on behalf of a corporation. | 
+**issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 
+**locationId** | **Long** | ID of the location where order was placed | 
+**minVolume** | **Integer** | For buy orders, the minimum quantity that will be accepted in a matching sell order |  [optional]
+**orderId** | **Long** | Unique order ID | 
+**price** | **Double** | Cost per unit for this order | 
+**range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
+**regionId** | **Integer** | ID of the region where order was placed | 
+**state** | [**StateEnum**](#StateEnum) | Current order state | 
+**typeId** | **Integer** | The type ID of the item transacted in this order | 
+**volumeRemain** | **Integer** | Quantity of items still required or offered | 
+**volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
 
 
 <a name="RangeEnum"></a>

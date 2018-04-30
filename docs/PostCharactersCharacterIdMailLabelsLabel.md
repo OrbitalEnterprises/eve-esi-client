@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | name string | 
 **color** | [**ColorEnum**](#ColorEnum) | Hexadecimal string representing label color, in RGB format |  [optional]
+**name** | **String** | name string | 
 
 
 <a name="ColorEnum"></a>

@@ -4,18 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orderId** | **Long** | order_id integer | 
-**typeId** | **Integer** | type_id integer | 
-**locationId** | **Long** | location_id integer | 
-**systemId** | **Integer** | The solar system this order was placed | 
-**volumeTotal** | **Integer** | volume_total integer | 
-**volumeRemain** | **Integer** | volume_remain integer | 
-**minVolume** | **Integer** | min_volume integer | 
-**price** | **Double** | price number | 
-**isBuyOrder** | **Boolean** | is_buy_order boolean | 
 **duration** | **Integer** | duration integer | 
+**isBuyOrder** | **Boolean** | is_buy_order boolean | 
 **issued** | [**DateTime**](DateTime.md) | issued string | 
+**locationId** | **Long** | location_id integer | 
+**minVolume** | **Integer** | min_volume integer | 
+**orderId** | **Long** | order_id integer | 
+**price** | **Double** | price number | 
 **range** | [**RangeEnum**](#RangeEnum) | range string | 
+**systemId** | **Integer** | The solar system this order was placed | 
+**typeId** | **Integer** | type_id integer | 
+**volumeRemain** | **Integer** | volume_remain integer | 
+**volumeTotal** | **Integer** | volume_total integer | 
 
 
 <a name="RangeEnum"></a>

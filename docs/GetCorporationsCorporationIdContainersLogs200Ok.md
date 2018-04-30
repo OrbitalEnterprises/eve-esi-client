@@ -4,18 +4,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
+**action** | [**ActionEnum**](#ActionEnum) | action string | 
+**characterId** | **Integer** | ID of the character who performed the action. | 
 **containerId** | **Long** | ID of the container | 
 **containerTypeId** | **Integer** | Type ID of the container | 
-**characterId** | **Integer** | ID of the character who performed the action. | 
-**locationId** | **Long** | location_id integer | 
-**action** | [**ActionEnum**](#ActionEnum) | action string | 
-**passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
-**typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
-**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
-**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
-**newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
+**locationId** | **Long** | location_id integer | 
+**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
+**newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
+**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
+**passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
+**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
+**typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
 
 
 <a name="ActionEnum"></a>
@@ -32,14 +32,6 @@ REPACKAGE | &quot;repackage&quot;
 SET_NAME | &quot;set_name&quot;
 SET_PASSWORD | &quot;set_password&quot;
 UNLOCK | &quot;unlock&quot;
-
-
-<a name="PasswordTypeEnum"></a>
-## Enum: PasswordTypeEnum
-Name | Value
----- | -----
-CONFIG | &quot;config&quot;
-GENERAL | &quot;general&quot;
 
 
 <a name="LocationFlagEnum"></a>
@@ -161,6 +153,14 @@ SUBSYSTEMSLOT7 | &quot;SubSystemSlot7&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;
+
+
+<a name="PasswordTypeEnum"></a>
+## Enum: PasswordTypeEnum
+Name | Value
+---- | -----
+CONFIG | &quot;config&quot;
+GENERAL | &quot;general&quot;
 
 
 

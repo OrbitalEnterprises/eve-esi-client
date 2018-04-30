@@ -5,15 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **characterId** | **Integer** | character_id integer | 
-**shipTypeId** | **Integer** | ship_type_id integer | 
-**wingId** | **Long** | ID of the wing the member is in. If not applicable, will be set to -1 | 
-**squadId** | **Long** | ID of the squad the member is in. If not applicable, will be set to -1 | 
+**joinTime** | [**DateTime**](DateTime.md) | join_time string | 
 **role** | [**RoleEnum**](#RoleEnum) | Member’s role in fleet | 
 **roleName** | **String** | Localized role names | 
-**joinTime** | [**DateTime**](DateTime.md) | join_time string | 
-**takesFleetWarp** | **Boolean** | Whether the member take fleet warps | 
+**shipTypeId** | **Integer** | ship_type_id integer | 
 **solarSystemId** | **Integer** | Solar system the member is located in | 
+**squadId** | **Long** | ID of the squad the member is in. If not applicable, will be set to -1 | 
 **stationId** | **Long** | Station in which the member is docked in, if applicable |  [optional]
+**takesFleetWarp** | **Boolean** | Whether the member take fleet warps | 
+**wingId** | **Long** | ID of the wing the member is in. If not applicable, will be set to -1 | 
 
 
 <a name="RoleEnum"></a>

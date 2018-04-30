@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recipientType** | [**RecipientTypeEnum**](#RecipientTypeEnum) | recipient_type string | 
 **recipientId** | **Integer** | recipient_id integer | 
+**recipientType** | [**RecipientTypeEnum**](#RecipientTypeEnum) | recipient_type string | 
 
 
 <a name="RecipientTypeEnum"></a>

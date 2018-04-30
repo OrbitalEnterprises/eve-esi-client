@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdAttributes"></a>
 # **getCharactersCharacterIdAttributes**
-> GetCharactersCharacterIdAttributesOk getCharactersCharacterIdAttributes(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdAttributesOk getCharactersCharacterIdAttributes(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get character attributes
 
@@ -35,11 +35,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 SkillsApi apiInstance = new SkillsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdAttributesOk result = apiInstance.getCharactersCharacterIdAttributes(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdAttributesOk result = apiInstance.getCharactersCharacterIdAttributes(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SkillsApi#getCharactersCharacterIdAttributes");
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -67,12 +69,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdSkillqueue"></a>
 # **getCharactersCharacterIdSkillqueue**
-> List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; getCharactersCharacterIdSkillqueue(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdSkillqueue200Ok&gt; getCharactersCharacterIdSkillqueue(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get character&#39;s skill queue
 
@@ -96,11 +98,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 SkillsApi apiInstance = new SkillsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdSkillqueue200Ok> result = apiInstance.getCharactersCharacterIdSkillqueue(characterId, datasource, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdSkillqueue200Ok> result = apiInstance.getCharactersCharacterIdSkillqueue(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SkillsApi#getCharactersCharacterIdSkillqueue");
@@ -114,6 +117,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -128,12 +132,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdSkills"></a>
 # **getCharactersCharacterIdSkills**
-> GetCharactersCharacterIdSkillsOk getCharactersCharacterIdSkills(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdSkillsOk getCharactersCharacterIdSkills(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get character skills
 
@@ -157,11 +161,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 SkillsApi apiInstance = new SkillsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdSkillsOk result = apiInstance.getCharactersCharacterIdSkills(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdSkillsOk result = apiInstance.getCharactersCharacterIdSkills(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SkillsApi#getCharactersCharacterIdSkills");
@@ -175,6 +180,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -189,6 +195,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**taskId** | **Integer** | task_id integer | 
-**name** | **String** | name string | 
 **description** | **String** | description string | 
+**name** | **String** | name string | 
 **notification** | **String** | notification string | 
+**taskId** | **Integer** | task_id integer | 
 
 
 

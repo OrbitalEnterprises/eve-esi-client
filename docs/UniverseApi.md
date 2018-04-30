@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 <a name="getUniverseAncestries"></a>
 # **getUniverseAncestries**
-> List&lt;GetUniverseAncestries200Ok&gt; getUniverseAncestries(datasource, language, userAgent, xUserAgent)
+> List&lt;GetUniverseAncestries200Ok&gt; getUniverseAncestries(datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get ancestries
 
@@ -53,11 +53,12 @@ Get all character ancestries  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseAncestries200Ok> result = apiInstance.getUniverseAncestries(datasource, language, userAgent, xUserAgent);
+    List<GetUniverseAncestries200Ok> result = apiInstance.getUniverseAncestries(datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseAncestries");
@@ -70,6 +71,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -84,12 +86,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseAsteroidBeltsAsteroidBeltId"></a>
 # **getUniverseAsteroidBeltsAsteroidBeltId**
-> GetUniverseAsteroidBeltsAsteroidBeltIdOk getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, userAgent, xUserAgent)
+> GetUniverseAsteroidBeltsAsteroidBeltIdOk getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get asteroid belt information
 
@@ -105,10 +107,11 @@ Get information on an asteroid belt  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer asteroidBeltId = 56; // Integer | asteroid_belt_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseAsteroidBeltsAsteroidBeltIdOk result = apiInstance.getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, userAgent, xUserAgent);
+    GetUniverseAsteroidBeltsAsteroidBeltIdOk result = apiInstance.getUniverseAsteroidBeltsAsteroidBeltId(asteroidBeltId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseAsteroidBeltsAsteroidBeltId");
@@ -122,6 +125,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asteroidBeltId** | **Integer**| asteroid_belt_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -135,12 +139,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseBloodlines"></a>
 # **getUniverseBloodlines**
-> List&lt;GetUniverseBloodlines200Ok&gt; getUniverseBloodlines(datasource, language, userAgent, xUserAgent)
+> List&lt;GetUniverseBloodlines200Ok&gt; getUniverseBloodlines(datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get bloodlines
 
@@ -155,11 +159,12 @@ Get a list of bloodlines  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseBloodlines200Ok> result = apiInstance.getUniverseBloodlines(datasource, language, userAgent, xUserAgent);
+    List<GetUniverseBloodlines200Ok> result = apiInstance.getUniverseBloodlines(datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseBloodlines");
@@ -172,6 +177,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -186,12 +192,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseCategories"></a>
 # **getUniverseCategories**
-> List&lt;Integer&gt; getUniverseCategories(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseCategories(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get item categories
 
@@ -206,10 +212,11 @@ Get a list of item categories  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseCategories(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseCategories(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseCategories");
@@ -222,6 +229,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -235,12 +243,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseCategoriesCategoryId"></a>
 # **getUniverseCategoriesCategoryId**
-> GetUniverseCategoriesCategoryIdOk getUniverseCategoriesCategoryId(categoryId, datasource, language, userAgent, xUserAgent)
+> GetUniverseCategoriesCategoryIdOk getUniverseCategoriesCategoryId(categoryId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get item category information
 
@@ -256,11 +264,12 @@ Get information of an item category  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer categoryId = 56; // Integer | An Eve item category ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseCategoriesCategoryIdOk result = apiInstance.getUniverseCategoriesCategoryId(categoryId, datasource, language, userAgent, xUserAgent);
+    GetUniverseCategoriesCategoryIdOk result = apiInstance.getUniverseCategoriesCategoryId(categoryId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseCategoriesCategoryId");
@@ -274,6 +283,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categoryId** | **Integer**| An Eve item category ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -288,12 +298,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseConstellations"></a>
 # **getUniverseConstellations**
-> List&lt;Integer&gt; getUniverseConstellations(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseConstellations(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get constellations
 
@@ -308,10 +318,11 @@ Get a list of constellations  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseConstellations(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseConstellations(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseConstellations");
@@ -324,6 +335,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -337,12 +349,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseConstellationsConstellationId"></a>
 # **getUniverseConstellationsConstellationId**
-> GetUniverseConstellationsConstellationIdOk getUniverseConstellationsConstellationId(constellationId, datasource, language, userAgent, xUserAgent)
+> GetUniverseConstellationsConstellationIdOk getUniverseConstellationsConstellationId(constellationId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get constellation information
 
@@ -358,11 +370,12 @@ Get information on a constellation  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer constellationId = 56; // Integer | constellation_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseConstellationsConstellationIdOk result = apiInstance.getUniverseConstellationsConstellationId(constellationId, datasource, language, userAgent, xUserAgent);
+    GetUniverseConstellationsConstellationIdOk result = apiInstance.getUniverseConstellationsConstellationId(constellationId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseConstellationsConstellationId");
@@ -376,6 +389,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **constellationId** | **Integer**| constellation_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -390,12 +404,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseFactions"></a>
 # **getUniverseFactions**
-> List&lt;GetUniverseFactions200Ok&gt; getUniverseFactions(datasource, language, userAgent, xUserAgent)
+> List&lt;GetUniverseFactions200Ok&gt; getUniverseFactions(datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get factions
 
@@ -410,11 +424,12 @@ Get a list of factions  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseFactions200Ok> result = apiInstance.getUniverseFactions(datasource, language, userAgent, xUserAgent);
+    List<GetUniverseFactions200Ok> result = apiInstance.getUniverseFactions(datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseFactions");
@@ -427,6 +442,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -441,12 +457,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseGraphics"></a>
 # **getUniverseGraphics**
-> List&lt;Integer&gt; getUniverseGraphics(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseGraphics(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get graphics
 
@@ -461,10 +477,11 @@ Get a list of graphics  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseGraphics(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseGraphics(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseGraphics");
@@ -477,6 +494,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -490,12 +508,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseGraphicsGraphicId"></a>
 # **getUniverseGraphicsGraphicId**
-> GetUniverseGraphicsGraphicIdOk getUniverseGraphicsGraphicId(graphicId, datasource, userAgent, xUserAgent)
+> GetUniverseGraphicsGraphicIdOk getUniverseGraphicsGraphicId(graphicId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get graphic information
 
@@ -511,10 +529,11 @@ Get information on a graphic  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer graphicId = 56; // Integer | graphic_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseGraphicsGraphicIdOk result = apiInstance.getUniverseGraphicsGraphicId(graphicId, datasource, userAgent, xUserAgent);
+    GetUniverseGraphicsGraphicIdOk result = apiInstance.getUniverseGraphicsGraphicId(graphicId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseGraphicsGraphicId");
@@ -528,6 +547,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **graphicId** | **Integer**| graphic_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -541,12 +561,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseGroups"></a>
 # **getUniverseGroups**
-> List&lt;Integer&gt; getUniverseGroups(datasource, page, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseGroups(datasource, ifNoneMatch, page, userAgent, xUserAgent)
 
 Get item groups
 
@@ -561,11 +581,12 @@ Get a list of item groups  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseGroups(datasource, page, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseGroups(datasource, ifNoneMatch, page, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseGroups");
@@ -578,6 +599,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -592,12 +614,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseGroupsGroupId"></a>
 # **getUniverseGroupsGroupId**
-> GetUniverseGroupsGroupIdOk getUniverseGroupsGroupId(groupId, datasource, language, userAgent, xUserAgent)
+> GetUniverseGroupsGroupIdOk getUniverseGroupsGroupId(groupId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get item group information
 
@@ -613,11 +635,12 @@ Get information on an item group  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer groupId = 56; // Integer | An Eve item group ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseGroupsGroupIdOk result = apiInstance.getUniverseGroupsGroupId(groupId, datasource, language, userAgent, xUserAgent);
+    GetUniverseGroupsGroupIdOk result = apiInstance.getUniverseGroupsGroupId(groupId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseGroupsGroupId");
@@ -631,6 +654,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **Integer**| An Eve item group ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -645,12 +669,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseMoonsMoonId"></a>
 # **getUniverseMoonsMoonId**
-> GetUniverseMoonsMoonIdOk getUniverseMoonsMoonId(moonId, datasource, userAgent, xUserAgent)
+> GetUniverseMoonsMoonIdOk getUniverseMoonsMoonId(moonId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get moon information
 
@@ -666,10 +690,11 @@ Get information on a moon  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer moonId = 56; // Integer | moon_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseMoonsMoonIdOk result = apiInstance.getUniverseMoonsMoonId(moonId, datasource, userAgent, xUserAgent);
+    GetUniverseMoonsMoonIdOk result = apiInstance.getUniverseMoonsMoonId(moonId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseMoonsMoonId");
@@ -683,6 +708,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **moonId** | **Integer**| moon_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -696,12 +722,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniversePlanetsPlanetId"></a>
 # **getUniversePlanetsPlanetId**
-> GetUniversePlanetsPlanetIdOk getUniversePlanetsPlanetId(planetId, datasource, userAgent, xUserAgent)
+> GetUniversePlanetsPlanetIdOk getUniversePlanetsPlanetId(planetId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get planet information
 
@@ -717,10 +743,11 @@ Get information on a planet  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer planetId = 56; // Integer | planet_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniversePlanetsPlanetIdOk result = apiInstance.getUniversePlanetsPlanetId(planetId, datasource, userAgent, xUserAgent);
+    GetUniversePlanetsPlanetIdOk result = apiInstance.getUniversePlanetsPlanetId(planetId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniversePlanetsPlanetId");
@@ -734,6 +761,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **planetId** | **Integer**| planet_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -747,12 +775,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseRaces"></a>
 # **getUniverseRaces**
-> List&lt;GetUniverseRaces200Ok&gt; getUniverseRaces(datasource, language, userAgent, xUserAgent)
+> List&lt;GetUniverseRaces200Ok&gt; getUniverseRaces(datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get character races
 
@@ -767,11 +795,12 @@ Get a list of character races  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseRaces200Ok> result = apiInstance.getUniverseRaces(datasource, language, userAgent, xUserAgent);
+    List<GetUniverseRaces200Ok> result = apiInstance.getUniverseRaces(datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseRaces");
@@ -784,6 +813,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -798,12 +828,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseRegions"></a>
 # **getUniverseRegions**
-> List&lt;Integer&gt; getUniverseRegions(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseRegions(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get regions
 
@@ -818,10 +848,11 @@ Get a list of regions  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseRegions(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseRegions(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseRegions");
@@ -834,6 +865,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -847,12 +879,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseRegionsRegionId"></a>
 # **getUniverseRegionsRegionId**
-> GetUniverseRegionsRegionIdOk getUniverseRegionsRegionId(regionId, datasource, language, userAgent, xUserAgent)
+> GetUniverseRegionsRegionIdOk getUniverseRegionsRegionId(regionId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get region information
 
@@ -868,11 +900,12 @@ Get information on a region  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer regionId = 56; // Integer | region_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseRegionsRegionIdOk result = apiInstance.getUniverseRegionsRegionId(regionId, datasource, language, userAgent, xUserAgent);
+    GetUniverseRegionsRegionIdOk result = apiInstance.getUniverseRegionsRegionId(regionId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseRegionsRegionId");
@@ -886,6 +919,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **regionId** | **Integer**| region_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -900,12 +934,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseStargatesStargateId"></a>
 # **getUniverseStargatesStargateId**
-> GetUniverseStargatesStargateIdOk getUniverseStargatesStargateId(stargateId, datasource, userAgent, xUserAgent)
+> GetUniverseStargatesStargateIdOk getUniverseStargatesStargateId(stargateId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get stargate information
 
@@ -921,10 +955,11 @@ Get information on a stargate  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer stargateId = 56; // Integer | stargate_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseStargatesStargateIdOk result = apiInstance.getUniverseStargatesStargateId(stargateId, datasource, userAgent, xUserAgent);
+    GetUniverseStargatesStargateIdOk result = apiInstance.getUniverseStargatesStargateId(stargateId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStargatesStargateId");
@@ -938,6 +973,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stargateId** | **Integer**| stargate_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -951,12 +987,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseStarsStarId"></a>
 # **getUniverseStarsStarId**
-> GetUniverseStarsStarIdOk getUniverseStarsStarId(starId, datasource, userAgent, xUserAgent)
+> GetUniverseStarsStarIdOk getUniverseStarsStarId(starId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get star information
 
@@ -972,10 +1008,11 @@ Get information on a star  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer starId = 56; // Integer | star_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseStarsStarIdOk result = apiInstance.getUniverseStarsStarId(starId, datasource, userAgent, xUserAgent);
+    GetUniverseStarsStarIdOk result = apiInstance.getUniverseStarsStarId(starId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStarsStarId");
@@ -989,6 +1026,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **starId** | **Integer**| star_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1002,12 +1040,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseStationsStationId"></a>
 # **getUniverseStationsStationId**
-> GetUniverseStationsStationIdOk getUniverseStationsStationId(stationId, datasource, userAgent, xUserAgent)
+> GetUniverseStationsStationIdOk getUniverseStationsStationId(stationId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get station information
 
@@ -1023,10 +1061,11 @@ Get information on a station  ---  This route is cached for up to 300 seconds
 UniverseApi apiInstance = new UniverseApi();
 Integer stationId = 56; // Integer | station_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseStationsStationIdOk result = apiInstance.getUniverseStationsStationId(stationId, datasource, userAgent, xUserAgent);
+    GetUniverseStationsStationIdOk result = apiInstance.getUniverseStationsStationId(stationId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStationsStationId");
@@ -1040,6 +1079,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stationId** | **Integer**| station_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1053,12 +1093,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseStructures"></a>
 # **getUniverseStructures**
-> List&lt;Long&gt; getUniverseStructures(datasource, userAgent, xUserAgent)
+> List&lt;Long&gt; getUniverseStructures(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List all public structures
 
@@ -1073,10 +1113,11 @@ List all public structures  ---  This route is cached for up to 3600 seconds
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Long> result = apiInstance.getUniverseStructures(datasource, userAgent, xUserAgent);
+    List<Long> result = apiInstance.getUniverseStructures(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStructures");
@@ -1089,6 +1130,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1102,12 +1144,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseStructuresStructureId"></a>
 # **getUniverseStructuresStructureId**
-> GetUniverseStructuresStructureIdOk getUniverseStructuresStructureId(structureId, datasource, token, userAgent, xUserAgent)
+> GetUniverseStructuresStructureIdOk getUniverseStructuresStructureId(structureId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get structure information
 
@@ -1131,11 +1173,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 UniverseApi apiInstance = new UniverseApi();
 Long structureId = 789L; // Long | An Eve structure ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseStructuresStructureIdOk result = apiInstance.getUniverseStructuresStructureId(structureId, datasource, token, userAgent, xUserAgent);
+    GetUniverseStructuresStructureIdOk result = apiInstance.getUniverseStructuresStructureId(structureId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStructuresStructureId");
@@ -1149,6 +1192,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structureId** | **Long**| An Eve structure ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -1163,12 +1207,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseSystemJumps"></a>
 # **getUniverseSystemJumps**
-> List&lt;GetUniverseSystemJumps200Ok&gt; getUniverseSystemJumps(datasource, userAgent, xUserAgent)
+> List&lt;GetUniverseSystemJumps200Ok&gt; getUniverseSystemJumps(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get system jumps
 
@@ -1183,10 +1227,11 @@ Get the number of jumps in solar systems within the last hour ending at the time
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseSystemJumps200Ok> result = apiInstance.getUniverseSystemJumps(datasource, userAgent, xUserAgent);
+    List<GetUniverseSystemJumps200Ok> result = apiInstance.getUniverseSystemJumps(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseSystemJumps");
@@ -1199,6 +1244,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1212,12 +1258,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseSystemKills"></a>
 # **getUniverseSystemKills**
-> List&lt;GetUniverseSystemKills200Ok&gt; getUniverseSystemKills(datasource, userAgent, xUserAgent)
+> List&lt;GetUniverseSystemKills200Ok&gt; getUniverseSystemKills(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get system kills
 
@@ -1232,10 +1278,11 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetUniverseSystemKills200Ok> result = apiInstance.getUniverseSystemKills(datasource, userAgent, xUserAgent);
+    List<GetUniverseSystemKills200Ok> result = apiInstance.getUniverseSystemKills(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseSystemKills");
@@ -1248,6 +1295,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1261,12 +1309,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseSystems"></a>
 # **getUniverseSystems**
-> List&lt;Integer&gt; getUniverseSystems(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseSystems(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get solar systems
 
@@ -1281,10 +1329,11 @@ Get a list of solar systems  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseSystems(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseSystems(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseSystems");
@@ -1297,6 +1346,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -1310,12 +1360,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseSystemsSystemId"></a>
 # **getUniverseSystemsSystemId**
-> GetUniverseSystemsSystemIdOk getUniverseSystemsSystemId(systemId, datasource, language, userAgent, xUserAgent)
+> GetUniverseSystemsSystemIdOk getUniverseSystemsSystemId(systemId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get solar system information
 
@@ -1331,11 +1381,12 @@ Get information on a solar system  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer systemId = 56; // Integer | system_id integer
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseSystemsSystemIdOk result = apiInstance.getUniverseSystemsSystemId(systemId, datasource, language, userAgent, xUserAgent);
+    GetUniverseSystemsSystemIdOk result = apiInstance.getUniverseSystemsSystemId(systemId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseSystemsSystemId");
@@ -1349,6 +1400,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **systemId** | **Integer**| system_id integer |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -1363,12 +1415,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseTypes"></a>
 # **getUniverseTypes**
-> List&lt;Integer&gt; getUniverseTypes(datasource, page, userAgent, xUserAgent)
+> List&lt;Integer&gt; getUniverseTypes(datasource, ifNoneMatch, page, userAgent, xUserAgent)
 
 Get types
 
@@ -1383,11 +1435,12 @@ Get a list of type ids  ---  This route expires daily at 11:05
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getUniverseTypes(datasource, page, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getUniverseTypes(datasource, ifNoneMatch, page, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseTypes");
@@ -1400,6 +1453,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -1414,12 +1468,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getUniverseTypesTypeId"></a>
 # **getUniverseTypesTypeId**
-> GetUniverseTypesTypeIdOk getUniverseTypesTypeId(typeId, datasource, language, userAgent, xUserAgent)
+> GetUniverseTypesTypeIdOk getUniverseTypesTypeId(typeId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
 
 Get type information
 
@@ -1435,11 +1489,12 @@ Get information on a type  ---  This route expires daily at 11:05
 UniverseApi apiInstance = new UniverseApi();
 Integer typeId = 56; // Integer | An Eve item type ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String language = "en-us"; // String | Language to use in the response
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetUniverseTypesTypeIdOk result = apiInstance.getUniverseTypesTypeId(typeId, datasource, language, userAgent, xUserAgent);
+    GetUniverseTypesTypeIdOk result = apiInstance.getUniverseTypesTypeId(typeId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseTypesTypeId");
@@ -1453,6 +1508,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **typeId** | **Integer**| An Eve item type ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -1467,7 +1523,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="postUniverseIds"></a>
@@ -1520,7 +1576,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="postUniverseNames"></a>
@@ -1571,6 +1627,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

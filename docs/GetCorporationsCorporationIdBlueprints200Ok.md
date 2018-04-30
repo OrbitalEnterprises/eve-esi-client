@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **itemId** | **Long** | Unique ID for this item. | 
-**typeId** | **Integer** | type_id integer | 
-**locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. | 
-**quantity** | **Integer** | A range of numbers with a minimum of -2 and no maximum value where -1 is an original and -2 is a copy. It can be a positive integer if it is a stack of blueprint originals fresh from the market (e.g. no activities performed on them yet). | 
-**timeEfficiency** | **Integer** | Time Efficiency Level of the blueprint. | 
-**materialEfficiency** | **Integer** | Material Efficiency Level of the blueprint. | 
-**runs** | **Integer** | Number of runs remaining if the blueprint is a copy, -1 if it is an original. | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | Type of the location_id | 
+**locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. | 
+**materialEfficiency** | **Integer** | Material Efficiency Level of the blueprint. | 
+**quantity** | **Integer** | A range of numbers with a minimum of -2 and no maximum value where -1 is an original and -2 is a copy. It can be a positive integer if it is a stack of blueprint originals fresh from the market (e.g. no activities performed on them yet). | 
+**runs** | **Integer** | Number of runs remaining if the blueprint is a copy, -1 if it is an original. | 
+**timeEfficiency** | **Integer** | Time Efficiency Level of the blueprint. | 
+**typeId** | **Integer** | type_id integer | 
 
 
 <a name="LocationFlagEnum"></a>

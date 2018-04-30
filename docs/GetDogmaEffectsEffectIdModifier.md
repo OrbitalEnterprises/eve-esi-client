@@ -4,11 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**func** | **String** | func string | 
 **domain** | **String** | domain string |  [optional]
+**effectId** | **Integer** | effect_id integer |  [optional]
+**func** | **String** | func string | 
 **modifiedAttributeId** | **Integer** | modified_attribute_id integer |  [optional]
 **modifyingAttributeId** | **Integer** | modifying_attribute_id integer |  [optional]
-**effectId** | **Integer** | effect_id integer |  [optional]
 **operator** | **Integer** | operator integer |  [optional]
 
 

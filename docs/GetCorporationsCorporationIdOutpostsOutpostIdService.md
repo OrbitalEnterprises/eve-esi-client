@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**serviceName** | [**ServiceNameEnum**](#ServiceNameEnum) | service_name string | 
-**minimumStanding** | **Double** | minimum_standing number | 
-**surchargePerBadStanding** | **Double** | surcharge_per_bad_standing number | 
 **discountPerGoodStanding** | **Double** | discount_per_good_standing number | 
+**minimumStanding** | **Double** | minimum_standing number | 
+**serviceName** | [**ServiceNameEnum**](#ServiceNameEnum) | service_name string | 
+**surchargePerBadStanding** | **Double** | surcharge_per_bad_standing number | 
 
 
 <a name="ServiceNameEnum"></a>

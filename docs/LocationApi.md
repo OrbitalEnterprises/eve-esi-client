@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdLocation"></a>
 # **getCharactersCharacterIdLocation**
-> GetCharactersCharacterIdLocationOk getCharactersCharacterIdLocation(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdLocationOk getCharactersCharacterIdLocation(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get character location
 
@@ -35,11 +35,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdLocationOk result = apiInstance.getCharactersCharacterIdLocation(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdLocationOk result = apiInstance.getCharactersCharacterIdLocation(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationApi#getCharactersCharacterIdLocation");
@@ -53,6 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -67,12 +69,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdOnline"></a>
 # **getCharactersCharacterIdOnline**
-> GetCharactersCharacterIdOnlineOk getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdOnlineOk getCharactersCharacterIdOnline(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get character online
 
@@ -96,11 +98,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdOnlineOk result = apiInstance.getCharactersCharacterIdOnline(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdOnlineOk result = apiInstance.getCharactersCharacterIdOnline(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationApi#getCharactersCharacterIdOnline");
@@ -114,6 +117,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -128,12 +132,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdShip"></a>
 # **getCharactersCharacterIdShip**
-> GetCharactersCharacterIdShipOk getCharactersCharacterIdShip(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdShipOk getCharactersCharacterIdShip(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get current ship
 
@@ -157,11 +161,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 LocationApi apiInstance = new LocationApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdShipOk result = apiInstance.getCharactersCharacterIdShip(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdShipOk result = apiInstance.getCharactersCharacterIdShip(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling LocationApi#getCharactersCharacterIdShip");
@@ -175,6 +180,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -189,6 +195,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

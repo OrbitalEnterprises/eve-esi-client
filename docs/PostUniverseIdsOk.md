@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **factions** | [**List&lt;PostUniverseIdsFaction&gt;**](PostUniverseIdsFaction.md) | factions array |  [optional]
 **inventoryTypes** | [**List&lt;PostUniverseIdsInventoryType&gt;**](PostUniverseIdsInventoryType.md) | inventory_types array |  [optional]
 **regions** | [**List&lt;PostUniverseIdsRegion&gt;**](PostUniverseIdsRegion.md) | regions array |  [optional]
-**systems** | [**List&lt;PostUniverseIdsSystem&gt;**](PostUniverseIdsSystem.md) | systems array |  [optional]
 **stations** | [**List&lt;PostUniverseIdsStation&gt;**](PostUniverseIdsStation.md) | stations array |  [optional]
+**systems** | [**List&lt;PostUniverseIdsSystem&gt;**](PostUniverseIdsSystem.md) | systems array |  [optional]
 
 
 

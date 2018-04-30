@@ -4,14 +4,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | name string | 
-**solarSystemId** | **Integer** | solar_system_id integer | 
-**typeId** | **Integer** | type_id integer | 
 **age** | **Long** | Age of star in years | 
 **luminosity** | **Float** | luminosity number | 
+**name** | **String** | name string | 
 **radius** | **Long** | radius integer | 
+**solarSystemId** | **Integer** | solar_system_id integer | 
 **spectralClass** | [**SpectralClassEnum**](#SpectralClassEnum) | spectral_class string | 
 **temperature** | **Integer** | temperature integer | 
+**typeId** | **Integer** | type_id integer | 
 
 
 <a name="SpectralClassEnum"></a>

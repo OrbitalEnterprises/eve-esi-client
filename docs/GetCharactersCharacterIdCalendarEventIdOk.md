@@ -4,16 +4,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**date** | [**DateTime**](DateTime.md) | date string | 
+**duration** | **Integer** | Length in minutes | 
 **eventId** | **Integer** | event_id integer | 
+**importance** | **Integer** | importance integer | 
 **ownerId** | **Integer** | owner_id integer | 
 **ownerName** | **String** | owner_name string | 
-**date** | [**DateTime**](DateTime.md) | date string | 
-**title** | **String** | title string | 
-**duration** | **Integer** | Length in minutes | 
-**importance** | **Integer** | importance integer | 
+**ownerType** | [**OwnerTypeEnum**](#OwnerTypeEnum) | owner_type string | 
 **response** | **String** | response string | 
 **text** | **String** | text string | 
-**ownerType** | [**OwnerTypeEnum**](#OwnerTypeEnum) | owner_type string | 
+**title** | **String** | title string | 
 
 
 <a name="OwnerTypeEnum"></a>

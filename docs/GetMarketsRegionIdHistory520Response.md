@@ -1,5 +1,5 @@
 
-# PostCharactersCharacterIdContacts520Response
+# GetMarketsRegionIdHistory520Response
 
 ## Properties
 Name | Type | Description | Notes

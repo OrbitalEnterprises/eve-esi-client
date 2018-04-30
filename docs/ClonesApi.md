@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdClones"></a>
 # **getCharactersCharacterIdClones**
-> GetCharactersCharacterIdClonesOk getCharactersCharacterIdClones(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdClonesOk getCharactersCharacterIdClones(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get clones
 
@@ -34,11 +34,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ClonesApi apiInstance = new ClonesApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdClonesOk result = apiInstance.getCharactersCharacterIdClones(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdClonesOk result = apiInstance.getCharactersCharacterIdClones(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClonesApi#getCharactersCharacterIdClones");
@@ -52,6 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -66,12 +68,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdImplants"></a>
 # **getCharactersCharacterIdImplants**
-> List&lt;Integer&gt; getCharactersCharacterIdImplants(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;Integer&gt; getCharactersCharacterIdImplants(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get active implants
 
@@ -95,11 +97,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ClonesApi apiInstance = new ClonesApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getCharactersCharacterIdImplants(characterId, datasource, token, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getCharactersCharacterIdImplants(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClonesApi#getCharactersCharacterIdImplants");
@@ -113,6 +116,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -127,6 +131,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

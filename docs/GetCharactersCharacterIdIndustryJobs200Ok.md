@@ -4,27 +4,27 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**jobId** | **Integer** | Unique job ID | 
-**installerId** | **Integer** | ID of the character which installed this job | 
-**facilityId** | **Long** | ID of the facility where this job is running | 
-**stationId** | **Long** | ID of the station where industry facility is located | 
 **activityId** | **Integer** | Job activity ID | 
 **blueprintId** | **Long** | blueprint_id integer | 
-**blueprintTypeId** | **Integer** | blueprint_type_id integer | 
 **blueprintLocationId** | **Long** | Location ID of the location from which the blueprint was installed. Normally a station ID, but can also be an asset (e.g. container) or corporation facility | 
-**outputLocationId** | **Long** | Location ID of the location to which the output of the job will be delivered. Normally a station ID, but can also be a corporation facility | 
-**runs** | **Integer** | Number of runs for a manufacturing job, or number of copies to make for a blueprint copy | 
+**blueprintTypeId** | **Integer** | blueprint_type_id integer | 
+**completedCharacterId** | **Integer** | ID of the character which completed this job |  [optional]
+**completedDate** | [**DateTime**](DateTime.md) | Date and time when this job was completed |  [optional]
 **cost** | **Double** | The sume of job installation fee and industry facility tax |  [optional]
+**duration** | **Integer** | Job duration in seconds | 
+**endDate** | [**DateTime**](DateTime.md) | Date and time when this job finished | 
+**facilityId** | **Long** | ID of the facility where this job is running | 
+**installerId** | **Integer** | ID of the character which installed this job | 
+**jobId** | **Integer** | Unique job ID | 
 **licensedRuns** | **Integer** | Number of runs blueprint is licensed for |  [optional]
+**outputLocationId** | **Long** | Location ID of the location to which the output of the job will be delivered. Normally a station ID, but can also be a corporation facility | 
+**pauseDate** | [**DateTime**](DateTime.md) | Date and time when this job was paused (i.e. time when the facility where this job was installed went offline) |  [optional]
 **probability** | **Float** | Chance of success for invention |  [optional]
 **productTypeId** | **Integer** | Type ID of product (manufactured, copied or invented) |  [optional]
-**status** | [**StatusEnum**](#StatusEnum) | status string | 
-**duration** | **Integer** | Job duration in seconds | 
+**runs** | **Integer** | Number of runs for a manufacturing job, or number of copies to make for a blueprint copy | 
 **startDate** | [**DateTime**](DateTime.md) | Date and time when this job started | 
-**endDate** | [**DateTime**](DateTime.md) | Date and time when this job finished | 
-**pauseDate** | [**DateTime**](DateTime.md) | Date and time when this job was paused (i.e. time when the facility where this job was installed went offline) |  [optional]
-**completedDate** | [**DateTime**](DateTime.md) | Date and time when this job was completed |  [optional]
-**completedCharacterId** | **Integer** | ID of the character which completed this job |  [optional]
+**stationId** | **Long** | ID of the station where industry facility is located | 
+**status** | [**StatusEnum**](#StatusEnum) | status string | 
 **successfulRuns** | **Integer** | Number of successful runs for this job. Equal to runs unless this is an invention job |  [optional]
 
 

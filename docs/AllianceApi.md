@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getAlliances"></a>
 # **getAlliances**
-> List&lt;Integer&gt; getAlliances(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getAlliances(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List all alliances
 
@@ -28,10 +28,11 @@ List all active player alliances  ---  This route is cached for up to 3600 secon
 
 AllianceApi apiInstance = new AllianceApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getAlliances(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getAlliances(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliances");
@@ -44,6 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -57,12 +59,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getAlliancesAllianceId"></a>
 # **getAlliancesAllianceId**
-> GetAlliancesAllianceIdOk getAlliancesAllianceId(allianceId, datasource, userAgent, xUserAgent)
+> GetAlliancesAllianceIdOk getAlliancesAllianceId(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get alliance information
 
@@ -78,10 +80,11 @@ Public information about an alliance  ---  This route is cached for up to 3600 s
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetAlliancesAllianceIdOk result = apiInstance.getAlliancesAllianceId(allianceId, datasource, userAgent, xUserAgent);
+    GetAlliancesAllianceIdOk result = apiInstance.getAlliancesAllianceId(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceId");
@@ -95,6 +98,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -108,12 +112,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getAlliancesAllianceIdCorporations"></a>
 # **getAlliancesAllianceIdCorporations**
-> List&lt;Integer&gt; getAlliancesAllianceIdCorporations(allianceId, datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getAlliancesAllianceIdCorporations(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List alliance&#39;s corporations
 
@@ -129,10 +133,11 @@ List all current member corporations of an alliance  ---  This route is cached f
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getAlliancesAllianceIdCorporations(allianceId, datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getAlliancesAllianceIdCorporations(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceIdCorporations");
@@ -146,6 +151,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -159,12 +165,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getAlliancesAllianceIdIcons"></a>
 # **getAlliancesAllianceIdIcons**
-> GetAlliancesAllianceIdIconsOk getAlliancesAllianceIdIcons(allianceId, datasource, userAgent, xUserAgent)
+> GetAlliancesAllianceIdIconsOk getAlliancesAllianceIdIcons(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get alliance icon
 
@@ -180,10 +186,11 @@ Get the icon urls for a alliance  ---  This route is cached for up to 3600 secon
 AllianceApi apiInstance = new AllianceApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetAlliancesAllianceIdIconsOk result = apiInstance.getAlliancesAllianceIdIcons(allianceId, datasource, userAgent, xUserAgent);
+    GetAlliancesAllianceIdIconsOk result = apiInstance.getAlliancesAllianceIdIcons(allianceId, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesAllianceIdIcons");
@@ -197,6 +204,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -210,12 +218,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getAlliancesNames"></a>
 # **getAlliancesNames**
-> List&lt;GetAlliancesNames200Ok&gt; getAlliancesNames(allianceIds, datasource, userAgent, xUserAgent)
+> List&lt;GetAlliancesNames200Ok&gt; getAlliancesNames(allianceIds, datasource, ifNoneMatch, userAgent, xUserAgent)
 
 Get alliance names
 
@@ -231,10 +239,11 @@ Resolve a set of alliance IDs to alliance names  ---  This route is cached for u
 AllianceApi apiInstance = new AllianceApi();
 List<Integer> allianceIds = Arrays.asList(56); // List<Integer> | A comma separated list of alliance IDs
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetAlliancesNames200Ok> result = apiInstance.getAlliancesNames(allianceIds, datasource, userAgent, xUserAgent);
+    List<GetAlliancesNames200Ok> result = apiInstance.getAlliancesNames(allianceIds, datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AllianceApi#getAlliancesNames");
@@ -248,6 +257,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of alliance IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -261,6 +271,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**standing** | **Float** | Standing of the contact | 
-**contactType** | [**ContactTypeEnum**](#ContactTypeEnum) | contact_type string | 
 **contactId** | **Integer** | contact_id integer | 
-**isWatched** | **Boolean** | Whether this contact is being watched |  [optional]
+**contactType** | [**ContactTypeEnum**](#ContactTypeEnum) | contact_type string | 
 **isBlocked** | **Boolean** | Whether this contact is in the blocked list. Note a missing value denotes unknown, not true or false |  [optional]
+**isWatched** | **Boolean** | Whether this contact is being watched |  [optional]
 **labelId** | **Long** | Custom label of the contact |  [optional]
+**standing** | **Float** | Standing of the contact | 
 
 
 <a name="ContactTypeEnum"></a>

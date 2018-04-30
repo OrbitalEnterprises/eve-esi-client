@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**year** | **Integer** | Gregorian year for this set of aggregates | 
 **character** | [**GetCharactersCharacterIdStatsCharacter**](GetCharactersCharacterIdStatsCharacter.md) |  |  [optional]
 **combat** | [**GetCharactersCharacterIdStatsCombat**](GetCharactersCharacterIdStatsCombat.md) |  |  [optional]
 **industry** | [**GetCharactersCharacterIdStatsIndustry**](GetCharactersCharacterIdStatsIndustry.md) |  |  [optional]
@@ -17,6 +16,7 @@ Name | Type | Description | Notes
 **pve** | [**GetCharactersCharacterIdStatsPve**](GetCharactersCharacterIdStatsPve.md) |  |  [optional]
 **social** | [**GetCharactersCharacterIdStatsSocial**](GetCharactersCharacterIdStatsSocial.md) |  |  [optional]
 **travel** | [**GetCharactersCharacterIdStatsTravel**](GetCharactersCharacterIdStatsTravel.md) |  |  [optional]
+**year** | **Integer** | Gregorian year for this set of aggregates | 
 
 
 

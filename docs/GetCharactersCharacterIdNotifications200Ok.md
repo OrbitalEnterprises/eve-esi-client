@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**isRead** | **Boolean** | is_read boolean |  [optional]
 **notificationId** | **Long** | notification_id integer | 
 **senderId** | **Integer** | sender_id integer | 
 **senderType** | [**SenderTypeEnum**](#SenderTypeEnum) | sender_type string | 
-**timestamp** | [**DateTime**](DateTime.md) | timestamp string | 
-**isRead** | **Boolean** | is_read boolean |  [optional]
 **text** | **String** | text string |  [optional]
+**timestamp** | [**DateTime**](DateTime.md) | timestamp string | 
 **type** | [**TypeEnum**](#TypeEnum) | type string | 
 
 

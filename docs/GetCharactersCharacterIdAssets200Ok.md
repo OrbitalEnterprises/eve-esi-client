@@ -4,22 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**typeId** | **Integer** | type_id integer | 
-**quantity** | **Integer** | quantity integer | 
-**locationId** | **Long** | location_id integer | 
-**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
+**isSingleton** | **Boolean** | is_singleton boolean | 
 **itemId** | **Long** | item_id integer | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
-**isSingleton** | **Boolean** | is_singleton boolean | 
-
-
-<a name="LocationTypeEnum"></a>
-## Enum: LocationTypeEnum
-Name | Value
----- | -----
-STATION | &quot;station&quot;
-SOLAR_SYSTEM | &quot;solar_system&quot;
-OTHER | &quot;other&quot;
+**locationId** | **Long** | location_id integer | 
+**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
+**quantity** | **Integer** | quantity integer | 
+**typeId** | **Integer** | type_id integer | 
 
 
 <a name="LocationFlagEnum"></a>
@@ -104,6 +95,15 @@ SUBSYSTEMSLOT6 | &quot;SubSystemSlot6&quot;
 SUBSYSTEMSLOT7 | &quot;SubSystemSlot7&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WARDROBE | &quot;Wardrobe&quot;
+
+
+<a name="LocationTypeEnum"></a>
+## Enum: LocationTypeEnum
+Name | Value
+---- | -----
+STATION | &quot;station&quot;
+SOLAR_SYSTEM | &quot;solar_system&quot;
+OTHER | &quot;other&quot;
 
 
 

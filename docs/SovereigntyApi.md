@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getSovereigntyCampaigns"></a>
 # **getSovereigntyCampaigns**
-> List&lt;GetSovereigntyCampaigns200Ok&gt; getSovereigntyCampaigns(datasource, userAgent, xUserAgent)
+> List&lt;GetSovereigntyCampaigns200Ok&gt; getSovereigntyCampaigns(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List sovereignty campaigns
 
@@ -26,10 +26,11 @@ Shows sovereignty data for campaigns.  ---  This route is cached for up to 5 sec
 
 SovereigntyApi apiInstance = new SovereigntyApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetSovereigntyCampaigns200Ok> result = apiInstance.getSovereigntyCampaigns(datasource, userAgent, xUserAgent);
+    List<GetSovereigntyCampaigns200Ok> result = apiInstance.getSovereigntyCampaigns(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SovereigntyApi#getSovereigntyCampaigns");
@@ -42,6 +43,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -55,12 +57,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getSovereigntyMap"></a>
 # **getSovereigntyMap**
-> List&lt;GetSovereigntyMap200Ok&gt; getSovereigntyMap(datasource, userAgent, xUserAgent)
+> List&lt;GetSovereigntyMap200Ok&gt; getSovereigntyMap(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List sovereignty of systems
 
@@ -75,10 +77,11 @@ Shows sovereignty information for solar systems  ---  This route is cached for u
 
 SovereigntyApi apiInstance = new SovereigntyApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetSovereigntyMap200Ok> result = apiInstance.getSovereigntyMap(datasource, userAgent, xUserAgent);
+    List<GetSovereigntyMap200Ok> result = apiInstance.getSovereigntyMap(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SovereigntyApi#getSovereigntyMap");
@@ -91,6 +94,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -104,12 +108,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getSovereigntyStructures"></a>
 # **getSovereigntyStructures**
-> List&lt;GetSovereigntyStructures200Ok&gt; getSovereigntyStructures(datasource, userAgent, xUserAgent)
+> List&lt;GetSovereigntyStructures200Ok&gt; getSovereigntyStructures(datasource, ifNoneMatch, userAgent, xUserAgent)
 
 List sovereignty structures
 
@@ -124,10 +128,11 @@ Shows sovereignty data for structures.  ---  This route is cached for up to 120 
 
 SovereigntyApi apiInstance = new SovereigntyApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetSovereigntyStructures200Ok> result = apiInstance.getSovereigntyStructures(datasource, userAgent, xUserAgent);
+    List<GetSovereigntyStructures200Ok> result = apiInstance.getSovereigntyStructures(datasource, ifNoneMatch, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SovereigntyApi#getSovereigntyStructures");
@@ -140,6 +145,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
@@ -153,6 +159,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

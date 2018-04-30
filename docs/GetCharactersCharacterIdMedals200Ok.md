@@ -4,15 +4,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**medalId** | **Integer** | medal_id integer | 
-**title** | **String** | title string | 
-**description** | **String** | description string | 
 **corporationId** | **Integer** | corporation_id integer | 
-**issuerId** | **Integer** | issuer_id integer | 
 **date** | [**DateTime**](DateTime.md) | date string | 
+**description** | **String** | description string | 
+**graphics** | [**List&lt;GetCharactersCharacterIdMedalsGraphic&gt;**](GetCharactersCharacterIdMedalsGraphic.md) | graphics array | 
+**issuerId** | **Integer** | issuer_id integer | 
+**medalId** | **Integer** | medal_id integer | 
 **reason** | **String** | reason string | 
 **status** | [**StatusEnum**](#StatusEnum) | status string | 
-**graphics** | [**List&lt;GetCharactersCharacterIdMedalsGraphic&gt;**](GetCharactersCharacterIdMedalsGraphic.md) | graphics array | 
+**title** | **String** | title string | 
 
 
 <a name="StatusEnum"></a>

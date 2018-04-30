@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **roles** | [**List&lt;RolesEnum&gt;**](#List&lt;RolesEnum&gt;) | roles array |  [optional]
-**rolesAtHq** | [**List&lt;RolesAtHqEnum&gt;**](#List&lt;RolesAtHqEnum&gt;) | roles_at_hq array |  [optional]
 **rolesAtBase** | [**List&lt;RolesAtBaseEnum&gt;**](#List&lt;RolesAtBaseEnum&gt;) | roles_at_base array |  [optional]
+**rolesAtHq** | [**List&lt;RolesAtHqEnum&gt;**](#List&lt;RolesAtHqEnum&gt;) | roles_at_hq array |  [optional]
 **rolesAtOther** | [**List&lt;RolesAtOtherEnum&gt;**](#List&lt;RolesAtOtherEnum&gt;) | roles_at_other array |  [optional]
 
 
@@ -66,8 +66,8 @@ TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
-<a name="List<RolesAtHqEnum>"></a>
-## Enum: List&lt;RolesAtHqEnum&gt;
+<a name="List<RolesAtBaseEnum>"></a>
+## Enum: List&lt;RolesAtBaseEnum&gt;
 Name | Value
 ---- | -----
 ACCOUNT_TAKE_1 | &quot;Account_Take_1&quot;
@@ -122,8 +122,8 @@ TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
-<a name="List<RolesAtBaseEnum>"></a>
-## Enum: List&lt;RolesAtBaseEnum&gt;
+<a name="List<RolesAtHqEnum>"></a>
+## Enum: List&lt;RolesAtHqEnum&gt;
 Name | Value
 ---- | -----
 ACCOUNT_TAKE_1 | &quot;Account_Take_1&quot;

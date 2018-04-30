@@ -74,7 +74,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="deleteCharactersCharacterIdMailMailId"></a>
@@ -102,7 +102,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
-Long mailId = 789L; // Long | An EVE mail ID
+Integer mailId = 56; // Integer | An EVE mail ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
@@ -120,7 +120,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **mailId** | **Long**| An EVE mail ID |
+ **mailId** | **Integer**| An EVE mail ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
@@ -136,12 +136,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdMail"></a>
 # **getCharactersCharacterIdMail**
-> List&lt;GetCharactersCharacterIdMail200Ok&gt; getCharactersCharacterIdMail(characterId, datasource, labels, lastMailId, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdMail200Ok&gt; getCharactersCharacterIdMail(characterId, datasource, ifNoneMatch, labels, lastMailId, token, userAgent, xUserAgent)
 
 Return mail headers
 
@@ -165,13 +165,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
-List<Long> labels = Arrays.asList(56L); // List<Long> | Fetch only mails that match one or more of the given labels
-Long lastMailId = 789L; // Long | List only mail with an ID lower than the given ID, if present
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+List<Integer> labels = Arrays.asList(56); // List<Integer> | Fetch only mails that match one or more of the given labels
+Integer lastMailId = 56; // Integer | List only mail with an ID lower than the given ID, if present
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdMail200Ok> result = apiInstance.getCharactersCharacterIdMail(characterId, datasource, labels, lastMailId, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdMail200Ok> result = apiInstance.getCharactersCharacterIdMail(characterId, datasource, ifNoneMatch, labels, lastMailId, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#getCharactersCharacterIdMail");
@@ -185,8 +186,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **labels** | [**List&lt;Long&gt;**](Long.md)| Fetch only mails that match one or more of the given labels | [optional]
- **lastMailId** | **Long**| List only mail with an ID lower than the given ID, if present | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **labels** | [**List&lt;Integer&gt;**](Integer.md)| Fetch only mails that match one or more of the given labels | [optional]
+ **lastMailId** | **Integer**| List only mail with an ID lower than the given ID, if present | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -201,12 +203,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdMailLabels"></a>
 # **getCharactersCharacterIdMailLabels**
-> GetCharactersCharacterIdMailLabelsOk getCharactersCharacterIdMailLabels(characterId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdMailLabelsOk getCharactersCharacterIdMailLabels(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Get mail labels and unread counts
 
@@ -230,11 +232,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdMailLabelsOk result = apiInstance.getCharactersCharacterIdMailLabels(characterId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdMailLabelsOk result = apiInstance.getCharactersCharacterIdMailLabels(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#getCharactersCharacterIdMailLabels");
@@ -248,6 +251,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -262,12 +266,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdMailLists"></a>
 # **getCharactersCharacterIdMailLists**
-> List&lt;GetCharactersCharacterIdMailLists200Ok&gt; getCharactersCharacterIdMailLists(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdMailLists200Ok&gt; getCharactersCharacterIdMailLists(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Return mailing list subscriptions
 
@@ -291,11 +295,12 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdMailLists200Ok> result = apiInstance.getCharactersCharacterIdMailLists(characterId, datasource, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdMailLists200Ok> result = apiInstance.getCharactersCharacterIdMailLists(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#getCharactersCharacterIdMailLists");
@@ -309,6 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -323,12 +329,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdMailMailId"></a>
 # **getCharactersCharacterIdMailMailId**
-> GetCharactersCharacterIdMailMailIdOk getCharactersCharacterIdMailMailId(characterId, mailId, datasource, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdMailMailIdOk getCharactersCharacterIdMailMailId(characterId, mailId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
 
 Return a mail
 
@@ -351,13 +357,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
-Long mailId = 789L; // Long | An EVE mail ID
+Integer mailId = 56; // Integer | An EVE mail ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdMailMailIdOk result = apiInstance.getCharactersCharacterIdMailMailId(characterId, mailId, datasource, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdMailMailIdOk result = apiInstance.getCharactersCharacterIdMailMailId(characterId, mailId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#getCharactersCharacterIdMailMailId");
@@ -370,8 +377,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **mailId** | **Long**| An EVE mail ID |
+ **mailId** | **Integer**| An EVE mail ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
@@ -386,12 +394,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="postCharactersCharacterIdMail"></a>
 # **postCharactersCharacterIdMail**
-> Long postCharactersCharacterIdMail(characterId, mail, datasource, token, userAgent, xUserAgent)
+> Integer postCharactersCharacterIdMail(characterId, mail, datasource, token, userAgent, xUserAgent)
 
 Send a new mail
 
@@ -420,7 +428,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Long result = apiInstance.postCharactersCharacterIdMail(characterId, mail, datasource, token, userAgent, xUserAgent);
+    Integer result = apiInstance.postCharactersCharacterIdMail(characterId, mail, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#postCharactersCharacterIdMail");
@@ -441,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Long**
+**Integer**
 
 ### Authorization
 
@@ -449,12 +457,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="postCharactersCharacterIdMailLabels"></a>
 # **postCharactersCharacterIdMailLabels**
-> Long postCharactersCharacterIdMailLabels(characterId, label, datasource, token, userAgent, xUserAgent)
+> Integer postCharactersCharacterIdMailLabels(characterId, label, datasource, token, userAgent, xUserAgent)
 
 Create a mail label
 
@@ -483,7 +491,7 @@ String token = "token_example"; // String | Access token to use if unable to set
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Long result = apiInstance.postCharactersCharacterIdMailLabels(characterId, label, datasource, token, userAgent, xUserAgent);
+    Integer result = apiInstance.postCharactersCharacterIdMailLabels(characterId, label, datasource, token, userAgent, xUserAgent);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MailApi#postCharactersCharacterIdMailLabels");
@@ -504,7 +512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Long**
+**Integer**
 
 ### Authorization
 
@@ -512,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="putCharactersCharacterIdMailMailId"></a>
@@ -541,7 +549,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 MailApi apiInstance = new MailApi();
 Integer characterId = 56; // Integer | An EVE character ID
 PutCharactersCharacterIdMailMailIdContents contents = new PutCharactersCharacterIdMailMailIdContents(); // PutCharactersCharacterIdMailMailIdContents | Data used to update the mail
-Long mailId = 789L; // Long | An EVE mail ID
+Integer mailId = 56; // Integer | An EVE mail ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
@@ -560,7 +568,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **contents** | [**PutCharactersCharacterIdMailMailIdContents**](PutCharactersCharacterIdMailMailIdContents.md)| Data used to update the mail |
- **mailId** | **Long**| An EVE mail ID |
+ **mailId** | **Integer**| An EVE mail ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
@@ -576,6 +584,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

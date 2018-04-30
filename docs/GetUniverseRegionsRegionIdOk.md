@@ -4,10 +4,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**regionId** | **Integer** | region_id integer | 
-**name** | **String** | name string | 
-**description** | **String** | description string |  [optional]
 **constellations** | **List&lt;Integer&gt;** | constellations array | 
+**description** | **String** | description string |  [optional]
+**name** | **String** | name string | 
+**regionId** | **Integer** | region_id integer | 
 
 
 
