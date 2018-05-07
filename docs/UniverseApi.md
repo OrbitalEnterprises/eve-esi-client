@@ -1,6 +1,6 @@
 # UniverseApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -1049,7 +1049,7 @@ No authorization required
 
 Get station information
 
-Get information on a station  ---  This route is cached for up to 300 seconds
+Get information on a station  ---  This route expires daily at 11:05
 
 ### Example
 ```java
