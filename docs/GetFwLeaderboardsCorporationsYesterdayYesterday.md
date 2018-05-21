@@ -1,5 +1,5 @@
 
-# GetFwLeaderboardsCorporationsActiveTotal
+# GetFwLeaderboardsCorporationsYesterdayYesterday
 
 ## Properties
 Name | Type | Description | Notes

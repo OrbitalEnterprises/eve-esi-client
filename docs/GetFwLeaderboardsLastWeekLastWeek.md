@@ -1,10 +1,10 @@
 
-# GetFwLeaderboardsLastWeek1
+# GetFwLeaderboardsLastWeekLastWeek
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | **Integer** | Amount of victory points |  [optional]
+**amount** | **Integer** | Amount of kills |  [optional]
 **factionId** | **Integer** | faction_id integer |  [optional]
 
 

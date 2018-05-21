@@ -1,5 +1,5 @@
 
-# GetCorporationsCorporationIdDivisionsWallet
+# GetCorporationsCorporationIdDivisionsHangarHangar
 
 ## Properties
 Name | Type | Description | Notes

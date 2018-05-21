@@ -83,7 +83,7 @@ null (empty response body)
 
 Get alliance contacts
 
-Return contacts of an alliance  ---  This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+Return contacts of an alliance  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
 
 ### Example
 ```java
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 Get contacts
 
-Return contacts of a character  ---  This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+Return contacts of a character  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
 
 ### Example
 ```java
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 Get corporation contacts
 
-Return contacts of a corporation  ---  This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+Return contacts of a corporation  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
 
 ### Example
 ```java
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 Add contacts
 
-Bulk add contacts with same settings  ---  [This route has an available update](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+Bulk add contacts with same settings  ---  Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
 
 ### Example
 ```java
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 
 Edit contacts
 
-Bulk edit contacts with same settings  ---  [This route has an available update](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+Bulk edit contacts with same settings  ---  Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
 
 ### Example
 ```java

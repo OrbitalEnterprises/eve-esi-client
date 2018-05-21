@@ -1,11 +1,11 @@
 
-# GetFwLeaderboardsCorporationsLastWeek1
+# GetFwLeaderboardsCharactersLastWeekLastWeek1
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Integer** | Amount of victory points |  [optional]
-**corporationId** | **Integer** | corporation_id integer |  [optional]
+**characterId** | **Integer** | character_id integer |  [optional]
 
 
 

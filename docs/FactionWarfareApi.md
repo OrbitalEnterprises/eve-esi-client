@@ -350,7 +350,7 @@ No authorization required
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds
+An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
 
 ### Example
 ```java

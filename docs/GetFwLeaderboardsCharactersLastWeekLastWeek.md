@@ -1,11 +1,11 @@
 
-# GetFwLeaderboardsLastWeek
+# GetFwLeaderboardsCharactersLastWeekLastWeek
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Integer** | Amount of kills |  [optional]
-**factionId** | **Integer** | faction_id integer |  [optional]
+**characterId** | **Integer** | character_id integer |  [optional]
 
 
 

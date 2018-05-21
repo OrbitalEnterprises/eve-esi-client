@@ -1,11 +1,11 @@
 
-# GetFwLeaderboardsCharactersYesterday
+# GetFwLeaderboardsCorporationsActiveTotalActiveTotal
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Integer** | Amount of kills |  [optional]
-**characterId** | **Integer** | character_id integer |  [optional]
+**corporationId** | **Integer** | corporation_id integer |  [optional]
 
 
 
