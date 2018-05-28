@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterId"></a>
 # **getCharactersCharacterId**
-> GetCharactersCharacterIdOk getCharactersCharacterId(characterId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetCharactersCharacterIdOk getCharactersCharacterId(characterId, datasource, ifNoneMatch)
 
 Get character&#39;s public information
 
@@ -41,10 +41,8 @@ CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdOk result = apiInstance.getCharactersCharacterId(characterId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetCharactersCharacterIdOk result = apiInstance.getCharactersCharacterId(characterId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterId");
@@ -59,8 +57,6 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -77,7 +73,7 @@ No authorization required
 
 <a name="getCharactersCharacterIdAgentsResearch"></a>
 # **getCharactersCharacterIdAgentsResearch**
-> List&lt;GetCharactersCharacterIdAgentsResearch200Ok&gt; getCharactersCharacterIdAgentsResearch(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdAgentsResearch200Ok&gt; getCharactersCharacterIdAgentsResearch(characterId, datasource, ifNoneMatch, token)
 
 Get agents research
 
@@ -103,10 +99,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdAgentsResearch200Ok> result = apiInstance.getCharactersCharacterIdAgentsResearch(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdAgentsResearch200Ok> result = apiInstance.getCharactersCharacterIdAgentsResearch(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdAgentsResearch");
@@ -122,8 +116,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -140,7 +132,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdBlueprints"></a>
 # **getCharactersCharacterIdBlueprints**
-> List&lt;GetCharactersCharacterIdBlueprints200Ok&gt; getCharactersCharacterIdBlueprints(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdBlueprints200Ok&gt; getCharactersCharacterIdBlueprints(characterId, datasource, ifNoneMatch, page, token)
 
 Get blueprints
 
@@ -167,10 +159,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdBlueprints200Ok> result = apiInstance.getCharactersCharacterIdBlueprints(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdBlueprints200Ok> result = apiInstance.getCharactersCharacterIdBlueprints(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdBlueprints");
@@ -187,8 +177,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -205,7 +193,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdCorporationhistory"></a>
 # **getCharactersCharacterIdCorporationhistory**
-> List&lt;GetCharactersCharacterIdCorporationhistory200Ok&gt; getCharactersCharacterIdCorporationhistory(characterId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdCorporationhistory200Ok&gt; getCharactersCharacterIdCorporationhistory(characterId, datasource, ifNoneMatch)
 
 Get corporation history
 
@@ -222,10 +210,8 @@ CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdCorporationhistory200Ok> result = apiInstance.getCharactersCharacterIdCorporationhistory(characterId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdCorporationhistory200Ok> result = apiInstance.getCharactersCharacterIdCorporationhistory(characterId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdCorporationhistory");
@@ -240,8 +226,6 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -258,7 +242,7 @@ No authorization required
 
 <a name="getCharactersCharacterIdFatigue"></a>
 # **getCharactersCharacterIdFatigue**
-> GetCharactersCharacterIdFatigueOk getCharactersCharacterIdFatigue(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdFatigueOk getCharactersCharacterIdFatigue(characterId, datasource, ifNoneMatch, token)
 
 Get jump fatigue
 
@@ -284,10 +268,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdFatigueOk result = apiInstance.getCharactersCharacterIdFatigue(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdFatigueOk result = apiInstance.getCharactersCharacterIdFatigue(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdFatigue");
@@ -303,8 +285,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -321,7 +301,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdMedals"></a>
 # **getCharactersCharacterIdMedals**
-> List&lt;GetCharactersCharacterIdMedals200Ok&gt; getCharactersCharacterIdMedals(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdMedals200Ok&gt; getCharactersCharacterIdMedals(characterId, datasource, ifNoneMatch, token)
 
 Get medals
 
@@ -347,10 +327,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdMedals200Ok> result = apiInstance.getCharactersCharacterIdMedals(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdMedals200Ok> result = apiInstance.getCharactersCharacterIdMedals(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdMedals");
@@ -366,8 +344,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -384,7 +360,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdNotifications"></a>
 # **getCharactersCharacterIdNotifications**
-> List&lt;GetCharactersCharacterIdNotifications200Ok&gt; getCharactersCharacterIdNotifications(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdNotifications200Ok&gt; getCharactersCharacterIdNotifications(characterId, datasource, ifNoneMatch, token)
 
 Get character notifications
 
@@ -410,10 +386,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdNotifications200Ok> result = apiInstance.getCharactersCharacterIdNotifications(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdNotifications200Ok> result = apiInstance.getCharactersCharacterIdNotifications(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdNotifications");
@@ -429,8 +403,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -447,7 +419,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdNotificationsContacts"></a>
 # **getCharactersCharacterIdNotificationsContacts**
-> List&lt;GetCharactersCharacterIdNotificationsContacts200Ok&gt; getCharactersCharacterIdNotificationsContacts(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdNotificationsContacts200Ok&gt; getCharactersCharacterIdNotificationsContacts(characterId, datasource, ifNoneMatch, token)
 
 Get new contact notifications
 
@@ -473,10 +445,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdNotificationsContacts200Ok> result = apiInstance.getCharactersCharacterIdNotificationsContacts(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdNotificationsContacts200Ok> result = apiInstance.getCharactersCharacterIdNotificationsContacts(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdNotificationsContacts");
@@ -492,8 +462,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -510,7 +478,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdPortrait"></a>
 # **getCharactersCharacterIdPortrait**
-> GetCharactersCharacterIdPortraitOk getCharactersCharacterIdPortrait(characterId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetCharactersCharacterIdPortraitOk getCharactersCharacterIdPortrait(characterId, datasource, ifNoneMatch)
 
 Get character portraits
 
@@ -527,10 +495,8 @@ CharacterApi apiInstance = new CharacterApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdPortraitOk result = apiInstance.getCharactersCharacterIdPortrait(characterId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetCharactersCharacterIdPortraitOk result = apiInstance.getCharactersCharacterIdPortrait(characterId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdPortrait");
@@ -545,8 +511,6 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -563,7 +527,7 @@ No authorization required
 
 <a name="getCharactersCharacterIdRoles"></a>
 # **getCharactersCharacterIdRoles**
-> GetCharactersCharacterIdRolesOk getCharactersCharacterIdRoles(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdRolesOk getCharactersCharacterIdRoles(characterId, datasource, ifNoneMatch, token)
 
 Get character corporation roles
 
@@ -589,10 +553,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdRolesOk result = apiInstance.getCharactersCharacterIdRoles(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdRolesOk result = apiInstance.getCharactersCharacterIdRoles(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdRoles");
@@ -608,8 +570,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -626,7 +586,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdStandings"></a>
 # **getCharactersCharacterIdStandings**
-> List&lt;GetCharactersCharacterIdStandings200Ok&gt; getCharactersCharacterIdStandings(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdStandings200Ok&gt; getCharactersCharacterIdStandings(characterId, datasource, ifNoneMatch, token)
 
 Get standings
 
@@ -652,10 +612,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdStandings200Ok> result = apiInstance.getCharactersCharacterIdStandings(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdStandings200Ok> result = apiInstance.getCharactersCharacterIdStandings(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdStandings");
@@ -671,8 +629,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -689,7 +645,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdStats"></a>
 # **getCharactersCharacterIdStats**
-> List&lt;GetCharactersCharacterIdStats200Ok&gt; getCharactersCharacterIdStats(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdStats200Ok&gt; getCharactersCharacterIdStats(characterId, datasource, ifNoneMatch, token)
 
 Yearly aggregate stats
 
@@ -715,10 +671,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdStats200Ok> result = apiInstance.getCharactersCharacterIdStats(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdStats200Ok> result = apiInstance.getCharactersCharacterIdStats(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdStats");
@@ -734,8 +688,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -752,7 +704,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdTitles"></a>
 # **getCharactersCharacterIdTitles**
-> List&lt;GetCharactersCharacterIdTitles200Ok&gt; getCharactersCharacterIdTitles(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdTitles200Ok&gt; getCharactersCharacterIdTitles(characterId, datasource, ifNoneMatch, token)
 
 Get character corporation titles
 
@@ -778,10 +730,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdTitles200Ok> result = apiInstance.getCharactersCharacterIdTitles(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdTitles200Ok> result = apiInstance.getCharactersCharacterIdTitles(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersCharacterIdTitles");
@@ -797,8 +747,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -815,7 +763,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersNames"></a>
 # **getCharactersNames**
-> List&lt;GetCharactersNames200Ok&gt; getCharactersNames(characterIds, datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetCharactersNames200Ok&gt; getCharactersNames(characterIds, datasource, ifNoneMatch)
 
 Get character names
 
@@ -832,10 +780,8 @@ CharacterApi apiInstance = new CharacterApi();
 List<Long> characterIds = Arrays.asList(56L); // List<Long> | A comma separated list of character IDs
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersNames200Ok> result = apiInstance.getCharactersNames(characterIds, datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetCharactersNames200Ok> result = apiInstance.getCharactersNames(characterIds, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#getCharactersNames");
@@ -850,8 +796,6 @@ Name | Type | Description  | Notes
  **characterIds** | [**List&lt;Long&gt;**](Long.md)| A comma separated list of character IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -868,7 +812,7 @@ No authorization required
 
 <a name="postCharactersAffiliation"></a>
 # **postCharactersAffiliation**
-> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource, ifNoneMatch)
 
 Character affiliation
 
@@ -885,10 +829,8 @@ CharacterApi apiInstance = new CharacterApi();
 List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#postCharactersAffiliation");
@@ -903,8 +845,6 @@ Name | Type | Description  | Notes
  **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -921,7 +861,7 @@ No authorization required
 
 <a name="postCharactersCharacterIdCspa"></a>
 # **postCharactersCharacterIdCspa**
-> Float postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent)
+> Float postCharactersCharacterIdCspa(characterId, characters, datasource, token)
 
 Calculate a CSPA charge cost
 
@@ -947,10 +887,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The target characters to calculate the charge for
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Float result = apiInstance.postCharactersCharacterIdCspa(characterId, characters, datasource, token, userAgent, xUserAgent);
+    Float result = apiInstance.postCharactersCharacterIdCspa(characterId, characters, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#postCharactersCharacterIdCspa");
@@ -966,8 +904,6 @@ Name | Type | Description  | Notes
  **characters** | **List&lt;Integer&gt;**| The target characters to calculate the charge for |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

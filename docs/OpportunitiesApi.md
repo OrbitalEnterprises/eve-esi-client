@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdOpportunities"></a>
 # **getCharactersCharacterIdOpportunities**
-> List&lt;GetCharactersCharacterIdOpportunities200Ok&gt; getCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdOpportunities200Ok&gt; getCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token)
 
 Get a character&#39;s completed tasks
 
@@ -39,10 +39,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdOpportunities200Ok> result = apiInstance.getCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdOpportunities200Ok> result = apiInstance.getCharactersCharacterIdOpportunities(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OpportunitiesApi#getCharactersCharacterIdOpportunities");
@@ -58,8 +56,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -76,7 +72,7 @@ Name | Type | Description  | Notes
 
 <a name="getOpportunitiesGroups"></a>
 # **getOpportunitiesGroups**
-> List&lt;Integer&gt; getOpportunitiesGroups(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getOpportunitiesGroups(datasource, ifNoneMatch)
 
 Get opportunities groups
 
@@ -92,10 +88,8 @@ Return a list of opportunities groups  ---  This route expires daily at 11:05
 OpportunitiesApi apiInstance = new OpportunitiesApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getOpportunitiesGroups(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getOpportunitiesGroups(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OpportunitiesApi#getOpportunitiesGroups");
@@ -109,8 +103,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -127,7 +119,7 @@ No authorization required
 
 <a name="getOpportunitiesGroupsGroupId"></a>
 # **getOpportunitiesGroupsGroupId**
-> GetOpportunitiesGroupsGroupIdOk getOpportunitiesGroupsGroupId(groupId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
+> GetOpportunitiesGroupsGroupIdOk getOpportunitiesGroupsGroupId(groupId, acceptLanguage, datasource, ifNoneMatch, language)
 
 Get opportunities group
 
@@ -142,13 +134,12 @@ Return information of an opportunities group  ---  This route expires daily at 1
 
 OpportunitiesApi apiInstance = new OpportunitiesApi();
 Integer groupId = 56; // Integer | ID of an opportunities group
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String language = "en-us"; // String | Language to use in the response
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 try {
-    GetOpportunitiesGroupsGroupIdOk result = apiInstance.getOpportunitiesGroupsGroupId(groupId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
+    GetOpportunitiesGroupsGroupIdOk result = apiInstance.getOpportunitiesGroupsGroupId(groupId, acceptLanguage, datasource, ifNoneMatch, language);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OpportunitiesApi#getOpportunitiesGroupsGroupId");
@@ -161,11 +152,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **Integer**| ID of an opportunities group |
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
 
 ### Return type
 
@@ -182,7 +172,7 @@ No authorization required
 
 <a name="getOpportunitiesTasks"></a>
 # **getOpportunitiesTasks**
-> List&lt;Integer&gt; getOpportunitiesTasks(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getOpportunitiesTasks(datasource, ifNoneMatch)
 
 Get opportunities tasks
 
@@ -198,10 +188,8 @@ Return a list of opportunities tasks  ---  This route expires daily at 11:05
 OpportunitiesApi apiInstance = new OpportunitiesApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getOpportunitiesTasks(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getOpportunitiesTasks(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OpportunitiesApi#getOpportunitiesTasks");
@@ -215,8 +203,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -233,7 +219,7 @@ No authorization required
 
 <a name="getOpportunitiesTasksTaskId"></a>
 # **getOpportunitiesTasksTaskId**
-> GetOpportunitiesTasksTaskIdOk getOpportunitiesTasksTaskId(taskId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetOpportunitiesTasksTaskIdOk getOpportunitiesTasksTaskId(taskId, datasource, ifNoneMatch)
 
 Get opportunities task
 
@@ -250,10 +236,8 @@ OpportunitiesApi apiInstance = new OpportunitiesApi();
 Integer taskId = 56; // Integer | ID of an opportunities task
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetOpportunitiesTasksTaskIdOk result = apiInstance.getOpportunitiesTasksTaskId(taskId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetOpportunitiesTasksTaskIdOk result = apiInstance.getOpportunitiesTasksTaskId(taskId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OpportunitiesApi#getOpportunitiesTasksTaskId");
@@ -268,8 +252,6 @@ Name | Type | Description  | Notes
  **taskId** | **Integer**| ID of an opportunities task |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdWallet"></a>
 # **getCharactersCharacterIdWallet**
-> Double getCharactersCharacterIdWallet(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> Double getCharactersCharacterIdWallet(characterId, datasource, ifNoneMatch, token)
 
 Get a character&#39;s wallet balance
 
@@ -40,10 +40,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Double result = apiInstance.getCharactersCharacterIdWallet(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    Double result = apiInstance.getCharactersCharacterIdWallet(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCharactersCharacterIdWallet");
@@ -59,8 +57,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -77,7 +73,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdWalletJournal"></a>
 # **getCharactersCharacterIdWalletJournal**
-> List&lt;GetCharactersCharacterIdWalletJournal200Ok&gt; getCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdWalletJournal200Ok&gt; getCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token)
 
 Get character wallet journal
 
@@ -104,10 +100,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdWalletJournal200Ok> result = apiInstance.getCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdWalletJournal200Ok> result = apiInstance.getCharactersCharacterIdWalletJournal(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCharactersCharacterIdWalletJournal");
@@ -124,8 +118,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -142,7 +134,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdWalletTransactions"></a>
 # **getCharactersCharacterIdWalletTransactions**
-> List&lt;GetCharactersCharacterIdWalletTransactions200Ok&gt; getCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdWalletTransactions200Ok&gt; getCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token)
 
 Get wallet transactions
 
@@ -169,10 +161,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 Long fromId = 789L; // Long | Only show transactions happened before the one referenced by this id
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdWalletTransactions200Ok> result = apiInstance.getCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdWalletTransactions200Ok> result = apiInstance.getCharactersCharacterIdWalletTransactions(characterId, datasource, fromId, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCharactersCharacterIdWalletTransactions");
@@ -189,8 +179,6 @@ Name | Type | Description  | Notes
  **fromId** | **Long**| Only show transactions happened before the one referenced by this id | [optional]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -207,7 +195,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdWallets"></a>
 # **getCorporationsCorporationIdWallets**
-> List&lt;GetCorporationsCorporationIdWallets200Ok&gt; getCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdWallets200Ok&gt; getCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token)
 
 Returns a corporation&#39;s wallet balance
 
@@ -233,10 +221,8 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdWallets200Ok> result = apiInstance.getCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdWallets200Ok> result = apiInstance.getCorporationsCorporationIdWallets(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCorporationsCorporationIdWallets");
@@ -252,8 +238,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -270,7 +254,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdWalletsDivisionJournal"></a>
 # **getCorporationsCorporationIdWalletsDivisionJournal**
-> List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; getCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; getCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token)
 
 Get corporation wallet journal
 
@@ -298,10 +282,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok> result = apiInstance.getCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdWalletsDivisionJournal200Ok> result = apiInstance.getCorporationsCorporationIdWalletsDivisionJournal(corporationId, division, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCorporationsCorporationIdWalletsDivisionJournal");
@@ -319,8 +301,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -337,7 +317,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdWalletsDivisionTransactions"></a>
 # **getCorporationsCorporationIdWalletsDivisionTransactions**
-> List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token)
 
 Get corporation wallet transactions
 
@@ -365,10 +345,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 Long fromId = 789L; // Long | Only show journal entries happened before the transaction referenced by this id
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> result = apiInstance.getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdWalletsDivisionTransactions200Ok> result = apiInstance.getCorporationsCorporationIdWalletsDivisionTransactions(corporationId, division, datasource, fromId, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WalletApi#getCorporationsCorporationIdWalletsDivisionTransactions");
@@ -386,8 +364,6 @@ Name | Type | Description  | Notes
  **fromId** | **Long**| Only show journal entries happened before the transaction referenced by this id | [optional]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

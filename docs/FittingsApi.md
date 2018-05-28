@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="deleteCharactersCharacterIdFittingsFittingId"></a>
 # **deleteCharactersCharacterIdFittingsFittingId**
-> deleteCharactersCharacterIdFittingsFittingId(characterId, fittingId, datasource, token, userAgent, xUserAgent)
+> deleteCharactersCharacterIdFittingsFittingId(characterId, fittingId, datasource, token)
 
 Delete fitting
 
@@ -37,10 +37,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 Integer fittingId = 56; // Integer | ID for a fitting of this character
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteCharactersCharacterIdFittingsFittingId(characterId, fittingId, datasource, token, userAgent, xUserAgent);
+    apiInstance.deleteCharactersCharacterIdFittingsFittingId(characterId, fittingId, datasource, token);
 } catch (ApiException e) {
     System.err.println("Exception when calling FittingsApi#deleteCharactersCharacterIdFittingsFittingId");
     e.printStackTrace();
@@ -55,8 +53,6 @@ Name | Type | Description  | Notes
  **fittingId** | **Integer**| ID for a fitting of this character |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -73,7 +69,7 @@ null (empty response body)
 
 <a name="getCharactersCharacterIdFittings"></a>
 # **getCharactersCharacterIdFittings**
-> List&lt;GetCharactersCharacterIdFittings200Ok&gt; getCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdFittings200Ok&gt; getCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token)
 
 Get fittings
 
@@ -99,10 +95,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdFittings200Ok> result = apiInstance.getCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdFittings200Ok> result = apiInstance.getCharactersCharacterIdFittings(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FittingsApi#getCharactersCharacterIdFittings");
@@ -118,8 +112,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -136,7 +128,7 @@ Name | Type | Description  | Notes
 
 <a name="postCharactersCharacterIdFittings"></a>
 # **postCharactersCharacterIdFittings**
-> PostCharactersCharacterIdFittingsCreated postCharactersCharacterIdFittings(characterId, fitting, datasource, token, userAgent, xUserAgent)
+> PostCharactersCharacterIdFittingsCreated postCharactersCharacterIdFittings(characterId, fitting, datasource, token)
 
 Create fitting
 
@@ -162,10 +154,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 PostCharactersCharacterIdFittingsFitting fitting = new PostCharactersCharacterIdFittingsFitting(); // PostCharactersCharacterIdFittingsFitting | Details about the new fitting
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    PostCharactersCharacterIdFittingsCreated result = apiInstance.postCharactersCharacterIdFittings(characterId, fitting, datasource, token, userAgent, xUserAgent);
+    PostCharactersCharacterIdFittingsCreated result = apiInstance.postCharactersCharacterIdFittings(characterId, fitting, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FittingsApi#postCharactersCharacterIdFittings");
@@ -181,8 +171,6 @@ Name | Type | Description  | Notes
  **fitting** | [**PostCharactersCharacterIdFittingsFitting**](PostCharactersCharacterIdFittingsFitting.md)| Details about the new fitting |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

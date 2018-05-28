@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdCalendar"></a>
 # **getCharactersCharacterIdCalendar**
-> List&lt;GetCharactersCharacterIdCalendar200Ok&gt; getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdCalendar200Ok&gt; getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token)
 
 List calendar event summaries
 
@@ -39,10 +39,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 Integer fromEvent = 56; // Integer | The event ID to retrieve events from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdCalendar200Ok> result = apiInstance.getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdCalendar200Ok> result = apiInstance.getCharactersCharacterIdCalendar(characterId, datasource, fromEvent, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#getCharactersCharacterIdCalendar");
@@ -59,8 +57,6 @@ Name | Type | Description  | Notes
  **fromEvent** | **Integer**| The event ID to retrieve events from | [optional]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -77,7 +73,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdCalendarEventId"></a>
 # **getCharactersCharacterIdCalendarEventId**
-> GetCharactersCharacterIdCalendarEventIdOk getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdCalendarEventIdOk getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, ifNoneMatch, token)
 
 Get an event
 
@@ -104,10 +100,8 @@ Integer eventId = 56; // Integer | The id of the event requested
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdCalendarEventIdOk result = apiInstance.getCharactersCharacterIdCalendarEventId(characterId, eventId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#getCharactersCharacterIdCalendarEventId");
@@ -124,8 +118,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -142,7 +134,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdCalendarEventIdAttendees"></a>
 # **getCharactersCharacterIdCalendarEventIdAttendees**
-> List&lt;GetCharactersCharacterIdCalendarEventIdAttendees200Ok&gt; getCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdCalendarEventIdAttendees200Ok&gt; getCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token)
 
 Get attendees
 
@@ -169,10 +161,8 @@ Integer eventId = 56; // Integer | The id of the event requested
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok> result = apiInstance.getCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdCalendarEventIdAttendees200Ok> result = apiInstance.getCharactersCharacterIdCalendarEventIdAttendees(characterId, eventId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#getCharactersCharacterIdCalendarEventIdAttendees");
@@ -189,8 +179,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -207,7 +195,7 @@ Name | Type | Description  | Notes
 
 <a name="putCharactersCharacterIdCalendarEventId"></a>
 # **putCharactersCharacterIdCalendarEventId**
-> putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token, userAgent, xUserAgent)
+> putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token)
 
 Respond to an event
 
@@ -234,10 +222,8 @@ Integer eventId = 56; // Integer | The ID of the event requested
 PutCharactersCharacterIdCalendarEventIdResponse response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token, userAgent, xUserAgent);
+    apiInstance.putCharactersCharacterIdCalendarEventId(characterId, eventId, response, datasource, token);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalendarApi#putCharactersCharacterIdCalendarEventId");
     e.printStackTrace();
@@ -253,8 +239,6 @@ Name | Type | Description  | Notes
  **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

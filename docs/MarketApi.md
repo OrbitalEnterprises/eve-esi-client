@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdOrders"></a>
 # **getCharactersCharacterIdOrders**
-> List&lt;GetCharactersCharacterIdOrders200Ok&gt; getCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdOrders200Ok&gt; getCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token)
 
 List open orders from a character
 
@@ -45,10 +45,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdOrders200Ok> result = apiInstance.getCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdOrders200Ok> result = apiInstance.getCharactersCharacterIdOrders(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getCharactersCharacterIdOrders");
@@ -64,8 +62,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -82,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdOrdersHistory"></a>
 # **getCharactersCharacterIdOrdersHistory**
-> List&lt;GetCharactersCharacterIdOrdersHistory200Ok&gt; getCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdOrdersHistory200Ok&gt; getCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token)
 
 List historical orders by a character
 
@@ -109,10 +105,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdOrdersHistory200Ok> result = apiInstance.getCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdOrdersHistory200Ok> result = apiInstance.getCharactersCharacterIdOrdersHistory(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getCharactersCharacterIdOrdersHistory");
@@ -129,8 +123,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -147,7 +139,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdOrders"></a>
 # **getCorporationsCorporationIdOrders**
-> List&lt;GetCorporationsCorporationIdOrders200Ok&gt; getCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdOrders200Ok&gt; getCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token)
 
 List open orders from a corporation
 
@@ -174,10 +166,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdOrders200Ok> result = apiInstance.getCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdOrders200Ok> result = apiInstance.getCorporationsCorporationIdOrders(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getCorporationsCorporationIdOrders");
@@ -194,8 +184,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -212,7 +200,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdOrdersHistory"></a>
 # **getCorporationsCorporationIdOrdersHistory**
-> List&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; getCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; getCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token)
 
 List historical orders from a corporation
 
@@ -239,10 +227,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdOrdersHistory200Ok> result = apiInstance.getCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdOrdersHistory200Ok> result = apiInstance.getCorporationsCorporationIdOrdersHistory(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getCorporationsCorporationIdOrdersHistory");
@@ -259,8 +245,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -277,7 +261,7 @@ Name | Type | Description  | Notes
 
 <a name="getMarketsGroups"></a>
 # **getMarketsGroups**
-> List&lt;Integer&gt; getMarketsGroups(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getMarketsGroups(datasource, ifNoneMatch)
 
 Get item groups
 
@@ -293,10 +277,8 @@ Get a list of item groups  ---  This route expires daily at 11:05
 MarketApi apiInstance = new MarketApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getMarketsGroups(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getMarketsGroups(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsGroups");
@@ -310,8 +292,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -328,7 +308,7 @@ No authorization required
 
 <a name="getMarketsGroupsMarketGroupId"></a>
 # **getMarketsGroupsMarketGroupId**
-> GetMarketsGroupsMarketGroupIdOk getMarketsGroupsMarketGroupId(marketGroupId, datasource, ifNoneMatch, language, userAgent, xUserAgent)
+> GetMarketsGroupsMarketGroupIdOk getMarketsGroupsMarketGroupId(marketGroupId, acceptLanguage, datasource, ifNoneMatch, language)
 
 Get item group information
 
@@ -343,13 +323,12 @@ Get information on an item group  ---  This route expires daily at 11:05
 
 MarketApi apiInstance = new MarketApi();
 Integer marketGroupId = 56; // Integer | An Eve item group ID
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String language = "en-us"; // String | Language to use in the response
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 try {
-    GetMarketsGroupsMarketGroupIdOk result = apiInstance.getMarketsGroupsMarketGroupId(marketGroupId, datasource, ifNoneMatch, language, userAgent, xUserAgent);
+    GetMarketsGroupsMarketGroupIdOk result = apiInstance.getMarketsGroupsMarketGroupId(marketGroupId, acceptLanguage, datasource, ifNoneMatch, language);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsGroupsMarketGroupId");
@@ -362,11 +341,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **marketGroupId** | **Integer**| An Eve item group ID |
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
 
 ### Return type
 
@@ -383,7 +361,7 @@ No authorization required
 
 <a name="getMarketsPrices"></a>
 # **getMarketsPrices**
-> List&lt;GetMarketsPrices200Ok&gt; getMarketsPrices(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetMarketsPrices200Ok&gt; getMarketsPrices(datasource, ifNoneMatch)
 
 List market prices
 
@@ -399,10 +377,8 @@ Return a list of prices  ---  This route is cached for up to 3600 seconds
 MarketApi apiInstance = new MarketApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetMarketsPrices200Ok> result = apiInstance.getMarketsPrices(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetMarketsPrices200Ok> result = apiInstance.getMarketsPrices(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsPrices");
@@ -416,8 +392,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -434,7 +408,7 @@ No authorization required
 
 <a name="getMarketsRegionIdHistory"></a>
 # **getMarketsRegionIdHistory**
-> List&lt;GetMarketsRegionIdHistory200Ok&gt; getMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetMarketsRegionIdHistory200Ok&gt; getMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch)
 
 List historical market statistics in a region
 
@@ -452,10 +426,8 @@ Integer regionId = 56; // Integer | Return statistics in this region
 Integer typeId = 56; // Integer | Return statistics for this type
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetMarketsRegionIdHistory200Ok> result = apiInstance.getMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetMarketsRegionIdHistory200Ok> result = apiInstance.getMarketsRegionIdHistory(regionId, typeId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsRegionIdHistory");
@@ -471,8 +443,6 @@ Name | Type | Description  | Notes
  **typeId** | **Integer**| Return statistics for this type |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -489,7 +459,7 @@ No authorization required
 
 <a name="getMarketsRegionIdOrders"></a>
 # **getMarketsRegionIdOrders**
-> List&lt;GetMarketsRegionIdOrders200Ok&gt; getMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId, userAgent, xUserAgent)
+> List&lt;GetMarketsRegionIdOrders200Ok&gt; getMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId)
 
 List orders in a region
 
@@ -509,10 +479,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 Integer typeId = 56; // Integer | Return orders only for this type
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetMarketsRegionIdOrders200Ok> result = apiInstance.getMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId, userAgent, xUserAgent);
+    List<GetMarketsRegionIdOrders200Ok> result = apiInstance.getMarketsRegionIdOrders(orderType, regionId, datasource, ifNoneMatch, page, typeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsRegionIdOrders");
@@ -530,8 +498,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **typeId** | **Integer**| Return orders only for this type | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -548,7 +514,7 @@ No authorization required
 
 <a name="getMarketsRegionIdTypes"></a>
 # **getMarketsRegionIdTypes**
-> List&lt;Integer&gt; getMarketsRegionIdTypes(regionId, datasource, ifNoneMatch, page, userAgent, xUserAgent)
+> List&lt;Integer&gt; getMarketsRegionIdTypes(regionId, datasource, ifNoneMatch, page)
 
 List type IDs relevant to a market
 
@@ -566,10 +532,8 @@ Integer regionId = 56; // Integer | Return statistics in this region
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getMarketsRegionIdTypes(regionId, datasource, ifNoneMatch, page, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getMarketsRegionIdTypes(regionId, datasource, ifNoneMatch, page);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsRegionIdTypes");
@@ -585,8 +549,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -603,7 +565,7 @@ No authorization required
 
 <a name="getMarketsStructuresStructureId"></a>
 # **getMarketsStructuresStructureId**
-> List&lt;GetMarketsStructuresStructureId200Ok&gt; getMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetMarketsStructuresStructureId200Ok&gt; getMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token)
 
 List orders in a structure
 
@@ -630,10 +592,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetMarketsStructuresStructureId200Ok> result = apiInstance.getMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetMarketsStructuresStructureId200Ok> result = apiInstance.getMarketsStructuresStructureId(structureId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MarketApi#getMarketsStructuresStructureId");
@@ -650,8 +610,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

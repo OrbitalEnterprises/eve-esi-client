@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getInsurancePrices"></a>
 # **getInsurancePrices**
-> List&lt;GetInsurancePrices200Ok&gt; getInsurancePrices(datasource, ifNoneMatch, language, userAgent, xUserAgent)
+> List&lt;GetInsurancePrices200Ok&gt; getInsurancePrices(acceptLanguage, datasource, ifNoneMatch, language)
 
 List insurance levels
 
@@ -23,13 +23,12 @@ Return available insurance levels for all ship types  ---  This route is cached 
 
 
 InsuranceApi apiInstance = new InsuranceApi();
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String language = "en-us"; // String | Language to use in the response
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 try {
-    List<GetInsurancePrices200Ok> result = apiInstance.getInsurancePrices(datasource, ifNoneMatch, language, userAgent, xUserAgent);
+    List<GetInsurancePrices200Ok> result = apiInstance.getInsurancePrices(acceptLanguage, datasource, ifNoneMatch, language);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InsuranceApi#getInsurancePrices");
@@ -41,11 +40,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
 
 ### Return type
 

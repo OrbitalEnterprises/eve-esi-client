@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdAssets"></a>
 # **getCharactersCharacterIdAssets**
-> List&lt;GetCharactersCharacterIdAssets200Ok&gt; getCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdAssets200Ok&gt; getCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token)
 
 Get character assets
 
@@ -41,10 +41,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdAssets200Ok> result = apiInstance.getCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdAssets200Ok> result = apiInstance.getCharactersCharacterIdAssets(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#getCharactersCharacterIdAssets");
@@ -61,8 +59,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -79,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdAssets"></a>
 # **getCorporationsCorporationIdAssets**
-> List&lt;GetCorporationsCorporationIdAssets200Ok&gt; getCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdAssets200Ok&gt; getCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation assets
 
@@ -106,10 +102,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdAssets200Ok> result = apiInstance.getCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdAssets200Ok> result = apiInstance.getCorporationsCorporationIdAssets(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#getCorporationsCorporationIdAssets");
@@ -126,8 +120,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -144,7 +136,7 @@ Name | Type | Description  | Notes
 
 <a name="postCharactersCharacterIdAssetsLocations"></a>
 # **postCharactersCharacterIdAssetsLocations**
-> List&lt;PostCharactersCharacterIdAssetsLocations200Ok&gt; postCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token, userAgent, xUserAgent)
+> List&lt;PostCharactersCharacterIdAssetsLocations200Ok&gt; postCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token)
 
 Get character asset locations
 
@@ -170,10 +162,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 List<Long> itemIds = Arrays.asList(new List<Long>()); // List<Long> | A list of item ids
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<PostCharactersCharacterIdAssetsLocations200Ok> result = apiInstance.postCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token, userAgent, xUserAgent);
+    List<PostCharactersCharacterIdAssetsLocations200Ok> result = apiInstance.postCharactersCharacterIdAssetsLocations(characterId, itemIds, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#postCharactersCharacterIdAssetsLocations");
@@ -189,8 +179,6 @@ Name | Type | Description  | Notes
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -207,7 +195,7 @@ Name | Type | Description  | Notes
 
 <a name="postCharactersCharacterIdAssetsNames"></a>
 # **postCharactersCharacterIdAssetsNames**
-> List&lt;PostCharactersCharacterIdAssetsNames200Ok&gt; postCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token, userAgent, xUserAgent)
+> List&lt;PostCharactersCharacterIdAssetsNames200Ok&gt; postCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token)
 
 Get character asset names
 
@@ -233,10 +221,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 List<Long> itemIds = Arrays.asList(new List<Long>()); // List<Long> | A list of item ids
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<PostCharactersCharacterIdAssetsNames200Ok> result = apiInstance.postCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token, userAgent, xUserAgent);
+    List<PostCharactersCharacterIdAssetsNames200Ok> result = apiInstance.postCharactersCharacterIdAssetsNames(characterId, itemIds, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#postCharactersCharacterIdAssetsNames");
@@ -252,8 +238,6 @@ Name | Type | Description  | Notes
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -270,7 +254,7 @@ Name | Type | Description  | Notes
 
 <a name="postCorporationsCorporationIdAssetsLocations"></a>
 # **postCorporationsCorporationIdAssetsLocations**
-> List&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; postCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token, userAgent, xUserAgent)
+> List&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; postCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token)
 
 Get corporation asset locations
 
@@ -296,10 +280,8 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 List<Long> itemIds = Arrays.asList(new List<Long>()); // List<Long> | A list of item ids
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<PostCorporationsCorporationIdAssetsLocations200Ok> result = apiInstance.postCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token, userAgent, xUserAgent);
+    List<PostCorporationsCorporationIdAssetsLocations200Ok> result = apiInstance.postCorporationsCorporationIdAssetsLocations(corporationId, itemIds, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#postCorporationsCorporationIdAssetsLocations");
@@ -315,8 +297,6 @@ Name | Type | Description  | Notes
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -333,7 +313,7 @@ Name | Type | Description  | Notes
 
 <a name="postCorporationsCorporationIdAssetsNames"></a>
 # **postCorporationsCorporationIdAssetsNames**
-> List&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; postCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token, userAgent, xUserAgent)
+> List&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; postCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token)
 
 Get coporation asset names
 
@@ -359,10 +339,8 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 List<Long> itemIds = Arrays.asList(new List<Long>()); // List<Long> | A list of item ids
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<PostCorporationsCorporationIdAssetsNames200Ok> result = apiInstance.postCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token, userAgent, xUserAgent);
+    List<PostCorporationsCorporationIdAssetsNames200Ok> result = apiInstance.postCorporationsCorporationIdAssetsNames(corporationId, itemIds, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AssetsApi#postCorporationsCorporationIdAssetsNames");
@@ -378,8 +356,6 @@ Name | Type | Description  | Notes
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

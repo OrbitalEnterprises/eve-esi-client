@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdSearch"></a>
 # **getCharactersCharacterIdSearch**
-> GetCharactersCharacterIdSearchOk getCharactersCharacterIdSearch(categories, characterId, search, datasource, ifNoneMatch, language, strict, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdSearchOk getCharactersCharacterIdSearch(categories, characterId, search, acceptLanguage, datasource, ifNoneMatch, language, strict, token)
 
 Search on a string
 
@@ -35,15 +35,14 @@ SearchApi apiInstance = new SearchApi();
 List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
 Integer characterId = 56; // Integer | An EVE character ID
 String search = "search_example"; // String | The string to search on
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String language = "en-us"; // String | Language to use in the response
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 Boolean strict = false; // Boolean | Whether the search should be a strict match
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdSearchOk result = apiInstance.getCharactersCharacterIdSearch(categories, characterId, search, datasource, ifNoneMatch, language, strict, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdSearchOk result = apiInstance.getCharactersCharacterIdSearch(categories, characterId, search, acceptLanguage, datasource, ifNoneMatch, language, strict, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SearchApi#getCharactersCharacterIdSearch");
@@ -58,13 +57,12 @@ Name | Type | Description  | Notes
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station, structure]
  **characterId** | **Integer**| An EVE character ID |
  **search** | **String**| The string to search on |
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -81,7 +79,7 @@ Name | Type | Description  | Notes
 
 <a name="getSearch"></a>
 # **getSearch**
-> GetSearchOk getSearch(categories, search, datasource, ifNoneMatch, language, strict, userAgent, xUserAgent)
+> GetSearchOk getSearch(categories, search, acceptLanguage, datasource, ifNoneMatch, language, strict)
 
 Search on a string
 
@@ -97,14 +95,13 @@ Search for entities that match a given sub-string.  ---  This route is cached fo
 SearchApi apiInstance = new SearchApi();
 List<String> categories = Arrays.asList("categories_example"); // List<String> | Type of entities to search for
 String search = "search_example"; // String | The string to search on
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String language = "en-us"; // String | Language to use in the response
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 Boolean strict = false; // Boolean | Whether the search should be a strict match
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetSearchOk result = apiInstance.getSearch(categories, search, datasource, ifNoneMatch, language, strict, userAgent, xUserAgent);
+    GetSearchOk result = apiInstance.getSearch(categories, search, acceptLanguage, datasource, ifNoneMatch, language, strict);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SearchApi#getSearch");
@@ -118,12 +115,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station]
  **search** | **String**| The string to search on |
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

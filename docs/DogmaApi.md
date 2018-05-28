@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="getDogmaAttributes"></a>
 # **getDogmaAttributes**
-> List&lt;Integer&gt; getDogmaAttributes(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getDogmaAttributes(datasource, ifNoneMatch)
 
 Get attributes
 
@@ -28,10 +28,8 @@ Get a list of dogma attribute ids  ---  This route expires daily at 11:05
 DogmaApi apiInstance = new DogmaApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getDogmaAttributes(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getDogmaAttributes(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DogmaApi#getDogmaAttributes");
@@ -45,8 +43,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -63,7 +59,7 @@ No authorization required
 
 <a name="getDogmaAttributesAttributeId"></a>
 # **getDogmaAttributesAttributeId**
-> GetDogmaAttributesAttributeIdOk getDogmaAttributesAttributeId(attributeId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetDogmaAttributesAttributeIdOk getDogmaAttributesAttributeId(attributeId, datasource, ifNoneMatch)
 
 Get attribute information
 
@@ -80,10 +76,8 @@ DogmaApi apiInstance = new DogmaApi();
 Integer attributeId = 56; // Integer | A dogma attribute ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetDogmaAttributesAttributeIdOk result = apiInstance.getDogmaAttributesAttributeId(attributeId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetDogmaAttributesAttributeIdOk result = apiInstance.getDogmaAttributesAttributeId(attributeId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DogmaApi#getDogmaAttributesAttributeId");
@@ -98,8 +92,6 @@ Name | Type | Description  | Notes
  **attributeId** | **Integer**| A dogma attribute ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -116,7 +108,7 @@ No authorization required
 
 <a name="getDogmaEffects"></a>
 # **getDogmaEffects**
-> List&lt;Integer&gt; getDogmaEffects(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getDogmaEffects(datasource, ifNoneMatch)
 
 Get effects
 
@@ -132,10 +124,8 @@ Get a list of dogma effect ids  ---  This route expires daily at 11:05
 DogmaApi apiInstance = new DogmaApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getDogmaEffects(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getDogmaEffects(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DogmaApi#getDogmaEffects");
@@ -149,8 +139,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -167,7 +155,7 @@ No authorization required
 
 <a name="getDogmaEffectsEffectId"></a>
 # **getDogmaEffectsEffectId**
-> GetDogmaEffectsEffectIdOk getDogmaEffectsEffectId(effectId, datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetDogmaEffectsEffectIdOk getDogmaEffectsEffectId(effectId, datasource, ifNoneMatch)
 
 Get effect information
 
@@ -184,10 +172,8 @@ DogmaApi apiInstance = new DogmaApi();
 Integer effectId = 56; // Integer | A dogma effect ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetDogmaEffectsEffectIdOk result = apiInstance.getDogmaEffectsEffectId(effectId, datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetDogmaEffectsEffectIdOk result = apiInstance.getDogmaEffectsEffectId(effectId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DogmaApi#getDogmaEffectsEffectId");
@@ -202,8 +188,6 @@ Name | Type | Description  | Notes
  **effectId** | **Integer**| A dogma effect ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getRouteOriginDestination"></a>
 # **getRouteOriginDestination**
-> List&lt;Integer&gt; getRouteOriginDestination(destination, origin, avoid, connections, datasource, flag, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;Integer&gt; getRouteOriginDestination(destination, origin, avoid, connections, datasource, flag, ifNoneMatch)
 
 Get route
 
@@ -30,10 +30,8 @@ List<List<Integer>> connections = Arrays.asList(new List<Integer>()); // List<Li
 String datasource = "tranquility"; // String | The server name you would like data from
 String flag = "shortest"; // String | route security preference
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getRouteOriginDestination(destination, origin, avoid, connections, datasource, flag, ifNoneMatch, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getRouteOriginDestination(destination, origin, avoid, connections, datasource, flag, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling RoutesApi#getRouteOriginDestination");
@@ -52,8 +50,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **flag** | **String**| route security preference | [optional] [default to shortest] [enum: shortest, secure, insecure]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

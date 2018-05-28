@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdContracts"></a>
 # **getCharactersCharacterIdContracts**
-> List&lt;GetCharactersCharacterIdContracts200Ok&gt; getCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContracts200Ok&gt; getCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token)
 
 Get contracts
 
@@ -41,10 +41,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContracts200Ok> result = apiInstance.getCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContracts200Ok> result = apiInstance.getCharactersCharacterIdContracts(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCharactersCharacterIdContracts");
@@ -61,8 +59,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -79,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdContractsContractIdBids"></a>
 # **getCharactersCharacterIdContractsContractIdBids**
-> List&lt;GetCharactersCharacterIdContractsContractIdBids200Ok&gt; getCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContractsContractIdBids200Ok&gt; getCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token)
 
 Get contract bids
 
@@ -106,10 +102,8 @@ Integer contractId = 56; // Integer | ID of a contract
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContractsContractIdBids200Ok> result = apiInstance.getCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContractsContractIdBids200Ok> result = apiInstance.getCharactersCharacterIdContractsContractIdBids(characterId, contractId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCharactersCharacterIdContractsContractIdBids");
@@ -126,8 +120,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -144,7 +136,7 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdContractsContractIdItems"></a>
 # **getCharactersCharacterIdContractsContractIdItems**
-> List&lt;GetCharactersCharacterIdContractsContractIdItems200Ok&gt; getCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContractsContractIdItems200Ok&gt; getCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token)
 
 Get contract items
 
@@ -171,10 +163,8 @@ Integer contractId = 56; // Integer | ID of a contract
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContractsContractIdItems200Ok> result = apiInstance.getCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContractsContractIdItems200Ok> result = apiInstance.getCharactersCharacterIdContractsContractIdItems(characterId, contractId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCharactersCharacterIdContractsContractIdItems");
@@ -191,8 +181,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -209,7 +197,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdContracts"></a>
 # **getCorporationsCorporationIdContracts**
-> List&lt;GetCorporationsCorporationIdContracts200Ok&gt; getCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContracts200Ok&gt; getCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token)
 
 Get coporation contracts
 
@@ -236,10 +224,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContracts200Ok> result = apiInstance.getCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContracts200Ok> result = apiInstance.getCorporationsCorporationIdContracts(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCorporationsCorporationIdContracts");
@@ -256,8 +242,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -274,7 +258,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdContractsContractIdBids"></a>
 # **getCorporationsCorporationIdContractsContractIdBids**
-> List&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; getCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; getCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation contract bids
 
@@ -302,10 +286,8 @@ String datasource = "tranquility"; // String | The server name you would like da
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContractsContractIdBids200Ok> result = apiInstance.getCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContractsContractIdBids200Ok> result = apiInstance.getCorporationsCorporationIdContractsContractIdBids(contractId, corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCorporationsCorporationIdContractsContractIdBids");
@@ -323,8 +305,6 @@ Name | Type | Description  | Notes
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -341,7 +321,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdContractsContractIdItems"></a>
 # **getCorporationsCorporationIdContractsContractIdItems**
-> List&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; getCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; getCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token)
 
 Get corporation contract items
 
@@ -368,10 +348,8 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContractsContractIdItems200Ok> result = apiInstance.getCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContractsContractIdItems200Ok> result = apiInstance.getCorporationsCorporationIdContractsContractIdItems(contractId, corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContractsApi#getCorporationsCorporationIdContractsContractIdItems");
@@ -388,8 +366,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 

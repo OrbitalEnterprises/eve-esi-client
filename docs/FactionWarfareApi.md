@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="getCharactersCharacterIdFwStats"></a>
 # **getCharactersCharacterIdFwStats**
-> GetCharactersCharacterIdFwStatsOk getCharactersCharacterIdFwStats(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> GetCharactersCharacterIdFwStatsOk getCharactersCharacterIdFwStats(characterId, datasource, ifNoneMatch, token)
 
 Overview of a character involved in faction warfare
 
@@ -42,10 +42,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCharactersCharacterIdFwStatsOk result = apiInstance.getCharactersCharacterIdFwStats(characterId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    GetCharactersCharacterIdFwStatsOk result = apiInstance.getCharactersCharacterIdFwStats(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getCharactersCharacterIdFwStats");
@@ -61,8 +59,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -79,7 +75,7 @@ Name | Type | Description  | Notes
 
 <a name="getCorporationsCorporationIdFwStats"></a>
 # **getCorporationsCorporationIdFwStats**
-> GetCorporationsCorporationIdFwStatsOk getCorporationsCorporationIdFwStats(corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent)
+> GetCorporationsCorporationIdFwStatsOk getCorporationsCorporationIdFwStats(corporationId, datasource, ifNoneMatch, token)
 
 Overview of a corporation involved in faction warfare
 
@@ -105,10 +101,8 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCorporationsCorporationIdFwStatsOk result = apiInstance.getCorporationsCorporationIdFwStats(corporationId, datasource, ifNoneMatch, token, userAgent, xUserAgent);
+    GetCorporationsCorporationIdFwStatsOk result = apiInstance.getCorporationsCorporationIdFwStats(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getCorporationsCorporationIdFwStats");
@@ -124,8 +118,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -142,7 +134,7 @@ Name | Type | Description  | Notes
 
 <a name="getFwLeaderboards"></a>
 # **getFwLeaderboards**
-> GetFwLeaderboardsOk getFwLeaderboards(datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetFwLeaderboardsOk getFwLeaderboards(datasource, ifNoneMatch)
 
 List of the top factions in faction warfare
 
@@ -158,10 +150,8 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetFwLeaderboardsOk result = apiInstance.getFwLeaderboards(datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetFwLeaderboardsOk result = apiInstance.getFwLeaderboards(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwLeaderboards");
@@ -175,8 +165,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -193,7 +181,7 @@ No authorization required
 
 <a name="getFwLeaderboardsCharacters"></a>
 # **getFwLeaderboardsCharacters**
-> GetFwLeaderboardsCharactersOk getFwLeaderboardsCharacters(datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetFwLeaderboardsCharactersOk getFwLeaderboardsCharacters(datasource, ifNoneMatch)
 
 List of the top pilots in faction warfare
 
@@ -209,10 +197,8 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetFwLeaderboardsCharactersOk result = apiInstance.getFwLeaderboardsCharacters(datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetFwLeaderboardsCharactersOk result = apiInstance.getFwLeaderboardsCharacters(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwLeaderboardsCharacters");
@@ -226,8 +212,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -244,7 +228,7 @@ No authorization required
 
 <a name="getFwLeaderboardsCorporations"></a>
 # **getFwLeaderboardsCorporations**
-> GetFwLeaderboardsCorporationsOk getFwLeaderboardsCorporations(datasource, ifNoneMatch, userAgent, xUserAgent)
+> GetFwLeaderboardsCorporationsOk getFwLeaderboardsCorporations(datasource, ifNoneMatch)
 
 List of the top corporations in faction warfare
 
@@ -260,10 +244,8 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetFwLeaderboardsCorporationsOk result = apiInstance.getFwLeaderboardsCorporations(datasource, ifNoneMatch, userAgent, xUserAgent);
+    GetFwLeaderboardsCorporationsOk result = apiInstance.getFwLeaderboardsCorporations(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwLeaderboardsCorporations");
@@ -277,8 +259,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -295,7 +275,7 @@ No authorization required
 
 <a name="getFwStats"></a>
 # **getFwStats**
-> List&lt;GetFwStats200Ok&gt; getFwStats(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetFwStats200Ok&gt; getFwStats(datasource, ifNoneMatch)
 
 An overview of statistics about factions involved in faction warfare
 
@@ -311,10 +291,8 @@ Statistical overviews of factions involved in faction warfare  ---  This route e
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetFwStats200Ok> result = apiInstance.getFwStats(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetFwStats200Ok> result = apiInstance.getFwStats(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwStats");
@@ -328,8 +306,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -346,7 +322,7 @@ No authorization required
 
 <a name="getFwSystems"></a>
 # **getFwSystems**
-> List&lt;GetFwSystems200Ok&gt; getFwSystems(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetFwSystems200Ok&gt; getFwSystems(datasource, ifNoneMatch)
 
 Ownership of faction warfare systems
 
@@ -362,10 +338,8 @@ An overview of the current ownership of faction warfare solar systems  ---  This
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetFwSystems200Ok> result = apiInstance.getFwSystems(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetFwSystems200Ok> result = apiInstance.getFwSystems(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwSystems");
@@ -379,8 +353,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -397,7 +369,7 @@ No authorization required
 
 <a name="getFwWars"></a>
 # **getFwWars**
-> List&lt;GetFwWars200Ok&gt; getFwWars(datasource, ifNoneMatch, userAgent, xUserAgent)
+> List&lt;GetFwWars200Ok&gt; getFwWars(datasource, ifNoneMatch)
 
 Data about which NPC factions are at war
 
@@ -413,10 +385,8 @@ Data about which NPC factions are at war  ---  This route expires daily at 11:05
 FactionWarfareApi apiInstance = new FactionWarfareApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetFwWars200Ok> result = apiInstance.getFwWars(datasource, ifNoneMatch, userAgent, xUserAgent);
+    List<GetFwWars200Ok> result = apiInstance.getFwWars(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FactionWarfareApi#getFwWars");
@@ -430,8 +400,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
