@@ -9,5 +9,5 @@ echo "done"
 
 echo -n "Creating new README.md..."
 'rm' README.md
-cat preamble.md target/generated-sources/swagger/README.md > README.md
+cat preamble.md target/generated-sources/swagger/README.md postscript.md > README.md
 echo "done"

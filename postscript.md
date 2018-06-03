@@ -1,0 +1,1 @@
+The ESI client and related tools are provided by [Orbital Enterprises](https://github.com/OrbitalEnterprises).  You may also be interested in [EveKit](https://evekit.orbital.enterprises), our flagship tool for maintaining your EVE data (and complete history) online. 
