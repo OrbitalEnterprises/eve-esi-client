@@ -1,10 +1,10 @@
 
-# PostCharactersCharacterIdMail520Response
+# GetDogmaDynamicItemsTypeIdItemIdNotFound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **String** | 520 response message |  [optional]
+**error** | **String** | Not found message |  [optional]
 
 
 

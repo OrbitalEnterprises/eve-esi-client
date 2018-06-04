@@ -1,10 +1,10 @@
 
-# BadGateway
+# PostCharactersCharacterIdMailError520
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **String** | Bad gateway message | 
+**error** | **String** | Error 520 message |  [optional]
 
 
 

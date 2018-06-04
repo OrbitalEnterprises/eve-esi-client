@@ -812,7 +812,7 @@ No authorization required
 
 <a name="postCharactersAffiliation"></a>
 # **postCharactersAffiliation**
-> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource, ifNoneMatch)
+> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource)
 
 Character affiliation
 
@@ -828,9 +828,8 @@ Bulk lookup of character IDs to corporation, alliance and faction  ---  This rou
 CharacterApi apiInstance = new CharacterApi();
 List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource, ifNoneMatch);
+    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#postCharactersAffiliation");
@@ -844,7 +843,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 

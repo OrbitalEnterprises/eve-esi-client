@@ -184,7 +184,7 @@ Class | Method | HTTP request | Description
 *ContractsApi* | [**getCharactersCharacterIdContracts**](docs/ContractsApi.md#getCharactersCharacterIdContracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdBids**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdBids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdItems**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdItems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
-*ContractsApi* | [**getCorporationsCorporationIdContracts**](docs/ContractsApi.md#getCorporationsCorporationIdContracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get coporation contracts
+*ContractsApi* | [**getCorporationsCorporationIdContracts**](docs/ContractsApi.md#getCorporationsCorporationIdContracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdBids**](docs/ContractsApi.md#getCorporationsCorporationIdContractsContractIdBids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdItems**](docs/ContractsApi.md#getCorporationsCorporationIdContractsContractIdItems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
 *CorporationApi* | [**getCorporationsCorporationId**](docs/CorporationApi.md#getCorporationsCorporationId) | **GET** /v4/corporations/{corporation_id}/ | Get corporation information
@@ -214,6 +214,7 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsNpccorps**](docs/CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 *DogmaApi* | [**getDogmaAttributes**](docs/DogmaApi.md#getDogmaAttributes) | **GET** /v1/dogma/attributes/ | Get attributes
 *DogmaApi* | [**getDogmaAttributesAttributeId**](docs/DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /v1/dogma/attributes/{attribute_id}/ | Get attribute information
+*DogmaApi* | [**getDogmaDynamicItemsTypeIdItemId**](docs/DogmaApi.md#getDogmaDynamicItemsTypeIdItemId) | **GET** /v1/dogma/dynamic/items/{type_id}/{item_id}/ | Get dynamic item information
 *DogmaApi* | [**getDogmaEffects**](docs/DogmaApi.md#getDogmaEffects) | **GET** /v1/dogma/effects/ | Get effects
 *DogmaApi* | [**getDogmaEffectsEffectId**](docs/DogmaApi.md#getDogmaEffectsEffectId) | **GET** /v2/dogma/effects/{effect_id}/ | Get effect information
 *FactionWarfareApi* | [**getCharactersCharacterIdFwStats**](docs/FactionWarfareApi.md#getCharactersCharacterIdFwStats) | **GET** /v1/characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
@@ -346,7 +347,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [BadGateway](docs/BadGateway.md)
  - [BadRequest](docs/BadRequest.md)
  - [DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity](docs/DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity.md)
  - [DeleteFleetsFleetIdMembersMemberIdNotFound](docs/DeleteFleetsFleetIdMembersMemberIdNotFound.md)
@@ -354,6 +354,7 @@ Class | Method | HTTP request | Description
  - [DeleteFleetsFleetIdWingsWingIdNotFound](docs/DeleteFleetsFleetIdWingsWingIdNotFound.md)
  - [ErrorLimited](docs/ErrorLimited.md)
  - [Forbidden](docs/Forbidden.md)
+ - [GatewayTimeout](docs/GatewayTimeout.md)
  - [GetAlliancesAllianceIdContacts200Ok](docs/GetAlliancesAllianceIdContacts200Ok.md)
  - [GetAlliancesAllianceIdContactsLabels200Ok](docs/GetAlliancesAllianceIdContactsLabels200Ok.md)
  - [GetAlliancesAllianceIdIconsNotFound](docs/GetAlliancesAllianceIdIconsNotFound.md)
@@ -469,7 +470,7 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdContractsContractIdBids200Ok](docs/GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
  - [GetCorporationsCorporationIdContractsContractIdBidsNotFound](docs/GetCorporationsCorporationIdContractsContractIdBidsNotFound.md)
  - [GetCorporationsCorporationIdContractsContractIdItems200Ok](docs/GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
- - [GetCorporationsCorporationIdContractsContractIdItems520Response](docs/GetCorporationsCorporationIdContractsContractIdItems520Response.md)
+ - [GetCorporationsCorporationIdContractsContractIdItemsError520](docs/GetCorporationsCorporationIdContractsContractIdItemsError520.md)
  - [GetCorporationsCorporationIdContractsContractIdItemsNotFound](docs/GetCorporationsCorporationIdContractsContractIdItemsNotFound.md)
  - [GetCorporationsCorporationIdCustomsOffices200Ok](docs/GetCorporationsCorporationIdCustomsOffices200Ok.md)
  - [GetCorporationsCorporationIdDivisionsHangarHangar](docs/GetCorporationsCorporationIdDivisionsHangarHangar.md)
@@ -510,6 +511,10 @@ Class | Method | HTTP request | Description
  - [GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
  - [GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
  - [GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdDogmaEffect](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaEffect.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdNotFound](docs/GetDogmaDynamicItemsTypeIdItemIdNotFound.md)
+ - [GetDogmaDynamicItemsTypeIdItemIdOk](docs/GetDogmaDynamicItemsTypeIdItemIdOk.md)
  - [GetDogmaEffectsEffectIdModifier](docs/GetDogmaEffectsEffectIdModifier.md)
  - [GetDogmaEffectsEffectIdNotFound](docs/GetDogmaEffectsEffectIdNotFound.md)
  - [GetDogmaEffectsEffectIdOk](docs/GetDogmaEffectsEffectIdOk.md)
@@ -572,7 +577,7 @@ Class | Method | HTTP request | Description
  - [GetMarketsGroupsMarketGroupIdOk](docs/GetMarketsGroupsMarketGroupIdOk.md)
  - [GetMarketsPrices200Ok](docs/GetMarketsPrices200Ok.md)
  - [GetMarketsRegionIdHistory200Ok](docs/GetMarketsRegionIdHistory200Ok.md)
- - [GetMarketsRegionIdHistory520Response](docs/GetMarketsRegionIdHistory520Response.md)
+ - [GetMarketsRegionIdHistoryError520](docs/GetMarketsRegionIdHistoryError520.md)
  - [GetMarketsRegionIdHistoryNotFound](docs/GetMarketsRegionIdHistoryNotFound.md)
  - [GetMarketsRegionIdHistoryUnprocessableEntity](docs/GetMarketsRegionIdHistoryUnprocessableEntity.md)
  - [GetMarketsRegionIdOrders200Ok](docs/GetMarketsRegionIdOrders200Ok.md)
@@ -651,7 +656,7 @@ Class | Method | HTTP request | Description
  - [PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
  - [PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
  - [PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)
- - [PostCharactersCharacterIdMail520Response](docs/PostCharactersCharacterIdMail520Response.md)
+ - [PostCharactersCharacterIdMailError520](docs/PostCharactersCharacterIdMailError520.md)
  - [PostCharactersCharacterIdMailLabelsLabel](docs/PostCharactersCharacterIdMailLabelsLabel.md)
  - [PostCharactersCharacterIdMailMail](docs/PostCharactersCharacterIdMailMail.md)
  - [PostCharactersCharacterIdMailRecipient](docs/PostCharactersCharacterIdMailRecipient.md)
@@ -784,3 +789,4 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 
 
+The ESI client and related tools are provided by [Orbital Enterprises](https://github.com/OrbitalEnterprises).  You may also be interested in [EveKit](https://evekit.orbital.enterprises), our flagship tool for maintaining your EVE data (and complete history) online. 

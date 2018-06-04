@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**isBlueprintCopy** | **Boolean** | is_blueprint_copy boolean |  [optional]
 **isSingleton** | **Boolean** | is_singleton boolean | 
 **itemId** | **Long** | item_id integer | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 

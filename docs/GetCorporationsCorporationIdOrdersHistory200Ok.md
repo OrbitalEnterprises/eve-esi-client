@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **typeId** | **Integer** | The type ID of the item transacted in this order | 
 **volumeRemain** | **Integer** | Quantity of items still required or offered | 
 **volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
-**walletDivision** | **Integer** | The corporation wallet division used for this order. | 
+**walletDivision** | **Integer** | The corporation wallet division used for this order | 
 
 
 <a name="RangeEnum"></a>
