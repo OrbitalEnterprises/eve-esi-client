@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **contactType** | [**ContactTypeEnum**](#ContactTypeEnum) | contact_type string | 
 **isBlocked** | **Boolean** | Whether this contact is in the blocked list. Note a missing value denotes unknown, not true or false |  [optional]
 **isWatched** | **Boolean** | Whether this contact is being watched |  [optional]
-**labelId** | **Long** | Custom label of the contact |  [optional]
+**labelIds** | **List&lt;Long&gt;** | label_ids array |  [optional]
 **standing** | **Float** | Standing of the contact | 
 
 

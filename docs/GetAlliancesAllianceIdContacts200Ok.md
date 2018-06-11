@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contactId** | **Integer** | contact_id integer | 
 **contactType** | [**ContactTypeEnum**](#ContactTypeEnum) | contact_type string | 
-**labelId** | **Long** | Custom label of the contact |  [optional]
+**labelIds** | **List&lt;Long&gt;** | label_ids array |  [optional]
 **standing** | **Float** | Standing of the contact | 
 
 

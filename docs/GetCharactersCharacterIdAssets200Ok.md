@@ -20,6 +20,7 @@ Name | Value
 ---- | -----
 ASSETSAFETY | &quot;AssetSafety&quot;
 AUTOFIT | &quot;AutoFit&quot;
+BOOSTERBAY | &quot;BoosterBay&quot;
 CARGO | &quot;Cargo&quot;
 CORPSEBAY | &quot;CorpseBay&quot;
 DELIVERIES | &quot;Deliveries&quot;

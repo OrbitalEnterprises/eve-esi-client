@@ -191,6 +191,7 @@ STRUCTURECOURIERCONTRACTCHANGED | &quot;StructureCourierContractChanged&quot;
 STRUCTUREDESTROYED | &quot;StructureDestroyed&quot;
 STRUCTUREFUELALERT | &quot;StructureFuelAlert&quot;
 STRUCTUREITEMSDELIVERED | &quot;StructureItemsDelivered&quot;
+STRUCTUREITEMSMOVEDTOSAFETY | &quot;StructureItemsMovedToSafety&quot;
 STRUCTURELOSTARMOR | &quot;StructureLostArmor&quot;
 STRUCTURELOSTSHIELDS | &quot;StructureLostShields&quot;
 STRUCTUREONLINE | &quot;StructureOnline&quot;

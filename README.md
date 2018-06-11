@@ -173,14 +173,14 @@ Class | Method | HTTP request | Description
 *ClonesApi* | [**getCharactersCharacterIdClones**](docs/ClonesApi.md#getCharactersCharacterIdClones) | **GET** /v3/characters/{character_id}/clones/ | Get clones
 *ClonesApi* | [**getCharactersCharacterIdImplants**](docs/ClonesApi.md#getCharactersCharacterIdImplants) | **GET** /v1/characters/{character_id}/implants/ | Get active implants
 *ContactsApi* | [**deleteCharactersCharacterIdContacts**](docs/ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
-*ContactsApi* | [**getAlliancesAllianceIdContacts**](docs/ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+*ContactsApi* | [**getAlliancesAllianceIdContacts**](docs/ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v2/alliances/{alliance_id}/contacts/ | Get alliance contacts
 *ContactsApi* | [**getAlliancesAllianceIdContactsLabels**](docs/ContactsApi.md#getAlliancesAllianceIdContactsLabels) | **GET** /v1/alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
-*ContactsApi* | [**getCharactersCharacterIdContacts**](docs/ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
+*ContactsApi* | [**getCharactersCharacterIdContacts**](docs/ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v2/characters/{character_id}/contacts/ | Get contacts
 *ContactsApi* | [**getCharactersCharacterIdContactsLabels**](docs/ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
-*ContactsApi* | [**getCorporationsCorporationIdContacts**](docs/ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+*ContactsApi* | [**getCorporationsCorporationIdContacts**](docs/ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v2/corporations/{corporation_id}/contacts/ | Get corporation contacts
 *ContactsApi* | [**getCorporationsCorporationIdContactsLabels**](docs/ContactsApi.md#getCorporationsCorporationIdContactsLabels) | **GET** /v1/corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
-*ContactsApi* | [**postCharactersCharacterIdContacts**](docs/ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
-*ContactsApi* | [**putCharactersCharacterIdContacts**](docs/ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
+*ContactsApi* | [**postCharactersCharacterIdContacts**](docs/ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v2/characters/{character_id}/contacts/ | Add contacts
+*ContactsApi* | [**putCharactersCharacterIdContacts**](docs/ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v2/characters/{character_id}/contacts/ | Edit contacts
 *ContractsApi* | [**getCharactersCharacterIdContracts**](docs/ContractsApi.md#getCharactersCharacterIdContracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdBids**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdBids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 *ContractsApi* | [**getCharactersCharacterIdContractsContractIdItems**](docs/ContractsApi.md#getCharactersCharacterIdContractsContractIdItems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
@@ -653,6 +653,7 @@ Class | Method | HTTP request | Description
  - [PostCharactersCharacterIdAssetsLocations200Ok](docs/PostCharactersCharacterIdAssetsLocations200Ok.md)
  - [PostCharactersCharacterIdAssetsLocationsPosition](docs/PostCharactersCharacterIdAssetsLocationsPosition.md)
  - [PostCharactersCharacterIdAssetsNames200Ok](docs/PostCharactersCharacterIdAssetsNames200Ok.md)
+ - [PostCharactersCharacterIdContactsError520](docs/PostCharactersCharacterIdContactsError520.md)
  - [PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
  - [PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
  - [PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)
