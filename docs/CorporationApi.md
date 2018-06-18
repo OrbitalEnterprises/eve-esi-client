@@ -27,7 +27,6 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
 [**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
 [**getCorporationsCorporationIdTitles**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
-[**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 [**getCorporationsNpccorps**](CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 
 
@@ -1382,55 +1381,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getCorporationsNames"></a>
-# **getCorporationsNames**
-> List&lt;GetCorporationsNames200Ok&gt; getCorporationsNames(corporationIds, datasource, ifNoneMatch)
-
-Get corporation names
-
-Resolve a set of corporation IDs to corporation names  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-
-CorporationApi apiInstance = new CorporationApi();
-List<Integer> corporationIds = Arrays.asList(56); // List<Integer> | A comma separated list of corporation IDs
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-try {
-    List<GetCorporationsNames200Ok> result = apiInstance.getCorporationsNames(corporationIds, datasource, ifNoneMatch);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsNames");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of corporation IDs |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
-
-### Return type
-
-[**List&lt;GetCorporationsNames200Ok&gt;**](GetCorporationsNames200Ok.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
