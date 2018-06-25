@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**getAlliancesAllianceId**](AllianceApi.md#getAlliancesAllianceId) | **GET** /v3/alliances/{alliance_id}/ | Get alliance information
 [**getAlliancesAllianceIdCorporations**](AllianceApi.md#getAlliancesAllianceIdCorporations) | **GET** /v1/alliances/{alliance_id}/corporations/ | List alliance&#39;s corporations
 [**getAlliancesAllianceIdIcons**](AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /v1/alliances/{alliance_id}/icons/ | Get alliance icon
-[**getAlliancesNames**](AllianceApi.md#getAlliancesNames) | **GET** /v2/alliances/names/ | Get alliance names
 
 
 <a name="getAlliances"></a>
@@ -195,55 +194,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAlliancesAllianceIdIconsOk**](GetAlliancesAllianceIdIconsOk.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getAlliancesNames"></a>
-# **getAlliancesNames**
-> List&lt;GetAlliancesNames200Ok&gt; getAlliancesNames(allianceIds, datasource, ifNoneMatch)
-
-Get alliance names
-
-Resolve a set of alliance IDs to alliance names  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.api.AllianceApi;
-
-
-AllianceApi apiInstance = new AllianceApi();
-List<Integer> allianceIds = Arrays.asList(56); // List<Integer> | A comma separated list of alliance IDs
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-try {
-    List<GetAlliancesNames200Ok> result = apiInstance.getAlliancesNames(allianceIds, datasource, ifNoneMatch);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AllianceApi#getAlliancesNames");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **allianceIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of alliance IDs |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
-
-### Return type
-
-[**List&lt;GetAlliancesNames200Ok&gt;**](GetAlliancesNames200Ok.md)
 
 ### Authorization
 
