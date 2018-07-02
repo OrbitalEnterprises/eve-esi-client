@@ -220,7 +220,7 @@ Class | Method | HTTP request | Description
 *FactionWarfareApi* | [**getFwLeaderboardsCharacters**](docs/FactionWarfareApi.md#getFwLeaderboardsCharacters) | **GET** /v1/fw/leaderboards/characters/ | List of the top pilots in faction warfare
 *FactionWarfareApi* | [**getFwLeaderboardsCorporations**](docs/FactionWarfareApi.md#getFwLeaderboardsCorporations) | **GET** /v1/fw/leaderboards/corporations/ | List of the top corporations in faction warfare
 *FactionWarfareApi* | [**getFwStats**](docs/FactionWarfareApi.md#getFwStats) | **GET** /v1/fw/stats/ | An overview of statistics about factions involved in faction warfare
-*FactionWarfareApi* | [**getFwSystems**](docs/FactionWarfareApi.md#getFwSystems) | **GET** /v1/fw/systems/ | Ownership of faction warfare systems
+*FactionWarfareApi* | [**getFwSystems**](docs/FactionWarfareApi.md#getFwSystems) | **GET** /v2/fw/systems/ | Ownership of faction warfare systems
 *FactionWarfareApi* | [**getFwWars**](docs/FactionWarfareApi.md#getFwWars) | **GET** /v1/fw/wars/ | Data about which NPC factions are at war
 *FittingsApi* | [**deleteCharactersCharacterIdFittingsFittingId**](docs/FittingsApi.md#deleteCharactersCharacterIdFittingsFittingId) | **DELETE** /v1/characters/{character_id}/fittings/{fitting_id}/ | Delete fitting
 *FittingsApi* | [**getCharactersCharacterIdFittings**](docs/FittingsApi.md#getCharactersCharacterIdFittings) | **GET** /v1/characters/{character_id}/fittings/ | Get fittings
