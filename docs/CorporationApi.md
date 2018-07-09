@@ -17,8 +17,6 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdMembersLimit**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 [**getCorporationsCorporationIdMembersTitles**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 [**getCorporationsCorporationIdMembertracking**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
-[**getCorporationsCorporationIdOutposts**](CorporationApi.md#getCorporationsCorporationIdOutposts) | **GET** /v1/corporations/{corporation_id}/outposts/ | Get corporation outposts
-[**getCorporationsCorporationIdOutpostsOutpostId**](CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 [**getCorporationsCorporationIdRoles**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 [**getCorporationsCorporationIdRolesHistory**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 [**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation shareholders
@@ -765,128 +763,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GetCorporationsCorporationIdMembertracking200Ok&gt;**](GetCorporationsCorporationIdMembertracking200Ok.md)
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getCorporationsCorporationIdOutposts"></a>
-# **getCorporationsCorporationIdOutposts**
-> List&lt;Integer&gt; getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token)
-
-Get corporation outposts
-
-Get a list of corporation outpost IDs Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- Warning: Outposts have been removed, this route will be deleted on 2018-07-08
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.invoker.Configuration;
-//import enterprises.orbital.eve.esi.client.invoker.auth.*;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Integer page = 1; // Integer | Which page of results to return
-String token = "token_example"; // String | Access token to use if unable to set a header
-try {
-    List<Integer> result = apiInstance.getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutposts");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **page** | **Integer**| Which page of results to return | [optional] [default to 1]
- **token** | **String**| Access token to use if unable to set a header | [optional]
-
-### Return type
-
-**List&lt;Integer&gt;**
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getCorporationsCorporationIdOutpostsOutpostId"></a>
-# **getCorporationsCorporationIdOutpostsOutpostId**
-> GetCorporationsCorporationIdOutpostsOutpostIdOk getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token)
-
-Get corporation outpost details
-
-Get details about a given outpost. Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- Warning: Outposts have been removed, this route will be deleted on 2018-07-08
-
-### Example
-```java
-// Import classes:
-//import enterprises.orbital.eve.esi.client.invoker.ApiClient;
-//import enterprises.orbital.eve.esi.client.invoker.ApiException;
-//import enterprises.orbital.eve.esi.client.invoker.Configuration;
-//import enterprises.orbital.eve.esi.client.invoker.auth.*;
-//import enterprises.orbital.eve.esi.client.api.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-Integer outpostId = 56; // Integer | A station (outpost) ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String token = "token_example"; // String | Access token to use if unable to set a header
-try {
-    GetCorporationsCorporationIdOutpostsOutpostIdOk result = apiInstance.getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutpostsOutpostId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **outpostId** | **Integer**| A station (outpost) ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **token** | **String**| Access token to use if unable to set a header | [optional]
-
-### Return type
-
-[**GetCorporationsCorporationIdOutpostsOutpostIdOk**](GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
 
 ### Authorization
 
