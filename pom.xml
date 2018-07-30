@@ -45,7 +45,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>https://esi.tech.ccp.is/_latest/swagger.json</inputSpec>
+              <inputSpec>https://esi.evetech.net/_latest/swagger.json</inputSpec>
               <language>java</language>
               <configOptions>
                 <sourceFolder>src/gen/java/main</sourceFolder>
