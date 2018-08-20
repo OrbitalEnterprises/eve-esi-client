@@ -41,7 +41,7 @@ IndustryApi apiInstance = new IndustryApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Boolean includeCompleted = true; // Boolean | Whether retrieve completed character industry jobs as well
+Boolean includeCompleted = true; // Boolean | Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days.
 String token = "token_example"; // String | Access token to use if unable to set a header
 try {
     List<GetCharactersCharacterIdIndustryJobs200Ok> result = apiInstance.getCharactersCharacterIdIndustryJobs(characterId, datasource, ifNoneMatch, includeCompleted, token);
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **includeCompleted** | **Boolean**| Whether retrieve completed character industry jobs as well | [optional]
+ **includeCompleted** | **Boolean**| Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days. | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -348,7 +348,7 @@ IndustryApi apiInstance = new IndustryApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Boolean includeCompleted = false; // Boolean | Whether retrieve completed industry jobs as well
+Boolean includeCompleted = false; // Boolean | Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days.
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
 try {
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **includeCompleted** | **Boolean**| Whether retrieve completed industry jobs as well | [optional] [default to false]
+ **includeCompleted** | **Boolean**| Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days. | [optional] [default to false]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 

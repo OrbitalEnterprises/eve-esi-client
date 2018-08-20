@@ -699,7 +699,7 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorizatoin URL**: https://login.eveonline.com/oauth/authorize
+- **Authorizatoin URL**: https://login.eveonline.com/v2/oauth/authorize
 - **Scopes**: 
   - esi-alliances.read_contacts.v1: EVE SSO scope esi-alliances.read_contacts.v1
   - esi-assets.read_assets.v1: EVE SSO scope esi-assets.read_assets.v1
