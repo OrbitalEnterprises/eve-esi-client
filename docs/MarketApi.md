@@ -473,7 +473,7 @@ Return a list of orders in a region  ---  This route is cached for up to 300 sec
 
 
 MarketApi apiInstance = new MarketApi();
-String orderType = "all"; // String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
+String orderType = "all"; // String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders
 Integer regionId = 56; // Integer | Return orders in this region
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
@@ -492,7 +492,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderType** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. | [default to all] [enum: buy, sell, all]
+ **orderType** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders | [default to all] [enum: buy, sell, all]
  **regionId** | **Integer**| Return orders in this region |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]

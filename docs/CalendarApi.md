@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List calendar event summaries
 
-Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event.  ---  This route is cached for up to 5 seconds
+Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event  ---  This route is cached for up to 5 seconds
 
 ### Example
 ```java
@@ -219,7 +219,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CalendarApi apiInstance = new CalendarApi();
 Integer characterId = 56; // Integer | An EVE character ID
 Integer eventId = 56; // Integer | The ID of the event requested
-PutCharactersCharacterIdCalendarEventIdResponse response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
+PutCharactersCharacterIdCalendarEventIdResponse response = new PutCharactersCharacterIdCalendarEventIdResponse(); // PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 try {
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **eventId** | **Integer**| The ID of the event requested |
- **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. |
+ **response** | [**PutCharactersCharacterIdCalendarEventIdResponse**](PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 

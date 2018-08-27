@@ -7,6 +7,9 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdContracts**](ContractsApi.md#getCharactersCharacterIdContracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 [**getCharactersCharacterIdContractsContractIdBids**](ContractsApi.md#getCharactersCharacterIdContractsContractIdBids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 [**getCharactersCharacterIdContractsContractIdItems**](ContractsApi.md#getCharactersCharacterIdContractsContractIdItems) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
+[**getContractsPublicBidsContractId**](ContractsApi.md#getContractsPublicBidsContractId) | **GET** /v1/contracts/public/bids/{contract_id}/ | Get public contract bids
+[**getContractsPublicItemsContractId**](ContractsApi.md#getContractsPublicItemsContractId) | **GET** /v1/contracts/public/items/{contract_id}/ | Get public contract items
+[**getContractsPublicRegionId**](ContractsApi.md#getContractsPublicRegionId) | **GET** /v1/contracts/public/{region_id}/ | Get public contracts
 [**getCorporationsCorporationIdContracts**](ContractsApi.md#getCorporationsCorporationIdContracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 [**getCorporationsCorporationIdContractsContractIdBids**](ContractsApi.md#getCorporationsCorporationIdContractsContractIdBids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 [**getCorporationsCorporationIdContractsContractIdItems**](ContractsApi.md#getCorporationsCorporationIdContractsContractIdItems) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
@@ -189,6 +192,159 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getContractsPublicBidsContractId"></a>
+# **getContractsPublicBidsContractId**
+> List&lt;GetContractsPublicBidsContractId200Ok&gt; getContractsPublicBidsContractId(contractId, datasource, ifNoneMatch, page)
+
+Get public contract bids
+
+Lists bids on a public auction contract  ---  This route is cached for up to 300 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.ContractsApi;
+
+
+ContractsApi apiInstance = new ContractsApi();
+Integer contractId = 56; // Integer | ID of a contract
+String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+Integer page = 1; // Integer | Which page of results to return
+try {
+    List<GetContractsPublicBidsContractId200Ok> result = apiInstance.getContractsPublicBidsContractId(contractId, datasource, ifNoneMatch, page);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContractsApi#getContractsPublicBidsContractId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contractId** | **Integer**| ID of a contract |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**List&lt;GetContractsPublicBidsContractId200Ok&gt;**](GetContractsPublicBidsContractId200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getContractsPublicItemsContractId"></a>
+# **getContractsPublicItemsContractId**
+> List&lt;GetContractsPublicItemsContractId200Ok&gt; getContractsPublicItemsContractId(contractId, datasource, ifNoneMatch, page)
+
+Get public contract items
+
+Lists items of a public contract  ---  This route is cached for up to 3600 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.ContractsApi;
+
+
+ContractsApi apiInstance = new ContractsApi();
+Integer contractId = 56; // Integer | ID of a contract
+String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+Integer page = 1; // Integer | Which page of results to return
+try {
+    List<GetContractsPublicItemsContractId200Ok> result = apiInstance.getContractsPublicItemsContractId(contractId, datasource, ifNoneMatch, page);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContractsApi#getContractsPublicItemsContractId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contractId** | **Integer**| ID of a contract |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**List&lt;GetContractsPublicItemsContractId200Ok&gt;**](GetContractsPublicItemsContractId200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getContractsPublicRegionId"></a>
+# **getContractsPublicRegionId**
+> List&lt;GetContractsPublicRegionId200Ok&gt; getContractsPublicRegionId(regionId, datasource, ifNoneMatch, page)
+
+Get public contracts
+
+Returns a paginated list of all public contracts in the given region  ---  This route is cached for up to 1800 seconds
+
+### Example
+```java
+// Import classes:
+//import enterprises.orbital.eve.esi.client.invoker.ApiException;
+//import enterprises.orbital.eve.esi.client.api.ContractsApi;
+
+
+ContractsApi apiInstance = new ContractsApi();
+Integer regionId = 56; // Integer | An EVE region id
+String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+Integer page = 1; // Integer | Which page of results to return
+try {
+    List<GetContractsPublicRegionId200Ok> result = apiInstance.getContractsPublicRegionId(regionId, datasource, ifNoneMatch, page);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContractsApi#getContractsPublicRegionId");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **Integer**| An EVE region id |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**List&lt;GetContractsPublicRegionId200Ok&gt;**](GetContractsPublicRegionId200Ok.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 

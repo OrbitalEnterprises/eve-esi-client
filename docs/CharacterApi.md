@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
+Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
 
 ### Example
 ```java
@@ -776,7 +776,7 @@ Bulk lookup of character IDs to corporation, alliance and faction  ---  This rou
 
 
 CharacterApi apiInstance = new CharacterApi();
-List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned
 String datasource = "tranquility"; // String | The server name you would like data from
 try {
     List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource);
@@ -791,7 +791,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
+ **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
 
 ### Return type

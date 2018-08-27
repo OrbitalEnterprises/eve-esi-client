@@ -27,7 +27,7 @@ Return a list of wars  ---  This route is cached for up to 3600 seconds
 WarsApi apiInstance = new WarsApi();
 String datasource = "tranquility"; // String | The server name you would like data from
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Integer maxWarId = 56; // Integer | Only return wars with ID smaller than this.
+Integer maxWarId = 56; // Integer | Only return wars with ID smaller than this
 try {
     List<Integer> result = apiInstance.getWars(datasource, ifNoneMatch, maxWarId);
     System.out.println(result);
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **maxWarId** | **Integer**| Only return wars with ID smaller than this. | [optional]
+ **maxWarId** | **Integer**| Only return wars with ID smaller than this | [optional]
 
 ### Return type
 
