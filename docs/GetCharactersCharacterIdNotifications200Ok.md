@@ -200,6 +200,8 @@ STRUCTUREUNANCHORING | &quot;StructureUnanchoring&quot;
 STRUCTUREUNDERATTACK | &quot;StructureUnderAttack&quot;
 STRUCTUREWENTHIGHPOWER | &quot;StructureWentHighPower&quot;
 STRUCTUREWENTLOWPOWER | &quot;StructureWentLowPower&quot;
+STRUCTURESJOBSCANCELLED | &quot;StructuresJobsCancelled&quot;
+STRUCTURESJOBSPAUSED | &quot;StructuresJobsPaused&quot;
 STRUCTURESREINFORCEMENTCHANGED | &quot;StructuresReinforcementChanged&quot;
 TOWERALERTMSG | &quot;TowerAlertMsg&quot;
 TOWERRESOURCEALERTMSG | &quot;TowerResourceAlertMsg&quot;
