@@ -481,7 +481,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
+Get portrait urls for a character  ---  This route expires daily at 11:05
 
 ### Example
 ```java

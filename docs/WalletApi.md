@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds
+Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/wallet/journal/)
 
 ### Example
 ```java
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve the given corporation&#39;s wallet journal for the given division going 30 days back  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Retrieve the given corporation&#39;s wallet journal for the given division going 30 days back  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/wallets/{division}/journal/)
 
 ### Example
 ```java
