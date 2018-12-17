@@ -1034,7 +1034,7 @@ No authorization required
 
 <a name="getUniverseStructures"></a>
 # **getUniverseStructures**
-> List&lt;Long&gt; getUniverseStructures(datasource, ifNoneMatch)
+> List&lt;Long&gt; getUniverseStructures(datasource, filter, ifNoneMatch)
 
 List all public structures
 
@@ -1049,9 +1049,10 @@ List all public structures  ---  This route is cached for up to 3600 seconds
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String filter = "filter_example"; // String | Only list public structures that have this service online
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<Long> result = apiInstance.getUniverseStructures(datasource, ifNoneMatch);
+    List<Long> result = apiInstance.getUniverseStructures(datasource, filter, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStructures");
@@ -1064,6 +1065,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **filter** | **String**| Only list public structures that have this service online | [optional] [enum: market, manufacturing_basic]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
