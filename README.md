@@ -207,7 +207,7 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdStandings**](docs/CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 *CorporationApi* | [**getCorporationsCorporationIdStarbases**](docs/CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 *CorporationApi* | [**getCorporationsCorporationIdStarbasesStarbaseId**](docs/CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-*CorporationApi* | [**getCorporationsCorporationIdStructures**](docs/CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
+*CorporationApi* | [**getCorporationsCorporationIdStructures**](docs/CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v3/corporations/{corporation_id}/structures/ | Get corporation structures
 *CorporationApi* | [**getCorporationsCorporationIdTitles**](docs/CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
 *CorporationApi* | [**getCorporationsNpccorps**](docs/CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 *DogmaApi* | [**getDogmaAttributes**](docs/DogmaApi.md#getDogmaAttributes) | **GET** /v1/dogma/attributes/ | Get attributes
@@ -333,10 +333,10 @@ Class | Method | HTTP request | Description
 *UserInterfaceApi* | [**postUiOpenwindowMarketdetails**](docs/UserInterfaceApi.md#postUiOpenwindowMarketdetails) | **POST** /v1/ui/openwindow/marketdetails/ | Open Market Details
 *UserInterfaceApi* | [**postUiOpenwindowNewmail**](docs/UserInterfaceApi.md#postUiOpenwindowNewmail) | **POST** /v1/ui/openwindow/newmail/ | Open New Mail Window
 *WalletApi* | [**getCharactersCharacterIdWallet**](docs/WalletApi.md#getCharactersCharacterIdWallet) | **GET** /v1/characters/{character_id}/wallet/ | Get a character&#39;s wallet balance
-*WalletApi* | [**getCharactersCharacterIdWalletJournal**](docs/WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /v4/characters/{character_id}/wallet/journal/ | Get character wallet journal
+*WalletApi* | [**getCharactersCharacterIdWalletJournal**](docs/WalletApi.md#getCharactersCharacterIdWalletJournal) | **GET** /v5/characters/{character_id}/wallet/journal/ | Get character wallet journal
 *WalletApi* | [**getCharactersCharacterIdWalletTransactions**](docs/WalletApi.md#getCharactersCharacterIdWalletTransactions) | **GET** /v1/characters/{character_id}/wallet/transactions/ | Get wallet transactions
 *WalletApi* | [**getCorporationsCorporationIdWallets**](docs/WalletApi.md#getCorporationsCorporationIdWallets) | **GET** /v1/corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-*WalletApi* | [**getCorporationsCorporationIdWalletsDivisionJournal**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /v3/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+*WalletApi* | [**getCorporationsCorporationIdWalletsDivisionJournal**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionJournal) | **GET** /v4/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
 *WalletApi* | [**getCorporationsCorporationIdWalletsDivisionTransactions**](docs/WalletApi.md#getCorporationsCorporationIdWalletsDivisionTransactions) | **GET** /v1/corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 *WarsApi* | [**getWars**](docs/WarsApi.md#getWars) | **GET** /v1/wars/ | List wars
 *WarsApi* | [**getWarsWarId**](docs/WarsApi.md#getWarsWarId) | **GET** /v1/wars/{war_id}/ | Get war information

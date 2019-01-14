@@ -153,6 +153,7 @@ SHARES | &quot;shares&quot;
 SOVEREIGNITY_BILL | &quot;sovereignity_bill&quot;
 STORE_PURCHASE | &quot;store_purchase&quot;
 STORE_PURCHASE_REFUND | &quot;store_purchase_refund&quot;
+STRUCTURE_GATE_JUMP | &quot;structure_gate_jump&quot;
 TRANSACTION_TAX | &quot;transaction_tax&quot;
 UPKEEP_ADJUSTMENT_FEE | &quot;upkeep_adjustment_fee&quot;
 WAR_ALLY_CONTRACT | &quot;war_ally_contract&quot;
