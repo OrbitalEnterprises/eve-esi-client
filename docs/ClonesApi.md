@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 Get active implants
 
-Return implants on the active clone of a character  ---  This route is cached for up to 300 seconds
+Return implants on the active clone of a character  ---  This route is cached for up to 120 seconds
 
 ### Example
 ```java
