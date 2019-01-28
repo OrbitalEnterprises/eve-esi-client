@@ -326,7 +326,7 @@ Class | Method | HTTP request | Description
 *UniverseApi* | [**getUniverseTypes**](docs/UniverseApi.md#getUniverseTypes) | **GET** /v1/universe/types/ | Get types
 *UniverseApi* | [**getUniverseTypesTypeId**](docs/UniverseApi.md#getUniverseTypesTypeId) | **GET** /v3/universe/types/{type_id}/ | Get type information
 *UniverseApi* | [**postUniverseIds**](docs/UniverseApi.md#postUniverseIds) | **POST** /v1/universe/ids/ | Bulk names to IDs
-*UniverseApi* | [**postUniverseNames**](docs/UniverseApi.md#postUniverseNames) | **POST** /v2/universe/names/ | Get names and categories for a set of ID&#39;s
+*UniverseApi* | [**postUniverseNames**](docs/UniverseApi.md#postUniverseNames) | **POST** /v2/universe/names/ | Get names and categories for a set of IDs
 *UserInterfaceApi* | [**postUiAutopilotWaypoint**](docs/UserInterfaceApi.md#postUiAutopilotWaypoint) | **POST** /v2/ui/autopilot/waypoint/ | Set Autopilot Waypoint
 *UserInterfaceApi* | [**postUiOpenwindowContract**](docs/UserInterfaceApi.md#postUiOpenwindowContract) | **POST** /v1/ui/openwindow/contract/ | Open Contract Window
 *UserInterfaceApi* | [**postUiOpenwindowInformation**](docs/UserInterfaceApi.md#postUiOpenwindowInformation) | **POST** /v1/ui/openwindow/information/ | Open Information Window
