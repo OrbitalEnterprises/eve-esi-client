@@ -21,6 +21,7 @@ INVENTORY_TYPE | &quot;inventory_type&quot;
 REGION | &quot;region&quot;
 SOLAR_SYSTEM | &quot;solar_system&quot;
 STATION | &quot;station&quot;
+FACTION | &quot;faction&quot;
 
 
 
