@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **name** | **String** | name string | 
 **raceId** | **Integer** | race_id integer | 
 **securityStatus** | **Float** | security_status number |  [optional]
+**title** | **String** | The individual title of the character |  [optional]
 
 
 <a name="GenderEnum"></a>
