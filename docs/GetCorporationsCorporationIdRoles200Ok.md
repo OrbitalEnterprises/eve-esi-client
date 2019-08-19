@@ -66,8 +66,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -122,8 +120,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -178,8 +174,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -234,8 +228,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -290,8 +282,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -346,8 +336,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -402,8 +390,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
@@ -458,8 +444,6 @@ SECURITY_OFFICER | &quot;Security_Officer&quot;
 STARBASE_DEFENSE_OPERATOR | &quot;Starbase_Defense_Operator&quot;
 STARBASE_FUEL_TECHNICIAN | &quot;Starbase_Fuel_Technician&quot;
 STATION_MANAGER | &quot;Station_Manager&quot;
-TERRESTRIAL_COMBAT_OFFICER | &quot;Terrestrial_Combat_Officer&quot;
-TERRESTRIAL_LOGISTICS_OFFICER | &quot;Terrestrial_Logistics_Officer&quot;
 TRADER | &quot;Trader&quot;
 
 
